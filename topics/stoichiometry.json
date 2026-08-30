@@ -1,0 +1,647 @@
+{
+  "schemaVersion": "1.0",
+  "topic": {
+    "id": "stoich-101",
+    "title": "Stoichiometry & Limiting Reagents",
+    "course": "CHEM 1301",
+    "author": "Prof. Example",
+    "defaults": {
+      "tolerance": {
+        "type": "relative",
+        "value": 0.01
+      },
+      "sigFigPolicy": "warn",
+      "unitsRequired": true,
+      "unitConversion": true,
+      "autoCapitalize": "suggest",
+      "hintAfterAttempts": 2,
+      "maxAttempts": 0
+    }
+  },
+  "levels": [
+    {
+      "id": "L1",
+      "title": "Formulas & Molar Mass",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 2,
+      "questions": [
+        {
+          "id": "L1-Q01",
+          "prompt": "Write the chemical formula for aluminum sulfate.",
+          "answer": {
+            "type": "formula",
+            "value": "Al_2(SO_4)_3",
+            "match": "composition",
+            "charge": 0
+          },
+          "hints": [
+            "Al forms a 3+ ion; sulfate is SO_4^2-.",
+            "Cross the charges over."
+          ],
+          "explanation": "Al^3+ and SO_4^2- combine in a 2:3 ratio to give Al_2(SO_4)_3.",
+          "tags": [
+            "nomenclature",
+            "ionic"
+          ],
+          "expectedSeconds": 45,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "formula",
+                  "value": "Al_3(SO_4)_2",
+                  "match": "composition"
+                },
+                "message": "You crossed the charges the wrong way. The 3+ charge on Al becomes the subscript on sulfate.",
+                "label": "charge-crossover-reversed"
+              },
+              {
+                "match": {
+                  "type": "formula",
+                  "value": "AlSO_4",
+                  "match": "composition"
+                },
+                "message": "Check the charges. A 3+ cation and a 2- anion cannot pair 1:1.",
+                "label": "no-charge-balance"
+              }
+            ]
+          }
+        },
+        {
+          "id": "L1-Q02",
+          "prompt": "What is the molar mass of Ca(OH)_2? Report to 4 significant figures.",
+          "answer": {
+            "type": "numeric",
+            "value": 74.1,
+            "unit": "g/mol",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.05
+            },
+            "sigFigs": 4,
+            "sigFigPolicy": "warn",
+            "unitAliases": [
+              "g/mol",
+              "g mol^-1",
+              "grams per mole"
+            ]
+          },
+          "hints": [
+            "Remember the subscript 2 applies to the entire hydroxide group."
+          ],
+          "explanation": "40.08 + 2(16.00 + 1.008) = 74.10 g/mol",
+          "tags": [
+            "molar-mass"
+          ],
+          "expectedSeconds": 60,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 57.09,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.05
+                  }
+                },
+                "message": "You only counted one hydroxide. The subscript 2 multiplies both O and H.",
+                "label": "subscript-not-distributed"
+              }
+            ]
+          }
+        },
+        {
+          "id": "L1-Q03",
+          "prompt": "How many moles are in 12.5 g of CaCO_3?",
+          "answer": {
+            "type": "numeric",
+            "value": 0.1249,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "sigFigPolicy": "warn"
+          },
+          "hints": [
+            "Find the molar mass first.",
+            "M(CaCO_3) = 100.09 g/mol"
+          ],
+          "explanation": "n = m / M = 12.5 / 100.09 = 0.125 mol",
+          "tags": [
+            "mole",
+            "molar-mass"
+          ],
+          "expectedSeconds": 75,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 1251,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.02
+                  }
+                },
+                "message": "You multiplied by the molar mass instead of dividing. Check your unit cancellation.",
+                "label": "inverted-molar-mass"
+              }
+            ]
+          }
+        },
+        {
+          "id": "L1-Q04",
+          "prompt": "Which of the following is an ionic compound?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "CO_2",
+              "KBr",
+              "CH_4",
+              "N_2O_4"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "KBr pairs a metal with a nonmetal. The others are all covalent.",
+          "tags": [
+            "bonding"
+          ],
+          "expectedSeconds": 25,
+          "points": 5
+        },
+        {
+          "id": "L1-Q05",
+          "prompt": "Name the ions produced when Na_2SO_4 dissolves in water.",
+          "answer": {
+            "type": "set",
+            "items": [
+              "Na^+",
+              "SO_4^2-"
+            ],
+            "itemType": "formula",
+            "ordered": false,
+            "partialCredit": true
+          },
+          "hints": [
+            "Sulfate does not break apart."
+          ],
+          "explanation": "Na_2SO_4(aq) -> 2 Na^+(aq) + SO_4^2-(aq)",
+          "tags": [
+            "dissociation"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "L1-Q06",
+          "prompt": "Give the full electron configuration of a neutral Zn atom.",
+          "answer": {
+            "type": "expression",
+            "value": "1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^10",
+            "mode": "set",
+            "accept": [
+              "[Ar] 4s^2 3d^10"
+            ]
+          },
+          "hints": [
+            "Zn is element 30."
+          ],
+          "explanation": "Thirty electrons fill through 3d^10 after 4s^2.",
+          "tags": [
+            "electron-configuration"
+          ],
+          "expectedSeconds": 90,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "L2",
+      "title": "Balancing Equations",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 2,
+      "questions": [
+        {
+          "id": "L2-Q01",
+          "prompt": "Balance the reaction below by entering the coefficients.",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ Al + __ O_2 -> __ Al_2O_3",
+            "correct": [
+              4,
+              3,
+              2
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "Balance Al first, then O.",
+            "Six oxygen atoms on each side works."
+          ],
+          "explanation": "4 Al + 3 O_2 -> 2 Al_2O_3",
+          "tags": [
+            "balancing"
+          ],
+          "expectedSeconds": 60,
+          "points": 10
+        },
+        {
+          "id": "L2-Q02",
+          "prompt": "Write the balanced equation for the complete combustion of propane, C_3H_8. Phases are not required.",
+          "answer": {
+            "type": "equation",
+            "value": "C_3H_8 + 5 O_2 -> 3 CO_2 + 4 H_2O",
+            "requireBalanced": true,
+            "requireLowest": true,
+            "requirePhases": false,
+            "allowReorder": true,
+            "arrow": "yields"
+          },
+          "hints": [
+            "Complete combustion of a hydrocarbon gives only CO_2 and H_2O.",
+            "Balance C, then H, then O last."
+          ],
+          "explanation": "C_3H_8 + 5 O_2 -> 3 CO_2 + 4 H_2O",
+          "tags": [
+            "combustion",
+            "balancing"
+          ],
+          "expectedSeconds": 110,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "equation",
+                  "value": "C_3H_8 + O_2 -> CO_2 + H_2O",
+                  "requireBalanced": false
+                },
+                "message": "Your products are right, but the equation is not balanced yet.",
+                "label": "unbalanced-correct-species"
+              }
+            ]
+          }
+        },
+        {
+          "id": "L2-Q03",
+          "prompt": "Balance the reaction below by entering the coefficients.",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ Fe + __ H_2O -> __ Fe_3O_4 + __ H_2",
+            "correct": [
+              3,
+              4,
+              1,
+              4
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "A coefficient of 1 must be typed as 1."
+          ],
+          "explanation": "3 Fe + 4 H_2O -> Fe_3O_4 + 4 H_2",
+          "tags": [
+            "balancing"
+          ],
+          "expectedSeconds": 90,
+          "points": 15
+        },
+        {
+          "id": "L2-Q04",
+          "prompt": "What type of reaction is 2 KClO_3 -> 2 KCl + 3 O_2?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "decomposition",
+              "decomposition reaction"
+            ],
+            "reject": [
+              "composition",
+              "displacement"
+            ],
+            "normalize": {
+              "case": false,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "explanation": "One reactant breaks into two products, so this is a decomposition.",
+          "tags": [
+            "reaction-types"
+          ],
+          "expectedSeconds": 30,
+          "points": 5
+        },
+        {
+          "id": "L2-Q05",
+          "prompt": "Write the balanced equation for the reaction of solid calcium carbonate with aqueous hydrochloric acid, including phase labels.",
+          "answer": {
+            "type": "equation",
+            "value": "CaCO_3(s) + 2 HCl(aq) -> CaCl_2(aq) + H_2O(l) + CO_2(g)",
+            "requireBalanced": true,
+            "requireLowest": true,
+            "requirePhases": true,
+            "allowReorder": true,
+            "arrow": "yields"
+          },
+          "hints": [
+            "Carbonates plus acid give a salt, water, and carbon dioxide."
+          ],
+          "explanation": "CaCO_3(s) + 2 HCl(aq) -> CaCl_2(aq) + H_2O(l) + CO_2(g)",
+          "tags": [
+            "acid-base",
+            "gas-evolution"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "L2-Q06",
+          "prompt": "Balance the reaction below by entering the coefficients.",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ C_2H_6 + __ O_2 -> __ CO_2 + __ H_2O",
+            "correct": [
+              2,
+              7,
+              4,
+              6
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "Balance carbon and hydrogen first, oxygen last.",
+            "An odd oxygen count means you need to double the whole equation."
+          ],
+          "explanation": "2 C_2H_6 + 7 O_2 -> 4 CO_2 + 6 H_2O",
+          "tags": [
+            "balancing",
+            "combustion"
+          ],
+          "expectedSeconds": 110,
+          "points": 15
+        },
+        {
+          "id": "L2-Q07",
+          "prompt": "Write the balanced equation for the reaction of aqueous silver nitrate with aqueous sodium chloride, including phase labels.",
+          "answer": {
+            "type": "equation",
+            "value": "AgNO_3(aq) + NaCl(aq) -> AgCl(s) + NaNO_3(aq)",
+            "requireBalanced": true,
+            "requireLowest": true,
+            "requirePhases": true,
+            "allowReorder": true,
+            "arrow": "yields"
+          },
+          "hints": [
+            "Swap the partners, then check which product is insoluble.",
+            "Silver chloride is the precipitate."
+          ],
+          "explanation": "AgNO_3(aq) + NaCl(aq) -> AgCl(s) + NaNO_3(aq)",
+          "tags": [
+            "precipitation",
+            "double-displacement"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "L3",
+      "title": "Limiting Reagent & Yield",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 2,
+      "questions": [
+        {
+          "id": "L3-Q01",
+          "prompt": "For N_2 + 3 H_2 -> 2 NH_3, you start with 28.0 g of N_2 and 3.00 g of H_2. Which reactant is limiting?",
+          "answer": {
+            "type": "formula",
+            "value": "H_2",
+            "match": "composition",
+            "charge": 0
+          },
+          "hints": [
+            "Convert both masses to moles.",
+            "Compare the available mole ratio to the 1:3 required ratio."
+          ],
+          "explanation": "1.00 mol N_2 needs 3.00 mol H_2, but only 1.49 mol H_2 is present, so H_2 runs out first.",
+          "tags": [
+            "limiting-reagent"
+          ],
+          "expectedSeconds": 120,
+          "points": 15
+        },
+        {
+          "id": "L3-Q02",
+          "prompt": "Using the amounts from the previous question, what is the theoretical yield of NH_3 in grams?",
+          "answer": {
+            "type": "numeric",
+            "value": 16.9,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "sigFigPolicy": "warn"
+          },
+          "hints": [
+            "Work from the limiting reagent.",
+            "n(NH_3) = n(H_2) x 2/3"
+          ],
+          "explanation": "1.488 mol H_2 x (2/3) = 0.992 mol NH_3; 0.992 x 17.03 = 16.9 g",
+          "tags": [
+            "limiting-reagent",
+            "theoretical-yield"
+          ],
+          "expectedSeconds": 150,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 34.1,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.02
+                  }
+                },
+                "message": "You used N_2 as the limiting reagent. Go back and compare the mole ratios.",
+                "label": "wrong-limiting-reagent"
+              },
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 25.3,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.02
+                  }
+                },
+                "message": "Check your mole ratio. It is 2 NH_3 per 3 H_2, not 1 per 1.",
+                "label": "mole-ratio-ignored"
+              }
+            ]
+          }
+        },
+        {
+          "id": "L3-Q03",
+          "prompt": "If the reaction above actually produces 12.5 g of NH_3, what is the percent yield?",
+          "answer": {
+            "type": "numeric",
+            "value": 74.0,
+            "unit": "%",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "sigFigPolicy": "warn",
+            "unitsRequired": false
+          },
+          "explanation": "12.5 / 16.9 x 100 = 74.0 %",
+          "tags": [
+            "percent-yield"
+          ],
+          "expectedSeconds": 75,
+          "points": 15
+        },
+        {
+          "id": "L3-Q04",
+          "prompt": "In the same reaction, how many grams of the excess reactant remain unreacted?",
+          "answer": {
+            "type": "numeric",
+            "value": 14.1,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.03
+            },
+            "sigFigs": 3,
+            "sigFigPolicy": "warn"
+          },
+          "hints": [
+            "Find how much N_2 is consumed by the H_2 that is present."
+          ],
+          "explanation": "0.496 mol N_2 reacts, leaving 0.504 mol x 28.01 = 14.1 g of N_2.",
+          "tags": [
+            "limiting-reagent",
+            "excess-reactant"
+          ],
+          "expectedSeconds": 150,
+          "points": 20
+        },
+        {
+          "id": "L3-Q05",
+          "prompt": "A percent yield greater than 100 % most likely indicates which of the following?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "The reaction ran to completion",
+              "The product was not fully dried",
+              "The limiting reagent was misidentified",
+              "The molar mass was calculated incorrectly"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "Residual solvent adds mass to the product, pushing the apparent yield above 100 %.",
+          "tags": [
+            "lab-technique",
+            "percent-yield"
+          ],
+          "expectedSeconds": 35,
+          "points": 10
+        },
+        {
+          "id": "L3-Q06",
+          "prompt": "For 2 Al + 3 Cl_2 -> 2 AlCl_3, how many moles of AlCl_3 form from 0.600 mol of Cl_2 with aluminium in excess?",
+          "answer": {
+            "type": "numeric",
+            "value": 0.4,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "sigFigPolicy": "warn"
+          },
+          "hints": [
+            "Use the 3:2 ratio between Cl_2 and AlCl_3."
+          ],
+          "explanation": "0.600 mol Cl_2 x (2 AlCl_3 / 3 Cl_2) = 0.400 mol",
+          "tags": [
+            "mole-ratio"
+          ],
+          "expectedSeconds": 90,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 0.9,
+                  "unit": "mol",
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.02
+                  }
+                },
+                "message": "You inverted the ratio. It is 2 AlCl_3 per 3 Cl_2, not 3 per 2.",
+                "label": "mole-ratio-inverted"
+              }
+            ]
+          }
+        },
+        {
+          "id": "L3-Q07",
+          "prompt": "Which statement correctly describes the limiting reagent?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "The reactant present in the smallest mass",
+              "The reactant present in the fewest moles",
+              "The reactant that runs out first given the mole ratio",
+              "The reactant with the largest molar mass"
+            ],
+            "correct": [
+              2
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "Only the mole ratio in the balanced equation decides which reactant runs out first.",
+          "tags": [
+            "limiting-reagent"
+          ],
+          "expectedSeconds": 35,
+          "points": 10
+        }
+      ]
+    }
+  ]
+}

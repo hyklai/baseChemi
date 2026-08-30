@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12171e">
+<title>Class progress</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body class="display">
+
+<!-- Browsers block audio until the page is clicked, so the chime is unlocked here. -->
+<div class="gate" id="gate">
+  <p class="eyebrow">Projector view</p>
+  <input id="gateCode" class="answer-input" type="text" maxlength="6" placeholder="SESSION CODE"
+         autocapitalize="characters" autocomplete="off"
+         style="max-width:280px; text-align:center; letter-spacing:.2em; background:var(--panel); color:var(--chalk); border-color:var(--panel-2)">
+  <button id="gateGo" class="primary big">Show class progress</button>
+  <p>Click to start. This also turns on the sound for the help button.</p>
+  <p class="err small" id="gateErr"></p>
+</div>
+
+<div class="wrap">
+  <header class="dhead">
+    <div>
+      <h1 id="dTitle">&nbsp;</h1>
+      <p class="eyebrow" id="dCourse" style="margin:2px 0 0">&nbsp;</p>
+    </div>
+    <div class="join">
+      <span>Join at this code</span>
+      <b id="dCode">-----</b>
+    </div>
+  </header>
+
+  <main class="dbody" id="dBody"></main>
+
+  <footer class="dfoot" id="dFoot">
+    <div>
+      <div class="lbl">In the room</div>
+      <div class="val" id="dCount">0</div>
+    </div>
+    <div>
+      <div class="lbl">Sticking point</div>
+      <div class="val" id="dStick"><small>gathering answers</small></div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--cu)"></i>flowing</span>
+      <span><i style="background:var(--na)"></i>slowing</span>
+      <span><i style="background:var(--sr)"></i>stuck</span>
+    </div>
+  </footer>
+</div>
+
+<div class="handalert" id="hand">Someone needs a hand</div>
+
+<script type="module" src="js/display.js"></script>
+</body>
+</html>

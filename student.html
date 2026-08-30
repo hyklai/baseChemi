@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f8f8">
+<title>Join a session</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<!-- Join -->
+<section id="join" class="wrap" style="padding-top:56px">
+  <p class="eyebrow">Chemistry practice</p>
+  <h1 style="margin:6px 0 20px">Join your class session</h1>
+  <div class="card">
+    <label class="eyebrow" for="code">Session code</label>
+    <input id="code" class="answer-input" type="text" inputmode="latin" autocapitalize="characters"
+           autocomplete="off" maxlength="6" placeholder="4K7QP" style="margin:6px 0 16px; letter-spacing:.18em">
+    <label class="eyebrow" for="nick">Pick a nickname</label>
+    <input id="nick" type="text" maxlength="18" autocomplete="off" placeholder="quicksilver" style="margin:6px 0 4px">
+    <p class="tiny muted">Your instructor sees this when you ask for help, and it appears on the leaderboard during a race. Everything else stays anonymous.</p>
+    <button id="joinBtn" class="primary big full" style="margin-top:12px">Join session</button>
+    <p id="joinErr" class="small err" style="margin-top:10px"></p>
+  </div>
+</section>
+
+<!-- Practice -->
+<section id="practice" class="hidden">
+  <div class="topbar">
+    <span class="chip mono" id="levelChip">L1</span>
+    <div class="grow">
+      <div class="meter"><i id="levelMeter" style="width:0%"></i></div>
+    </div>
+    <span class="tiny mono muted" id="levelCount">0/0</span>
+    <button id="helpBtn" class="ghost" title="Ask for help" style="padding:8px 12px">Help</button>
+  </div>
+
+  <div class="wrap">
+    <div id="levelUp" class="banner hidden">
+      <strong id="levelUpText">Level cleared.</strong>
+      <p class="small muted" style="margin:4px 0 10px">Keep practising this level, or move up.</p>
+      <div class="row">
+        <button id="stayBtn" class="ghost">Keep practising</button>
+        <button id="advanceBtn" class="primary">Next level</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="eyebrow" id="qMeta">Question</p>
+      <h2 id="qPrompt" style="margin:8px 0 16px; font-weight:500; line-height:1.4"></h2>
+      <div id="qInput"></div>
+      <div class="preview" id="qPreview"></div>
+      <div id="qHint"></div>
+      <div class="row" style="margin-top:14px">
+        <button id="checkBtn" class="primary big grow" style="flex:1">Check answer</button>
+        <button id="hintBtn" class="ghost">Hint</button>
+      </div>
+      <div id="qVerdict"></div>
+      <button id="nextBtn" class="full big hidden" style="margin-top:12px">Next question</button>
+    </div>
+
+    <p class="tiny muted center" id="doneNote"></p>
+  </div>
+</section>
+
+<!-- Race -->
+<section id="race" class="hidden">
+  <div class="topbar">
+    <span class="chip mono on" id="raceChip">RACE</span>
+    <div class="grow"><div class="meter"><i id="raceMeter" style="width:0%"></i></div></div>
+    <span class="tiny mono muted" id="raceScore">0 pts</span>
+  </div>
+  <div class="wrap">
+    <div id="raceCountdown" class="card center hidden">
+      <p class="eyebrow">Starting</p>
+      <div class="countdown" id="cdNum">3</div>
+    </div>
+    <div id="raceCard" class="card hidden">
+      <p class="eyebrow" id="rqMeta">Question 1</p>
+      <h2 id="rqPrompt" style="margin:8px 0 16px; font-weight:500; line-height:1.4"></h2>
+      <div id="rqInput"></div>
+      <div class="preview" id="rqPreview"></div>
+      <button id="rqSubmit" class="primary big full" style="margin-top:14px">Submit</button>
+      <div id="rqVerdict"></div>
+    </div>
+    <div id="raceDone" class="card center hidden">
+      <p class="eyebrow">Finished</p>
+      <h2 style="margin:8px 0">Nice work.</h2>
+      <p class="muted" id="raceFinal"></p>
+      <p class="small muted">Results are on the projector.</p>
+    </div>
+  </div>
+</section>
+
+<script type="module" src="js/student.js"></script>
+</body>
+</html>
