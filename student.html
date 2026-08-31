@@ -23,6 +23,7 @@
     <label class="eyebrow" for="nick">Pick a nickname</label>
     <input id="nick" type="text" maxlength="18" autocomplete="off" placeholder="quicksilver" style="margin:6px 0 4px">
     <p class="tiny muted">Your instructor sees this when you ask for help, and it appears on the leaderboard during a race. Everything else stays anonymous.</p>
+    <p class="tiny muted" style="margin-top:6px">Rejoining? Enter the same nickname on the same device and you will pick up where you left off.</p>
     <button id="joinBtn" class="primary big full" style="margin-top:12px">Join session</button>
     <p id="joinErr" class="small err" style="margin-top:10px"></p>
   </div>
@@ -92,6 +93,17 @@
       <h2 style="margin:8px 0">Nice work.</h2>
       <p class="muted" id="raceFinal"></p>
       <p class="small muted">Results are on the projector.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Session ended -->
+<section id="ended" class="hidden">
+  <div class="wrap" style="padding-top:72px; max-width:460px">
+    <div class="card center">
+      <p class="eyebrow">Session closed</p>
+      <h2 style="margin:8px 0 6px">That's practice done.</h2>
+      <p class="small muted" id="endedStats" style="margin:0"></p>
     </div>
   </div>
 </section>

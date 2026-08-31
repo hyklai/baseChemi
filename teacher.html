@@ -112,9 +112,28 @@
       </div>
       <p class="tiny muted" style="margin:10px 0 0">Signing out leaves the session running for your students. Sign back in to rejoin it.</p>
       <hr style="border:0; border-top:1px solid var(--line-2); margin:16px 0">
-      <p class="small muted" style="margin-bottom:10px">Starting a race ends practice and downloads the CSV first.</p>
-      <button id="raceBtn" class="primary big full">End practice &amp; start race</button>
+      <button id="raceBtn" class="primary big full">Start a race</button>
+      <button id="endPracticeBtn" class="full danger" style="margin-top:8px">End practice</button>
+      <p class="tiny muted" style="margin-top:10px">
+        Ending practice stops students answering and downloads the CSV. Starting a race
+        leaves the practice data in place, and you can still export it afterwards.
+      </p>
     </div>
+  </div>
+</section>
+
+<!-- Wrap up -->
+<section id="wrapUp" class="hidden">
+  <div class="wrap" style="padding-top:56px; max-width:460px">
+    <p class="eyebrow" id="wrapEyebrow">Done</p>
+    <h1 style="margin:6px 0 6px" id="wrapTitle">Practice ended</h1>
+    <p class="small muted" style="margin-bottom:18px" id="wrapNote"></p>
+    <div class="card">
+      <button id="wrapRaceBtn" class="primary big full">Start a race</button>
+      <button id="wrapExportBtn" class="ghost full" style="margin-top:8px">Export the CSV again</button>
+      <button id="wrapBackBtn" class="ghost full" style="margin-top:8px">Back to Start a session</button>
+    </div>
+    <p class="tiny muted center" style="margin-top:14px">Going back leaves this session in the database. Your students can no longer answer.</p>
   </div>
 </section>
 
@@ -125,7 +144,7 @@
     <h1 style="margin:6px 0 6px">How many questions from each level?</h1>
     <p class="small muted" style="margin-bottom:16px">They are shuffled together into one race.</p>
     <div class="card" id="raceCounts"></div>
-    <button id="raceGo" class="primary big full">Download CSV and start the race</button>
+    <button id="raceGo" class="primary big full">Start the race</button>
     <button id="raceCancel" class="ghost full" style="margin-top:8px">Back</button>
   </div>
 </section>
@@ -136,7 +155,7 @@
     <p class="eyebrow">Race in progress</p>
     <h1 style="margin:6px 0 16px" id="raceStatus">Waiting for finishers</h1>
     <div class="card"><div id="raceBoard"></div></div>
-    <button id="raceEnd" class="ghost full">End race</button>
+    <button id="raceEnd" class="ghost full danger">End race</button>
   </div>
 </section>
 
