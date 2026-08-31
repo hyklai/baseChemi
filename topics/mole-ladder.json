@@ -416,7 +416,7 @@
           "points": 15
         },
         {
-          "id": "L2-Q04",
+          "id": "L2-Q03",
           "prompt": "Silver has two isotopes: Ag-107 (106.905 amu, 51.84%) and Ag-109 (108.905 amu, 48.16%). What is the average atomic mass in amu? Enter the number only.",
           "answer": {
             "type": "numeric",
