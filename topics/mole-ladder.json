@@ -340,33 +340,6 @@
           ],
           "expectedSeconds": 55,
           "points": 10
-        },
-        {
-          "id": "L1-Q09",
-          "prompt": "Comparing neutral atoms of ^235U and ^238U, which counts are IDENTICAL in both?",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "Protons only",
-              "Protons and electrons",
-              "Neutrons and electrons",
-              "Protons, neutrons and electrons"
-            ],
-            "correct": [
-              1
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "hints": [
-            "What does the word *isotope* hold constant?"
-          ],
-          "explanation": "Isotopes of one element share the proton count, and when neutral they also share the electron count. Only the neutron count differs: 143 versus 146.",
-          "tags": [
-            "isotopes"
-          ],
-          "expectedSeconds": 60,
-          "points": 10
         }
       ]
     },
@@ -616,43 +589,15 @@
           ],
           "expectedSeconds": 135,
           "points": 15
-        },
-        {
-          "id": "L2-Q08",
-          "prompt": "The periodic table lists chlorine as 35.45 amu, yet its isotopes have masses very near 35 and 37. What does that value tell you?",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "The two isotopes are roughly equally abundant",
-              "Cl-35 is much more abundant than Cl-37",
-              "Cl-37 is much more abundant than Cl-35",
-              "Some chlorine atoms actually have a mass of 35.45 amu"
-            ],
-            "correct": [
-              1
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "hints": [
-            "Which isotope is the value 35.45 closer to?"
-          ],
-          "explanation": "A weighted average always lands nearer the more abundant isotope. Since 35.45 sits much closer to 35, Cl-35 dominates. No individual atom weighs 35.45 amu.",
-          "tags": [
-            "average-atomic-mass",
-            "conceptual"
-          ],
-          "expectedSeconds": 60,
-          "points": 10
         }
       ]
     },
     {
       "id": "L3",
       "title": "Molar Mass",
-      "requiredCorrect": 5,
+      "requiredCorrect": 4,
       "drawMode": "random",
-      "raceCount": 3,
+      "raceCount": 2,
       "questions": [
         {
           "id": "L3-Q01",
@@ -800,51 +745,6 @@
         },
         {
           "id": "L3-Q04",
-          "prompt": "What is the molar mass of CuSO_4*5H_2O?",
-          "answer": {
-            "type": "numeric",
-            "value": 249.69,
-            "unit": "g/mol",
-            "tolerance": {
-              "type": "absolute",
-              "value": 0.1
-            },
-            "sigFigs": 5,
-            "unitAliases": [
-              "g/mol",
-              "g mol^-1",
-              "grams per mole"
-            ]
-          },
-          "hints": [
-            "The dot does not mean multiply. Those five waters are part of the formula unit.",
-            "Count every atom: 1 Cu, 1 S, 9 O, 10 H."
-          ],
-          "explanation": "Summing the atomic masses of every atom in the formula unit gives 249.69 g/mol.",
-          "tags": [
-            "molar-mass"
-          ],
-          "expectedSeconds": 120,
-          "points": 10,
-          "feedback": {
-            "commonErrors": [
-              {
-                "match": {
-                  "type": "numeric",
-                  "value": 159.61,
-                  "tolerance": {
-                    "type": "absolute",
-                    "value": 0.1
-                  }
-                },
-                "message": "You stopped at the anhydrous salt. The five waters of hydration count toward the mass.",
-                "label": "hydrate-water-ignored"
-              }
-            ]
-          }
-        },
-        {
-          "id": "L3-Q05",
           "prompt": "What is the molar mass of Mg_3(PO_4)_2?",
           "answer": {
             "type": "numeric",
@@ -872,7 +772,7 @@
           "points": 10
         },
         {
-          "id": "L3-Q06",
+          "id": "L3-Q05",
           "prompt": "What is the molar mass of C_9H_8O_4 (aspirin)?",
           "answer": {
             "type": "numeric",
@@ -900,7 +800,7 @@
           "points": 10
         },
         {
-          "id": "L3-Q07",
+          "id": "L3-Q06",
           "prompt": "What is the molar mass of Fe_2(SO_4)_3?",
           "answer": {
             "type": "numeric",
@@ -944,52 +844,7 @@
           }
         },
         {
-          "id": "L3-Q08",
-          "prompt": "What is the molar mass of Na_2CO_3*10H_2O (washing soda)?",
-          "answer": {
-            "type": "numeric",
-            "value": 286.15,
-            "unit": "g/mol",
-            "tolerance": {
-              "type": "absolute",
-              "value": 0.1
-            },
-            "sigFigs": 5,
-            "unitAliases": [
-              "g/mol",
-              "g mol^-1",
-              "grams per mole"
-            ]
-          },
-          "hints": [
-            "Ten waters add 20 H and 10 O on top of the carbonate.",
-            "Total oxygen is 3 + 10 = 13."
-          ],
-          "explanation": "Summing the atomic masses of every atom in the formula unit gives 286.15 g/mol.",
-          "tags": [
-            "molar-mass"
-          ],
-          "expectedSeconds": 120,
-          "points": 10,
-          "feedback": {
-            "commonErrors": [
-              {
-                "match": {
-                  "type": "numeric",
-                  "value": 105.99,
-                  "tolerance": {
-                    "type": "absolute",
-                    "value": 0.1
-                  }
-                },
-                "message": "The ten waters were left out. They contribute more mass here than the carbonate itself.",
-                "label": "hydrate-water-ignored"
-              }
-            ]
-          }
-        },
-        {
-          "id": "L3-Q09",
+          "id": "L3-Q07",
           "prompt": "What is the molar mass of (NH_4)_2Cr_2O_7?",
           "answer": {
             "type": "numeric",
@@ -1021,9 +876,9 @@
     {
       "id": "L4",
       "title": "One-Step Conversions",
-      "requiredCorrect": 5,
+      "requiredCorrect": 4,
       "drawMode": "random",
-      "raceCount": 3,
+      "raceCount": 2,
       "questions": [
         {
           "id": "L4-Q01",
@@ -1281,9 +1136,9 @@
     {
       "id": "L5",
       "title": "Two-Step Conversions",
-      "requiredCorrect": 5,
+      "requiredCorrect": 4,
       "drawMode": "random",
-      "raceCount": 3,
+      "raceCount": 2,
       "questions": [
         {
           "id": "L5-Q01",
@@ -1484,39 +1339,15 @@
           ],
           "expectedSeconds": 120,
           "points": 15
-        },
-        {
-          "id": "L5-Q08",
-          "prompt": "How many formula units are in 10.0 g of NaCl?",
-          "answer": {
-            "type": "numeric",
-            "value": 1.03e+23,
-            "unit": "",
-            "tolerance": {
-              "type": "relative",
-              "value": 0.015
-            },
-            "sigFigs": 3
-          },
-          "hints": [
-            "Convert to moles first, then apply Avogadro's number."
-          ],
-          "explanation": "10.0 / 58.44 = 0.1711 mol, then x 6.022 x 10^23 = 1.03 x 10^23 formula units.",
-          "tags": [
-            "mole-conversion",
-            "avogadro"
-          ],
-          "expectedSeconds": 110,
-          "points": 15
         }
       ]
     },
     {
       "id": "L6",
       "title": "Atoms Inside a Compound",
-      "requiredCorrect": 5,
+      "requiredCorrect": 3,
       "drawMode": "random",
-      "raceCount": 3,
+      "raceCount": 2,
       "questions": [
         {
           "id": "L6-Q01",
@@ -1723,48 +1554,6 @@
         },
         {
           "id": "L6-Q05",
-          "prompt": "How many oxygen atoms are in 25.00 g of CuSO_4*5H_2O?",
-          "answer": {
-            "type": "numeric",
-            "value": 5.427e+23,
-            "unit": "",
-            "tolerance": {
-              "type": "relative",
-              "value": 0.015
-            },
-            "sigFigs": 4
-          },
-          "hints": [
-            "The waters contain oxygen too.",
-            "There are 9 oxygen atoms per formula unit, not 4."
-          ],
-          "explanation": "25.00 / 249.69 = 0.1001 mol. Oxygen appears in the sulfate AND the five waters: 4 + 5 = 9 per formula unit. So x 9 = 0.9011 mol O, then x 6.022 x 10^23 = 5.427 x 10^23 atoms.",
-          "tags": [
-            "subscript-step",
-            "avogadro",
-            "hydrates"
-          ],
-          "expectedSeconds": 185,
-          "points": 20,
-          "feedback": {
-            "commonErrors": [
-              {
-                "match": {
-                  "type": "numeric",
-                  "value": 2.412e+23,
-                  "tolerance": {
-                    "type": "relative",
-                    "value": 0.015
-                  }
-                },
-                "message": "You counted only the sulfate oxygens. The five waters carry 5 more, giving 9 in total.",
-                "label": "hydrate-oxygen-missed"
-              }
-            ]
-          }
-        },
-        {
-          "id": "L6-Q06",
           "prompt": "How many nitrogen atoms are in 20.0 g of (NH_4)_3PO_4?",
           "answer": {
             "type": "numeric",
@@ -1804,7 +1593,7 @@
           }
         },
         {
-          "id": "L6-Q07",
+          "id": "L6-Q06",
           "prompt": "How many oxygen atoms are in 0.500 mol of Mg_3(PO_4)_2?",
           "answer": {
             "type": "numeric",
@@ -1844,7 +1633,7 @@
           }
         },
         {
-          "id": "L6-Q08",
+          "id": "L6-Q07",
           "prompt": "How many TOTAL atoms are in 15.0 g of Ca(NO_3)_2?",
           "answer": {
             "type": "numeric",
@@ -1888,9 +1677,9 @@
     {
       "id": "L7",
       "title": "Percent Composition",
-      "requiredCorrect": 5,
+      "requiredCorrect": 3,
       "drawMode": "random",
-      "raceCount": 3,
+      "raceCount": 2,
       "questions": [
         {
           "id": "L7-Q01",
@@ -1937,50 +1726,6 @@
         },
         {
           "id": "L7-Q02",
-          "prompt": "What is the mass percent of oxygen in CuSO_4*5H_2O?",
-          "answer": {
-            "type": "numeric",
-            "value": 57.67,
-            "unit": "%",
-            "tolerance": {
-              "type": "absolute",
-              "value": 0.1
-            },
-            "sigFigs": 4,
-            "unitAliases": [
-              "%",
-              "percent"
-            ]
-          },
-          "hints": [
-            "Count the oxygens in the waters as well as in the sulfate."
-          ],
-          "explanation": "Total oxygen = 4 + 5 = 9 atoms, so 9(16.00) = 144.00 g. Then (144.00 / 249.69) x 100 = 57.67%.",
-          "tags": [
-            "percent-composition",
-            "hydrates"
-          ],
-          "expectedSeconds": 145,
-          "points": 15,
-          "feedback": {
-            "commonErrors": [
-              {
-                "match": {
-                  "type": "numeric",
-                  "value": 25.63,
-                  "tolerance": {
-                    "type": "absolute",
-                    "value": 0.1
-                  }
-                },
-                "message": "You counted only the sulfate oxygens. Include the five from the waters, for 9 in total.",
-                "label": "hydrate-oxygen-missed"
-              }
-            ]
-          }
-        },
-        {
-          "id": "L7-Q03",
           "prompt": "What is the mass percent of calcium in CaCO_3?",
           "answer": {
             "type": "numeric",
@@ -2007,7 +1752,7 @@
           "points": 15
         },
         {
-          "id": "L7-Q04",
+          "id": "L7-Q03",
           "prompt": "Calcium citrate is Ca_3(C_6H_5O_7)_2. What is its mass percent of calcium?",
           "answer": {
             "type": "numeric",
@@ -2036,7 +1781,7 @@
           "points": 20
         },
         {
-          "id": "L7-Q05",
+          "id": "L7-Q04",
           "prompt": "What is the mass percent of carbon in aspirin, C_9H_8O_4?",
           "answer": {
             "type": "numeric",
@@ -2063,7 +1808,7 @@
           "points": 15
         },
         {
-          "id": "L7-Q06",
+          "id": "L7-Q05",
           "prompt": "What is the mass percent of hydrogen in aspirin, C_9H_8O_4?",
           "answer": {
             "type": "numeric",
@@ -2090,7 +1835,7 @@
           "points": 15
         },
         {
-          "id": "L7-Q07",
+          "id": "L7-Q06",
           "prompt": "What is the mass percent of iron in Fe_2O_3?",
           "answer": {
             "type": "numeric",
@@ -2115,340 +1860,18 @@
           ],
           "expectedSeconds": 95,
           "points": 15
-        },
-        {
-          "id": "L7-Q08",
-          "prompt": "You calculate the percent composition of a compound and your three percentages sum to 100.01%. What does that mean?",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "You made an arithmetic error and must redo it",
-              "Nothing is wrong; each percentage was rounded independently",
-              "The formula you were given must be incorrect",
-              "You should scale all three values down so they sum to exactly 100"
-            ],
-            "correct": [
-              1
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "hints": [
-            "Think about what happens when you round three numbers separately and then add them."
-          ],
-          "explanation": "Rounding each percentage separately lets the total drift a hundredth either way. A sum of 100.01% or 99.99% is expected. A sum of 96% or 104% signals a real error, such as a dropped or double-counted element.",
-          "tags": [
-            "percent-composition",
-            "sig-figs",
-            "conceptual"
-          ],
-          "expectedSeconds": 70,
-          "points": 10
         }
       ]
     },
     {
       "id": "L8",
-      "title": "Working Percent Composition Backwards",
-      "requiredCorrect": 4,
+      "title": "Challenge",
+      "requiredCorrect": 3,
       "drawMode": "random",
-      "raceCount": 3,
+      "raceCount": 2,
       "questions": [
         {
           "id": "L8-Q01",
-          "prompt": "How many grams of Ca(NO_3)_2 must you weigh out to deliver 15.0 g of nitrogen?",
-          "answer": {
-            "type": "numeric",
-            "value": 87.8,
-            "unit": "g",
-            "tolerance": {
-              "type": "relative",
-              "value": 0.02
-            },
-            "sigFigs": 3,
-            "unitAliases": [
-              "g",
-              "gram",
-              "grams"
-            ]
-          },
-          "hints": [
-            "Convert the nitrogen mass to moles of nitrogen first.",
-            "Two nitrogens per formula unit means dividing by 2."
-          ],
-          "explanation": "15.0 / 14.01 = 1.071 mol N. There are 2 N per formula unit, so 0.5353 mol compound, then x 164.10 g/mol = 87.8 g.",
-          "tags": [
-            "percent-composition",
-            "reverse"
-          ],
-          "expectedSeconds": 180,
-          "points": 20,
-          "feedback": {
-            "commonErrors": [
-              {
-                "match": {
-                  "type": "numeric",
-                  "value": 176.0,
-                  "tolerance": {
-                    "type": "relative",
-                    "value": 0.02
-                  }
-                },
-                "message": "You forgot that each formula unit supplies 2 nitrogen atoms, so you need only half as much compound.",
-                "label": "subscript-step-skipped"
-              }
-            ]
-          }
-        },
-        {
-          "id": "L8-Q02",
-          "prompt": "Urea is (NH_2)_2CO. How many grams of urea contain 50.0 g of nitrogen?",
-          "answer": {
-            "type": "numeric",
-            "value": 107.0,
-            "unit": "g",
-            "tolerance": {
-              "type": "relative",
-              "value": 0.02
-            },
-            "sigFigs": 3,
-            "unitAliases": [
-              "g",
-              "gram",
-              "grams"
-            ]
-          },
-          "hints": [
-            "Find the percent nitrogen in urea first.",
-            "%N = 46.65%"
-          ],
-          "explanation": "M(urea) = 60.06 g/mol and %N = 46.65%. Then 50.0 / 0.4665 = 107 g.",
-          "tags": [
-            "percent-composition",
-            "reverse",
-            "application"
-          ],
-          "expectedSeconds": 180,
-          "points": 20
-        },
-        {
-          "id": "L8-Q03",
-          "prompt": "A student needs 1.00 g of elemental calcium. How many grams of CaCO_3 should she weigh out?",
-          "answer": {
-            "type": "numeric",
-            "value": 2.5,
-            "unit": "g",
-            "tolerance": {
-              "type": "relative",
-              "value": 0.02
-            },
-            "sigFigs": 3,
-            "unitAliases": [
-              "g",
-              "gram",
-              "grams"
-            ]
-          },
-          "hints": [
-            "Calcium makes up about 40% of the compound, so you need roughly 2.5 times as much."
-          ],
-          "explanation": "Calcium is 40.04% of CaCO_3 by mass, so 1.00 / 0.4004 = 2.50 g.",
-          "tags": [
-            "percent-composition",
-            "reverse",
-            "application"
-          ],
-          "expectedSeconds": 150,
-          "points": 20
-        },
-        {
-          "id": "L8-Q04",
-          "prompt": "What is the mass percent of nitrogen in (NH_4)_2SO_4?",
-          "answer": {
-            "type": "numeric",
-            "value": 21.2,
-            "unit": "%",
-            "tolerance": {
-              "type": "absolute",
-              "value": 0.1
-            },
-            "sigFigs": 4,
-            "unitAliases": [
-              "%",
-              "percent"
-            ]
-          },
-          "hints": [
-            "Two ammonium ions give 2 N and 8 H."
-          ],
-          "explanation": "2(14.01) = 28.02 out of 132.14 g/mol, so 21.20%. The sulfate adds mass without adding nitrogen, which drags the percentage down.",
-          "tags": [
-            "percent-composition"
-          ],
-          "expectedSeconds": 125,
-          "points": 15
-        },
-        {
-          "id": "L8-Q05",
-          "prompt": "How many grams of Fe_2O_3 must be reduced to obtain 25.0 g of iron?",
-          "answer": {
-            "type": "numeric",
-            "value": 35.7,
-            "unit": "g",
-            "tolerance": {
-              "type": "relative",
-              "value": 0.02
-            },
-            "sigFigs": 3,
-            "unitAliases": [
-              "g",
-              "gram",
-              "grams"
-            ]
-          },
-          "hints": [
-            "Iron is about 70% of Fe_2O_3 by mass.",
-            "Remember there are 2 Fe atoms per formula unit."
-          ],
-          "explanation": "25.0 / 55.85 = 0.4476 mol Fe. Two Fe per formula unit gives 0.2238 mol Fe_2O_3, then x 159.70 g/mol = 35.7 g.",
-          "tags": [
-            "percent-composition",
-            "reverse"
-          ],
-          "expectedSeconds": 175,
-          "points": 20,
-          "feedback": {
-            "commonErrors": [
-              {
-                "match": {
-                  "type": "numeric",
-                  "value": 71.5,
-                  "tolerance": {
-                    "type": "relative",
-                    "value": 0.02
-                  }
-                },
-                "message": "Each formula unit supplies 2 iron atoms, so divide the moles of Fe by 2.",
-                "label": "subscript-step-skipped"
-              }
-            ]
-          }
-        },
-        {
-          "id": "L8-Q06",
-          "prompt": "How many grams of CuSO_4*5H_2O contain 10.0 g of copper?",
-          "answer": {
-            "type": "numeric",
-            "value": 39.3,
-            "unit": "g",
-            "tolerance": {
-              "type": "relative",
-              "value": 0.02
-            },
-            "sigFigs": 3,
-            "unitAliases": [
-              "g",
-              "gram",
-              "grams"
-            ]
-          },
-          "hints": [
-            "There is only one copper per formula unit, so moles of Cu equals moles of compound.",
-            "Do not forget the five waters when you build the molar mass."
-          ],
-          "explanation": "10.0 / 63.55 = 0.1574 mol Cu, which equals 0.1574 mol of the hydrate since there is 1 Cu per formula unit. Then x 249.69 g/mol = 39.3 g.",
-          "tags": [
-            "percent-composition",
-            "reverse",
-            "hydrates"
-          ],
-          "expectedSeconds": 185,
-          "points": 20,
-          "feedback": {
-            "commonErrors": [
-              {
-                "match": {
-                  "type": "numeric",
-                  "value": 25.1,
-                  "tolerance": {
-                    "type": "relative",
-                    "value": 0.02
-                  }
-                },
-                "message": "You used the anhydrous molar mass. The five waters are part of what you weigh out.",
-                "label": "hydrate-water-ignored"
-              }
-            ]
-          }
-        },
-        {
-          "id": "L8-Q07",
-          "prompt": "Which fertilizer delivers more nitrogen per gram of product?",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "NH_4NO_3",
-              "(NH_4)_2SO_4",
-              "They are identical",
-              "It cannot be determined without the price"
-            ],
-            "correct": [
-              0
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "hints": [
-            "Compare the two percent nitrogen values you calculated earlier."
-          ],
-          "explanation": "NH_4NO_3 is 35.00% N while (NH_4)_2SO_4 is only 21.20% N. Both supply 2 nitrogens, but the heavier sulfate group dilutes the second one.",
-          "tags": [
-            "percent-composition",
-            "application"
-          ],
-          "expectedSeconds": 105,
-          "points": 15
-        },
-        {
-          "id": "L8-Q08",
-          "prompt": "Ammonium nitrate (35.00% N) sells for $0.80/kg and urea (46.65% N) for $1.05/kg. Which is cheaper per kilogram of **delivered nitrogen**?",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "Ammonium nitrate",
-              "Urea",
-              "They cost the same per kg of N",
-              "Ammonium nitrate, because it is cheaper per kilogram of product"
-            ],
-            "correct": [
-              1
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "hints": [
-            "Divide each price by the fraction of nitrogen it delivers.",
-            "The cheaper bag is not automatically the cheaper nitrogen."
-          ],
-          "explanation": "One kg of ammonium nitrate carries 0.3500 kg N, so $0.80 / 0.3500 = $2.29 per kg N. One kg of urea carries 0.4665 kg N, so $1.05 / 0.4665 = $2.25 per kg N. Urea costs more per kilogram of product but less per kilogram of the thing you actually want.",
-          "tags": [
-            "percent-composition",
-            "application"
-          ],
-          "expectedSeconds": 150,
-          "points": 20
-        }
-      ]
-    },
-    {
-      "id": "L9",
-      "title": "Challenge",
-      "requiredCorrect": 4,
-      "drawMode": "random",
-      "raceCount": 3,
-      "questions": [
-        {
-          "id": "L9-Q01",
           "prompt": "What is the mass, in grams, of a single molecule of caffeine, C_8H_10N_4O_2?",
           "answer": {
             "type": "numeric",
@@ -2494,7 +1917,7 @@
           }
         },
         {
-          "id": "L9-Q02",
+          "id": "L8-Q02",
           "prompt": "How many carbon atoms are in a 1.00-carat diamond? One carat is 0.200 g and diamond is pure carbon.",
           "answer": {
             "type": "numeric",
@@ -2519,37 +1942,7 @@
           "points": 20
         },
         {
-          "id": "L9-Q03",
-          "prompt": "Which sample contains more atoms: 10.0 g of helium or 100.0 g of lead?",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "10.0 g of helium",
-              "100.0 g of lead",
-              "They contain equal numbers of atoms",
-              "Lead, because it has the greater mass"
-            ],
-            "correct": [
-              0
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "hints": [
-            "Convert both to moles before comparing.",
-            "Mass and atom count are not the same question."
-          ],
-          "explanation": "Helium: 10.0 / 4.003 = 2.498 mol, giving 1.50 x 10^24 atoms. Lead: 100.0 / 207.2 = 0.4826 mol, giving 2.906 x 10^23 atoms. The helium sample has ten times less mass but about five times more atoms, because each lead atom is roughly fifty times heavier.",
-          "tags": [
-            "avogadro",
-            "challenge",
-            "conceptual"
-          ],
-          "expectedSeconds": 165,
-          "points": 20
-        },
-        {
-          "id": "L9-Q04",
+          "id": "L8-Q03",
           "prompt": "A 0.500 g sample of a pure metal contains 4.61 x 10^21 atoms. Identify the metal by name or symbol.",
           "answer": {
             "type": "text",
@@ -2587,7 +1980,7 @@
           "points": 20
         },
         {
-          "id": "L9-Q05",
+          "id": "L8-Q04",
           "prompt": "A 250. mL glass of water has a density of 1.00 g/mL. How many moles of water does it hold?",
           "answer": {
             "type": "numeric",
@@ -2616,32 +2009,7 @@
           "points": 20
         },
         {
-          "id": "L9-Q06",
-          "prompt": "The same 250. mL glass of water: how many water molecules does it contain?",
-          "answer": {
-            "type": "numeric",
-            "value": 8.36e+24,
-            "unit": "",
-            "tolerance": {
-              "type": "relative",
-              "value": 0.02
-            },
-            "sigFigs": 3
-          },
-          "hints": [
-            "Do not round the moles before multiplying by Avogadro's number."
-          ],
-          "explanation": "250. / 18.02 = 13.873 mol, then x 6.022 x 10^23 = 8.35 x 10^24 molecules. Carry the unrounded 13.873 into the second step; rounding to 13.9 first gives 8.37 x 10^24, which is wrong in the third digit.",
-          "tags": [
-            "avogadro",
-            "challenge",
-            "sig-figs"
-          ],
-          "expectedSeconds": 145,
-          "points": 20
-        },
-        {
-          "id": "L9-Q07",
+          "id": "L8-Q05",
           "prompt": "What is the mass, in grams, of a single molecule of H_2O?",
           "answer": {
             "type": "numeric",
@@ -2686,7 +2054,7 @@
           }
         },
         {
-          "id": "L9-Q08",
+          "id": "L8-Q06",
           "prompt": "A sample of pure gold contains 3.01 x 10^23 atoms. What is its mass in grams?",
           "answer": {
             "type": "numeric",
