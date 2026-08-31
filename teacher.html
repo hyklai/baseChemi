@@ -115,8 +115,8 @@
       <button id="raceBtn" class="primary big full">Start a race</button>
       <button id="endPracticeBtn" class="full danger" style="margin-top:8px">End practice</button>
       <p class="tiny muted" style="margin-top:10px">
-        Ending practice stops students answering and downloads the CSV. Starting a race
-        leaves the practice data in place, and you can still export it afterwards.
+        Ending practice stops students answering. Neither button downloads anything on its
+        own — use Export CSV above whenever you actually want the data.
       </p>
     </div>
   </div>
@@ -127,13 +127,17 @@
   <div class="wrap" style="padding-top:56px; max-width:460px">
     <p class="eyebrow" id="wrapEyebrow">Done</p>
     <h1 style="margin:6px 0 6px" id="wrapTitle">Practice ended</h1>
-    <p class="small muted" style="margin-bottom:18px" id="wrapNote"></p>
+    <p class="small muted" style="margin-bottom:6px" id="wrapNote"></p>
+    <p class="mono small" id="wrapCode" style="margin-bottom:18px"></p>
     <div class="card">
-      <button id="wrapRaceBtn" class="primary big full">Start a race</button>
-      <button id="wrapExportBtn" class="ghost full" style="margin-top:8px">Export the CSV again</button>
+      <button id="wrapExportBtn" class="primary big full">Export CSV</button>
+      <button id="wrapRaceBtn" class="ghost full" style="margin-top:8px">Start a race</button>
       <button id="wrapBackBtn" class="ghost full" style="margin-top:8px">Back to Start a session</button>
     </div>
-    <p class="tiny muted center" style="margin-top:14px">Going back leaves this session in the database. Your students can no longer answer.</p>
+    <p class="tiny muted center" style="margin-top:14px">
+      Nothing is deleted when you go back. To export this session later, open
+      <span class="mono">teacher.html?code=</span> followed by the code above.
+    </p>
   </div>
 </section>
 
