@@ -113,16 +113,45 @@ async function rejoin(active) {
 /* Load and validate a topic                                           */
 /* ------------------------------------------------------------------ */
 
-BUILTIN_TOPICS.forEach((t) => {
-  const o = document.createElement("option");
-  o.value = t.file; o.textContent = t.label;
-  $("builtin").appendChild(o);
-});
+// The topic menu is re-read from config.js with a cache-busting query, which
+// makes it a distinct module URL so neither the browser nor the GitHub Pages
+// CDN can serve a stale copy. Without this, a newly added topic can take ten
+// minutes to appear and needs a hard refresh. If anything about the re-read
+// fails, the statically imported list is used, so the worst case is simply the
+// old behaviour.
+async function freshConfig() {
+  return import(`./config.js?v=${Date.now()}`);
+}
+
+async function loadTopicMenu(loader = freshConfig) {
+  let list = BUILTIN_TOPICS;
+  try {
+    const fresh = await loader();
+    if (Array.isArray(fresh.BUILTIN_TOPICS) && fresh.BUILTIN_TOPICS.length) list = fresh.BUILTIN_TOPICS;
+  } catch (_) { /* keep the statically imported list */ }
+
+  const sel = $("builtin");
+  sel.innerHTML = "";
+  for (const t of list) {
+    if (!t || !t.file) continue;
+    const o = document.createElement("option");
+    o.value = t.file;
+    o.textContent = t.label || t.file;
+    sel.appendChild(o);
+  }
+  if (!sel.children.length) {
+    const o = document.createElement("option");
+    o.textContent = "No topics listed in config.js";
+    sel.appendChild(o);
+  }
+  return list;
+}
+loadTopicMenu();
 
 $("loadBuiltin").addEventListener("click", async () => {
   try {
     const res = await fetch($("builtin").value, { cache: "no-store" });
-    if (!res.ok) throw new Error(`Could not read ${$("builtin").value} (${res.status}).`);
+    if (!res.ok) throw new Error(`Could not read ${$("builtin").value} (${res.status}). Check the file is in the topics folder and that its name matches exactly, including capitals \u2014 GitHub Pages is case-sensitive even though Windows is not.`);
     tryLoad(await res.json());
   } catch (e) { problems([e.message], []); }
 });
