@@ -24,4 +24,5 @@ export const MIN_RESPONSES_TO_SHOW = 5;
 // Loaded on the teacher screen's "Load topic" menu.
 export const BUILTIN_TOPICS = [
   { file: "topics/stoichiometry.json", label: "Stoichiometry & Limiting Reagents" },
+  { file: "topics/mole-ladder.json", label: "8-31-2026" },
 ];
