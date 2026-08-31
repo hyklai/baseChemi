@@ -56,13 +56,21 @@ sub, sup { font-size: .68em; line-height: 0; }
 
 /* ---------- layout ---------- */
 
-.wrap { max-width: 620px; margin: 0 auto; padding: 0 16px 96px; }
+.wrap {
+  max-width: 620px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left));
+  padding-right: max(16px, env(safe-area-inset-right));
+  padding-bottom: calc(96px + env(safe-area-inset-bottom));
+}
 
 .topbar {
   position: sticky; top: 0; z-index: 20;
   display: flex; align-items: center; gap: 10px;
-  padding: 10px 16px; background: rgba(246, 248, 248, .93);
-  backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
+  padding: calc(10px + env(safe-area-inset-top)) max(16px, env(safe-area-inset-right))
+           10px max(16px, env(safe-area-inset-left));
+  background: rgba(246, 248, 248, .93);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
 }
 .topbar .grow { flex: 1; min-width: 0; }
 
@@ -103,10 +111,14 @@ button:focus-visible, input:focus-visible, select:focus-visible {
 .full { width: 100%; }
 .big { padding: 15px 18px; font-size: 1.02rem; }
 
-input[type="text"], input[type="number"], select, textarea {
+input[type="text"], input[type="number"], input[type="email"],
+input[type="password"], input[type="search"], select, textarea {
   font: inherit; width: 100%;
   padding: 12px 13px; border: 1px solid var(--line); border-radius: var(--r);
   background: var(--card); color: var(--ink);
+  /* iOS restyles form controls with its own inset shadow and pill corners
+     unless appearance is cleared. */
+  -webkit-appearance: none; appearance: none;
 }
 input::placeholder { color: var(--ink-3); }
 textarea { min-height: 140px; resize: vertical; }
@@ -188,9 +200,9 @@ textarea { min-height: 140px; resize: vertical; }
 
 body.display {
   background: var(--slate); color: var(--chalk);
-  height: 100vh; overflow: hidden;
+  height: 100vh; height: 100dvh; overflow: hidden;
 }
-.display .wrap { max-width: none; padding: 0; height: 100vh; display: flex; flex-direction: column; }
+.display .wrap { max-width: none; padding: 0; height: 100vh; height: 100dvh; display: flex; flex-direction: column; }
 
 .dhead {
   display: flex; align-items: baseline; gap: 24px;
@@ -299,3 +311,36 @@ body.display {
 .tbl td { padding: 9px 10px 9px 0; border-bottom: 1px solid var(--line-2); vertical-align: top; }
 .tbl td:first-child { max-width: 220px; word-break: break-word; }
 .tbl tr:last-child td { border-bottom: 0; }
+
+
+/* ---------- Safari and touch corrections ---------- */
+
+/* iOS zooms the page whenever a focused field is under 16px and does not
+   reliably zoom back out. Every control is pinned at or above that. */
+input[type="text"], input[type="number"], input[type="email"],
+input[type="password"], input[type="search"], select, textarea {
+  font-size: 16px;
+}
+.answer-input, .blank { font-size: 17px; }
+
+/* appearance:none strips the native select arrow, so draw one back. */
+select {
+  padding-right: 34px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%2359636f' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 13px center;
+}
+
+/* Number spinners crowd the 58px coefficient boxes. */
+input[type="number"] { -moz-appearance: textfield; }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+button, .btn { -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent; }
+
+/* Apple's minimum reliable tap target is 44px. The chemistry keypad was 33. */
+@media (pointer: coarse) {
+  button, .btn { min-height: 44px; }
+  .keypad button { min-height: 44px; min-width: 44px; font-size: 1rem; padding: 10px 12px; }
+  .helplist button, .chip { min-height: 0; }
+}
