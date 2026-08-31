@@ -3,7 +3,7 @@
 // to be served over http: browsers block ES modules on file:// URLs.
 
 import { grade, validateTopic } from "./grade.js";
-import { renderChem, parseFormula, parseEquation, parseQuantity, normalize, repairCaseAll } from "./chem.js";
+import { renderChem, formulaMarkup, parseFormula, parseEquation, parseQuantity, normalize, repairCaseAll } from "./chem.js";
 import { BUILTIN_TOPICS } from "./config.js";
 
 const $ = (id) => document.getElementById(id);
@@ -151,15 +151,17 @@ function previewOf(raw, type) {
       }
     } else if (type === "numeric" || type === "range") {
       const p = parseQuantity(s);
-      if (p.ok) return `reads as <b>${p.value}${p.unit ? " " + renderChem(p.unit) : ""}</b>${p.sig ? ` <span class="tiny">(${p.sig} sig figs${p.ambiguousSig ? ", ambiguous" : ""})</span>` : ""}`;
+      if (p.ok) return `reads as <b>${p.text}${p.unit ? " " + renderChem(p.unit) : ""}</b>${p.sig ? ` <span class="tiny">(${p.sig} sig figs${p.ambiguousSig ? ", ambiguous" : ""})</span>` : ""}`;
     }
   } catch (_) { /* preview must never throw */ }
   return `<span class="tiny">normalized to <b>${escapeHtml(normalize(s))}</b></span>`;
 }
 
+// Built from the string that was parsed, not from the expanded token list.
+// The token list repeats grouped units, which rendered Al2(SO4)3 back to the
+// student as Al2SO4SO4SO4.
 function pretty(p) {
-  let out = p.electron ? "e" : "";
-  if (!p.electron) for (const [el, n] of p.seq) out += el + (n === 1 ? "" : "_" + n);
+  let out = p.electron ? "e" : formulaMarkup(p.body);
   if (p.charge) out += "^" + (Math.abs(p.charge) === 1 ? "" : Math.abs(p.charge)) + (p.charge > 0 ? "+" : "-");
   if (p.phase) out += `(${p.phase})`;
   return out;

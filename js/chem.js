@@ -90,10 +90,22 @@ export function renderChem(text) {
     .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
     .replace(/_\{([^}]*)\}/g, "<sub>$1</sub>")
     .replace(/\^\{([^}]*)\}/g, "<sup>$1</sup>")
-    .replace(/_([A-Za-z0-9+-]+)/g, "<sub>$1</sub>")
-    .replace(/\^([A-Za-z0-9+-]+)/g, "<sup>$1</sup>")
-    .replace(/\s->\s/g, " \u2192 ")
-    .replace(/\s<->\s/g, " \u21CC ");
+    // Chemical subscripts are always numeric. Allowing letters here made
+    // "Na_2SO_4" capture "2SO" and subscript the rest of the formula.
+    .replace(/_(\d+)/g, "<sub>$1</sub>")
+    // Superscripts are a signed number (charges, exponents, mol^-1) or a bare
+    // sign. Anything else needs explicit ^{...} braces.
+    .replace(/\^([+-]?\d+[+-]?|[+-])/g, "<sup>$1</sup>")
+    // Arrows are matched in their escaped form, because ">" became "&gt;"
+    // above and the old rule never fired. Equilibrium first: "<->" holds "->".
+    .replace(/\s*&lt;-+&gt;\s*/g, " \u21CC ")
+    .replace(/\s*-+&gt;\s*/g, " \u2192 ");
+}
+
+// "Al2(SO4)3" -> "Al_2(SO_4)_3". Puts subscript markup back on a bare formula
+// so a parsed reading can be shown to the student with its grouping intact.
+export function formulaMarkup(body) {
+  return String(body || "").replace(/([A-Za-z\)\]])(\d+)/g, "$1_$2");
 }
 
 /* ------------------------------------------------------------------ */
@@ -214,7 +226,7 @@ function parseBody(bodyRaw) {
   if (!s) return { ok: false, error: "empty" };
 
   // Electrons in half-reactions.
-  if (/^e$/i.test(s)) return { ok: true, counts: Object.create(null), seq: [], electron: true };
+  if (/^e$/i.test(s)) return { ok: true, counts: Object.create(null), seq: [], electron: true, body: "e" };
 
   // Hydrates: split on the raised dot, each block may carry a multiplier.
   const blocks = s.split("\u00B7");
@@ -231,7 +243,7 @@ function parseBody(bodyRaw) {
     for (const [el, n] of Object.entries(r.counts)) counts[el] = (counts[el] || 0) + n * mult;
     for (let k = 0; k < mult; k++) seq.push(...r.seq);
   }
-  return { ok: true, counts, seq };
+  return { ok: true, counts, seq, body: s };
 }
 
 export function parseFormula(input, opts = {}) {
@@ -449,7 +461,7 @@ export function parseQuantity(input) {
   if (!isFinite(value)) return { ok: false, error: "not-finite" };
 
   const unitRaw = m[2].trim();
-  return { ok: true, value, unitRaw, unit: canonUnit(unitRaw), ...sigFigs(m[1]) };
+  return { ok: true, value, text: m[1], unitRaw, unit: canonUnit(unitRaw), ...sigFigs(m[1]) };
 }
 
 export function canonUnit(raw) {

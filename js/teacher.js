@@ -1,7 +1,7 @@
 import { validateTopic } from "./grade.js";
 import {
   watchAuth, isTeacher, signInTeacher, signOutTeacher, resetTeacherPassword,
-  createSession, getActiveSession, forgetActiveSession, getTopic,
+  createSession, getActiveSession, forgetActiveSession, getTopic, endPractice,
   watchStudents, watchAgg, watchHelps, watchRace,
   clearHand, exportCsv, downloadCsv, startRace, endRace,
   struggleScore, readyToShow, topError, errorName,
@@ -13,6 +13,7 @@ const show = (id, on) => $(id).classList.toggle("hidden", !on);
 
 let uid, code, topic;
 let students = {}, agg = {};
+let unsubs = [];   // live listeners, detached when returning to setup
 
 /* ------------------------------------------------------------------ */
 /* Sign in                                                             */
@@ -170,9 +171,16 @@ function goLive() {
   $("liveTitle").textContent = topic.topic.title;
   history.replaceState(null, "", `?code=${code}`);
 
-  watchStudents(code, (s) => { students = s; paintStudents(); });
-  watchAgg(code, (a) => { agg = a; paintHard(); });
-  watchHelps(code, paintHelps);
+  unsubs.push(
+    watchStudents(code, (s) => { students = s; paintStudents(); }),
+    watchAgg(code, (a) => { agg = a; paintHard(); }),
+    watchHelps(code, paintHelps),
+  );
+}
+
+function detach() {
+  unsubs.forEach((u) => { try { u(); } catch (_) {} });
+  unsubs = [];
 }
 
 /* ------------------------------------------------------------------ */
@@ -252,16 +260,68 @@ async function doExport() {
   downloadCsv(csv, `${code}-${stamp}.csv`);
 }
 
-$("raceBtn").addEventListener("click", () => {
-  show("live", false); show("raceSetup", true);
+$("endPracticeBtn").addEventListener("click", async () => {
+  if (!confirm("End practice? Students will not be able to answer any more, and the CSV downloads now.")) return;
+  const btn = $("endPracticeBtn");
+  btn.disabled = true; btn.textContent = "Ending\u2026";
+  try {
+    await doExport();
+    await endPractice(code);
+    showWrapUp("Practice ended", "The CSV has downloaded. You can still start a race with the same questions.", true);
+  } finally {
+    btn.disabled = false; btn.textContent = "End practice";
+  }
+});
+
+function showWrapUp(title, note, offerRace) {
+  $("wrapTitle").textContent = title;
+  $("wrapNote").textContent = note;
+  show("wrapRaceBtn", offerRace);
+  show("live", false); show("raceSetup", false); show("raceLive", false); show("wrapUp", true);
+}
+
+$("wrapExportBtn").addEventListener("click", async () => {
+  $("wrapExportBtn").disabled = true;
+  await doExport();
+  $("wrapExportBtn").disabled = false;
+});
+
+$("wrapBackBtn").addEventListener("click", () => {
+  detach();
+  forgetActiveSession(uid);
+  code = null; students = {}; agg = {};
+  history.replaceState(null, "", location.pathname);
+  ["wrapUp", "live", "raceSetup", "raceLive", "resumeCard"].forEach((id) => show(id, false));
+  show("setup", true);
+  $("startBtn").disabled = false;
+  $("startBtn").textContent = "Start session";
+  $("raceGo").disabled = false;
+  $("raceGo").textContent = "Start the race";
+  $("raceEnd").disabled = false;
+  $("raceEnd").textContent = "End race";
+  window.scrollTo(0, 0);
+});
+
+$("wrapRaceBtn").addEventListener("click", openRaceSetup);
+$("raceBtn").addEventListener("click", openRaceSetup);
+
+let cameFromWrapUp = false;
+
+function openRaceSetup() {
+  cameFromWrapUp = !$("wrapUp").classList.contains("hidden");
+  show("live", false); show("wrapUp", false); show("raceSetup", true);
   $("raceCounts").innerHTML = topic.levels.map((l, i) => `
     <div class="levelrow" style="grid-template-columns:1fr 80px">
       <span class="small"><strong class="mono tiny">${l.id}</strong> ${l.title || ""}</span>
       <input type="number" min="0" max="${l.questions.length}" value="${Math.min(l.raceCount || 2, l.questions.length)}" data-level="${i}">
     </div>`).join("");
-});
+}
 
-$("raceCancel").addEventListener("click", () => { show("raceSetup", false); show("live", true); });
+$("raceCancel").addEventListener("click", () => {
+  show("raceSetup", false);
+  // Back to whichever screen sent us here.
+  show(cameFromWrapUp ? "wrapUp" : "live", true);
+});
 
 $("raceGo").addEventListener("click", async () => {
   const picks = [];
@@ -277,12 +337,11 @@ $("raceGo").addEventListener("click", async () => {
   for (let i = picks.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [picks[i], picks[j]] = [picks[j], picks[i]]; }
 
   $("raceGo").disabled = true;
-  $("raceGo").textContent = "Exporting\u2026";
-  await doExport();                    // practice data is saved before it stops changing
+  $("raceGo").textContent = "Starting\u2026";
   await startRace(code, picks);
   show("raceSetup", false); show("raceLive", true);
   $("raceStatus").textContent = `${picks.length} questions in play`;
-  watchRace(code, paintBoard);
+  unsubs.push(watchRace(code, paintBoard));
 });
 
 function paintBoard(r) {
@@ -299,8 +358,11 @@ function paintBoard(r) {
 }
 
 $("raceEnd").addEventListener("click", async () => {
-  await endRace(code);
-  await doExport();
-  $("raceEnd").textContent = "Race ended";
+  if (!confirm("End the race and download the results?")) return;
   $("raceEnd").disabled = true;
+  $("raceEnd").textContent = "Ending\u2026";
+  await endRace(code);
+  await endPractice(code);
+  await doExport();
+  showWrapUp("Race finished", "The CSV has downloaded, covering both practice and the race.", false);
 });

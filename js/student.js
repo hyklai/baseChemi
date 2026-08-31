@@ -1,8 +1,8 @@
-import { renderChem, parseFormula, parseEquation, parseQuantity, repairCaseAll } from "./chem.js";
+import { renderChem, formulaMarkup, parseFormula, parseEquation, parseQuantity, repairCaseAll } from "./chem.js";
 import { grade } from "./grade.js";
 import {
   signIn, getSessionMeta, getTopic, joinSession, watchMeta, watchMe, watchRace,
-  recordAttempt, setMyLevel, raiseHand, submitRaceScore,
+  recordAttempt, setMyLevel, raiseHand, submitRaceScore, claimNick, getMyProgress,
 } from "./db.js";
 
 const $ = (id) => document.getElementById(id);
@@ -21,6 +21,12 @@ let race = null, raceIdx = 0, raceScore = 0, raceStarted = false;
 
 const params = new URLSearchParams(location.search);
 if (params.get("code")) $("code").value = params.get("code").toUpperCase();
+// Prefill so rejoining after a reload is one tap.
+try {
+  const last = JSON.parse(localStorage.getItem("chem-arena") || "{}");
+  if (last.nick) $("nick").value = last.nick;
+  if (last.code && !$("code").value) $("code").value = last.code;
+} catch (_) { /* private browsing */ }
 
 $("code").addEventListener("input", (e) => { e.target.value = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, ""); });
 $("joinBtn").addEventListener("click", doJoin);
@@ -42,17 +48,36 @@ async function doJoin() {
     if (!meta) throw new Error("No session with that code. Check the projector and try again.");
     topic = await getTopic(c);
     if (!topic) throw new Error("That session has no questions loaded yet.");
+    const claim = await claimNick(c, uid, n);
+    if (!claim.ok) throw new Error("Another device is already using that nickname in this session. Pick a different one.");
+
     code = c; nick = n;
     await joinSession(code, uid, nick);
+    await restoreProgress();
     // Safari in private browsing throws on any storage write, and this is
     // only a convenience, so a failure must not break the join.
-    try { sessionStorage.setItem("chem-arena", JSON.stringify({ code, nick })); } catch (_) {}
+    try { localStorage.setItem("chem-arena", JSON.stringify({ code, nick })); } catch (_) {}
     startSession();
   } catch (err) {
     $("joinErr").textContent = err.message || "Could not join. Check your connection.";
     $("joinBtn").disabled = false;
     $("joinBtn").textContent = "Join session";
   }
+}
+
+// Rebuilds local state from the student's own stored answers so a reload
+// picks up where they left off instead of starting the level again.
+async function restoreProgress() {
+  const mine = await getMyProgress(code, uid).catch(() => null);
+  if (!mine) return;
+  for (const [qid, row] of Object.entries(mine.progress || {})) {
+    if (row && row.ok) answered.set(qid, true);
+  }
+  const saved = mine.student && typeof mine.student.level === "number" ? mine.student.level : 0;
+  levelIdx = Math.min(Math.max(saved, 0), topic.levels.length - 1);
+  // Recounted from stored answers rather than trusting the running total, so
+  // a rejoin cannot inflate progress toward the next level.
+  correctInLevel = topic.levels[levelIdx].questions.filter((q) => answered.get(q.id)).length;
 }
 
 function startSession() {
@@ -72,6 +97,15 @@ function startSession() {
 }
 
 function onPhase() {
+  if (phase === "ended") {
+    show("practice", false); show("race", false); show("ended", true);
+    const total = [...answered.values()].filter(Boolean).length;
+    $("endedStats").textContent = total
+      ? `You answered ${total} question${total === 1 ? "" : "s"} correctly. Nice work.`
+      : "Thanks for taking part.";
+    return;
+  }
+  show("ended", false);
   if (phase === "race") {
     show("practice", false); show("race", true);
     watchRace(code, onRace);
@@ -295,7 +329,7 @@ function updatePreview(inp, previewId, type) {
   const raw = inp.value.trim();
   if (!raw) { el.innerHTML = ""; return; }
 
-  let text = "", warn = "";
+  let text = "", warn = "", sig = "";
   try {
     if (type === "formula" || type === "set") {
       const p = parseFormula(raw);
@@ -309,12 +343,20 @@ function updatePreview(inp, previewId, type) {
       }
     } else if (type === "numeric" || type === "range") {
       const p = parseQuantity(raw);
-      if (p.ok) text = `${p.value}${p.unit ? " " + p.unit : ""}`;
+      if (p.ok) {
+        text = `${p.text}${p.unit ? " " + p.unit : ""}`;
+        if (type === "numeric") {
+          sig = p.ambiguousSig
+            ? `${p.sig}\u2013${p.sigMax} sig figs (ambiguous \u2014 write it in scientific notation)`
+            : `${p.sig} sig fig${p.sig === 1 ? "" : "s"}`;
+        }
+      }
     }
   } catch (_) { /* preview must never block typing */ }
 
   if (warn) { el.innerHTML = `<span style="color:var(--na)">${renderChem(warn)}</span>`; return; }
-  el.innerHTML = text ? `reads as <b>${renderChem(text)}</b>` : "";
+  if (!text) { el.innerHTML = ""; return; }
+  el.innerHTML = `reads as <b>${renderChem(text)}</b>${sig ? ` <span class="tiny">\u00b7 ${sig}</span>` : ""}`;
 }
 
 // Element symbols are case-sensitive and CO is not Co, so the app never
@@ -328,10 +370,11 @@ function capitalHint(raw) {
   return "";
 }
 
+// Built from the string that was parsed, not from the expanded token list.
+// The token list repeats grouped units, which rendered Al2(SO4)3 back to the
+// student as Al2SO4SO4SO4.
 function pretty(p) {
-  let out = "";
-  for (const [el, n] of p.seq) out += el + (n === 1 ? "" : "_" + n);
-  if (p.electron) out = "e";
+  let out = p.electron ? "e" : formulaMarkup(p.body);
   if (p.charge) out += "^" + (Math.abs(p.charge) === 1 ? "" : Math.abs(p.charge)) + (p.charge > 0 ? "+" : "-");
   if (p.phase) out += `(${p.phase})`;
   return out;

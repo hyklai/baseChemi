@@ -142,9 +142,36 @@ export async function getTopic(code) {
   return snap.exists() ? snap.val() : null;
 }
 
+// Nicknames are claimed in a public index so a student who reloads can take
+// their own name back, while a second device is told the name is in use
+// instead of silently starting a parallel record.
+export const nickKey = (n) => String(n).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40) || "student";
+
+export async function claimNick(code, uid, nick) {
+  const r = ref(db, `${S(code)}/nicks/${nickKey(nick)}`);
+  const snap = await get(r);
+  if (snap.exists() && snap.val() !== uid) return { ok: false };
+  await set(r, uid);
+  return { ok: true, returning: snap.exists() };
+}
+
+// Everything needed to put a returning student back where they were. Both
+// paths are readable by their owner under the security rules.
+export async function getMyProgress(code, uid) {
+  const [st, pr] = await Promise.all([
+    get(ref(db, `${S(code)}/students/${uid}`)),
+    get(ref(db, `${S(code)}/progress/${uid}`)),
+  ]);
+  return { student: st.exists() ? st.val() : null, progress: pr.exists() ? pr.val() : {} };
+}
+
 export async function joinSession(code, uid, nick) {
   const path = `${S(code)}/students/${uid}`;
-  await update(ref(db, path), { nick, level: 0, correct: 0, joinedAt: serverTimestamp() });
+  const existing = await get(ref(db, path));
+  const base = existing.exists()
+    ? { nick, lastSeen: serverTimestamp() }
+    : { nick, level: 0, correct: 0, joinedAt: serverTimestamp() };
+  await update(ref(db, path), base);
   // A name-free presence marker. The projector counts these, so it never needs
   // read access to the students branch.
   await set(ref(db, `${S(code)}/roster/${uid}`), true);
@@ -163,6 +190,7 @@ export const watchHeadcount = (code, cb) =>
   onValue(ref(db, `${S(code)}/roster`), (s) => cb(s.exists() ? Object.keys(s.val()).length : 0));
 
 export const setPhase = (code, phase) => update(ref(db, `${S(code)}/meta`), { phase });
+export const endPractice = (code) => setPhase(code, "ended");
 export const setMyLevel = (code, uid, level, correct) =>
   update(ref(db, `${S(code)}/students/${uid}`), { level, correct });
 
