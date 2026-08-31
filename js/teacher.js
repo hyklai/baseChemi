@@ -1,7 +1,7 @@
 import { validateTopic } from "./grade.js";
 import {
   watchAuth, isTeacher, signInTeacher, signOutTeacher, resetTeacherPassword,
-  createSession, getActiveSession, forgetActiveSession, getTopic, endPractice,
+  createSession, getActiveSession, forgetActiveSession, getTopic, endPractice, getSessionMeta,
   watchStudents, watchAgg, watchHelps, watchRace,
   clearHand, exportCsv, downloadCsv, startRace, endRace,
   struggleScore, readyToShow, topError, errorName,
@@ -13,7 +13,8 @@ const show = (id, on) => $(id).classList.toggle("hidden", !on);
 
 let uid, code, topic;
 let students = {}, agg = {};
-let unsubs = [];   // live listeners, detached when returning to setup
+let unsubs = [];        // live listeners, detached when returning to setup
+let exported = false;   // whether this session's CSV has been taken yet
 
 /* ------------------------------------------------------------------ */
 /* Sign in                                                             */
@@ -71,10 +72,19 @@ $("signOutLive").addEventListener("click", doSignOut);
 /* ------------------------------------------------------------------ */
 
 async function offerResume() {
-  const wanted = new URLSearchParams(location.search).get("code");
+  // A code in the URL reopens any session you own, including one you have
+  // already finished with. This is how you export a session's data after the
+  // fact, so it is not tied to the stored "currently running" pointer.
+  const wanted = (new URLSearchParams(location.search).get("code") || "").trim().toUpperCase();
+  if (wanted) {
+    const meta = await getSessionMeta(wanted).catch(() => null);
+    if (meta && meta.teacherUid === uid) return rejoin({ code: wanted, meta });
+    if (meta) problems([`Session ${wanted} belongs to a different account.`], []);
+    else if (wanted) problems([`No session found with the code ${wanted}.`], []);
+  }
+
   const active = await getActiveSession(uid).catch(() => null);
   if (!active) { show("resumeCard", false); return; }
-  if (wanted && wanted.toUpperCase() === active.code) return rejoin(active);
   $("resumeCode").textContent = active.code;
   $("resumeTitle").textContent = active.meta.title || "";
   show("resumeCard", true);
@@ -84,8 +94,18 @@ async function offerResume() {
 
 async function rejoin(active) {
   topic = await getTopic(active.code);
-  if (!topic) { show("resumeCard", false); return; }
+  if (!topic) { problems([`Session ${active.code} has no questions stored.`], []); return; }
   code = active.code;
+  exported = false;
+  show("resumeCard", false);
+  history.replaceState(null, "", `?code=${code}`);
+
+  // A finished session has no live console to return to, but its data is
+  // still there, so it opens straight on the wrap-up screen.
+  if (active.meta && active.meta.phase === "ended") {
+    showWrapUp("Session closed", `${topic.topic.title}. Practice has ended, but the data is still here.`, true);
+    return;
+  }
   goLive();
 }
 
@@ -258,24 +278,26 @@ async function doExport() {
   const csv = await exportCsv(code);
   const stamp = new Date().toISOString().slice(0, 16).replace(/[:T]/g, "-");
   downloadCsv(csv, `${code}-${stamp}.csv`);
+  exported = true;
 }
 
 $("endPracticeBtn").addEventListener("click", async () => {
-  if (!confirm("End practice? Students will not be able to answer any more, and the CSV downloads now.")) return;
+  if (!confirm("End practice? Students will not be able to answer any more.")) return;
   const btn = $("endPracticeBtn");
   btn.disabled = true; btn.textContent = "Ending\u2026";
   try {
-    await doExport();
     await endPractice(code);
-    showWrapUp("Practice ended", "The CSV has downloaded. You can still start a race with the same questions.", true);
+    showWrapUp("Practice ended", "You can export the data or start a race with the same questions.", true);
   } finally {
     btn.disabled = false; btn.textContent = "End practice";
   }
 });
 
 function showWrapUp(title, note, offerRace) {
+  $("wrapEyebrow").textContent = offerRace ? "Practice" : "Race";
   $("wrapTitle").textContent = title;
   $("wrapNote").textContent = note;
+  $("wrapCode").textContent = code || "";
   show("wrapRaceBtn", offerRace);
   show("live", false); show("raceSetup", false); show("raceLive", false); show("wrapUp", true);
 }
@@ -287,9 +309,12 @@ $("wrapExportBtn").addEventListener("click", async () => {
 });
 
 $("wrapBackBtn").addEventListener("click", () => {
+  // The data survives either way, but it is easy to walk out of a room having
+  // meant to export, so this is mentioned once and only when it applies.
+  if (!exported && !confirm(`You have not exported session ${code}. The data stays in the database and you can reopen it later with teacher.html?code=${code}. Go back now?`)) return;
   detach();
   forgetActiveSession(uid);
-  code = null; students = {}; agg = {};
+  code = null; students = {}; agg = {}; exported = false;
   history.replaceState(null, "", location.pathname);
   ["wrapUp", "live", "raceSetup", "raceLive", "resumeCard"].forEach((id) => show(id, false));
   show("setup", true);
@@ -358,11 +383,10 @@ function paintBoard(r) {
 }
 
 $("raceEnd").addEventListener("click", async () => {
-  if (!confirm("End the race and download the results?")) return;
+  if (!confirm("End the race? Students will stop where they are.")) return;
   $("raceEnd").disabled = true;
   $("raceEnd").textContent = "Ending\u2026";
   await endRace(code);
   await endPractice(code);
-  await doExport();
-  showWrapUp("Race finished", "The CSV has downloaded, covering both practice and the race.", false);
+  showWrapUp("Race finished", "One export covers both practice and the race.", false);
 });
