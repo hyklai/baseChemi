@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f8f8">
+<title>Answer bench</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="wrap" style="max-width:760px; padding-top:36px">
+  <p class="eyebrow">Answer bench &middot; no Firebase, no session</p>
+  <h1 style="margin:6px 0 6px">Test how your questions grade</h1>
+  <p class="small muted" style="margin-bottom:18px">Load a topic file, pick a question, and throw student answers at it. Nothing here touches Firebase.</p>
+
+  <div class="card">
+    <p class="eyebrow">Topic file</p>
+    <select id="builtin" style="margin:8px 0 10px"></select>
+    <div class="row wrap-row" style="margin-bottom:8px">
+      <button id="loadBuiltin" class="ghost">Load selected</button>
+      <label class="btn ghost" style="margin:0">Upload JSON<input id="file" type="file" accept="application/json,.json" hidden></label>
+    </div>
+    <details>
+      <summary class="small muted" style="cursor:pointer">Or paste JSON</summary>
+      <textarea id="paste" style="margin-top:8px" placeholder='{ "schemaVersion": "1.0", "topic": { ... }, "levels": [ ... ] }'></textarea>
+      <button id="loadPaste" class="ghost full" style="margin-top:8px">Validate and load</button>
+    </details>
+    <div id="valid"></div>
+  </div>
+
+  <div id="workbench" class="hidden">
+    <div class="card">
+      <p class="eyebrow">Question</p>
+      <select id="qPick" style="margin:8px 0 14px"></select>
+      <h2 id="qPrompt" style="font-weight:500; line-height:1.4; margin-bottom:12px"></h2>
+      <div id="qSpec" class="small muted"></div>
+    </div>
+
+    <div class="card">
+      <p class="eyebrow">Type one answer</p>
+      <input id="one" class="answer-input" autocomplete="off" autocapitalize="off" spellcheck="false"
+             placeholder="type as a student would" style="margin-top:8px">
+      <div class="preview" id="onePreview"></div>
+      <div id="oneVerdict"></div>
+    </div>
+
+    <div class="card">
+      <p class="eyebrow">Batch check</p>
+      <p class="small muted" style="margin:6px 0 8px">One candidate answer per line. Everything a student might reasonably write should come back accepted.</p>
+      <textarea id="batch" spellcheck="false" style="font-family:'JetBrains Mono',ui-monospace,monospace; font-size:.92rem; min-height:150px"></textarea>
+      <div class="row wrap-row" style="margin-top:10px">
+        <button id="runBatch" class="primary">Run batch</button>
+        <button id="suggest" class="ghost">Fill with likely variants</button>
+        <span class="small muted" id="batchTally"></span>
+      </div>
+      <div id="batchOut"></div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="js/sandbox.js"></script>
+</body>
+</html>
