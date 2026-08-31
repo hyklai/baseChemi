@@ -18,6 +18,10 @@ BUILTIN_TOPICS.forEach((t) => {
 });
 
 $("loadBuiltin").addEventListener("click", async () => {
+  // The offline build inlines the topic files, because fetch() is blocked on
+  // file:// URLs just as module imports are.
+  const inlined = (globalThis.OFFLINE_TOPICS || {})[$("builtin").value];
+  if (inlined) { load(inlined); return; }
   try {
     const res = await fetch($("builtin").value, { cache: "no-store" });
     if (!res.ok) throw new Error(`Could not read ${$("builtin").value} (${res.status}). If you opened this page from a file:// URL, use Upload or Paste instead.`);
@@ -39,7 +43,7 @@ $("loadPaste").addEventListener("click", () => {
 
 function load(data) {
   const v = validateTopic(data);
-  report(v.errors, v.warnings);
+  report(v.errors, v.warnings, true);
   if (!v.ok) { $("workbench").classList.add("hidden"); return; }
   topic = data;
   flat = [];
@@ -50,13 +54,15 @@ function load(data) {
   pick(0);
 }
 
-function report(errors, warnings) {
+function report(errors, warnings, loaded) {
   const block = (title, items, cls) => items.length
     ? `<p class="small ${cls}" style="margin:12px 0 0"><strong>${title}</strong></p><ul class="problems ${cls}">${items.map((e) => `<li>${escapeHtml(e)}</li>`).join("")}</ul>`
     : "";
   const host = $("valid");
   if (!errors.length && !warnings.length) {
-    host.innerHTML = topic === null ? "" : '<p class="small" style="margin:12px 0 0; color:var(--cu)"><strong>File is valid.</strong></p>';
+    host.innerHTML = loaded
+      ? '<p class="small" style="margin:12px 0 0; color:var(--cu)"><strong>File is valid.</strong></p>'
+      : "";
     return;
   }
   host.innerHTML = block(`${errors.length} problem${errors.length === 1 ? "" : "s"} to fix`, errors, "err")
