@@ -1,5 +1,6 @@
 // sandbox.js — an authoring bench for the grading rules. No Firebase import,
-// so this page works from a file:// URL before the project is even set up.
+// so it needs no project setup, no session and no network. It does still need
+// to be served over http: browsers block ES modules on file:// URLs.
 
 import { grade, validateTopic } from "./grade.js";
 import { renderChem, parseFormula, parseEquation, parseQuantity, normalize, repairCaseAll } from "./chem.js";

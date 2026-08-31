@@ -44,7 +44,9 @@ async function doJoin() {
     if (!topic) throw new Error("That session has no questions loaded yet.");
     code = c; nick = n;
     await joinSession(code, uid, nick);
-    sessionStorage.setItem("chem-arena", JSON.stringify({ code, nick }));
+    // Safari in private browsing throws on any storage write, and this is
+    // only a convenience, so a failure must not break the join.
+    try { sessionStorage.setItem("chem-arena", JSON.stringify({ code, nick })); } catch (_) {}
     startSession();
   } catch (err) {
     $("joinErr").textContent = err.message || "Could not join. Check your connection.";

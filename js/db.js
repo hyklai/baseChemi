@@ -337,7 +337,10 @@ export function downloadCsv(text, filename) {
   const a = document.createElement("a");
   a.href = url; a.download = filename;
   document.body.appendChild(a); a.click(); a.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 2000);
+  // iOS hands the blob to its own download flow and can still be reading it
+  // well after the click, so the URL is kept alive far longer than a desktop
+  // browser needs.
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
 }
 
 export { db, ref, set, get, update, onValue };

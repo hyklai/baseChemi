@@ -64,14 +64,29 @@ let audioCtx = null, lastPing = null;
 
 function unlockAudio() {
   try {
-    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const Ctx = window.AudioContext || window.webkitAudioContext;
+    if (!Ctx) return;
+    audioCtx = new Ctx();
+    // iOS does not consider the context unlocked until a buffer has actually
+    // played inside the user gesture, so a silent one-frame buffer is fired
+    // here. resume() alone is not enough on iPhone or iPad.
+    const src = audioCtx.createBufferSource();
+    src.buffer = audioCtx.createBuffer(1, 1, 22050);
+    src.connect(audioCtx.destination);
+    src.start(0);
     if (audioCtx.state === "suspended") audioCtx.resume();
   } catch (_) { audioCtx = null; }
 }
 
+// Some browsers re-suspend an idle context; any later click re-arms it.
+document.addEventListener("click", () => {
+  if (audioCtx && audioCtx.state === "suspended") audioCtx.resume().catch(() => {});
+});
+
 // A two-note bell, synthesized so there is no audio file to host.
 function chime() {
   if (!audioCtx) return;
+  if (audioCtx.state === "suspended") audioCtx.resume().catch(() => {});
   const now = audioCtx.currentTime;
   [880, 1174.7].forEach((freq, i) => {
     const osc = audioCtx.createOscillator();
