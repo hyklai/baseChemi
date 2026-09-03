@@ -2,6 +2,7 @@ import { validateTopic } from "./grade.js";
 import {
   watchAuth, isTeacher, signInTeacher, signOutTeacher, resetTeacherPassword,
   createSession, getActiveSession, forgetActiveSession, getTopic, endPractice, getSessionMeta,
+  listMySessions, deleteSession, deleteAllMySessions,
   watchStudents, watchAgg, watchHelps, watchRace,
   clearHand, exportCsv, downloadCsv, startRace, endRace,
   struggleScore, readyToShow, topError, errorName,
@@ -27,6 +28,7 @@ watchAuth(async (user) => {
   uid = user.uid;
   show("login", false); show("setup", true);
   await offerResume();
+  paintSessions();
 });
 
 $("signInBtn").addEventListener("click", doSignIn);
@@ -194,6 +196,72 @@ function problems(errors, warnings) {
   host.innerHTML = block(`${errors.length} problem${errors.length === 1 ? "" : "s"} to fix`, errors, "err")
     + block(`${warnings.length} thing${warnings.length === 1 ? "" : "s"} to check`, warnings, "muted");
 }
+
+/* ------------------------------------------------------------------ */
+/* Housekeeping                                                        */
+/* ------------------------------------------------------------------ */
+
+async function paintSessions() {
+  const host = $("sessionList");
+  let list = [];
+  try { list = await listMySessions(uid); }
+  catch (_) { host.innerHTML = '<p class="small muted" style="margin:0">Could not read your session list.</p>'; return; }
+
+  if (!list.length) {
+    host.innerHTML = '<p class="small muted" style="margin:0">Nothing stored. Sessions you start from now on are listed here.</p>';
+    return;
+  }
+  host.innerHTML = list.map((s) => `
+    <div class="levelrow" style="grid-template-columns:62px 1fr auto">
+      <span class="mono tiny">${escapeHtml(s.code)}</span>
+      <span class="small">${escapeHtml(s.title || "Untitled")}
+        <span class="tiny muted">${s.createdAt ? new Date(s.createdAt).toLocaleDateString() : ""}</span></span>
+      <button class="ghost" data-del="${escapeHtml(s.code)}" style="padding:5px 11px; font-size:.8rem">Delete</button>
+    </div>`).join("");
+
+  host.querySelectorAll("[data-del]").forEach((b) => {
+    b.addEventListener("click", () => removeSession(b.dataset.del, b));
+  });
+}
+
+async function removeSession(target, btn) {
+  if (!confirm(`Delete session ${target}? Every answer and metric from it goes with it. This cannot be undone.`)) return;
+  if (btn) btn.disabled = true;
+  $("delMsg").textContent = "";
+  try {
+    await deleteSession(target, uid);
+    $("delMsg").style.color = "var(--cu)";
+    $("delMsg").textContent = `Session ${target} deleted.`;
+    await paintSessions();
+  } catch (e) {
+    $("delMsg").style.color = "var(--sr)";
+    $("delMsg").textContent = `Could not delete ${target}. ${e.message || ""} If it was created before this update, delete it from the Firebase console instead.`;
+    if (btn) btn.disabled = false;
+  }
+}
+
+$("delCode").addEventListener("input", (e) => { e.target.value = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, ""); });
+$("delCodeBtn").addEventListener("click", () => {
+  const c = $("delCode").value.trim();
+  if (!c) { $("delMsg").style.color = "var(--sr)"; $("delMsg").textContent = "Enter a session code."; return; }
+  removeSession(c, null).then(() => { $("delCode").value = ""; });
+});
+
+$("delAllBtn").addEventListener("click", async () => {
+  const list = await listMySessions(uid).catch(() => []);
+  if (!list.length) { $("delMsg").textContent = "Nothing to delete."; return; }
+  if (!confirm(`Delete all ${list.length} stored session(s)? Every answer and metric goes with them. This cannot be undone.`)) return;
+  $("delAllBtn").disabled = true;
+  $("delAllBtn").textContent = "Deleting\u2026";
+  const { done, failed } = await deleteAllMySessions(uid);
+  $("delMsg").style.color = failed.length ? "var(--sr)" : "var(--cu)";
+  $("delMsg").textContent = failed.length
+    ? `Deleted ${done}. Could not delete ${failed.join(", ")}.`
+    : `Deleted ${done} session${done === 1 ? "" : "s"}.`;
+  $("delAllBtn").disabled = false;
+  $("delAllBtn").textContent = "Delete every session I own";
+  await paintSessions();
+});
 
 /* ------------------------------------------------------------------ */
 /* Start                                                               */

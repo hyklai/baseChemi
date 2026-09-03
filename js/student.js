@@ -1,5 +1,6 @@
 import { renderChem, formulaMarkup, parseFormula, parseEquation, parseQuantity, repairCaseAll } from "./chem.js";
 import { grade } from "./grade.js";
+import { LOCK_QUESTION_TEXT, BLOCK_ANSWER_PASTE } from "./config.js";
 import {
   signIn, getSessionMeta, getTopic, joinSession, watchMeta, watchMe, watchRace,
   recordAttempt, setMyLevel, raiseHand, submitRaceScore, claimNick, getMyProgress,
@@ -120,6 +121,16 @@ function onPhase() {
 /* ------------------------------------------------------------------ */
 
 const level = () => topic.levels[levelIdx];
+const levelCleared = () =>
+  correctInLevel >= (level().requiredCorrect || 1) && levelIdx < topic.levels.length - 1;
+
+// The banner is the one-shot celebration; the bar is the persistent way up for
+// a student who chose to keep practising and would otherwise be stuck.
+function paintAdvanceUi(celebrate) {
+  const cleared = levelCleared();
+  show("levelUp", cleared && celebrate);
+  show("nextLevelBar", cleared && !celebrate);
+}
 
 // Practice mode serves the whole level pool, shuffled per student, so nobody
 // runs out after hitting the target and no two neighbours see the same order.
@@ -133,7 +144,7 @@ function buildQueue() {
 }
 
 function nextQuestion() {
-  show("levelUp", false);
+  paintAdvanceUi(false);
   current = queue.shift();
   if (!current) { buildQueue(); current = queue.shift(); }
   attemptNo = 0; hintsUsed = 0; startedAt = Date.now();
@@ -194,19 +205,26 @@ function paintLevel() {
   $("levelChip").textContent = level().id;
   $("levelCount").textContent = `${Math.min(correctInLevel, need)}/${need}`;
   $("levelMeter").style.width = `${Math.min(100, (correctInLevel / need) * 100)}%`;
+  if (!$("levelUp").classList.contains("hidden")) return;
+  show("nextLevelBar", levelCleared());
 }
 
 function offerAdvance() {
   $("levelUpText").textContent = `${level().title || level().id} cleared.`;
-  show("levelUp", true);
+  paintAdvanceUi(true);
 }
-$("stayBtn").addEventListener("click", () => show("levelUp", false));
-$("advanceBtn").addEventListener("click", () => {
+
+$("stayBtn").addEventListener("click", () => paintAdvanceUi(false));
+$("advanceBtn").addEventListener("click", advanceLevel);
+$("nextLevelBtn").addEventListener("click", advanceLevel);
+
+function advanceLevel() {
   levelIdx = Math.min(levelIdx + 1, topic.levels.length - 1);
   correctInLevel = 0;
   setMyLevel(code, uid, levelIdx, 0).catch(() => {});
   buildQueue(); nextQuestion(); paintLevel();
-});
+  window.scrollTo(0, 0);
+}
 
 /* ------------------------------------------------------------------ */
 /* Help                                                                */
@@ -222,15 +240,44 @@ $("helpBtn").addEventListener("click", async () => {
 });
 
 /* ------------------------------------------------------------------ */
+/* Question text locking                                               */
+/* ------------------------------------------------------------------ */
+
+// Blocks the ordinary routes out of the question card: drag-select, the
+// right-click menu, the iOS long-press callout, and the copy shortcut. Form
+// fields are exempt so the answer box still works normally.
+function lockQuestionText(el) {
+  if (!LOCK_QUESTION_TEXT || !el || el.dataset.locked) return;
+  el.dataset.locked = "1";
+  el.classList.add("noselect");
+  const isField = (t) => t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA");
+  for (const ev of ["copy", "cut", "contextmenu", "selectstart", "dragstart"]) {
+    el.addEventListener(ev, (e) => { if (!isField(e.target)) e.preventDefault(); });
+  }
+}
+
+["qCard", "raceCard"].forEach((id) => lockQuestionText($(id)));
+
+/* ------------------------------------------------------------------ */
 /* Input widgets                                                       */
 /* ------------------------------------------------------------------ */
 
 // Subscripts are plain digits here (H2O), so the pad only carries the
-// characters a phone keyboard buries: superscript, arrows, the hydrate dot.
+// characters a phone keyboard buries. Each key gets a spoken-word title.
+//
+// The hydrate dot is labelled rather than shown bare: sitting between + and -
+// a lone middot reads as a multiplication sign, and students used it as one.
 const KEYS = [
-  ["x\u207f", "sup"], ["+", "+"], ["\u2212", "-"], ["\u2192", " -> "],
-  ["\u21cc", " <-> "], ["\u00b7", "\u00b7"], ["( )", "()"],
-  ["\u0394", "\u0394"], ["\u00b0", "\u00b0"], ["\u2153", "/"],
+  ["x\u207f", "sup", "superscript, for charges and exponents"],
+  ["+", "+", "plus"],
+  ["\u2212", "-", "minus"],
+  ["\u2192", " -> ", "yields arrow"],
+  ["\u21cc", " <-> ", "equilibrium arrow"],
+  ["( )", "()", "parentheses"],
+  ["\u0394", "\u0394", "delta"],
+  ["\u00b0", "\u00b0", "degree"],
+  ["/", "/", "divided by"],
+  ["\u00b7 hydrate", "\u00b7", "hydrate dot, as in CuSO4\u00b75H2O \u2014 not multiplication"],
 ];
 
 function buildInput(hostId, previewId, q) {
@@ -283,14 +330,17 @@ function buildInput(hostId, previewId, q) {
 
   const pad = document.createElement("div");
   pad.className = "keypad";
-  for (const [label, val] of KEYS) {
+  for (const [label, val, hint] of KEYS) {
     const b = document.createElement("button");
     b.type = "button"; b.textContent = label; b.tabIndex = -1;
+    if (hint) { b.title = hint; b.setAttribute("aria-label", hint); }
+    if (val === "\u00b7") b.classList.add("wide");
     b.addEventListener("click", () => { insert(inp, val); updatePreview(inp, previewId, a.type); });
     pad.appendChild(b);
   }
   host.appendChild(pad);
 
+  if (BLOCK_ANSWER_PASTE) inp.addEventListener("paste", (e) => e.preventDefault());
   inp.addEventListener("input", () => updatePreview(inp, previewId, a.type));
   inp.addEventListener("keydown", (e) => {
     if (e.key === "Enter") { e.preventDefault(); (hostId === "qInput" ? $("checkBtn") : $("rqSubmit")).click(); }
@@ -343,7 +393,9 @@ function updatePreview(inp, previewId, type) {
       }
     } else if (type === "numeric" || type === "range") {
       const p = parseQuantity(raw);
-      if (p.ok) {
+      if (!p.ok && /[\u00b7*]/.test(raw)) {
+        warn = "the dot is the hydrate separator, as in CuSO_4\u00b75H_2O. It does not multiply \u2014 work out the number and type the result.";
+      } else if (p.ok) {
         text = `${p.text}${p.unit ? " " + p.unit : ""}`;
         if (type === "numeric") {
           sig = p.ambiguousSig

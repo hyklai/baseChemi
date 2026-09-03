@@ -119,8 +119,20 @@ function onPing(p) {
 function render() {
   if (!topic) return;
   if (phase === "race") return;   // the race board owns the screen
+  fitDensity(topic.levels.length);
   $("dBody").innerHTML = topic.levels.map(renderLevel).join("");
   renderSticking();
+}
+
+// Past three levels the blocks shrink so a normal topic still fits a projector
+// without scrolling. Beyond about six the body scrolls, which beats clipping.
+function fitDensity(n) {
+  const over = Math.max(0, n - 3);
+  const st = $("dBody").style;
+  st.setProperty("--spectrum-h", `${Math.max(24, 62 - over * 8)}px`);
+  st.setProperty("--dmeter-h", `${Math.max(18, 30 - over * 3)}px`);
+  st.setProperty("--dgap", `${Math.max(8, 20 - over * 3)}px`);
+  st.setProperty("--dname-w", `${Math.max(140, 200 - over * 12)}px`);
 }
 
 function renderLevel(level) {

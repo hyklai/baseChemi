@@ -113,6 +113,11 @@ export async function createSession(topic, uid) {
   // Remembered so a reload, or a phone that locked mid-class, can rejoin
   // instead of stranding a live session with no console.
   await set(ref(db, `teachers/${uid}/activeSession`), code).catch(() => {});
+  // An index of your own sessions, so the console can list and clean them up
+  // later. There is no way to query /sessions by owner without opening it up.
+  await set(ref(db, `teachers/${uid}/sessions/${code}`), {
+    title: topic.topic.title, createdAt: Date.now(),
+  }).catch(() => {});
   return code;
 }
 
@@ -131,6 +136,38 @@ export async function getActiveSession(uid) {
 }
 
 export const forgetActiveSession = (uid) => remove(ref(db, `teachers/${uid}/activeSession`)).catch(() => {});
+
+/* ---------- housekeeping ---------- */
+
+export async function listMySessions(uid) {
+  const snap = await get(ref(db, `teachers/${uid}/sessions`));
+  if (!snap.exists()) return [];
+  return Object.entries(snap.val())
+    .map(([code, v]) => ({ code, ...(v || {}) }))
+    .sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+}
+
+// Removes the questions, every student's answers and the class metrics.
+// Irreversible, so the caller confirms first.
+export async function deleteSession(code, uid) {
+  await remove(ref(db, `${S(code)}`));
+  await remove(ref(db, `teachers/${uid}/sessions/${code}`)).catch(() => {});
+  const active = await get(ref(db, `teachers/${uid}/activeSession`)).catch(() => null);
+  if (active && active.exists() && active.val() === code) {
+    await remove(ref(db, `teachers/${uid}/activeSession`)).catch(() => {});
+  }
+}
+
+export async function deleteAllMySessions(uid) {
+  const list = await listMySessions(uid);
+  const failed = [];
+  let done = 0;
+  for (const s of list) {
+    try { await deleteSession(s.code, uid); done += 1; }
+    catch (_) { failed.push(s.code); }
+  }
+  return { done, failed };
+}
 
 export async function getSessionMeta(code) {
   const snap = await get(ref(db, `${S(code)}/meta`));
