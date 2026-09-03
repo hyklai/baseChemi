@@ -25,4 +25,5 @@ export const MIN_RESPONSES_TO_SHOW = 5;
 export const BUILTIN_TOPICS = [
   { file: "topics/stoichiometry.json", label: "Stoichiometry & Limiting Reagents" },
   { file: "topics/mole-ladder.json", label: "8-31-2026" },
+  { file: "topics/chapter02-03.json", label: "9-03-2026" }
 ];
