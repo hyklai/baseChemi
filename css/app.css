@@ -136,6 +136,8 @@ textarea { min-height: 140px; resize: vertical; }
   border-color: transparent;
 }
 .keypad button:hover { background: #e3e9ec; }
+/* The labelled hydrate key needs room for its word. */
+.keypad button.wide { min-width: 92px; font-size: .78rem; letter-spacing: .01em; }
 
 .preview {
   margin-top: 8px; min-height: 1.3em;
@@ -216,13 +218,22 @@ body.display {
 .dhead .join b { display: block; font-size: clamp(1.8rem, 3.4vw, 3rem); letter-spacing: .08em; color: #fff; }
 .dhead .join span { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--chalk-2); }
 
-.dbody { flex: 1; padding: 24px 34px; overflow: hidden; display: flex; flex-direction: column; gap: 20px; }
+.dbody {
+  flex: 1; padding: 24px 34px; display: flex; flex-direction: column;
+  gap: var(--dgap, 20px);
+  overflow-y: auto; overflow-x: hidden;
+}
+/* A pale scrollbar; the default light one is glaring against the dark panel. */
+.dbody::-webkit-scrollbar { width: 10px; }
+.dbody::-webkit-scrollbar-track { background: transparent; }
+.dbody::-webkit-scrollbar-thumb { background: var(--panel-2); border-radius: 99px; }
+.dbody { scrollbar-width: thin; scrollbar-color: var(--panel-2) transparent; }
 
-.dlevel { display: grid; grid-template-columns: 200px 1fr; gap: 22px; align-items: center; }
+.dlevel { display: grid; grid-template-columns: var(--dname-w, 200px) 1fr; gap: 22px; align-items: center; }
 .dlevel .name { font-size: clamp(.95rem, 1.5vw, 1.3rem); font-weight: 600; }
 .dlevel .name span { display: block; color: var(--chalk-2); font-size: .74em; font-weight: 400; }
 
-.dmeter { height: 30px; background: var(--panel); border-radius: 2px; overflow: hidden; position: relative; }
+.dmeter { height: var(--dmeter-h, 30px); background: var(--panel); border-radius: 2px; overflow: hidden; position: relative; }
 .dmeter > i { display: block; height: 100%; background: var(--btb); transition: width .6s cubic-bezier(.4,0,.2,1); }
 .dmeter > b {
   position: absolute; right: 11px; top: 50%; transform: translateY(-50%);
@@ -231,7 +242,7 @@ body.display {
 
 /* The spectrum strip: one band per question, colour = struggle,
    width = share of attempts. Reads like an absorbance trace from the back row. */
-.spectrum { display: flex; gap: 3px; height: 62px; margin-top: 8px; }
+.spectrum { display: flex; gap: 3px; height: var(--spectrum-h, 62px); margin-top: 8px; }
 .band {
   position: relative; border-radius: 2px; min-width: 10px;
   background: var(--panel-2); transition: background .5s ease, flex-grow .5s ease;
@@ -344,3 +355,40 @@ button, .btn { -webkit-appearance: none; appearance: none; -webkit-tap-highlight
   .keypad button { min-height: 44px; min-width: 44px; font-size: 1rem; padding: 10px 12px; }
   .helplist button, .chip { min-height: 0; }
 }
+
+
+/* ---------- question text locking ---------- */
+
+/* Applied to the question card. Raises the bar on selecting a prompt and
+   pasting it elsewhere. -webkit-touch-callout is the one that matters on
+   iPhone: without it, a long press still offers Copy and Look Up even when
+   user-select is none. */
+.noselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Inputs must be exempt. iOS Safari will not let you type into a field that
+   inherits user-select:none from an ancestor, so this is not optional. */
+.noselect input,
+.noselect textarea,
+.noselect select {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text;
+  -webkit-touch-callout: default;
+}
+
+
+/* ---------- level cleared bar ---------- */
+
+/* Stays put once the target is met, so a student who chose to keep practising
+   can still move up later. The one-shot banner alone left them stranded. */
+#nextLevelBar {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 12px; margin: 12px 0;
+  background: #eafaf3; border: 1px solid #b9e8d5; border-radius: var(--r);
+}
+#nextLevelBar span { flex: 1; }
