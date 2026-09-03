@@ -22,7 +22,7 @@
     {
       "id": "L1",
       "title": "Atomic Bookkeeping",
-      "requiredCorrect": 3,
+      "requiredCorrect": 4,
       "drawMode": "random",
       "raceCount": 3,
       "questions": [
@@ -346,7 +346,7 @@
     {
       "id": "L2",
       "title": "Average Atomic Mass",
-      "requiredCorrect": 3,
+      "requiredCorrect": 2,
       "drawMode": "random",
       "raceCount": 3,
       "questions": [
@@ -393,63 +393,6 @@
         },
         {
           "id": "L2-Q02",
-          "prompt": "Gallium averages 69.723 amu and has two isotopes, Ga-69 (68.926 amu) and Ga-71 (70.925 amu). What is the percent abundance of **Ga-69**?",
-          "answer": {
-            "type": "numeric",
-            "value": 60.13,
-            "unit": "%",
-            "tolerance": {
-              "type": "absolute",
-              "value": 0.1
-            },
-            "sigFigs": 4,
-            "unitAliases": [
-              "%",
-              "percent"
-            ]
-          },
-          "hints": [
-            "Call the Ga-69 fraction x. The Ga-71 fraction is then (1 - x).",
-            "Set up 68.926x + 70.925(1 - x) = 69.723 and solve for x."
-          ],
-          "explanation": "Let x be the fraction of Ga-69. Then 68.926x + 70.925(1 - x) = 69.723, so -1.999x = -1.202 and x = 0.6013, or 60.13%.",
-          "tags": [
-            "average-atomic-mass",
-            "isotopes"
-          ],
-          "expectedSeconds": 210,
-          "points": 20,
-          "feedback": {
-            "commonErrors": [
-              {
-                "match": {
-                  "type": "numeric",
-                  "value": 39.87,
-                  "tolerance": {
-                    "type": "absolute",
-                    "value": 0.1
-                  }
-                },
-                "message": "That is the Ga-71 abundance. The question asks for Ga-69, the lighter isotope.",
-                "label": "wrong-isotope-reported"
-              },
-              {
-                "match": {
-                  "type": "numeric",
-                  "value": 50.0,
-                  "tolerance": {
-                    "type": "absolute",
-                    "value": 0.1
-                  }
-                },
-                "message": "The average sits closer to 69 than to 71, so the two isotopes cannot be equally abundant.",
-                "label": "assumed-equal-abundance"
-              }
-            ]
-          }
-        },
-        {
-          "id": "L2-Q03",
           "prompt": "Element X has two isotopes: X-10 (10.013 amu, 19.9%) and X-11 (11.009 amu, 80.1%). What is its average atomic mass in amu? Enter the number only.",
           "answer": {
             "type": "numeric",
@@ -473,7 +416,7 @@
           "points": 15
         },
         {
-          "id": "L2-Q04",
+          "id": "L2-Q03",
           "prompt": "Silver has two isotopes: Ag-107 (106.905 amu, 51.84%) and Ag-109 (108.905 amu, 48.16%). What is the average atomic mass in amu? Enter the number only.",
           "answer": {
             "type": "numeric",
@@ -498,52 +441,7 @@
           "points": 15
         },
         {
-          "id": "L2-Q05",
-          "prompt": "Chlorine averages 35.453 amu with isotopes Cl-35 (34.969 amu) and Cl-37 (36.966 amu). What is the percent abundance of **Cl-35**?",
-          "answer": {
-            "type": "numeric",
-            "value": 75.76,
-            "unit": "%",
-            "tolerance": {
-              "type": "absolute",
-              "value": 0.1
-            },
-            "sigFigs": 4,
-            "unitAliases": [
-              "%",
-              "percent"
-            ]
-          },
-          "hints": [
-            "Set up the weighted average with x as the Cl-35 fraction.",
-            "The average lies much nearer 35 than 37, so expect x well above 0.5."
-          ],
-          "explanation": "Solving 34.969x + 36.966(1 - x) = 35.453 gives x = 0.7576, or 75.76% Cl-35.",
-          "tags": [
-            "average-atomic-mass",
-            "isotopes"
-          ],
-          "expectedSeconds": 210,
-          "points": 20,
-          "feedback": {
-            "commonErrors": [
-              {
-                "match": {
-                  "type": "numeric",
-                  "value": 24.24,
-                  "tolerance": {
-                    "type": "absolute",
-                    "value": 0.1
-                  }
-                },
-                "message": "That is the Cl-37 abundance. Since 35.453 sits close to 35, the lighter isotope must be the abundant one.",
-                "label": "wrong-isotope-reported"
-              }
-            ]
-          }
-        },
-        {
-          "id": "L2-Q06",
+          "id": "L2-Q04",
           "prompt": "Lithium has two isotopes: Li-6 (6.015 amu, 7.59%) and Li-7 (7.016 amu, 92.41%). What is the average atomic mass in amu? Enter the number only.",
           "answer": {
             "type": "numeric",
@@ -567,7 +465,7 @@
           "points": 15
         },
         {
-          "id": "L2-Q07",
+          "id": "L2-Q05",
           "prompt": "Rubidium has two isotopes: Rb-85 (84.912 amu, 72.17%) and Rb-87 (86.909 amu, 27.83%). What is the average atomic mass in amu? Enter the number only.",
           "answer": {
             "type": "numeric",
@@ -1345,7 +1243,7 @@
     {
       "id": "L6",
       "title": "Atoms Inside a Compound",
-      "requiredCorrect": 3,
+      "requiredCorrect": 1,
       "drawMode": "random",
       "raceCount": 3,
       "questions": [
@@ -1719,7 +1617,7 @@
     {
       "id": "L7",
       "title": "Percent Composition",
-      "requiredCorrect": 3,
+      "requiredCorrect": 1,
       "drawMode": "random",
       "raceCount": 3,
       "questions": [
@@ -1937,9 +1835,9 @@
     {
       "id": "L8",
       "title": "Light & the Electromagnetic Spectrum",
-      "requiredCorrect": 4,
+      "requiredCorrect": 2,
       "drawMode": "random",
-      "raceCount": 3,
+      "raceCount": 2,
       "questions": [
         {
           "id": "L8-Q01",
@@ -2110,7 +2008,7 @@
     {
       "id": "L9",
       "title": "Electron Configuration",
-      "requiredCorrect": 4,
+      "requiredCorrect": 3,
       "drawMode": "random",
       "raceCount": 3,
       "questions": [
