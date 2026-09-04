@@ -1,6 +1,6 @@
 import { renderChem, formulaMarkup, parseFormula, parseEquation, parseQuantity, repairCaseAll } from "./chem.js";
 import { grade } from "./grade.js";
-import { LOCK_QUESTION_TEXT, BLOCK_ANSWER_PASTE } from "./config.js";
+
 import {
   signIn, getSessionMeta, getTopic, joinSession, watchMeta, watchMe, watchRace,
   recordAttempt, setMyLevel, raiseHand, submitRaceScore, claimNick, getMyProgress,
