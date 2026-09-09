@@ -11,6 +11,28 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 import { firebaseConfig, MIN_RESPONSES_TO_SHOW } from "./config.js";
 
+// An unreplaced placeholder key produces a bare 400 from Google's identity
+// service, which says nothing useful. Catch it here and say what is wrong,
+// on whichever screen the person happens to be looking at.
+const looksUnset = (v) => !v || /PASTE_YOURS|your-project|^0+$|000000000000/.test(String(v));
+export const configIsPlaceholder =
+  looksUnset(firebaseConfig && firebaseConfig.apiKey) ||
+  looksUnset(firebaseConfig && firebaseConfig.projectId);
+
+if (configIsPlaceholder && typeof document !== "undefined") {
+  const warn = () => {
+    const bar = document.createElement("div");
+    bar.textContent =
+      "js/config.js still contains the placeholder Firebase values. Paste your own config into it \u2014 nothing will connect until you do.";
+    bar.style.cssText =
+      "position:fixed;left:0;right:0;top:0;z-index:9999;background:#dd3b4c;color:#fff;" +
+      "padding:12px 16px;font:600 14px/1.45 system-ui,-apple-system,sans-serif";
+    (document.body || document.documentElement).appendChild(bar);
+  };
+  if (document.body) warn();
+  else document.addEventListener("DOMContentLoaded", warn);
+}
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getDatabase(app);
@@ -33,6 +55,9 @@ export const currentUser = () => auth.currentUser;
 export const isTeacher = (u) => !!u && !u.isAnonymous && !!u.email;
 
 export async function signInTeacher(email, password) {
+  if (configIsPlaceholder) {
+    throw new Error("js/config.js still has the placeholder Firebase values. Paste your config into it first.");
+  }
   try {
     const cred = await signInWithEmailAndPassword(auth, email.trim(), password);
     return cred.user;
@@ -65,8 +90,11 @@ function authMessage(code) {
     "auth/too-many-requests": "Too many attempts. Wait a minute and try again.",
     "auth/network-request-failed": "No connection to Firebase. Check the network.",
     "auth/operation-not-allowed": "Email and password sign-in is not enabled in the Firebase console.",
-    "auth/unauthorized-domain": "This domain is not in the Firebase authorized domains list.",
-  }[code] || "Could not sign in. Please try again.";
+    "auth/unauthorized-domain": "This domain is not in the Firebase authorized domains list. Add it under Authentication, Settings, Authorized domains.",
+    "auth/invalid-api-key": "The API key in js/config.js is not valid. Paste the config from your Firebase console.",
+    "auth/api-key-not-valid.-please-pass-a-valid-api-key.": "The API key in js/config.js is not valid. Paste the config from your Firebase console.",
+    "auth/internal-error": "Firebase rejected the request. This is usually a wrong or placeholder API key in js/config.js.",
+  }[code] || `Could not sign in (${code || "no error code"}). If this persists, check js/config.js against your Firebase console.`;
 }
 
 const S = (code) => `sessions/${code}`;
