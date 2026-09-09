@@ -1,0 +1,2127 @@
+{
+  "schemaVersion": "1.0",
+  "topic": {
+    "id": "mole-ladder-ch3",
+    "title": "The Mole Ladder — Chapter 3: Light, Orbitals & Electron Configuration",
+    "course": "General Chemistry I",
+    "author": "",
+    "defaults": {
+      "tolerance": {
+        "type": "relative",
+        "value": 0.01
+      },
+      "sigFigPolicy": "enforce",
+      "unitsRequired": true,
+      "unitConversion": true,
+      "autoCapitalize": "suggest",
+      "hintAfterAttempts": 2,
+      "maxAttempts": 0
+    }
+  },
+  "levels": [
+    {
+      "id": "C3L1",
+      "title": "The Electromagnetic Spectrum",
+      "requiredCorrect": 4,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C3L1-Q01",
+          "prompt": "Which of these types of radiation has the LONGEST wavelength?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Gamma rays",
+              "X-rays",
+              "Ultraviolet",
+              "Microwaves"
+            ],
+            "correct": [
+              3
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Put the whole spectrum in order from gamma rays through to radio waves."
+          ],
+          "explanation": "Wavelength increases across the spectrum in the order gamma, X-ray, ultraviolet, visible, infrared, microwave, radio. Microwaves are the longest of the four listed.",
+          "tags": [
+            "light",
+            "spectrum",
+            "conceptual"
+          ],
+          "expectedSeconds": 60,
+          "points": 10
+        },
+        {
+          "id": "C3L1-Q02",
+          "prompt": "Which colour of visible light carries the MOST energy per photon?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Red",
+              "Orange",
+              "Green",
+              "Violet"
+            ],
+            "correct": [
+              3
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Which end of the visible range has the shortest wavelength?"
+          ],
+          "explanation": "Energy rises as wavelength falls. Violet sits at the short end of the visible range near 400 nm and red at the long end near 700 nm, so violet photons carry the most energy.",
+          "tags": [
+            "light",
+            "spectrum",
+            "conceptual"
+          ],
+          "expectedSeconds": 60,
+          "points": 10
+        },
+        {
+          "id": "C3L1-Q03",
+          "prompt": "As the frequency of light increases, what happens to its wavelength and its energy per photon?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Wavelength decreases, energy increases",
+              "Wavelength increases, energy increases",
+              "Wavelength decreases, energy decreases",
+              "Wavelength increases, energy decreases"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Write down both c = (wavelength)(frequency) and E = h(frequency) before choosing."
+          ],
+          "explanation": "Two relationships are at work. c = (wavelength)(frequency) makes wavelength and frequency inversely related, so wavelength falls. E = h(frequency) makes energy directly proportional to frequency, so energy rises. Wavelength is the one that moves the opposite way.",
+          "tags": [
+            "light",
+            "conceptual"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        },
+        {
+          "id": "C3L1-Q04",
+          "prompt": "Which of these has the HIGHEST frequency?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Radio waves",
+              "Infrared",
+              "Visible light",
+              "Gamma rays"
+            ],
+            "correct": [
+              3
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Highest frequency means shortest wavelength."
+          ],
+          "explanation": "Frequency runs opposite to wavelength, so the shortest-wavelength radiation has the highest frequency. Gamma rays sit at the short-wavelength end of the spectrum.",
+          "tags": [
+            "light",
+            "spectrum",
+            "conceptual"
+          ],
+          "expectedSeconds": 60,
+          "points": 10
+        },
+        {
+          "id": "C3L1-Q05",
+          "prompt": "One photon has a wavelength of 400 nm and another has a wavelength of 700 nm. Which carries more energy?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "The 400 nm photon",
+              "The 700 nm photon",
+              "They carry equal energy",
+              "It depends on the light's intensity"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Energy and wavelength sit on opposite sides of the same fraction."
+          ],
+          "explanation": "E = hc / wavelength, so energy is inversely proportional to wavelength. The shorter 400 nm photon carries more energy. Intensity changes how MANY photons arrive, not how much energy each one has.",
+          "tags": [
+            "light",
+            "photon-energy",
+            "conceptual"
+          ],
+          "expectedSeconds": 70,
+          "points": 15
+        },
+        {
+          "id": "C3L1-Q06",
+          "prompt": "Arrange infrared, ultraviolet and visible light in order of INCREASING energy per photon.",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Infrared, visible, ultraviolet",
+              "Ultraviolet, visible, infrared",
+              "Visible, infrared, ultraviolet",
+              "Infrared, ultraviolet, visible"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Rank them by wavelength first, then flip the order to get energy."
+          ],
+          "explanation": "Infrared has the longest wavelength of the three and so the least energy; ultraviolet has the shortest and the most. Visible light sits between them, which is the same order you would get by ranking them by decreasing wavelength.",
+          "tags": [
+            "light",
+            "spectrum",
+            "conceptual"
+          ],
+          "expectedSeconds": 75,
+          "points": 15
+        },
+        {
+          "id": "C3L1-Q07",
+          "prompt": "Which statement about electromagnetic radiation travelling through a vacuum is TRUE?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "All electromagnetic radiation travels at the same speed",
+              "Gamma rays travel faster than radio waves",
+              "Radio waves travel faster because their wavelength is longer",
+              "Speed depends on the energy of the photon"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "What does the c in c = (wavelength)(frequency) stand for, and does it change?"
+          ],
+          "explanation": "Every form of electromagnetic radiation moves at c = 2.998 x 10^8 m/s in a vacuum. That is exactly why c = (wavelength)(frequency) works as a fixed relationship: with the speed pinned, a longer wavelength forces a lower frequency.",
+          "tags": [
+            "light",
+            "conceptual"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "C3L2",
+      "title": "Wavelength & Frequency",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C3L2-Q01",
+          "prompt": "A red laser emits light with a wavelength of 650. nm. What is its frequency?",
+          "answer": {
+            "type": "numeric",
+            "value": 461000000000000.0,
+            "unit": "Hz",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "Hz",
+              "hertz",
+              "s^-1",
+              "1/s"
+            ]
+          },
+          "hints": [
+            "Rearrange c = (wavelength)(frequency) to solve for frequency.",
+            "Nanometres must become metres first: 1 nm = 10^-9 m."
+          ],
+          "explanation": "Convert first: 650. nm = 6.50 x 10^-7 m. Then frequency = c / wavelength = 2.998 x 10^8 / 6.50 x 10^-7 = 4.61 x 10^14 Hz.",
+          "tags": [
+            "light",
+            "wavelength-frequency"
+          ],
+          "expectedSeconds": 150,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 461000.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.02
+                  }
+                },
+                "message": "You divided by 650 without converting to metres. 650. nm = 6.50 x 10^-7 m.",
+                "label": "no-unit-conversion"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C3L2-Q02",
+          "prompt": "A radio station broadcasts at 98.5 MHz. What is the wavelength of the signal in metres?",
+          "answer": {
+            "type": "numeric",
+            "value": 3.04,
+            "unit": "m",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "m",
+              "metre",
+              "meter",
+              "metres",
+              "meters"
+            ]
+          },
+          "hints": [
+            "Convert megahertz to hertz before dividing.",
+            "Radio waves are long, so expect a few metres."
+          ],
+          "explanation": "1 MHz = 10^6 Hz, so 98.5 MHz = 9.85 x 10^7 Hz. Then wavelength = c / frequency = 2.998 x 10^8 / 9.85 x 10^7 = 3.04 m.",
+          "tags": [
+            "light",
+            "wavelength-frequency"
+          ],
+          "expectedSeconds": 150,
+          "points": 15
+        },
+        {
+          "id": "C3L2-Q03",
+          "prompt": "A green laser pointer emits at 532 nm. What is its frequency?",
+          "answer": {
+            "type": "numeric",
+            "value": 564000000000000.0,
+            "unit": "Hz",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "Hz",
+              "hertz",
+              "s^-1",
+              "1/s"
+            ]
+          },
+          "hints": [
+            "Same route as the red laser: convert, then divide c by the wavelength."
+          ],
+          "explanation": "532 nm = 5.32 x 10^-7 m, so frequency = 2.998 x 10^8 / 5.32 x 10^-7 = 5.64 x 10^14 Hz. Visible light always lands near 10^14 Hz, which is a useful sanity check.",
+          "tags": [
+            "light",
+            "wavelength-frequency"
+          ],
+          "expectedSeconds": 150,
+          "points": 15
+        },
+        {
+          "id": "C3L2-Q04",
+          "prompt": "A microwave oven operates at 2.45 GHz. What is the wavelength in metres?",
+          "answer": {
+            "type": "numeric",
+            "value": 0.122,
+            "unit": "m",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "m",
+              "metre",
+              "meter",
+              "metres",
+              "meters"
+            ]
+          },
+          "hints": [
+            "Gigahertz means 10^9 Hz.",
+            "The answer is less than a metre, so expect a decimal."
+          ],
+          "explanation": "1 GHz = 10^9 Hz, so 2.45 GHz = 2.45 x 10^9 Hz. Then wavelength = 2.998 x 10^8 / 2.45 x 10^9 = 0.122 m, about 12 cm, which is why a microwave cavity is the size it is.",
+          "tags": [
+            "light",
+            "wavelength-frequency"
+          ],
+          "expectedSeconds": 155,
+          "points": 15
+        },
+        {
+          "id": "C3L2-Q05",
+          "prompt": "An Nd:YAG laser emits infrared light at 1060 nm. What is its frequency?",
+          "answer": {
+            "type": "numeric",
+            "value": 283000000000000.0,
+            "unit": "Hz",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "Hz",
+              "hertz",
+              "s^-1",
+              "1/s"
+            ]
+          },
+          "hints": [
+            "The wavelength is longer than visible light, so the frequency must come out lower."
+          ],
+          "explanation": "1060 nm = 1.060 x 10^-6 m, so frequency = 2.998 x 10^8 / 1.060 x 10^-6 = 2.83 x 10^14 Hz. This is lower than visible light's frequency, as infrared should be.",
+          "tags": [
+            "light",
+            "wavelength-frequency"
+          ],
+          "expectedSeconds": 155,
+          "points": 15
+        },
+        {
+          "id": "C3L2-Q06",
+          "prompt": "Light has a frequency of 7.50 x 10^14 Hz. What is its wavelength in nanometres?",
+          "answer": {
+            "type": "numeric",
+            "value": 400.0,
+            "unit": "nm",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "nm",
+              "nanometre",
+              "nanometer",
+              "nanometres",
+              "nanometers"
+            ]
+          },
+          "hints": [
+            "Divide c by the frequency to get metres, then convert to nanometres.",
+            "Multiply the answer in metres by 10^9."
+          ],
+          "explanation": "wavelength = c / frequency = 2.998 x 10^8 / 7.50 x 10^14 = 3.998 x 10^-7 m. Multiplying by 10^9 gives 4.00 x 10^2 nm, at the violet end of the visible range.",
+          "tags": [
+            "light",
+            "wavelength-frequency"
+          ],
+          "expectedSeconds": 160,
+          "points": 20
+        },
+        {
+          "id": "C3L2-Q07",
+          "prompt": "X-rays used in crystallography have a wavelength of 0.154 nm. What is their frequency?",
+          "answer": {
+            "type": "numeric",
+            "value": 1.95e+18,
+            "unit": "Hz",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "Hz",
+              "hertz",
+              "s^-1",
+              "1/s"
+            ]
+          },
+          "hints": [
+            "Watch the exponent: 0.154 nm is 1.54 x 10^-10 m, not 1.54 x 10^-9."
+          ],
+          "explanation": "0.154 nm = 1.54 x 10^-10 m, so frequency = 2.998 x 10^8 / 1.54 x 10^-10 = 1.95 x 10^18 Hz. That is roughly ten thousand times the frequency of visible light.",
+          "tags": [
+            "light",
+            "wavelength-frequency"
+          ],
+          "expectedSeconds": 165,
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "C3L3",
+      "title": "Photon Energy",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C3L3-Q01",
+          "prompt": "What is the energy of a single photon of blue light with a wavelength of 450. nm?",
+          "answer": {
+            "type": "numeric",
+            "value": 4.41e-19,
+            "unit": "J",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "J",
+              "joule",
+              "joules"
+            ]
+          },
+          "hints": [
+            "Combine the constants once: hc = 1.986 x 10^-25 J m.",
+            "Convert 450. nm to metres before dividing."
+          ],
+          "explanation": "Energy = hc / wavelength = (6.626 x 10^-34)(2.998 x 10^8) / 4.50 x 10^-7 = 1.986 x 10^-25 / 4.50 x 10^-7 = 4.41 x 10^-19 J. A single photon carries very little energy, so a negative exponent is expected.",
+          "tags": [
+            "light",
+            "photon-energy"
+          ],
+          "expectedSeconds": 165,
+          "points": 15
+        },
+        {
+          "id": "C3L3-Q02",
+          "prompt": "A photon has a frequency of 6.50 x 10^14 Hz. What is its energy?",
+          "answer": {
+            "type": "numeric",
+            "value": 4.31e-19,
+            "unit": "J",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "J",
+              "joule",
+              "joules"
+            ]
+          },
+          "hints": [
+            "A single multiplication: E = h times frequency."
+          ],
+          "explanation": "Energy = h x frequency = (6.626 x 10^-34)(6.50 x 10^14) = 4.31 x 10^-19 J. No wavelength conversion is needed because the frequency was handed to you.",
+          "tags": [
+            "light",
+            "photon-energy"
+          ],
+          "expectedSeconds": 120,
+          "points": 15
+        },
+        {
+          "id": "C3L3-Q03",
+          "prompt": "A photon carries 3.60 x 10^-19 J of energy. What is its wavelength in nanometres?",
+          "answer": {
+            "type": "numeric",
+            "value": 552.0,
+            "unit": "nm",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "nm",
+              "nanometre",
+              "nanometer",
+              "nanometres",
+              "nanometers"
+            ]
+          },
+          "hints": [
+            "Solve E = hc / wavelength for the wavelength.",
+            "You will land near 5.5 x 10^-7 m; convert that to nanometres."
+          ],
+          "explanation": "Rearranging E = hc / wavelength gives wavelength = hc / E = 1.986 x 10^-25 / 3.60 x 10^-19 = 5.518 x 10^-7 m, which is 552 nm, green light.",
+          "tags": [
+            "light",
+            "photon-energy"
+          ],
+          "expectedSeconds": 165,
+          "points": 20
+        },
+        {
+          "id": "C3L3-Q04",
+          "prompt": "Green laser light has a wavelength of 532 nm. What is the energy of one mole of these photons?",
+          "answer": {
+            "type": "numeric",
+            "value": 225.0,
+            "unit": "kJ/mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "kJ/mol",
+              "kJ mol^-1",
+              "kilojoules per mole"
+            ]
+          },
+          "hints": [
+            "Find the energy of one photon first.",
+            "Then multiply by Avogadro's number and divide by 1000 for kilojoules."
+          ],
+          "explanation": "One photon carries hc / wavelength = 1.986 x 10^-25 / 5.32 x 10^-7 = 3.734 x 10^-19 J. A mole of them carries 3.734 x 10^-19 x 6.022 x 10^23 = 2.248 x 10^5 J/mol, which is 225 kJ/mol.",
+          "tags": [
+            "light",
+            "photon-energy",
+            "avogadro"
+          ],
+          "expectedSeconds": 200,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 225000.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.02
+                  }
+                },
+                "message": "That is the answer in J/mol. The question asks for kJ/mol, so divide by 1000.",
+                "label": "wrong-energy-unit"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C3L3-Q05",
+          "prompt": "Germicidal lamps emit ultraviolet light at 254 nm. What is the energy of one such photon?",
+          "answer": {
+            "type": "numeric",
+            "value": 7.82e-19,
+            "unit": "J",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "J",
+              "joule",
+              "joules"
+            ]
+          },
+          "hints": [
+            "Shorter wavelength than visible means the answer should be bigger than 4 x 10^-19 J."
+          ],
+          "explanation": "Energy = 1.986 x 10^-25 / 2.54 x 10^-7 = 7.82 x 10^-19 J. This is larger than a visible photon's energy, which is why UV can damage DNA and visible light cannot.",
+          "tags": [
+            "light",
+            "photon-energy"
+          ],
+          "expectedSeconds": 150,
+          "points": 15
+        },
+        {
+          "id": "C3L3-Q06",
+          "prompt": "A photon has a frequency of 1.20 x 10^15 Hz. What is its energy?",
+          "answer": {
+            "type": "numeric",
+            "value": 7.95e-19,
+            "unit": "J",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "J",
+              "joule",
+              "joules"
+            ]
+          },
+          "hints": [
+            "Multiply Planck's constant by the frequency."
+          ],
+          "explanation": "Energy = (6.626 x 10^-34)(1.20 x 10^15) = 7.95 x 10^-19 J.",
+          "tags": [
+            "light",
+            "photon-energy"
+          ],
+          "expectedSeconds": 120,
+          "points": 15
+        },
+        {
+          "id": "C3L3-Q07",
+          "prompt": "A photon carries 4.09 x 10^-19 J. What is its frequency?",
+          "answer": {
+            "type": "numeric",
+            "value": 617000000000000.0,
+            "unit": "Hz",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "Hz",
+              "hertz",
+              "s^-1",
+              "1/s"
+            ]
+          },
+          "hints": [
+            "Divide the energy by Planck's constant.",
+            "Dividing a 10^-19 by a 10^-34 gives a large positive exponent."
+          ],
+          "explanation": "Rearranging E = h x frequency gives frequency = E / h = 4.09 x 10^-19 / 6.626 x 10^-34 = 6.17 x 10^14 Hz.",
+          "tags": [
+            "light",
+            "photon-energy"
+          ],
+          "expectedSeconds": 145,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 2.71e-52,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.02
+                  }
+                },
+                "message": "You multiplied by h instead of dividing. Rearrange E = h x frequency to isolate the frequency.",
+                "label": "inverted-conversion-factor"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C3L3-Q08",
+          "prompt": "Red light has a wavelength of 700. nm. What is the energy of one mole of these photons?",
+          "answer": {
+            "type": "numeric",
+            "value": 171.0,
+            "unit": "kJ/mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "kJ/mol",
+              "kJ mol^-1",
+              "kilojoules per mole"
+            ]
+          },
+          "hints": [
+            "Same three steps as the green laser question.",
+            "Red light is lower energy than green, so expect less than 225 kJ/mol."
+          ],
+          "explanation": "One photon carries 1.986 x 10^-25 / 7.00 x 10^-7 = 2.838 x 10^-19 J, so a mole carries 2.838 x 10^-19 x 6.022 x 10^23 = 1.709 x 10^5 J/mol, which is 171 kJ/mol. Compare this with 225 kJ/mol for green light: longer wavelength, less energy.",
+          "tags": [
+            "light",
+            "photon-energy",
+            "avogadro"
+          ],
+          "expectedSeconds": 200,
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "C3L4",
+      "title": "Energy Levels, Sublevels & Orbitals",
+      "requiredCorrect": 4,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C3L4-Q01",
+          "prompt": "How many orbitals are in the 3d sublevel? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 5,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "The letter, not the number, sets how many orbitals there are."
+          ],
+          "explanation": "Every d sublevel holds 5 orbitals, whatever the energy level. The 3 tells you the level, not the orbital count.",
+          "tags": [
+            "orbitals"
+          ],
+          "expectedSeconds": 40,
+          "points": 10
+        },
+        {
+          "id": "C3L4-Q02",
+          "prompt": "How many orbitals are in the n = 3 energy level? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 9,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "List the sublevels in level 3, then add up their orbitals.",
+            "The shortcut is n^2."
+          ],
+          "explanation": "Level 3 holds 3s (1 orbital), 3p (3) and 3d (5), giving 9. In general a level holds n^2 orbitals.",
+          "tags": [
+            "orbitals"
+          ],
+          "expectedSeconds": 60,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 3,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "That is the number of SUBLEVELS in level 3. Each sublevel holds a different number of orbitals.",
+                "label": "counted-sublevels"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C3L4-Q03",
+          "prompt": "What is the maximum number of electrons the n = 4 energy level can hold? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 32,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 2,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Count the orbitals first, then double it.",
+            "The general result is 2n^2."
+          ],
+          "explanation": "Level 4 holds n^2 = 16 orbitals and each takes 2 electrons, so 2n^2 = 32.",
+          "tags": [
+            "orbitals"
+          ],
+          "expectedSeconds": 60,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 16,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "That is the number of ORBITALS in level 4. Each one holds 2 electrons.",
+                "label": "forgot-two-per-orbital"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C3L4-Q04",
+          "prompt": "How many sublevels are in the n = 4 energy level? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 4,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Name them: 4s, 4p, and what comes next?"
+          ],
+          "explanation": "Level 4 contains 4s, 4p, 4d and 4f. The number of sublevels always equals n.",
+          "tags": [
+            "orbitals"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "C3L4-Q05",
+          "prompt": "What is the maximum number of electrons a p sublevel can hold? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 6,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Three orbitals, two electrons each."
+          ],
+          "explanation": "A p sublevel has 3 orbitals at 2 electrons each, so 6.",
+          "tags": [
+            "orbitals"
+          ],
+          "expectedSeconds": 40,
+          "points": 10
+        },
+        {
+          "id": "C3L4-Q06",
+          "prompt": "How many orbitals are in an f sublevel? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 7,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "The pattern goes 1, 3, 5, ..."
+          ],
+          "explanation": "The counts run s = 1, p = 3, d = 5, f = 7, rising by two each time.",
+          "tags": [
+            "orbitals"
+          ],
+          "expectedSeconds": 40,
+          "points": 10
+        },
+        {
+          "id": "C3L4-Q07",
+          "prompt": "How many electrons can the 5f sublevel hold in total? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 14,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 2,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Capacity depends on the letter only."
+          ],
+          "explanation": "An f sublevel has 7 orbitals at 2 electrons each, so 14. The 5 changes the energy, not the capacity.",
+          "tags": [
+            "orbitals"
+          ],
+          "expectedSeconds": 50,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 7,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "That is the number of ORBITALS. Each holds 2 electrons.",
+                "label": "forgot-two-per-orbital"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C3L4-Q08",
+          "prompt": "Which of these sublevels does NOT exist?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "2d",
+              "3d",
+              "4f",
+              "5p"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "How many sublevels does energy level 2 have?"
+          ],
+          "explanation": "A level n contains exactly n sublevels, so level 2 has only 2s and 2p. A d sublevel first appears at n = 3 and an f sublevel at n = 4.",
+          "tags": [
+            "orbitals",
+            "conceptual"
+          ],
+          "expectedSeconds": 70,
+          "points": 15
+        },
+        {
+          "id": "C3L4-Q09",
+          "prompt": "Which sublevel contains orbitals that are spherical?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "s",
+              "p",
+              "d",
+              "f"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Which sublevel holds one orbital, with no direction to point in?"
+          ],
+          "explanation": "An s orbital is a sphere centred on the nucleus. A p orbital is a dumbbell along an axis, and d orbitals are mostly four-lobed.",
+          "tags": [
+            "orbitals",
+            "conceptual"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "C3L5",
+      "title": "Quantum Numbers",
+      "requiredCorrect": 4,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C3L5-Q01",
+          "prompt": "What is the value of the principal quantum number n for an electron in a 3p orbital? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 3,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "It is written directly in the orbital label."
+          ],
+          "explanation": "The number in front of the letter is n, so n = 3.",
+          "tags": [
+            "quantum-numbers"
+          ],
+          "expectedSeconds": 40,
+          "points": 10
+        },
+        {
+          "id": "C3L5-Q02",
+          "prompt": "What is the value of the angular momentum quantum number l for a 3p orbital? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 1,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Translate the letter, not the number."
+          ],
+          "explanation": "The letter fixes l: s = 0, p = 1, d = 2, f = 3. So a p orbital has l = 1.",
+          "tags": [
+            "quantum-numbers"
+          ],
+          "expectedSeconds": 55,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 3,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "You reported n. The letter p sets l, and p corresponds to l = 1.",
+                "label": "reported-n-for-l"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C3L5-Q03",
+          "prompt": "How many values of the magnetic quantum number ml are allowed when l = 2? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 5,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "ml runs from -l up to +l, including zero.",
+            "The count is always 2l + 1."
+          ],
+          "explanation": "ml runs from -l to +l in whole steps, so l = 2 allows -2, -1, 0, +1 and +2. That is 5, which is why a d sublevel has 5 orbitals.",
+          "tags": [
+            "quantum-numbers"
+          ],
+          "expectedSeconds": 70,
+          "points": 15
+        },
+        {
+          "id": "C3L5-Q04",
+          "prompt": "Which sublevel is described by n = 4 and l = 2? Give the sublevel label, such as 3p.",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "4d",
+              "4 d"
+            ],
+            "reject": [
+              "4p",
+              "4f",
+              "4s",
+              "3d"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 0
+            }
+          },
+          "hints": [
+            "Convert l back into a letter: 0, 1, 2, 3 map to s, p, d, f."
+          ],
+          "explanation": "n = 4 gives the energy level and l = 2 corresponds to the letter d, so the sublevel is 4d.",
+          "tags": [
+            "quantum-numbers"
+          ],
+          "expectedSeconds": 65,
+          "points": 15
+        },
+        {
+          "id": "C3L5-Q05",
+          "prompt": "What is the largest value of l allowed when n = 3? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 2,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "l is capped at n - 1."
+          ],
+          "explanation": "l runs from 0 up to n - 1, so the largest is 2. That is the d sublevel, which is why 3d exists but 3f does not.",
+          "tags": [
+            "quantum-numbers"
+          ],
+          "expectedSeconds": 60,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 3,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "l can never reach n. Its maximum is n - 1.",
+                "label": "l-equals-n"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C3L5-Q06",
+          "prompt": "How many electrons in a single atom can have n = 2? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 8,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Count the orbitals with n = 2, then allow 2 electrons in each."
+          ],
+          "explanation": "Level 2 contains 2s and 2p, which is 1 + 3 = 4 orbitals. At 2 electrons each that is 8, matching 2n^2.",
+          "tags": [
+            "quantum-numbers",
+            "orbitals"
+          ],
+          "expectedSeconds": 75,
+          "points": 15
+        },
+        {
+          "id": "C3L5-Q07",
+          "prompt": "How many electrons can occupy a single orbital? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 2,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Think about the two possible values of the spin quantum number."
+          ],
+          "explanation": "Two, with opposite spins, ms = +1/2 and ms = -1/2. This is the Pauli exclusion principle: no two electrons in an atom share all four quantum numbers.",
+          "tags": [
+            "quantum-numbers"
+          ],
+          "expectedSeconds": 35,
+          "points": 10
+        },
+        {
+          "id": "C3L5-Q08",
+          "prompt": "Which set of quantum numbers is NOT allowed?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "n = 2, l = 1, ml = -1",
+              "n = 3, l = 3, ml = 0",
+              "n = 4, l = 0, ml = 0",
+              "n = 3, l = 2, ml = +2"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Check each set against two rules: l reaches at most n - 1, and ml runs from -l to +l."
+          ],
+          "explanation": "l can be no larger than n - 1, so n = 3 permits only l = 0, 1 or 2. l = 3 is impossible there. The other three satisfy both l <= n - 1 and -l <= ml <= +l.",
+          "tags": [
+            "quantum-numbers",
+            "conceptual"
+          ],
+          "expectedSeconds": 100,
+          "points": 20
+        },
+        {
+          "id": "C3L5-Q09",
+          "prompt": "Which quantum number determines the SHAPE of an orbital?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "n, the principal quantum number",
+              "l, the angular momentum quantum number",
+              "ml, the magnetic quantum number",
+              "ms, the spin quantum number"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Which quantum number decides whether a sublevel is s, p, d or f?"
+          ],
+          "explanation": "l sets the shape, which is why it also fixes the letter. n sets size and energy, ml sets orientation in space, and ms is the spin.",
+          "tags": [
+            "quantum-numbers",
+            "conceptual"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "C3L6",
+      "title": "Electron Configuration: Neutral Atoms",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C3L6-Q01",
+          "prompt": "Write the full electron configuration of a neutral calcium atom (Z = 20).",
+          "answer": {
+            "type": "expression",
+            "value": "1s^2 2s^2 2p^6 3s^2 3p^6 4s^2",
+            "mode": "set",
+            "accept": [
+              "[Ar] 4s^2"
+            ]
+          },
+          "hints": [
+            "Follow the filling order and stop when the superscripts total 20.",
+            "After 3p^6 the next sublevel to fill is 4s, not 3d."
+          ],
+          "explanation": "Filling in order gives 1s^2 2s^2 2p^6 3s^2 3p^6 4s^2, and the superscripts total 20. The condensed form [Ar] 4s^2 is also accepted.",
+          "tags": [
+            "electron-configuration"
+          ],
+          "expectedSeconds": 150,
+          "points": 20
+        },
+        {
+          "id": "C3L6-Q02",
+          "prompt": "Write the noble-gas (condensed) electron configuration of a neutral bromine atom (Z = 35).",
+          "answer": {
+            "type": "expression",
+            "value": "[Ar] 4s^2 3d^10 4p^5",
+            "mode": "set",
+            "accept": [
+              "1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^10 4p^5",
+              "[Ar] 3d^10 4s^2 4p^5"
+            ]
+          },
+          "hints": [
+            "Start from the noble gas immediately before bromine.",
+            "After 4s^2 the 3d sublevel fills before 4p."
+          ],
+          "explanation": "Argon covers the first 18 electrons, leaving 17: 4s^2 3d^10 4p^5. Listing 3d before 4s is also accepted, since textbooks differ on filling order versus energy-level order.",
+          "tags": [
+            "electron-configuration"
+          ],
+          "expectedSeconds": 165,
+          "points": 20
+        },
+        {
+          "id": "C3L6-Q03",
+          "prompt": "Which element has the ground-state configuration [Ne] 3s^2 3p^3? Give the name or the symbol.",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "phosphorus",
+              "P",
+              "p",
+              "phosphorous"
+            ],
+            "reject": [
+              "nitrogen",
+              "N",
+              "sulfur",
+              "S"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Add every electron, including those hidden inside [Ne].",
+            "The total electron count is the atomic number."
+          ],
+          "explanation": "Neon covers 10 electrons and the rest add 2 + 3 = 5, giving 15 in total. Element 15 is phosphorus.",
+          "tags": [
+            "electron-configuration"
+          ],
+          "expectedSeconds": 90,
+          "points": 15
+        },
+        {
+          "id": "C3L6-Q04",
+          "prompt": "How many UNPAIRED electrons does a ground-state nitrogen atom (Z = 7) have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 3,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Draw the three 2p orbitals and fill them using Hund's rule.",
+            "Electrons occupy separate orbitals singly before doubling up."
+          ],
+          "explanation": "Nitrogen is 1s^2 2s^2 2p^3. The three 2p electrons spread one to each of the three 2p orbitals before any pairing begins, which is Hund's rule, so all three are unpaired.",
+          "tags": [
+            "electron-configuration",
+            "hunds-rule"
+          ],
+          "expectedSeconds": 90,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 1,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "Hund's rule spreads the three 2p electrons across all three orbitals before any pair up.",
+                "label": "paired-too-early"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C3L6-Q05",
+          "prompt": "Copper (Z = 29) is an exception to the expected filling order. Write its actual ground-state configuration.",
+          "answer": {
+            "type": "expression",
+            "value": "[Ar] 4s^1 3d^10",
+            "mode": "set",
+            "accept": [
+              "1s^2 2s^2 2p^6 3s^2 3p^6 4s^1 3d^10",
+              "[Ar] 3d^10 4s^1"
+            ]
+          },
+          "hints": [
+            "The expected answer would be [Ar] 4s^2 3d^9. Move one electron to complete the d sublevel."
+          ],
+          "explanation": "The predicted configuration is [Ar] 4s^2 3d^9, but a filled d sublevel is more stable than a filled s, so one 4s electron shifts across to give [Ar] 4s^1 3d^10.",
+          "tags": [
+            "electron-configuration",
+            "exceptions"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C3L6-Q06",
+          "prompt": "Chromium (Z = 24) is the other common exception. Write its actual ground-state configuration.",
+          "answer": {
+            "type": "expression",
+            "value": "[Ar] 4s^1 3d^5",
+            "mode": "set",
+            "accept": [
+              "1s^2 2s^2 2p^6 3s^2 3p^6 4s^1 3d^5",
+              "[Ar] 3d^5 4s^1"
+            ]
+          },
+          "hints": [
+            "The expected answer would be [Ar] 4s^2 3d^4. What would make the d sublevel half full?"
+          ],
+          "explanation": "The predicted configuration is [Ar] 4s^2 3d^4, but a HALF-filled d sublevel is also unusually stable, so one 4s electron moves across to give [Ar] 4s^1 3d^5. Copper does the same thing for a completely filled d.",
+          "tags": [
+            "electron-configuration",
+            "exceptions"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C3L6-Q07",
+          "prompt": "Write the noble-gas (condensed) electron configuration of a neutral sulfur atom (Z = 16).",
+          "answer": {
+            "type": "expression",
+            "value": "[Ne] 3s^2 3p^4",
+            "mode": "set",
+            "accept": [
+              "1s^2 2s^2 2p^6 3s^2 3p^4"
+            ]
+          },
+          "hints": [
+            "Which noble gas comes immediately before sulfur?"
+          ],
+          "explanation": "Neon covers 10 electrons, leaving 6 more: 3s^2 3p^4. The superscripts total 16.",
+          "tags": [
+            "electron-configuration"
+          ],
+          "expectedSeconds": 120,
+          "points": 15
+        },
+        {
+          "id": "C3L6-Q08",
+          "prompt": "Write the noble-gas (condensed) electron configuration of a neutral iron atom (Z = 26).",
+          "answer": {
+            "type": "expression",
+            "value": "[Ar] 4s^2 3d^6",
+            "mode": "set",
+            "accept": [
+              "1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^6",
+              "[Ar] 3d^6 4s^2"
+            ]
+          },
+          "hints": [
+            "4s fills before 3d.",
+            "Iron is not one of the exceptions; fill normally."
+          ],
+          "explanation": "Argon covers 18, leaving 8 more: 4s^2 3d^6. Iron is NOT an exception, so the expected filling order holds here.",
+          "tags": [
+            "electron-configuration"
+          ],
+          "expectedSeconds": 130,
+          "points": 20
+        },
+        {
+          "id": "C3L6-Q09",
+          "prompt": "How many UNPAIRED electrons does a ground-state oxygen atom (Z = 8) have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 2,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Place all four 2p electrons one orbital at a time before pairing any of them.",
+            "Only the fourth electron is forced to pair."
+          ],
+          "explanation": "Oxygen is 1s^2 2s^2 2p^4. The first three 2p electrons take one orbital each, then the fourth pairs up with one of them. That leaves one orbital doubly occupied and two singly occupied, so 2 electrons are unpaired.",
+          "tags": [
+            "electron-configuration",
+            "hunds-rule"
+          ],
+          "expectedSeconds": 95,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 4,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "All four 2p electrons are not unpaired. Once each orbital holds one, the fourth must pair up.",
+                "label": "counted-all-p-electrons"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "C3L7",
+      "title": "Valence Electrons & the Octet Rule",
+      "requiredCorrect": 4,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C3L7-Q01",
+          "prompt": "How many valence electrons does a neutral sulfur atom (Z = 16) have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 6,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Write the configuration, then count only the electrons in the highest n."
+          ],
+          "explanation": "Sulfur is [Ne] 3s^2 3p^4. Valence electrons are those in the outermost level, n = 3, giving 2 + 4 = 6. This matches its group number.",
+          "tags": [
+            "valence",
+            "octet"
+          ],
+          "expectedSeconds": 70,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 16,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "That is the total electron count. Valence electrons are only those in the outermost level.",
+                "label": "counted-all-electrons"
+              },
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 4,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "You counted only the 3p electrons. The 3s pair is in the same level and counts too.",
+                "label": "omitted-s-electrons"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C3L7-Q02",
+          "prompt": "How many valence electrons does a neutral aluminium atom (Z = 13) have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 3,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Count only the electrons outside the [Ne] core."
+          ],
+          "explanation": "Aluminium is [Ne] 3s^2 3p^1, so the outermost level holds 2 + 1 = 3 electrons. This is why aluminium forms Al^3+.",
+          "tags": [
+            "valence",
+            "octet"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        },
+        {
+          "id": "C3L7-Q03",
+          "prompt": "What charge does a strontium ion carry? Enter a signed number, such as -2 or 3.",
+          "answer": {
+            "type": "numeric",
+            "value": 2,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Which group is strontium in, and how many electrons must it shed to empty its outer level?"
+          ],
+          "explanation": "Strontium is in group 2, so it loses its two valence electrons to reach a noble-gas configuration, forming Sr^2+.",
+          "tags": [
+            "ions",
+            "octet"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "C3L7-Q04",
+          "prompt": "Write the formula, including the charge, of the ion that nitrogen forms.",
+          "answer": {
+            "type": "formula",
+            "value": "N",
+            "match": "composition",
+            "charge": -3,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Count nitrogen's valence electrons, then decide whether gaining or losing reaches eight faster."
+          ],
+          "explanation": "Nitrogen has 5 valence electrons and needs 3 more to complete its octet, so it gains three and becomes N^3-.",
+          "tags": [
+            "ions",
+            "octet"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        },
+        {
+          "id": "C3L7-Q05",
+          "prompt": "How many valence electrons does a neutral chlorine atom (Z = 17) have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 7,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Count the electrons outside the [Ne] core."
+          ],
+          "explanation": "Chlorine is [Ne] 3s^2 3p^5, so the outermost level holds 2 + 5 = 7. One short of an octet, which is why chlorine so readily forms Cl^-.",
+          "tags": [
+            "valence",
+            "octet"
+          ],
+          "expectedSeconds": 65,
+          "points": 15
+        },
+        {
+          "id": "C3L7-Q06",
+          "prompt": "What charge does an aluminium ion carry? Enter a signed number, such as -2 or 3.",
+          "answer": {
+            "type": "numeric",
+            "value": 3,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Is it faster for aluminium to lose 3 electrons or gain 5?"
+          ],
+          "explanation": "Aluminium has 3 valence electrons. Losing all three empties its outer level and leaves the neon configuration, giving Al^3+.",
+          "tags": [
+            "ions",
+            "octet"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "C3L7-Q07",
+          "prompt": "Why are the noble gases so unreactive?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Their outermost energy level is already full",
+              "They have no electrons in their outer level",
+              "Their nuclei are unusually heavy",
+              "They exist only as single atoms rather than molecules"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "What is special about the outer level of a noble gas?"
+          ],
+          "explanation": "A noble gas already has a full outer level, eight electrons for all but helium. There is nothing to gain by trading electrons, which is exactly the configuration every other atom is reaching for when it forms an ion or a bond.",
+          "tags": [
+            "octet",
+            "conceptual"
+          ],
+          "expectedSeconds": 70,
+          "points": 15
+        },
+        {
+          "id": "C3L7-Q08",
+          "prompt": "Which element commonly forms a stable compound with FEWER than eight electrons around it?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Boron",
+              "Nitrogen",
+              "Oxygen",
+              "Fluorine"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Think about BF_3 and count the electrons around the central atom."
+          ],
+          "explanation": "Boron is a well-known octet exception. In BF_3 the boron atom is surrounded by only six electrons and the compound is still stable, which is why the octet rule is a strong guideline rather than a law.",
+          "tags": [
+            "octet",
+            "exceptions",
+            "conceptual"
+          ],
+          "expectedSeconds": 90,
+          "points": 20
+        },
+        {
+          "id": "C3L7-Q09",
+          "prompt": "How many electrons must a phosphorus atom GAIN to complete its octet? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 3,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Count its valence electrons first, then work out the shortfall from eight."
+          ],
+          "explanation": "Phosphorus is [Ne] 3s^2 3p^3, so it has 5 valence electrons and needs 3 more to reach 8. That is why it forms P^3-.",
+          "tags": [
+            "valence",
+            "octet"
+          ],
+          "expectedSeconds": 75,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "C3L8",
+      "title": "Ions & Isoelectronic Series",
+      "requiredCorrect": 4,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C3L8-Q01",
+          "prompt": "Write the electron configuration of the Fe^2+ ion (iron is Z = 26).",
+          "answer": {
+            "type": "expression",
+            "value": "[Ar] 3d^6",
+            "mode": "set",
+            "accept": [
+              "1s^2 2s^2 2p^6 3s^2 3p^6 3d^6"
+            ]
+          },
+          "hints": [
+            "Write the neutral atom first, then remove two electrons.",
+            "For transition metals the outermost s electrons go first."
+          ],
+          "explanation": "Neutral iron is [Ar] 4s^2 3d^6. When a transition metal is ionised the 4s electrons leave FIRST, even though 4s filled first, so removing two gives [Ar] 3d^6 rather than [Ar] 4s^2 3d^4.",
+          "tags": [
+            "electron-configuration",
+            "ions"
+          ],
+          "expectedSeconds": 165,
+          "points": 20
+        },
+        {
+          "id": "C3L8-Q02",
+          "prompt": "Write the full electron configuration of the O^2- ion (oxygen is Z = 8).",
+          "answer": {
+            "type": "expression",
+            "value": "1s^2 2s^2 2p^6",
+            "mode": "set",
+            "accept": [
+              "[Ne]",
+              "[He] 2s^2 2p^6"
+            ]
+          },
+          "hints": [
+            "Start from neutral oxygen, then ADD two electrons because the charge is negative."
+          ],
+          "explanation": "Neutral oxygen is 1s^2 2s^2 2p^4. Gaining two electrons fills the 2p sublevel, giving 1s^2 2s^2 2p^6, the same configuration as neon. Reaching a noble-gas configuration is exactly what the octet rule describes.",
+          "tags": [
+            "electron-configuration",
+            "ions",
+            "octet"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        },
+        {
+          "id": "C3L8-Q03",
+          "prompt": "Which ion is isoelectronic with neon?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Na^+",
+              "Cl^-",
+              "K^+",
+              "Ca^2+"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Count neon's electrons, then the electrons of each ion."
+          ],
+          "explanation": "Isoelectronic means the same electron count. Neon has 10. Sodium has 11 protons, so Na^+ has 10. Cl^-, K^+ and Ca^2+ all have 18 and match argon instead.",
+          "tags": [
+            "ions",
+            "isoelectronic"
+          ],
+          "expectedSeconds": 80,
+          "points": 15
+        },
+        {
+          "id": "C3L8-Q04",
+          "prompt": "How many electrons does the S^2- ion have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 18,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 2,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "A negative charge means electrons were gained."
+          ],
+          "explanation": "Sulfur has 16 electrons when neutral. A 2- charge means two were gained, giving 18, the same as argon.",
+          "tags": [
+            "ions",
+            "isoelectronic"
+          ],
+          "expectedSeconds": 60,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 14,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "A 2- charge means the ion GAINED two electrons, so add rather than subtract.",
+                "label": "charge-sign-flipped"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C3L8-Q05",
+          "prompt": "Which noble gas is the Ca^2+ ion isoelectronic with? Give the name or the symbol.",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "argon",
+              "Ar",
+              "ar",
+              "AR"
+            ],
+            "reject": [
+              "neon",
+              "Ne",
+              "krypton",
+              "Kr"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Work out how many electrons Ca^2+ has, then find the noble gas with that count."
+          ],
+          "explanation": "Calcium has 20 electrons when neutral, and losing two leaves 18. Argon also has 18, so the two are isoelectronic.",
+          "tags": [
+            "ions",
+            "isoelectronic"
+          ],
+          "expectedSeconds": 75,
+          "points": 15
+        },
+        {
+          "id": "C3L8-Q06",
+          "prompt": "The ions O^2-, F^-, Na^+ and Mg^2+ all have 10 electrons. Which has the LARGEST radius?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "O^2-",
+              "F^-",
+              "Na^+",
+              "Mg^2+"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "The electron count is identical, so compare the proton counts.",
+            "More protons pulling on the same electrons means a smaller ion."
+          ],
+          "explanation": "In an isoelectronic series every ion holds the same 10 electrons, so what changes is the nuclear charge pulling on them. Oxygen has only 8 protons, the weakest pull of the four, so O^2- is the largest. Mg^2+, with 12 protons, is the smallest.",
+          "tags": [
+            "ions",
+            "isoelectronic",
+            "periodic-trends"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        },
+        {
+          "id": "C3L8-Q07",
+          "prompt": "How many electrons does the Al^3+ ion have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 10,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 2,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "A positive charge means electrons were removed."
+          ],
+          "explanation": "Aluminium has 13 electrons when neutral, and a 3+ charge means three were lost, leaving 10. That matches neon.",
+          "tags": [
+            "ions",
+            "isoelectronic"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "C3L8-Q08",
+          "prompt": "Which of these is isoelectronic with argon?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "K^+",
+              "Br^-",
+              "Na^+",
+              "Mg^2+"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Work out each ion's electron count and compare it with argon's 18."
+          ],
+          "explanation": "Argon has 18 electrons. Potassium has 19, so K^+ has 18 and matches. Br^- has 36, matching krypton, while Na^+ and Mg^2+ both have 10 and match neon.",
+          "tags": [
+            "ions",
+            "isoelectronic"
+          ],
+          "expectedSeconds": 80,
+          "points": 15
+        },
+        {
+          "id": "C3L8-Q09",
+          "prompt": "Arrange Mg^2+, Na^+ and F^- in order of INCREASING radius.",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Mg^2+ < Na^+ < F^-",
+              "F^- < Na^+ < Mg^2+",
+              "Na^+ < Mg^2+ < F^-",
+              "They are all the same size"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Count the protons in each. Fewer protons on the same 10 electrons means a larger ion."
+          ],
+          "explanation": "All three have 10 electrons, so nuclear charge decides size. Magnesium has 12 protons, sodium 11 and fluorine 9. The strongest pull gives the smallest ion, so smallest to largest runs Mg^2+, Na^+, F^-.",
+          "tags": [
+            "ions",
+            "isoelectronic",
+            "periodic-trends"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        }
+      ]
+    }
+  ]
+}
