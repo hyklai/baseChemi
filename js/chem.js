@@ -420,9 +420,14 @@ export function gcdAll(nums) {
 
 const BASE = {
   // mass
-  g: ["mass", 1], kg: ["mass", 1000], mg: ["mass", 1e-3], "\u03BCg": ["mass", 1e-6], ug: ["mass", 1e-6], ng: ["mass", 1e-9], lb: ["mass", 453.592], amu: ["mass", 1.66054e-24], u: ["mass", 1.66054e-24],
+  g: ["mass", 1], kg: ["mass", 1000], mg: ["mass", 1e-3], "\u03BCg": ["mass", 1e-6], ug: ["mass", 1e-6], ng: ["mass", 1e-9], lb: ["mass", 453.592], amu: ["mass", 1.66054e-24],
   // amount
   mol: ["amount", 1], mmol: ["amount", 1e-3], "\u03BCmol": ["amount", 1e-6], kmol: ["amount", 1000],
+  // counting. These interconvert with each other but deliberately NOT with
+  // moles: converting by Avogadro's number would let "1 mol" pass a question
+  // that asked how many atoms, which is the skill being tested.
+  atoms: ["count", 1], molecules: ["count", 1], particles: ["count", 1],
+  ions: ["count", 1], things: ["count", 1],
   // volume
   L: ["volume", 1], mL: ["volume", 1e-3], "\u03BCL": ["volume", 1e-6], dL: ["volume", 0.1], cm3: ["volume", 1e-3], dm3: ["volume", 1], m3: ["volume", 1000],
   // length
@@ -433,8 +438,17 @@ const BASE = {
   Pa: ["pressure", 1], kPa: ["pressure", 1000], atm: ["pressure", 101325], bar: ["pressure", 1e5], torr: ["pressure", 133.322], mmHg: ["pressure", 133.322],
   // time
   s: ["time", 1], min: ["time", 60], h: ["time", 3600], hr: ["time", 3600], ms: ["time", 1e-3],
-  // dimensionless
-  "%": ["ratio", 1], "": ["none", 1],
+  // dimensionless. "1" is the numerator of reciprocal units such as 1/s.
+  "%": ["ratio", 1], "": ["none", 1], "1": ["none", 1],
+};
+
+// Units that are not a single BASE entry over another. Looked up whole, so
+// "Hz" can share a dimension with "1/s" and convert to it.
+const COMPOUND = {
+  Hz: ["none/time", 1],
+  kHz: ["none/time", 1e3],
+  MHz: ["none/time", 1e6],
+  GHz: ["none/time", 1e9],
 };
 
 const UNIT_ALIAS = {
@@ -446,7 +460,21 @@ const UNIT_ALIAS = {
   atmospheres: "atm", atmosphere: "atm", pascals: "Pa", pascal: "Pa",
   molar: "mol/L", M: "mol/L", m: "m", percent: "%", pct: "%",
   angstrom: "\u00C5", angstroms: "\u00C5", "a\u030A": "\u00C5",
-  amus: "amu", daltons: "amu", da: "amu",
+  amus: "amu", daltons: "amu", dalton: "amu", da: "amu", u: "amu",
+  aum: "amu", "atomicmassunit": "amu", "atomicmassunits": "amu",
+
+  // frequency
+  hz: "Hz", hertz: "Hz", hertzes: "Hz",
+  khz: "kHz", kilohertz: "kHz", mhz: "MHz", megahertz: "MHz",
+  ghz: "GHz", gigahertz: "GHz",
+  persecond: "1/s", cyclespersecond: "Hz", cycles: "1/s",
+
+  // counting
+  atom: "atoms", molecule: "molecules", particle: "particles",
+  ion: "ions", thing: "things",
+  formulaunit: "particles", formulaunits: "particles",
+  specie: "particles", species: "particles", entity: "particles", entities: "particles",
+  item: "particles", items: "particles", count: "particles", counts: "particles",
 };
 
 // Parses "0.125 mol", "2.5e-3 M", "74.10 g/mol", "25 °C".
@@ -473,7 +501,10 @@ export function canonUnit(raw) {
   // "g mol^-1" -> "g/mol". Done before whitespace is stripped, so the
   // numerator is not swallowed into the exponent match.
   u = u.replace(/([A-Za-z\u03BC\u00C5]+)\s*\^?\s*-1\b/g, "/$1");
-  u = u.replace(/\s+/g, "").replace(/\/\//g, "/").replace(/^\//, (m, o, str) => (str.indexOf("/") === 0 ? "/" : m));
+  u = u.replace(/\s+/g, "").replace(/\/\//g, "/");
+  // "s^-1" collapses to "/s" above; give it the numerator it needs so it can
+  // be decomposed the same way "1/s" is.
+  if (u.startsWith("/")) u = "1" + u;
   const parts = u.split("/");
   const map = (p) => {
     const trimmed = p.replace(/[.\s]/g, "");
@@ -502,6 +533,7 @@ export function convert(value, from, to) {
     return to === "K" ? k : to === "\u00B0C" ? k - 273.15 : (k - 273.15) * 9 / 5 + 32;
   }
   const dec = (u) => {
+    if (COMPOUND[u]) return { dim: COMPOUND[u][0], factor: COMPOUND[u][1] };
     const [num, den] = u.split("/");
     const n = BASE[num];
     const d = den ? BASE[den] : ["none", 1];
