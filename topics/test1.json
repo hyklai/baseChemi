@@ -1,0 +1,3338 @@
+{
+  "schemaVersion": "1.0",
+  "topic": {
+    "id": "mole-ladder-test1-review",
+    "title": "Test 1 Review — Chapters 1, 2 & 3",
+    "course": "General Chemistry I",
+    "author": "",
+    "defaults": {
+      "tolerance": {
+        "type": "relative",
+        "value": 0.01
+      },
+      "sigFigPolicy": "enforce",
+      "unitsRequired": true,
+      "unitConversion": true,
+      "autoCapitalize": "suggest",
+      "hintAfterAttempts": 2,
+      "maxAttempts": 0
+    }
+  },
+  "levels": [
+    {
+      "id": "T1L1",
+      "title": "Matter & the Scientific Method",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T1L1-Q01",
+          "prompt": "What do we call a tentative, testable explanation proposed BEFORE the experiments are run?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "hypothesis",
+              "a hypothesis"
+            ],
+            "reject": [
+              "theory",
+              "law"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "It is the idea you design the experiment to test."
+          ],
+          "explanation": "A hypothesis is the proposed explanation you set out to test. It comes first and may well be discarded.",
+          "tags": [
+            "scientific-method"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "T1L1-Q02",
+          "prompt": "What do we call a well-tested explanation supported by a large body of evidence?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "theory",
+              "scientific theory",
+              "a theory"
+            ],
+            "reject": [
+              "hypothesis",
+              "law"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "It explains WHY, and it has survived a great deal of testing."
+          ],
+          "explanation": "A theory is an explanation that has survived extensive testing. In everyday speech 'theory' means a guess, but in science it is the opposite: a hypothesis that has earned its place.",
+          "tags": [
+            "scientific-method"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T1L1-Q03",
+          "prompt": "What do we call a statement, often written as an equation, that summarises a natural relationship observed to hold every time?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "law",
+              "a law",
+              "scientific law",
+              "natural law"
+            ],
+            "reject": [
+              "theory",
+              "hypothesis"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 0
+            }
+          },
+          "hints": [
+            "It tells you what happens, not why."
+          ],
+          "explanation": "A law describes WHAT happens, reliably and often mathematically. A theory explains WHY it happens. A law never 'graduates' into a theory; they answer different questions.",
+          "tags": [
+            "scientific-method"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "T1L1-Q04",
+          "prompt": "Is dissolving table salt in water a physical or a chemical change?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "physical",
+              "physical change"
+            ],
+            "reject": [
+              "chemical",
+              "chemical change"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Could you get the original substance back without a reaction?"
+          ],
+          "explanation": "Physical. The salt is dispersed among the water molecules but no new substance forms, and evaporating the water returns the salt unchanged.",
+          "tags": [
+            "matter",
+            "changes"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T1L1-Q05",
+          "prompt": "Is iron rusting a physical or a chemical change?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "chemical",
+              "chemical change"
+            ],
+            "reject": [
+              "physical",
+              "physical change"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Is rust still iron?"
+          ],
+          "explanation": "Chemical. Iron combines with oxygen to make iron(III) oxide, a genuinely new substance with new properties.",
+          "tags": [
+            "matter",
+            "changes"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T1L1-Q06",
+          "prompt": "Is flammability a physical or a chemical property?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "chemical",
+              "chemical property"
+            ],
+            "reject": [
+              "physical",
+              "physical property"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "To test it, do you have to change the substance into something new?"
+          ],
+          "explanation": "Chemical. You cannot measure flammability without actually changing the substance into something else, which is what makes a property chemical rather than physical.",
+          "tags": [
+            "matter",
+            "properties"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "T1L1-Q07",
+          "prompt": "Is air a pure substance or a mixture?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "mixture",
+              "a mixture",
+              "homogeneous mixture"
+            ],
+            "reject": [
+              "pure substance",
+              "compound",
+              "element"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Does air have a fixed chemical formula?"
+          ],
+          "explanation": "A mixture. Air is mostly nitrogen and oxygen with argon and other gases, combined in proportions that vary and are not fixed by any chemical formula.",
+          "tags": [
+            "matter",
+            "classification"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T1L1-Q08",
+          "prompt": "Is salt water a homogeneous or a heterogeneous mixture?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "homogeneous",
+              "homogenous",
+              "homogeneous mixture"
+            ],
+            "reject": [
+              "heterogeneous",
+              "heterogenous"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Can you see separate regions in it?"
+          ],
+          "explanation": "Homogeneous. The composition is uniform throughout, so every sample you draw looks and behaves the same. A homogeneous mixture is also called a solution.",
+          "tags": [
+            "matter",
+            "classification"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "T1L1-Q09",
+          "prompt": "In which state of matter do the particles hold a fixed volume but take the shape of their container?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "liquid",
+              "liquids",
+              "the liquid state"
+            ],
+            "reject": [
+              "solid",
+              "gas",
+              "gaseous"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Fixed volume, but no fixed shape."
+          ],
+          "explanation": "Liquid. The particles stay in contact, which fixes the volume, but they slide past one another, so the shape is whatever the container imposes. A solid fixes both; a gas fixes neither.",
+          "tags": [
+            "matter",
+            "states"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "T1L2",
+      "title": "Significant Figures & Exact Numbers",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T1L2-Q01",
+          "prompt": "How many significant figures are in 0.00450?",
+          "answer": {
+            "type": "numeric",
+            "value": 3,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Leading zeros never count. Trailing zeros count when there is a decimal point."
+          ],
+          "explanation": "Three. Leading zeros only hold the decimal point and never count. The 4 and 5 count, and the trailing zero counts because a decimal point is present.",
+          "tags": [
+            "sig-figs"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "T1L2-Q02",
+          "prompt": "How many significant figures are in 100.0?",
+          "answer": {
+            "type": "numeric",
+            "value": 4,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "What does that final decimal point tell you?"
+          ],
+          "explanation": "Four. The decimal point makes every digit significant, including all three zeros. Written as plain 100 it would be ambiguous.",
+          "tags": [
+            "sig-figs"
+          ],
+          "expectedSeconds": 45,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 1,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "The decimal point matters. With it, all four digits are significant.",
+                "label": "ignored-decimal-point"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L2-Q03",
+          "prompt": "How many significant figures are in 2.030 x 10^3?",
+          "answer": {
+            "type": "numeric",
+            "value": 4,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Count only the digits in front of the power of ten."
+          ],
+          "explanation": "Four. In scientific notation only the mantissa carries significant figures. The captive zero counts and so does the trailing zero after the decimal point.",
+          "tags": [
+            "sig-figs"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T1L2-Q04",
+          "prompt": "How many significant figures are in 0.0300?",
+          "answer": {
+            "type": "numeric",
+            "value": 3,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Leading zeros out, trailing zeros in when a decimal point is shown."
+          ],
+          "explanation": "Three. The two leading zeros do not count; the 3 and the two trailing zeros do, because the decimal point is present.",
+          "tags": [
+            "sig-figs"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "T1L2-Q05",
+          "prompt": "Calculate 4.56 x 1.4 and report the answer with the correct number of significant figures.",
+          "answer": {
+            "type": "numeric",
+            "value": 6.4,
+            "unit": "",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 2,
+            "sigFigPolicy": "enforce"
+          },
+          "hints": [
+            "For multiplication, count significant figures, not decimal places.",
+            "1.4 is the limiting value with two significant figures."
+          ],
+          "explanation": "The raw product is 6.384. In multiplication the answer takes the FEWEST significant figures of the inputs, and 1.4 has only two, so the answer is 6.4.",
+          "tags": [
+            "sig-figs",
+            "calculation"
+          ],
+          "expectedSeconds": 70,
+          "points": 15
+        },
+        {
+          "id": "T1L2-Q06",
+          "prompt": "Calculate 12.11 + 8.0 + 3.056 and report the answer with the correct number of significant figures.",
+          "answer": {
+            "type": "numeric",
+            "value": 23.2,
+            "unit": "",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "sigFigPolicy": "enforce"
+          },
+          "hints": [
+            "Addition and multiplication follow different rules.",
+            "For addition, look at decimal places. Which value has the fewest?"
+          ],
+          "explanation": "The raw sum is 23.166. Addition follows DECIMAL PLACES, not significant figures: 8.0 has only one decimal place, so the answer is rounded to one, giving 23.2.",
+          "tags": [
+            "sig-figs",
+            "calculation"
+          ],
+          "expectedSeconds": 75,
+          "points": 15
+        },
+        {
+          "id": "T1L2-Q07",
+          "prompt": "Calculate 24.0 / 5.0 and report the answer with the correct number of significant figures.",
+          "answer": {
+            "type": "numeric",
+            "value": 4.8,
+            "unit": "",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 2,
+            "sigFigPolicy": "enforce"
+          },
+          "hints": [
+            "Division uses the same rule as multiplication."
+          ],
+          "explanation": "24.0 / 5.0 = 4.8. Division follows the multiplication rule, so the answer takes the fewer count of significant figures, which is the two in 5.0.",
+          "tags": [
+            "sig-figs",
+            "calculation"
+          ],
+          "expectedSeconds": 65,
+          "points": 15
+        },
+        {
+          "id": "T1L2-Q08",
+          "prompt": "You count 24 chairs in a room. Is 24 an exact number or a measurement?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "exact",
+              "exact number",
+              "an exact number"
+            ],
+            "reject": [
+              "measurement",
+              "measured"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Did anyone read this off an instrument with a scale?"
+          ],
+          "explanation": "Exact. Counted whole objects and defined conversions such as 12 in = 1 ft have no uncertainty, so they carry unlimited significant figures and never limit an answer.",
+          "tags": [
+            "sig-figs",
+            "exact-numbers"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "T1L3",
+      "title": "Unit Conversion, Density & Dimensional Analysis",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T1L3-Q01",
+          "prompt": "Convert 2.50 kg to grams.",
+          "answer": {
+            "type": "numeric",
+            "value": 2500.0,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitConversion": false,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "The prefix kilo means 1000."
+          ],
+          "explanation": "1 kg = 1000 g, so 2.50 kg x 1000 = 2500 g. Reported to three significant figures that is 2.50 x 10^3 g, which makes the precision unambiguous.",
+          "tags": [
+            "unit-conversion"
+          ],
+          "expectedSeconds": 70,
+          "points": 10
+        },
+        {
+          "id": "T1L3-Q02",
+          "prompt": "Convert 45.0 mL to litres.",
+          "answer": {
+            "type": "numeric",
+            "value": 0.045,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitConversion": false,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "Milli means one thousandth, so you are dividing."
+          ],
+          "explanation": "1 L = 1000 mL, so 45.0 / 1000 = 0.0450 L. Keep the trailing zero: it carries the third significant figure.",
+          "tags": [
+            "unit-conversion"
+          ],
+          "expectedSeconds": 70,
+          "points": 10
+        },
+        {
+          "id": "T1L3-Q03",
+          "prompt": "Convert 1.25 m to centimetres.",
+          "answer": {
+            "type": "numeric",
+            "value": 125,
+            "unit": "cm",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitConversion": false,
+            "unitAliases": [
+              "cm",
+              "centimetre",
+              "centimeter",
+              "centimetres",
+              "centimeters"
+            ]
+          },
+          "hints": [
+            "Centi means one hundredth, so there are 100 cm in a metre."
+          ],
+          "explanation": "1 m = 100 cm, so 1.25 x 100 = 125 cm.",
+          "tags": [
+            "unit-conversion"
+          ],
+          "expectedSeconds": 65,
+          "points": 10
+        },
+        {
+          "id": "T1L3-Q04",
+          "prompt": "Convert 500. mg to grams.",
+          "answer": {
+            "type": "numeric",
+            "value": 0.5,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitConversion": false,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Watch the decimal point in 500. when you count significant figures."
+          ],
+          "explanation": "1 g = 1000 mg, so 500. / 1000 = 0.500 g. The decimal point in 500. marks it as three significant figures, so the answer keeps three.",
+          "tags": [
+            "unit-conversion"
+          ],
+          "expectedSeconds": 70,
+          "points": 10
+        },
+        {
+          "id": "T1L3-Q05",
+          "prompt": "A person is 5.00 feet tall. Using 12 in = 1 ft and 1 in = 2.54 cm, what is their height in centimetres?",
+          "answer": {
+            "type": "numeric",
+            "value": 152.0,
+            "unit": "cm",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitConversion": false,
+            "unitAliases": [
+              "cm",
+              "centimetre",
+              "centimeter",
+              "centimetres",
+              "centimeters"
+            ]
+          },
+          "hints": [
+            "Two steps: feet to inches, then inches to centimetres.",
+            "Set each factor up so the unit you are leaving cancels out."
+          ],
+          "explanation": "Chain the two factors so the unwanted units cancel: 5.00 ft x (12 in / 1 ft) x (2.54 cm / 1 in) = 152.4 cm, which is 152 cm to three significant figures. Both conversion factors are exact, so only 5.00 limits the answer.",
+          "tags": [
+            "unit-conversion",
+            "dimensional-analysis"
+          ],
+          "expectedSeconds": 110,
+          "points": 15
+        },
+        {
+          "id": "T1L3-Q06",
+          "prompt": "Convert 3.50 lb to grams, using 1 lb = 453.6 g.",
+          "answer": {
+            "type": "numeric",
+            "value": 1590.0,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitConversion": false,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Multiply so that pounds cancel and grams survive."
+          ],
+          "explanation": "3.50 lb x 453.6 g/lb = 1587.6 g, which is 1.59 x 10^3 g to three significant figures.",
+          "tags": [
+            "unit-conversion",
+            "dimensional-analysis"
+          ],
+          "expectedSeconds": 95,
+          "points": 15
+        },
+        {
+          "id": "T1L3-Q07",
+          "prompt": "A metal has a density of 8.00 g/mL. What is the mass of a 5.00 mL sample?",
+          "answer": {
+            "type": "numeric",
+            "value": 40.0,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Rearrange density = mass / volume to isolate mass.",
+            "Check that mL cancels in your setup."
+          ],
+          "explanation": "Density is mass per unit volume, so mass = density x volume = 8.00 g/mL x 5.00 mL = 40.0 g. The millilitres cancel and grams are left, which confirms the setup.",
+          "tags": [
+            "density",
+            "dimensional-analysis"
+          ],
+          "expectedSeconds": 85,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 0.625,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.01
+                  }
+                },
+                "message": "You divided instead of multiplying. Density x volume gives mass; the millilitres must cancel.",
+                "label": "inverted-density"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L3-Q08",
+          "prompt": "A liquid sample has a mass of 24.0 g and a volume of 30.0 mL. What is its density in g/mL? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 0.8,
+            "unit": "",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3
+          },
+          "hints": [
+            "Density is mass divided by volume."
+          ],
+          "explanation": "Density = mass / volume = 24.0 g / 30.0 mL = 0.800 g/mL. Since the number is below 1, this liquid is less dense than water and would float on it.",
+          "tags": [
+            "density"
+          ],
+          "expectedSeconds": 85,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 1.25,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.01
+                  }
+                },
+                "message": "You divided volume by mass. Density is mass over volume.",
+                "label": "inverted-density"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L3-Q09",
+          "prompt": "A car travels at a steady 60. km/h. How far does it go in 3.0 hours?",
+          "answer": {
+            "type": "numeric",
+            "value": 180.0,
+            "unit": "km",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 2,
+            "unitAliases": [
+              "km",
+              "kilometre",
+              "kilometer",
+              "kilometres",
+              "kilometers"
+            ]
+          },
+          "hints": [
+            "Set it up so that hours cancel and kilometres remain."
+          ],
+          "explanation": "distance = speed x time = 60. km/h x 3.0 h = 180 km. The hours cancel, leaving kilometres. With two significant figures this is best written 1.8 x 10^2 km.",
+          "tags": [
+            "dimensional-analysis"
+          ],
+          "expectedSeconds": 80,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "T1L4",
+      "title": "Atomic Theory, Chemical Families & Subatomic Particles",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T1L4-Q01",
+          "prompt": "Which scientist discovered the electron using cathode-ray tube experiments?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "Thomson",
+              "J.J. Thomson",
+              "JJ Thomson",
+              "Joseph Thomson",
+              "Thompson"
+            ],
+            "reject": [
+              "Rutherford",
+              "Dalton",
+              "Bohr",
+              "Millikan"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "He worked with a cathode-ray tube and measured a charge-to-mass ratio."
+          ],
+          "explanation": "J.J. Thomson. He showed that cathode rays were deflected by electric and magnetic fields, which meant they were negatively charged particles, and measured their charge-to-mass ratio.",
+          "tags": [
+            "atomic-theory"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T1L4-Q02",
+          "prompt": "Whose gold foil experiment showed that an atom's positive charge is concentrated in a tiny dense nucleus?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "Rutherford",
+              "Ernest Rutherford"
+            ],
+            "reject": [
+              "Thomson",
+              "Dalton",
+              "Bohr",
+              "Chadwick"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Alpha particles, thin gold foil, and a few surprising large-angle deflections."
+          ],
+          "explanation": "Rutherford. Most alpha particles passed straight through the foil, but a very small fraction bounced back, which is only possible if the positive charge and nearly all the mass sit in a tiny central nucleus.",
+          "tags": [
+            "atomic-theory"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "T1L4-Q03",
+          "prompt": "Which scientist proposed that electrons travel in fixed energy levels around the nucleus?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "Bohr",
+              "Niels Bohr"
+            ],
+            "reject": [
+              "Rutherford",
+              "Thomson",
+              "Dalton",
+              "Schrodinger"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "His model explained why hydrogen emits a line spectrum, not a continuous one."
+          ],
+          "explanation": "Bohr. His model confined electrons to orbits of fixed energy, which explained why excited atoms emit only certain wavelengths rather than a continuous spectrum.",
+          "tags": [
+            "atomic-theory"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "T1L4-Q04",
+          "prompt": "Whose atomic postulates stated that all atoms of a given element are identical and that atoms are neither created nor destroyed in a reaction?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "Dalton",
+              "John Dalton"
+            ],
+            "reject": [
+              "Thomson",
+              "Rutherford",
+              "Bohr"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "He came first, and isotopes later amended one of his claims."
+          ],
+          "explanation": "Dalton. His postulates came first, and the later discovery of isotopes forced only one revision: atoms of an element share a proton count but can differ in mass.",
+          "tags": [
+            "atomic-theory"
+          ],
+          "expectedSeconds": 60,
+          "points": 10
+        },
+        {
+          "id": "T1L4-Q05",
+          "prompt": "What is the family name for the Group 17 elements?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "halogens",
+              "halogen",
+              "the halogens"
+            ],
+            "reject": [
+              "noble gases",
+              "alkali metals"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Fluorine, chlorine, bromine, iodine."
+          ],
+          "explanation": "The halogens. With 7 valence electrons they are one short of an octet, which makes them highly reactive non-metals that readily form 1- ions.",
+          "tags": [
+            "periodic-table",
+            "families"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T1L4-Q06",
+          "prompt": "What is the family name for the Group 1 metals?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "alkali metals",
+              "alkali metal",
+              "the alkali metals",
+              "alkali"
+            ],
+            "reject": [
+              "alkaline earth metals",
+              "halogens",
+              "transition metals"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Lithium, sodium, potassium. Hydrogen sits in the column but is not one of them."
+          ],
+          "explanation": "The alkali metals. A single valence electron makes them extremely reactive, so they form 1+ ions readily and are stored under oil.",
+          "tags": [
+            "periodic-table",
+            "families"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T1L4-Q07",
+          "prompt": "What is the family name for the Group 2 elements?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "alkaline earth metals",
+              "alkaline earth",
+              "alkaline earths",
+              "alkaline earth metal"
+            ],
+            "reject": [
+              "alkali metals",
+              "halogens",
+              "noble gases"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Magnesium and calcium are in this family."
+          ],
+          "explanation": "The alkaline earth metals. Two valence electrons give them 2+ ions, and they are reactive but noticeably less so than the alkali metals next door.",
+          "tags": [
+            "periodic-table",
+            "families"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "T1L4-Q08",
+          "prompt": "What is the family name for the Group 18 elements?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "noble gases",
+              "noble gas",
+              "the noble gases",
+              "inert gases"
+            ],
+            "reject": [
+              "halogens",
+              "alkali metals"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Helium, neon, argon."
+          ],
+          "explanation": "The noble gases. Their outer level is already full, so they have nothing to gain by reacting. That full-shell arrangement is the configuration every other atom is reaching for.",
+          "tags": [
+            "periodic-table",
+            "families"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T1L4-Q09",
+          "prompt": "Which subatomic particle carries a negative charge?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "electron",
+              "electrons",
+              "the electron"
+            ],
+            "reject": [
+              "proton",
+              "neutron"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "It is also by far the lightest of the three."
+          ],
+          "explanation": "The electron, with a relative charge of 1-. It also carries almost no mass, roughly 1/1836 that of a proton.",
+          "tags": [
+            "subatomic-particles"
+          ],
+          "expectedSeconds": 40,
+          "points": 10
+        },
+        {
+          "id": "T1L4-Q10",
+          "prompt": "What is the relative charge of a neutron? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 0,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "The name is the giveaway."
+          ],
+          "explanation": "Zero. The neutron is electrically neutral, which is where its name comes from. It sits in the nucleus and contributes mass but no charge.",
+          "tags": [
+            "subatomic-particles"
+          ],
+          "expectedSeconds": 40,
+          "points": 10
+        },
+        {
+          "id": "T1L4-Q11",
+          "prompt": "In which part of the atom are the protons and neutrons found?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "nucleus",
+              "the nucleus",
+              "nuclei"
+            ],
+            "reject": [
+              "electron cloud",
+              "orbitals",
+              "shells"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "It is the dense centre Rutherford's experiment revealed."
+          ],
+          "explanation": "The nucleus. It holds essentially all the atom's mass in a volume far smaller than the atom itself, with the electrons occupying the space around it.",
+          "tags": [
+            "subatomic-particles"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "T1L5",
+      "title": "Isotopes, Atomic Symbols & Average Atomic Mass",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T1L5-Q01",
+          "prompt": "How many protons are in ^56Fe^3+? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 26,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 2,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "The proton count is what makes it iron."
+          ],
+          "explanation": "26. Iron's atomic number is 26, and the proton count never changes: it is what makes the atom iron.",
+          "tags": [
+            "atomic-structure"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "T1L5-Q02",
+          "prompt": "How many neutrons are in ^56Fe^3+? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 30,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 2,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Subtract the atomic number from the mass number."
+          ],
+          "explanation": "Neutrons = mass number - atomic number = 56 - 26 = 30.",
+          "tags": [
+            "atomic-structure",
+            "isotopes"
+          ],
+          "expectedSeconds": 55,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 26,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "That is the proton count. Subtract it from 56 to get the neutrons.",
+                "label": "used-atomic-number"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L5-Q03",
+          "prompt": "How many electrons are in ^56Fe^3+? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 23,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 2,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "A positive charge means electrons were removed, not added."
+          ],
+          "explanation": "A neutral iron atom has 26 electrons. The 3+ charge means three were LOST, so 26 - 3 = 23.",
+          "tags": [
+            "atomic-structure",
+            "ions"
+          ],
+          "expectedSeconds": 60,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 29,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "A 3+ charge means the ion lost three electrons, so subtract rather than add.",
+                "label": "charge-sign-flipped"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L5-Q04",
+          "prompt": "How many electrons are in ^31P^3-? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 18,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 2,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "A negative charge means electrons were gained."
+          ],
+          "explanation": "Phosphorus has 15 protons and so 15 electrons when neutral. A 3- charge means three were gained: 15 + 3 = 18.",
+          "tags": [
+            "atomic-structure",
+            "ions"
+          ],
+          "expectedSeconds": 60,
+          "points": 10
+        },
+        {
+          "id": "T1L5-Q05",
+          "prompt": "An atom has 34 protons and 45 neutrons. What is its mass number? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 79,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 2,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Only the nuclear particles count."
+          ],
+          "explanation": "Mass number = protons + neutrons = 34 + 45 = 79. Electrons are far too light to contribute.",
+          "tags": [
+            "atomic-structure",
+            "isotopes"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T1L5-Q06",
+          "prompt": "Copper has two isotopes: Cu-63 (62.9296 amu, 69.15%) and Cu-65 (64.9278 amu, 30.85%). What is its average atomic mass?",
+          "answer": {
+            "type": "numeric",
+            "value": 63.55,
+            "unit": "amu",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.02
+            },
+            "sigFigs": 4,
+            "unitAliases": [
+              "amu",
+              "u",
+              "Da",
+              "dalton",
+              "daltons"
+            ]
+          },
+          "hints": [
+            "Turn each percentage into a decimal fraction first.",
+            "Multiply each mass by its fraction, then add the two products."
+          ],
+          "explanation": "Weight each isotope by its abundance: (62.9296)(0.6915) = 43.52 and (64.9278)(0.3085) = 20.03. Adding gives 63.55 amu.",
+          "tags": [
+            "average-atomic-mass"
+          ],
+          "expectedSeconds": 130,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 63.93,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.02
+                  }
+                },
+                "message": "You took a plain average. Each isotope must be weighted by how common it is.",
+                "label": "unweighted-average"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L5-Q07",
+          "prompt": "Lithium has two isotopes: Li-6 (6.015 amu, 7.59%) and Li-7 (7.016 amu, 92.41%). What is its average atomic mass?",
+          "answer": {
+            "type": "numeric",
+            "value": 6.94,
+            "unit": "amu",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.02
+            },
+            "sigFigs": 4,
+            "unitAliases": [
+              "amu",
+              "u",
+              "Da",
+              "dalton",
+              "daltons"
+            ]
+          },
+          "hints": [
+            "The answer must land between the two isotopic masses, nearer the common one."
+          ],
+          "explanation": "(6.015)(0.0759) = 0.457 and (7.016)(0.9241) = 6.483, giving 6.940 amu. Li-7 dominates, so the answer sits very close to 7.016.",
+          "tags": [
+            "average-atomic-mass"
+          ],
+          "expectedSeconds": 130,
+          "points": 15
+        },
+        {
+          "id": "T1L5-Q08",
+          "prompt": "Element X has two isotopes: X-10 (10.013 amu, 19.9%) and X-11 (11.009 amu, 80.1%). What is its average atomic mass?",
+          "answer": {
+            "type": "numeric",
+            "value": 10.81,
+            "unit": "amu",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.02
+            },
+            "sigFigs": 4,
+            "unitAliases": [
+              "amu",
+              "u",
+              "Da",
+              "dalton",
+              "daltons"
+            ]
+          },
+          "hints": [
+            "Weight each mass by its own abundance before adding."
+          ],
+          "explanation": "(10.013)(0.199) = 1.99 and (11.009)(0.801) = 8.82, giving 10.81 amu. Checking the periodic table, that identifies boron.",
+          "tags": [
+            "average-atomic-mass"
+          ],
+          "expectedSeconds": 130,
+          "points": 15
+        },
+        {
+          "id": "T1L5-Q09",
+          "prompt": "Silver has two isotopes: Ag-107 (106.905 amu, 51.84%) and Ag-109 (108.905 amu, 48.16%). What is its average atomic mass?",
+          "answer": {
+            "type": "numeric",
+            "value": 107.87,
+            "unit": "amu",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.02
+            },
+            "sigFigs": 5,
+            "unitAliases": [
+              "amu",
+              "u",
+              "Da",
+              "dalton",
+              "daltons"
+            ]
+          },
+          "hints": [
+            "The two isotopes are nearly equally abundant, so expect an answer near the midpoint."
+          ],
+          "explanation": "(106.905)(0.5184) = 55.42 and (108.905)(0.4816) = 52.45, giving 107.87 amu, exactly the periodic table value.",
+          "tags": [
+            "average-atomic-mass"
+          ],
+          "expectedSeconds": 130,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "T1L6",
+      "title": "Molar Mass & Percent Composition",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T1L6-Q01",
+          "prompt": "What is the molar mass of CO_2?",
+          "answer": {
+            "type": "numeric",
+            "value": 44.01,
+            "unit": "g/mol",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.1
+            },
+            "sigFigs": 4,
+            "unitAliases": [
+              "g/mol",
+              "g mol^-1",
+              "grams per mole"
+            ]
+          },
+          "hints": [
+            "One carbon and two oxygens."
+          ],
+          "explanation": "12.01 + 2(16.00) = 12.01 + 32.00 = 44.01 g/mol. Two oxygens, so the 16.00 is doubled.",
+          "tags": [
+            "molar-mass"
+          ],
+          "expectedSeconds": 70,
+          "points": 10
+        },
+        {
+          "id": "T1L6-Q02",
+          "prompt": "What is the molar mass of Mg(OH)_2?",
+          "answer": {
+            "type": "numeric",
+            "value": 58.33,
+            "unit": "g/mol",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.1
+            },
+            "sigFigs": 4,
+            "unitAliases": [
+              "g/mol",
+              "g mol^-1",
+              "grams per mole"
+            ]
+          },
+          "hints": [
+            "The subscript 2 applies to everything inside the brackets."
+          ],
+          "explanation": "24.31 + 2(16.00) + 2(1.008) = 24.31 + 32.00 + 2.016 = 58.33 g/mol. The 2 outside the parentheses doubles BOTH the oxygen and the hydrogen.",
+          "tags": [
+            "molar-mass"
+          ],
+          "expectedSeconds": 90,
+          "points": 15
+        },
+        {
+          "id": "T1L6-Q03",
+          "prompt": "What is the molar mass of Ca(NO_3)_2?",
+          "answer": {
+            "type": "numeric",
+            "value": 164.1,
+            "unit": "g/mol",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.1
+            },
+            "sigFigs": 5,
+            "unitAliases": [
+              "g/mol",
+              "g mol^-1",
+              "grams per mole"
+            ]
+          },
+          "hints": [
+            "Distribute the 2 across the whole nitrate ion."
+          ],
+          "explanation": "40.08 + 2(14.01) + 6(16.00) = 40.08 + 28.02 + 96.00 = 164.10 g/mol. The 2 outside the parentheses gives 2 nitrogens and 6 oxygens, not 3.",
+          "tags": [
+            "molar-mass"
+          ],
+          "expectedSeconds": 95,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 116.1,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.1
+                  }
+                },
+                "message": "You distributed the 2 to nitrogen but not to oxygen. There are 6 oxygens.",
+                "label": "subscript-not-distributed"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L6-Q04",
+          "prompt": "What is the molar mass of C_9H_8O_4 (aspirin)?",
+          "answer": {
+            "type": "numeric",
+            "value": 180.15,
+            "unit": "g/mol",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.1
+            },
+            "sigFigs": 5,
+            "unitAliases": [
+              "g/mol",
+              "g mol^-1",
+              "grams per mole"
+            ]
+          },
+          "hints": [
+            "Straight addition, but keep track of all nine carbons."
+          ],
+          "explanation": "9(12.01) + 8(1.008) + 4(16.00) = 108.09 + 8.064 + 64.00 = 180.15 g/mol. No brackets here; the only risk is dropping a digit.",
+          "tags": [
+            "molar-mass"
+          ],
+          "expectedSeconds": 85,
+          "points": 10
+        },
+        {
+          "id": "T1L6-Q05",
+          "prompt": "What is the mass percent of nitrogen in NH_4NO_3?",
+          "answer": {
+            "type": "numeric",
+            "value": 35.0,
+            "unit": "%",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.1
+            },
+            "sigFigs": 4,
+            "unitAliases": [
+              "%",
+              "percent"
+            ]
+          },
+          "hints": [
+            "Ammonium nitrate has one nitrogen in each ion, so two in total.",
+            "Percent = mass of the part / mass of the whole, times 100."
+          ],
+          "explanation": "Both nitrogens count: 2(14.01) = 28.02 out of 80.05 g/mol. So (28.02 / 80.05) x 100 = 35.00%.",
+          "tags": [
+            "percent-composition"
+          ],
+          "expectedSeconds": 105,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 17.5,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.1
+                  }
+                },
+                "message": "You counted one nitrogen. There is one in NH_4^+ and one in NO_3^-.",
+                "label": "counted-one-nitrogen"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L6-Q06",
+          "prompt": "What is the mass percent of calcium in CaCO_3?",
+          "answer": {
+            "type": "numeric",
+            "value": 40.04,
+            "unit": "%",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.1
+            },
+            "sigFigs": 4,
+            "unitAliases": [
+              "%",
+              "percent"
+            ]
+          },
+          "hints": [
+            "Work out the molar mass first, then divide calcium's share into it."
+          ],
+          "explanation": "(40.08 / 100.09) x 100 = 40.04%.",
+          "tags": [
+            "percent-composition"
+          ],
+          "expectedSeconds": 95,
+          "points": 15
+        },
+        {
+          "id": "T1L6-Q07",
+          "prompt": "What is the mass percent of oxygen in H_2O?",
+          "answer": {
+            "type": "numeric",
+            "value": 88.79,
+            "unit": "%",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.1
+            },
+            "sigFigs": 4,
+            "unitAliases": [
+              "%",
+              "percent"
+            ]
+          },
+          "hints": [
+            "There is only one oxygen, but it is far heavier than the two hydrogens."
+          ],
+          "explanation": "Oxygen contributes 16.00 of the 18.02 g/mol, so (16.00 / 18.02) x 100 = 88.79%. Water is mostly oxygen by mass even though two thirds of its atoms are hydrogen.",
+          "tags": [
+            "percent-composition"
+          ],
+          "expectedSeconds": 95,
+          "points": 15
+        },
+        {
+          "id": "T1L6-Q08",
+          "prompt": "What is the mass percent of iron in Fe_2O_3?",
+          "answer": {
+            "type": "numeric",
+            "value": 69.94,
+            "unit": "%",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.1
+            },
+            "sigFigs": 4,
+            "unitAliases": [
+              "%",
+              "percent"
+            ]
+          },
+          "hints": [
+            "Remember to double the iron in the numerator."
+          ],
+          "explanation": "Both irons count: 2(55.85) = 111.70 out of 159.70 g/mol, giving 69.94%.",
+          "tags": [
+            "percent-composition"
+          ],
+          "expectedSeconds": 100,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "T1L7",
+      "title": "Mole Conversions & Atoms in a Compound",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T1L7-Q01",
+          "prompt": "How many moles are in 45.0 g of NaCl?",
+          "answer": {
+            "type": "numeric",
+            "value": 0.77,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Divide by the molar mass so that grams cancel."
+          ],
+          "explanation": "M(NaCl) = 58.44 g/mol, so 45.0 / 58.44 = 0.770 mol. Molar mass goes underneath so that grams cancel.",
+          "tags": [
+            "mole-conversion"
+          ],
+          "expectedSeconds": 80,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 2630.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.01
+                  }
+                },
+                "message": "You multiplied by the molar mass instead of dividing. Check that grams cancel.",
+                "label": "inverted-conversion-factor"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L7-Q02",
+          "prompt": "How many moles are in 88.0 g of CO_2?",
+          "answer": {
+            "type": "numeric",
+            "value": 2.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "The molar mass of CO_2 is close to 44, so expect roughly 2 mol."
+          ],
+          "explanation": "88.0 / 44.01 = 2.00 mol.",
+          "tags": [
+            "mole-conversion"
+          ],
+          "expectedSeconds": 75,
+          "points": 10
+        },
+        {
+          "id": "T1L7-Q03",
+          "prompt": "What is the mass of 2.50 mol of C_6H_12O_6?",
+          "answer": {
+            "type": "numeric",
+            "value": 450.0,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "sigFigPolicy": "enforce",
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Moles times molar mass gives grams.",
+            "Writing 450 is ambiguous; use scientific notation."
+          ],
+          "explanation": "2.50 mol x 180.16 g/mol = 450.40 g. To three significant figures that is 4.50 x 10^2 g.",
+          "tags": [
+            "mole-conversion",
+            "sig-figs"
+          ],
+          "expectedSeconds": 95,
+          "points": 15
+        },
+        {
+          "id": "T1L7-Q04",
+          "prompt": "How many molecules are in 25.0 g of CO_2?",
+          "answer": {
+            "type": "numeric",
+            "value": 3.42e+23,
+            "unit": "molecules",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "molecules",
+              "molecule",
+              "particles"
+            ]
+          },
+          "hints": [
+            "Grams to moles first, then moles to molecules.",
+            "n = 0.568 mol"
+          ],
+          "explanation": "First to moles: 25.0 / 44.01 = 0.5681 mol. Then x 6.022 x 10^23 = 3.42 x 10^23 molecules. Avogadro's number never touches grams directly.",
+          "tags": [
+            "mole-conversion",
+            "avogadro"
+          ],
+          "expectedSeconds": 115,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 1.51e+25,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "You skipped the molar mass step. Convert to moles before applying Avogadro's number.",
+                "label": "skipped-molar-mass"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L7-Q05",
+          "prompt": "What is the mass of 3.50 x 10^22 atoms of Fe?",
+          "answer": {
+            "type": "numeric",
+            "value": 3.25,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Divide by Avogadro's number to reach moles, then multiply by the molar mass."
+          ],
+          "explanation": "3.50 x 10^22 / 6.022 x 10^23 = 0.05812 mol, then x 55.85 g/mol = 3.25 g.",
+          "tags": [
+            "mole-conversion",
+            "avogadro"
+          ],
+          "expectedSeconds": 115,
+          "points": 15
+        },
+        {
+          "id": "T1L7-Q06",
+          "prompt": "How many atoms are in 2.00 g of He?",
+          "answer": {
+            "type": "numeric",
+            "value": 3.01e+23,
+            "unit": "atoms",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "atoms",
+              "atom",
+              "particles"
+            ]
+          },
+          "hints": [
+            "Two grams of helium is about half a mole."
+          ],
+          "explanation": "2.00 / 4.003 = 0.4996 mol, then x 6.022 x 10^23 = 3.01 x 10^23 atoms. Helium is monatomic, so atoms and particles are the same thing here.",
+          "tags": [
+            "mole-conversion",
+            "avogadro"
+          ],
+          "expectedSeconds": 110,
+          "points": 15
+        },
+        {
+          "id": "T1L7-Q07",
+          "prompt": "How many oxygen atoms are in 50.0 g of Ca(NO_3)_2?",
+          "answer": {
+            "type": "numeric",
+            "value": 1.1e+24,
+            "unit": "atoms",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "atoms",
+              "atom",
+              "particles"
+            ]
+          },
+          "hints": [
+            "How many oxygen atoms are in ONE formula unit?",
+            "Multiply the moles of compound by 6 before reaching for Avogadro's number."
+          ],
+          "explanation": "50.0 / 164.10 = 0.3047 mol of compound. Each formula unit holds 6 oxygens, so x 6 = 1.828 mol O, then x 6.022 x 10^23 = 1.10 x 10^24 atoms.",
+          "tags": [
+            "subscript-step",
+            "avogadro"
+          ],
+          "expectedSeconds": 150,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 1.83e+23,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "That is the number of formula units. Each one holds 6 oxygen atoms, so multiply by 6.",
+                "label": "subscript-step-skipped"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L7-Q08",
+          "prompt": "How many hydrogen atoms are in 10.0 g of C_6H_12O_6?",
+          "answer": {
+            "type": "numeric",
+            "value": 4.01e+23,
+            "unit": "atoms",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "atoms",
+              "atom",
+              "particles"
+            ]
+          },
+          "hints": [
+            "Glucose carries 12 hydrogens per molecule."
+          ],
+          "explanation": "10.0 / 180.16 = 0.05551 mol. Each molecule carries 12 hydrogens, so x 12 = 0.6661 mol H, then x 6.022 x 10^23 = 4.01 x 10^23 atoms.",
+          "tags": [
+            "subscript-step",
+            "avogadro"
+          ],
+          "expectedSeconds": 145,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 3.34e+22,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "That is the number of glucose molecules. Multiply by 12 to count hydrogen atoms.",
+                "label": "subscript-step-skipped"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L7-Q09",
+          "prompt": "How many oxygen atoms are in 0.500 mol of Mg_3(PO_4)_2?",
+          "answer": {
+            "type": "numeric",
+            "value": 2.41e+24,
+            "unit": "atoms",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "atoms",
+              "atom",
+              "particles"
+            ]
+          },
+          "hints": [
+            "No molar mass needed here: just the subscript step and Avogadro's number."
+          ],
+          "explanation": "Two phosphate ions carry 8 oxygens, so 0.500 x 8 = 4.00 mol O, then x 6.022 x 10^23 = 2.41 x 10^24 atoms. You are already in moles, so no molar mass is needed.",
+          "tags": [
+            "subscript-step",
+            "avogadro"
+          ],
+          "expectedSeconds": 120,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "T1L8",
+      "title": "Light: Wavelength, Frequency & Energy",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T1L8-Q01",
+          "prompt": "A red laser emits light with a wavelength of 650. nm. What is its frequency?",
+          "answer": {
+            "type": "numeric",
+            "value": 461000000000000.0,
+            "unit": "Hz",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "Hz",
+              "hertz",
+              "s^-1",
+              "1/s"
+            ]
+          },
+          "hints": [
+            "Rearrange c = (wavelength)(frequency) for frequency.",
+            "Nanometres must become metres first: 1 nm = 10^-9 m."
+          ],
+          "explanation": "Convert first: 650. nm = 6.50 x 10^-7 m. Then frequency = c / wavelength = 2.998 x 10^8 / 6.50 x 10^-7 = 4.61 x 10^14 Hz.",
+          "tags": [
+            "light",
+            "wavelength-frequency"
+          ],
+          "expectedSeconds": 145,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 461000.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.02
+                  }
+                },
+                "message": "You divided by 650 without converting to metres. 650. nm = 6.50 x 10^-7 m.",
+                "label": "no-unit-conversion"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L8-Q02",
+          "prompt": "A green laser pointer emits at 532 nm. What is its frequency?",
+          "answer": {
+            "type": "numeric",
+            "value": 564000000000000.0,
+            "unit": "Hz",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "Hz",
+              "hertz",
+              "s^-1",
+              "1/s"
+            ]
+          },
+          "hints": [
+            "Same route as the red laser: convert to metres, then divide c by the wavelength."
+          ],
+          "explanation": "532 nm = 5.32 x 10^-7 m, so frequency = 2.998 x 10^8 / 5.32 x 10^-7 = 5.64 x 10^14 Hz. Visible light always lands near 10^14 Hz.",
+          "tags": [
+            "light",
+            "wavelength-frequency"
+          ],
+          "expectedSeconds": 145,
+          "points": 15
+        },
+        {
+          "id": "T1L8-Q03",
+          "prompt": "A radio station broadcasts at 98.5 MHz. What is the wavelength of the signal in metres?",
+          "answer": {
+            "type": "numeric",
+            "value": 3.04,
+            "unit": "m",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "m",
+              "metre",
+              "meter",
+              "metres",
+              "meters"
+            ]
+          },
+          "hints": [
+            "Megahertz means 10^6 Hz.",
+            "Radio waves are long, so expect a few metres."
+          ],
+          "explanation": "98.5 MHz = 9.85 x 10^7 Hz, so wavelength = 2.998 x 10^8 / 9.85 x 10^7 = 3.04 m.",
+          "tags": [
+            "light",
+            "wavelength-frequency"
+          ],
+          "expectedSeconds": 145,
+          "points": 15
+        },
+        {
+          "id": "T1L8-Q04",
+          "prompt": "What is the energy of a single photon of blue light with a wavelength of 450. nm?",
+          "answer": {
+            "type": "numeric",
+            "value": 4.41e-19,
+            "unit": "J",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "J",
+              "joule",
+              "joules"
+            ]
+          },
+          "hints": [
+            "Combine the constants once: hc = 1.986 x 10^-25 J m.",
+            "Convert 450. nm to metres before dividing."
+          ],
+          "explanation": "Energy = hc / wavelength = 1.986 x 10^-25 / 4.50 x 10^-7 = 4.41 x 10^-19 J. One photon carries very little energy, so a negative exponent is expected.",
+          "tags": [
+            "light",
+            "photon-energy"
+          ],
+          "expectedSeconds": 155,
+          "points": 20
+        },
+        {
+          "id": "T1L8-Q05",
+          "prompt": "A photon has a frequency of 6.50 x 10^14 Hz. What is its energy?",
+          "answer": {
+            "type": "numeric",
+            "value": 4.31e-19,
+            "unit": "J",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "J",
+              "joule",
+              "joules"
+            ]
+          },
+          "hints": [
+            "A single multiplication: E = h times frequency."
+          ],
+          "explanation": "Energy = h x frequency = (6.626 x 10^-34)(6.50 x 10^14) = 4.31 x 10^-19 J. No conversion is needed because the frequency was given directly.",
+          "tags": [
+            "light",
+            "photon-energy"
+          ],
+          "expectedSeconds": 120,
+          "points": 15
+        },
+        {
+          "id": "T1L8-Q06",
+          "prompt": "Germicidal lamps emit ultraviolet light at 254 nm. What is the energy of one such photon?",
+          "answer": {
+            "type": "numeric",
+            "value": 7.82e-19,
+            "unit": "J",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "J",
+              "joule",
+              "joules"
+            ]
+          },
+          "hints": [
+            "Shorter wavelength than visible means the answer should exceed 4 x 10^-19 J."
+          ],
+          "explanation": "Energy = 1.986 x 10^-25 / 2.54 x 10^-7 = 7.82 x 10^-19 J, larger than a visible photon's energy, which is why UV can damage DNA and visible light cannot.",
+          "tags": [
+            "light",
+            "photon-energy"
+          ],
+          "expectedSeconds": 150,
+          "points": 20
+        },
+        {
+          "id": "T1L8-Q07",
+          "prompt": "Which has the longer wavelength, red light or blue light?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "red",
+              "red light"
+            ],
+            "reject": [
+              "blue",
+              "blue light"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Picture the visible spectrum from red through to violet."
+          ],
+          "explanation": "Red. It sits at the long-wavelength end of the visible range near 700 nm, while blue is nearer 450 nm. Longer wavelength also means lower frequency and less energy per photon.",
+          "tags": [
+            "light",
+            "spectrum"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "T1L8-Q08",
+          "prompt": "As the wavelength of light increases, does the energy per photon increase or decrease?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "decrease",
+              "decreases",
+              "it decreases",
+              "goes down"
+            ],
+            "reject": [
+              "increase",
+              "increases"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Look at where wavelength sits in E = hc / wavelength."
+          ],
+          "explanation": "It decreases. E = hc / wavelength puts wavelength in the denominator, so the two move in opposite directions. This is why UV is damaging and infrared is not.",
+          "tags": [
+            "light",
+            "photon-energy"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "T1L9",
+      "title": "Orbitals, Quantum Numbers & Principles",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T1L9-Q01",
+          "prompt": "How many orbitals are in the 3d sublevel? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 5,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "The letter, not the number, fixes how many orbitals there are."
+          ],
+          "explanation": "Five. Every d sublevel holds 5 orbitals whatever the energy level; the 3 sets the level, not the count.",
+          "tags": [
+            "orbitals"
+          ],
+          "expectedSeconds": 40,
+          "points": 10
+        },
+        {
+          "id": "T1L9-Q02",
+          "prompt": "How many orbitals are in the n = 3 energy level? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 9,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "List the sublevels in level 3, then add up their orbitals.",
+            "The shortcut is n^2."
+          ],
+          "explanation": "Level 3 holds 3s (1), 3p (3) and 3d (5), giving 9. In general a level holds n^2 orbitals.",
+          "tags": [
+            "orbitals"
+          ],
+          "expectedSeconds": 60,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 3,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "That is the number of SUBLEVELS. Each holds a different number of orbitals.",
+                "label": "counted-sublevels"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L9-Q03",
+          "prompt": "What is the maximum number of electrons the n = 4 energy level can hold? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 32,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 2,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Count the orbitals first, then double."
+          ],
+          "explanation": "Level 4 holds n^2 = 16 orbitals at 2 electrons each, so 2n^2 = 32.",
+          "tags": [
+            "orbitals"
+          ],
+          "expectedSeconds": 60,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 16,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "That is the ORBITAL count. Each orbital holds 2 electrons.",
+                "label": "forgot-two-per-orbital"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L9-Q04",
+          "prompt": "What is the maximum number of electrons a p sublevel can hold? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 6,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Three orbitals, two electrons each."
+          ],
+          "explanation": "Six. A p sublevel has 3 orbitals at 2 electrons each.",
+          "tags": [
+            "orbitals"
+          ],
+          "expectedSeconds": 40,
+          "points": 10
+        },
+        {
+          "id": "T1L9-Q05",
+          "prompt": "What is the value of the principal quantum number n for an electron in a 3p orbital? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 3,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "It is written directly in the orbital label."
+          ],
+          "explanation": "n = 3. The number written in front of the letter is the principal quantum number.",
+          "tags": [
+            "quantum-numbers"
+          ],
+          "expectedSeconds": 40,
+          "points": 10
+        },
+        {
+          "id": "T1L9-Q06",
+          "prompt": "What is the value of the angular momentum quantum number l for a 3p orbital? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 1,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Translate the letter, not the number."
+          ],
+          "explanation": "l = 1. The letter fixes l: s = 0, p = 1, d = 2, f = 3.",
+          "tags": [
+            "quantum-numbers"
+          ],
+          "expectedSeconds": 55,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 3,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "You reported n. The letter p sets l, and p means l = 1.",
+                "label": "reported-n-for-l"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L9-Q07",
+          "prompt": "What is the largest value of l allowed when n = 3? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 2,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "l is capped at n - 1."
+          ],
+          "explanation": "l runs from 0 up to n - 1, so the largest is 2. That is the d sublevel, which is why 3d exists but 3f does not.",
+          "tags": [
+            "quantum-numbers"
+          ],
+          "expectedSeconds": 60,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 3,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "l can never reach n. Its maximum is n - 1.",
+                "label": "l-equals-n"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L9-Q08",
+          "prompt": "Which principle states that no two electrons in the same atom can have the same set of four quantum numbers?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "Pauli exclusion principle",
+              "Pauli",
+              "Pauli principle",
+              "exclusion principle"
+            ],
+            "reject": [
+              "Hund's rule",
+              "Heisenberg uncertainty principle",
+              "Aufbau principle"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "It is what limits an orbital to two electrons."
+          ],
+          "explanation": "The Pauli exclusion principle. It is the reason an orbital tops out at two electrons: with n, l and ml already fixed, only the two spin values remain.",
+          "tags": [
+            "quantum-numbers",
+            "principles"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        },
+        {
+          "id": "T1L9-Q09",
+          "prompt": "Which rule states that electrons occupy empty orbitals of equal energy singly before any of them pair up?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "Hund's rule",
+              "Hunds rule",
+              "Hund",
+              "rule of Hund"
+            ],
+            "reject": [
+              "Pauli exclusion principle",
+              "Heisenberg uncertainty principle",
+              "Aufbau principle"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "It governs how you fill an orbital diagram across a sublevel."
+          ],
+          "explanation": "Hund's rule. It is why nitrogen's three 2p electrons sit one to an orbital and all three stay unpaired.",
+          "tags": [
+            "quantum-numbers",
+            "principles"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        },
+        {
+          "id": "T1L9-Q10",
+          "prompt": "Which principle states that the position and the momentum of an electron cannot both be known exactly at the same time?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "Heisenberg uncertainty principle",
+              "uncertainty principle",
+              "Heisenberg",
+              "Heisenberg's uncertainty principle"
+            ],
+            "reject": [
+              "Pauli exclusion principle",
+              "Hund's rule",
+              "Aufbau principle"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "It is the reason we draw electron clouds instead of orbits."
+          ],
+          "explanation": "The Heisenberg uncertainty principle. It is why we speak of orbitals as probability regions rather than as fixed orbits, which is where Bohr's model falls short.",
+          "tags": [
+            "quantum-numbers",
+            "principles"
+          ],
+          "expectedSeconds": 65,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "T1L10",
+      "title": "Electron Configuration & Orbital Diagrams",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T1L10-Q01",
+          "prompt": "Write the full electron configuration of a neutral calcium atom (Z = 20).",
+          "answer": {
+            "type": "expression",
+            "value": "1s^2 2s^2 2p^6 3s^2 3p^6 4s^2",
+            "mode": "set",
+            "accept": [
+              "[Ar] 4s^2"
+            ]
+          },
+          "hints": [
+            "Follow the filling order until the superscripts add to 20.",
+            "After 3p^6 the next sublevel to fill is 4s, not 3d."
+          ],
+          "explanation": "Filling in order gives 1s^2 2s^2 2p^6 3s^2 3p^6 4s^2, and the superscripts total 20. The condensed form [Ar] 4s^2 is also accepted.",
+          "tags": [
+            "electron-configuration"
+          ],
+          "expectedSeconds": 140,
+          "points": 20
+        },
+        {
+          "id": "T1L10-Q02",
+          "prompt": "Write the noble-gas (condensed) electron configuration of a neutral sulfur atom (Z = 16).",
+          "answer": {
+            "type": "expression",
+            "value": "[Ne] 3s^2 3p^4",
+            "mode": "set",
+            "accept": [
+              "1s^2 2s^2 2p^6 3s^2 3p^4"
+            ]
+          },
+          "hints": [
+            "Which noble gas comes immediately before sulfur?"
+          ],
+          "explanation": "Neon covers the first 10 electrons, leaving 6: 3s^2 3p^4. The superscripts total 16.",
+          "tags": [
+            "electron-configuration"
+          ],
+          "expectedSeconds": 115,
+          "points": 15
+        },
+        {
+          "id": "T1L10-Q03",
+          "prompt": "Write the noble-gas (condensed) electron configuration of a neutral iron atom (Z = 26).",
+          "answer": {
+            "type": "expression",
+            "value": "[Ar] 4s^2 3d^6",
+            "mode": "set",
+            "accept": [
+              "1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^6",
+              "[Ar] 3d^6 4s^2"
+            ]
+          },
+          "hints": [
+            "4s fills before 3d.",
+            "Iron is not an exception; fill normally."
+          ],
+          "explanation": "Argon covers 18, leaving 8 more: 4s^2 3d^6. Iron is not one of the exceptions, so the expected filling order holds.",
+          "tags": [
+            "electron-configuration"
+          ],
+          "expectedSeconds": 130,
+          "points": 20
+        },
+        {
+          "id": "T1L10-Q04",
+          "prompt": "Copper (Z = 29) is an exception to the expected filling order. Write its actual ground-state configuration.",
+          "answer": {
+            "type": "expression",
+            "value": "[Ar] 4s^1 3d^10",
+            "mode": "set",
+            "accept": [
+              "1s^2 2s^2 2p^6 3s^2 3p^6 4s^1 3d^10",
+              "[Ar] 3d^10 4s^1"
+            ]
+          },
+          "hints": [
+            "The expected answer would be [Ar] 4s^2 3d^9. Move one electron to complete the d."
+          ],
+          "explanation": "The predicted configuration is [Ar] 4s^2 3d^9, but a filled d sublevel is more stable than a filled s, so one 4s electron moves across to give [Ar] 4s^1 3d^10.",
+          "tags": [
+            "electron-configuration",
+            "exceptions"
+          ],
+          "expectedSeconds": 125,
+          "points": 20
+        },
+        {
+          "id": "T1L10-Q05",
+          "prompt": "How many UNPAIRED electrons does a ground-state nitrogen atom (Z = 7) have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 3,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Draw the three 2p orbitals and fill them using Hund's rule."
+          ],
+          "explanation": "Nitrogen is 1s^2 2s^2 2p^3. Hund's rule spreads the three 2p electrons one to each of the three 2p orbitals, so all three stay unpaired.",
+          "tags": [
+            "orbital-diagram",
+            "hunds-rule"
+          ],
+          "expectedSeconds": 90,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 1,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "Hund's rule spreads the three 2p electrons across all three orbitals before any pair.",
+                "label": "paired-too-early"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L10-Q06",
+          "prompt": "How many UNPAIRED electrons does a ground-state oxygen atom (Z = 8) have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 2,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Place all four 2p electrons singly first, then see which one has to pair."
+          ],
+          "explanation": "Oxygen is 1s^2 2s^2 2p^4. The first three 2p electrons take one orbital each, then the fourth is forced to pair with one of them, leaving 2 unpaired.",
+          "tags": [
+            "orbital-diagram",
+            "hunds-rule"
+          ],
+          "expectedSeconds": 95,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 4,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "Not all four are unpaired. Once each orbital holds one, the fourth must pair up.",
+                "label": "counted-all-p-electrons"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L10-Q07",
+          "prompt": "How many UNPAIRED electrons does a ground-state iron atom (Z = 26) have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 4,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "The 4s electrons are already paired, so look only at 3d^6.",
+            "Six electrons into five orbitals: fill singly first."
+          ],
+          "explanation": "Iron is [Ar] 4s^2 3d^6. The 4s pair is full, so only the 3d matters: six electrons across five orbitals means five go in singly and the sixth pairs up, leaving 4 unpaired. This is why iron is magnetic.",
+          "tags": [
+            "orbital-diagram",
+            "hunds-rule"
+          ],
+          "expectedSeconds": 130,
+          "points": 20
+        },
+        {
+          "id": "T1L10-Q08",
+          "prompt": "Write the full electron configuration of the O^2- ion (oxygen is Z = 8).",
+          "answer": {
+            "type": "expression",
+            "value": "1s^2 2s^2 2p^6",
+            "mode": "set",
+            "accept": [
+              "[Ne]",
+              "[He] 2s^2 2p^6"
+            ]
+          },
+          "hints": [
+            "Start from neutral oxygen, then ADD two electrons because the charge is negative."
+          ],
+          "explanation": "Neutral oxygen is 1s^2 2s^2 2p^4. Gaining two electrons fills the 2p sublevel, giving 1s^2 2s^2 2p^6, the same configuration as neon.",
+          "tags": [
+            "electron-configuration",
+            "ions"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        },
+        {
+          "id": "T1L10-Q09",
+          "prompt": "Write the electron configuration of the Fe^2+ ion (iron is Z = 26).",
+          "answer": {
+            "type": "expression",
+            "value": "[Ar] 3d^6",
+            "mode": "set",
+            "accept": [
+              "1s^2 2s^2 2p^6 3s^2 3p^6 3d^6"
+            ]
+          },
+          "hints": [
+            "Write the neutral atom first, then remove two electrons.",
+            "For transition metals the outermost s electrons go first."
+          ],
+          "explanation": "Neutral iron is [Ar] 4s^2 3d^6. When a transition metal is ionised the 4s electrons leave FIRST, even though 4s filled first, so removing two gives [Ar] 3d^6, not [Ar] 4s^2 3d^4.",
+          "tags": [
+            "electron-configuration",
+            "ions"
+          ],
+          "expectedSeconds": 145,
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "T1L11",
+      "title": "Valence Electrons, Ions & Isoelectronic Series",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T1L11-Q01",
+          "prompt": "How many valence electrons does a neutral sulfur atom (Z = 16) have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 6,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Write the configuration, then count only the electrons in the highest n."
+          ],
+          "explanation": "Sulfur is [Ne] 3s^2 3p^4. Valence electrons are those in the outermost level, n = 3, so 2 + 4 = 6. This matches its group number.",
+          "tags": [
+            "valence"
+          ],
+          "expectedSeconds": 65,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 16,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "That is the total electron count. Valence electrons are only the outermost ones.",
+                "label": "counted-all-electrons"
+              },
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 4,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "You counted only the 3p electrons. The 3s pair is in the same level.",
+                "label": "omitted-s-electrons"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L11-Q02",
+          "prompt": "How many valence electrons does a neutral aluminium atom (Z = 13) have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 3,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Count only the electrons outside the [Ne] core."
+          ],
+          "explanation": "Aluminium is [Ne] 3s^2 3p^1, so the outermost level holds 2 + 1 = 3. This is why aluminium forms Al^3+.",
+          "tags": [
+            "valence"
+          ],
+          "expectedSeconds": 60,
+          "points": 10
+        },
+        {
+          "id": "T1L11-Q03",
+          "prompt": "How many valence electrons does a neutral chlorine atom (Z = 17) have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 7,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Count the electrons outside the [Ne] core."
+          ],
+          "explanation": "Chlorine is [Ne] 3s^2 3p^5, giving 2 + 5 = 7. One short of an octet, which is why it so readily forms Cl^-.",
+          "tags": [
+            "valence"
+          ],
+          "expectedSeconds": 60,
+          "points": 10
+        },
+        {
+          "id": "T1L11-Q04",
+          "prompt": "How many electrons does the S^2- ion have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 18,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 2,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "A negative charge means electrons were gained."
+          ],
+          "explanation": "Sulfur has 16 electrons when neutral. A 2- charge means two were gained, giving 18, the same as argon.",
+          "tags": [
+            "ions",
+            "isoelectronic"
+          ],
+          "expectedSeconds": 60,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 14,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.001
+                  }
+                },
+                "message": "A 2- charge means the ion GAINED two electrons, so add rather than subtract.",
+                "label": "charge-sign-flipped"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T1L11-Q05",
+          "prompt": "How many electrons does the Al^3+ ion have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 10,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 2,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "A positive charge means electrons were removed."
+          ],
+          "explanation": "Aluminium has 13 electrons when neutral, and a 3+ charge means three were lost, leaving 10. That matches neon.",
+          "tags": [
+            "ions",
+            "isoelectronic"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "T1L11-Q06",
+          "prompt": "Which noble gas is the Ca^2+ ion isoelectronic with? Give the name or the symbol.",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "argon",
+              "Ar",
+              "ar",
+              "AR"
+            ],
+            "reject": [
+              "neon",
+              "Ne",
+              "krypton",
+              "Kr"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Work out how many electrons Ca^2+ has, then find the noble gas with that count."
+          ],
+          "explanation": "Calcium has 20 electrons when neutral, and losing two leaves 18. Argon also has 18, so the two are isoelectronic.",
+          "tags": [
+            "ions",
+            "isoelectronic"
+          ],
+          "expectedSeconds": 75,
+          "points": 15
+        },
+        {
+          "id": "T1L11-Q07",
+          "prompt": "The ions O^2-, F^-, Na^+ and Mg^2+ all have 10 electrons. Write the formula, with its charge, of the one with the LARGEST radius.",
+          "answer": {
+            "type": "formula",
+            "value": "O",
+            "match": "composition",
+            "charge": -2,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "The electron count is identical, so compare the proton counts.",
+            "Fewer protons pulling on the same 10 electrons means a larger ion."
+          ],
+          "explanation": "O^2-. In an isoelectronic series the electron count is fixed, so the nuclear charge decides the size. Oxygen has only 8 protons, the weakest pull of the four, so its cloud is held least tightly.",
+          "tags": [
+            "ions",
+            "isoelectronic",
+            "periodic-trends"
+          ],
+          "expectedSeconds": 100,
+          "points": 20
+        },
+        {
+          "id": "T1L11-Q08",
+          "prompt": "From that same series (O^2-, F^-, Na^+, Mg^2+), write the formula, with its charge, of the ion with the SMALLEST radius.",
+          "answer": {
+            "type": "formula",
+            "value": "Mg",
+            "match": "composition",
+            "charge": 2,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Which of the four has the most protons?"
+          ],
+          "explanation": "Mg^2+. With 12 protons it exerts the strongest pull on the shared set of 10 electrons, drawing the cloud in tightest.",
+          "tags": [
+            "ions",
+            "isoelectronic",
+            "periodic-trends"
+          ],
+          "expectedSeconds": 95,
+          "points": 20
+        },
+        {
+          "id": "T1L11-Q09",
+          "prompt": "Write the formula, including the charge, of the ion that nitrogen forms.",
+          "answer": {
+            "type": "formula",
+            "value": "N",
+            "match": "composition",
+            "charge": -3,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Count nitrogen's valence electrons, then decide whether gaining or losing reaches eight faster."
+          ],
+          "explanation": "N^3-. Nitrogen has 5 valence electrons and needs 3 more to complete its octet, so it gains three.",
+          "tags": [
+            "ions",
+            "octet"
+          ],
+          "expectedSeconds": 70,
+          "points": 15
+        }
+      ]
+    }
+  ]
+}
