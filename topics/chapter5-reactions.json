@@ -22,7 +22,7 @@
     {
       "id": "C5L1",
       "title": "Balancing Chemical Equations",
-      "requiredCorrect": 5,
+      "requiredCorrect": 4,
       "drawMode": "random",
       "raceCount": 3,
       "questions": [
@@ -274,7 +274,7 @@
     {
       "id": "C5L2",
       "title": "The Five Main Reaction Types",
-      "requiredCorrect": 5,
+      "requiredCorrect": 4,
       "drawMode": "random",
       "raceCount": 3,
       "questions": [
@@ -531,60 +531,6 @@
           ],
           "expectedSeconds": 45,
           "points": 10
-        },
-        {
-          "id": "C5L2-Q10",
-          "prompt": "Which of the five main reaction types always has exactly ONE reactant?",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "Synthesis",
-              "Decomposition",
-              "Single displacement",
-              "Double replacement"
-            ],
-            "correct": [
-              1
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "hints": [
-            "Which one is the reverse of synthesis?"
-          ],
-          "explanation": "Decomposition. A single compound is pulled apart into two or more products, usually by heat or electricity. Synthesis is the reverse: many reactants, one product.",
-          "tags": [
-            "reaction-types"
-          ],
-          "expectedSeconds": 55,
-          "points": 10
-        },
-        {
-          "id": "C5L2-Q11",
-          "prompt": "In a double replacement reaction, what do the two reactants exchange?",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "Their cations (positive ions)",
-              "Their electrons",
-              "Their physical states",
-              "Nothing; they simply dissolve"
-            ],
-            "correct": [
-              0
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "hints": [
-            "Compare AgNO_3 + NaCl with its products and see what moved."
-          ],
-          "explanation": "They swap cations, so the positive ions change partners. No electrons are transferred, which is what separates a double replacement from a redox reaction.",
-          "tags": [
-            "reaction-types"
-          ],
-          "expectedSeconds": 60,
-          "points": 15
         }
       ]
     },
@@ -900,7 +846,7 @@
     {
       "id": "C5L4",
       "title": "Subtypes: Precipitation, Neutralization & Redox",
-      "requiredCorrect": 5,
+      "requiredCorrect": 3,
       "drawMode": "random",
       "raceCount": 3,
       "questions": [
@@ -1064,90 +1010,6 @@
             "redox"
           ],
           "expectedSeconds": 60,
-          "points": 15
-        },
-        {
-          "id": "C5L4-Q07",
-          "prompt": "Which subtype of reaction involves a transfer of electrons between species?",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "Precipitation",
-              "Neutralization",
-              "Redox",
-              "Decomposition"
-            ],
-            "correct": [
-              2
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "hints": [
-            "The name itself is a contraction of two words."
-          ],
-          "explanation": "Redox, short for oxidation-reduction. One species loses electrons and another gains them, and the two always happen together.",
-          "tags": [
-            "subtypes",
-            "redox"
-          ],
-          "expectedSeconds": 50,
-          "points": 10
-        },
-        {
-          "id": "C5L4-Q08",
-          "prompt": "What two products are always formed in an acid-base neutralization?",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "A salt and water",
-              "A gas and water",
-              "A precipitate and a gas",
-              "Two new acids"
-            ],
-            "correct": [
-              0
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "hints": [
-            "What happens when H^+ meets OH^-?"
-          ],
-          "explanation": "A salt and water. The H^+ from the acid joins the OH^- from the base to make water, and the leftover cation and anion make the salt.",
-          "tags": [
-            "subtypes",
-            "neutralization"
-          ],
-          "expectedSeconds": 55,
-          "points": 10
-        },
-        {
-          "id": "C5L4-Q09",
-          "prompt": "In a precipitation reaction, what does the phase label (s) next to a product tell you?",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "That product is insoluble and has come out of solution",
-              "That product is a strong acid",
-              "That product is a gas escaping the mixture",
-              "That product stayed dissolved as ions"
-            ],
-            "correct": [
-              0
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "hints": [
-            "Compare the (s) label with the (aq) labels on the other products."
-          ],
-          "explanation": "It marks the precipitate: that product is insoluble, so instead of staying as separated ions it forms a solid. Everything still labelled (aq) remained dissolved.",
-          "tags": [
-            "subtypes",
-            "precipitation"
-          ],
-          "expectedSeconds": 55,
           "points": 15
         }
       ]
@@ -1408,41 +1270,13 @@
           ],
           "expectedSeconds": 60,
           "points": 15
-        },
-        {
-          "id": "C5L5-Q09",
-          "prompt": "In any redox reaction, the total number of electrons lost must equal what?",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "The total number of electrons gained",
-              "The number of atoms in the equation",
-              "The charge on the precipitate",
-              "The number of products"
-            ],
-            "correct": [
-              0
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "hints": [
-            "Where would a leftover electron go?"
-          ],
-          "explanation": "The total gained. Electrons are never created or destroyed in the reaction, so every electron given up by one species is taken by another. This is what lets you combine two half-reactions into a balanced whole.",
-          "tags": [
-            "redox",
-            "half-reactions"
-          ],
-          "expectedSeconds": 60,
-          "points": 15
         }
       ]
     },
     {
       "id": "C5L6",
       "title": "The Activity Series & Single Displacement",
-      "requiredCorrect": 5,
+      "requiredCorrect": 4,
       "drawMode": "random",
       "raceCount": 3,
       "questions": [
@@ -1654,33 +1488,6 @@
             "activity-series"
           ],
           "expectedSeconds": 60,
-          "points": 15
-        },
-        {
-          "id": "C5L6-Q09",
-          "prompt": "A single displacement reaction between a metal and a dissolved metal salt will occur only if the free metal is:",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "Higher on the activity series than the dissolved metal",
-              "Lower on the activity series than the dissolved metal",
-              "In the same group of the periodic table",
-              "Heavier than the dissolved metal"
-            ],
-            "correct": [
-              0
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "hints": [
-            "Think about what happened with zinc and copper, then with copper and zinc."
-          ],
-          "explanation": "Higher on the series, which is to say more reactive. The activity series is simply a ranking of how readily each metal gives up electrons, so a metal can only push out one that holds its electrons more tightly.",
-          "tags": [
-            "activity-series"
-          ],
-          "expectedSeconds": 70,
           "points": 15
         }
       ]
