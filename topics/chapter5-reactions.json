@@ -1,0 +1,1689 @@
+{
+  "schemaVersion": "1.0",
+  "topic": {
+    "id": "chemical-reactions-ch5",
+    "title": "Chapter 5: Chemical Reactions",
+    "course": "General Chemistry I",
+    "author": "",
+    "defaults": {
+      "tolerance": {
+        "type": "relative",
+        "value": 0.01
+      },
+      "sigFigPolicy": "enforce",
+      "unitsRequired": true,
+      "unitConversion": true,
+      "autoCapitalize": "suggest",
+      "hintAfterAttempts": 2,
+      "maxAttempts": 0
+    }
+  },
+  "levels": [
+    {
+      "id": "C5L1",
+      "title": "Balancing Chemical Equations",
+      "requiredCorrect": 5,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C5L1-Q01",
+          "prompt": "Balance this equation. A coefficient of 1 must be typed in, not left blank.\n\n__ H_2 + __ O_2 -> __ H_2O",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ H_2 + __ O_2 -> __ H_2O",
+            "correct": [
+              2,
+              1,
+              2
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "Balance oxygen first; hydrogen will follow.",
+            "The oxygen coefficient is 1."
+          ],
+          "explanation": "Oxygen comes in pairs on the left but singly on the right, so 2 H_2O fixes the oxygen at 2 and forces 2 H_2 to supply 4 hydrogens. Final: 2 H_2 + O_2 -> 2 H_2O.",
+          "tags": [
+            "balancing"
+          ],
+          "expectedSeconds": 80,
+          "points": 10
+        },
+        {
+          "id": "C5L1-Q02",
+          "prompt": "Balance this equation.\n\n__ Na + __ Cl_2 -> __ NaCl",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ Na + __ Cl_2 -> __ NaCl",
+            "correct": [
+              2,
+              1,
+              2
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "Start with the diatomic element."
+          ],
+          "explanation": "Chlorine is diatomic, so one Cl_2 supplies 2 chlorine atoms and makes 2 NaCl, which then needs 2 Na. Final: 2 Na + Cl_2 -> 2 NaCl.",
+          "tags": [
+            "balancing"
+          ],
+          "expectedSeconds": 75,
+          "points": 10
+        },
+        {
+          "id": "C5L1-Q03",
+          "prompt": "Balance this equation.\n\n__ Al + __ O_2 -> __ Al_2O_3",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ Al + __ O_2 -> __ Al_2O_3",
+            "correct": [
+              4,
+              3,
+              2
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "Find the lowest common multiple of the oxygen counts, 2 and 3.",
+            "Six oxygen atoms on each side."
+          ],
+          "explanation": "Oxygen appears as 2 on the left and 3 on the right, so take the lowest common multiple, 6: that means 3 O_2 and 2 Al_2O_3. Two Al_2O_3 hold 4 aluminium atoms, so 4 Al. Final: 4 Al + 3 O_2 -> 2 Al_2O_3.",
+          "tags": [
+            "balancing"
+          ],
+          "expectedSeconds": 110,
+          "points": 15
+        },
+        {
+          "id": "C5L1-Q04",
+          "prompt": "Balance this equation.\n\n__ CH_4 + __ O_2 -> __ CO_2 + __ H_2O",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ CH_4 + __ O_2 -> __ CO_2 + __ H_2O",
+            "correct": [
+              1,
+              2,
+              1,
+              2
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "In a combustion, balance carbon first, then hydrogen, then oxygen last.",
+            "Oxygen is easiest last because it appears in both products."
+          ],
+          "explanation": "One carbon gives 1 CO_2, and four hydrogens give 2 H_2O. That puts 2 + 2 = 4 oxygens on the right, so 2 O_2 on the left. Final: CH_4 + 2 O_2 -> CO_2 + 2 H_2O.",
+          "tags": [
+            "balancing",
+            "combustion"
+          ],
+          "expectedSeconds": 100,
+          "points": 15
+        },
+        {
+          "id": "C5L1-Q05",
+          "prompt": "Balance this equation.\n\n__ Mg + __ HCl -> __ MgCl_2 + __ H_2",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ Mg + __ HCl -> __ MgCl_2 + __ H_2",
+            "correct": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "The subscript 2 in MgCl_2 tells you how much HCl you need.",
+            "Do not leave the 1s blank."
+          ],
+          "explanation": "MgCl_2 needs 2 chlorines, so 2 HCl, which brings 2 hydrogens and makes exactly 1 H_2. Three of the four coefficients are 1 and must still be typed in. Final: Mg + 2 HCl -> MgCl_2 + H_2.",
+          "tags": [
+            "balancing"
+          ],
+          "expectedSeconds": 95,
+          "points": 15
+        },
+        {
+          "id": "C5L1-Q06",
+          "prompt": "Balance this equation.\n\n__ N_2 + __ H_2 -> __ NH_3",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ N_2 + __ H_2 -> __ NH_3",
+            "correct": [
+              1,
+              3,
+              2
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "Both reactants are diatomic; start from one N_2."
+          ],
+          "explanation": "One N_2 supplies 2 nitrogens, so 2 NH_3, which needs 6 hydrogens, so 3 H_2. Final: N_2 + 3 H_2 -> 2 NH_3.",
+          "tags": [
+            "balancing"
+          ],
+          "expectedSeconds": 90,
+          "points": 15
+        },
+        {
+          "id": "C5L1-Q07",
+          "prompt": "Balance this equation.\n\n__ KClO_3 -> __ KCl + __ O_2",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ KClO_3 -> __ KCl + __ O_2",
+            "correct": [
+              2,
+              2,
+              3
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "An odd number of oxygens on one side usually means doubling everything.",
+            "Six oxygen atoms on each side."
+          ],
+          "explanation": "Three oxygens on the left will not divide into pairs, so double it: 2 KClO_3 gives 6 oxygens, which is 3 O_2, and the potassium and chlorine follow as 2 KCl. Final: 2 KClO_3 -> 2 KCl + 3 O_2.",
+          "tags": [
+            "balancing",
+            "decomposition"
+          ],
+          "expectedSeconds": 110,
+          "points": 15
+        },
+        {
+          "id": "C5L1-Q08",
+          "prompt": "Balance this equation.\n\n__ Fe + __ O_2 -> __ Fe_2O_3",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ Fe + __ O_2 -> __ Fe_2O_3",
+            "correct": [
+              4,
+              3,
+              2
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "Compare this with the aluminium equation; the numbers are identical."
+          ],
+          "explanation": "Same shape as the aluminium case: six oxygens on each side means 3 O_2 and 2 Fe_2O_3, which needs 4 Fe. Final: 4 Fe + 3 O_2 -> 2 Fe_2O_3.",
+          "tags": [
+            "balancing"
+          ],
+          "expectedSeconds": 100,
+          "points": 15
+        },
+        {
+          "id": "C5L1-Q09",
+          "prompt": "Balance this equation.\n\n__ CaCO_3 -> __ CaO + __ CO_2",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ CaCO_3 -> __ CaO + __ CO_2",
+            "correct": [
+              1,
+              1,
+              1
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "Count the atoms before you change anything. This one may already be balanced."
+          ],
+          "explanation": "Every atom already balances one to one: 1 Ca, 1 C and 3 O on each side. All three coefficients are 1, and all three must be typed in rather than left blank.",
+          "tags": [
+            "balancing",
+            "decomposition"
+          ],
+          "expectedSeconds": 75,
+          "points": 10
+        },
+        {
+          "id": "C5L1-Q10",
+          "prompt": "Balance this equation.\n\n__ C_3H_8 + __ O_2 -> __ CO_2 + __ H_2O",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ C_3H_8 + __ O_2 -> __ CO_2 + __ H_2O",
+            "correct": [
+              1,
+              5,
+              3,
+              4
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "Carbon first, then hydrogen, then oxygen.",
+            "Count the oxygens in BOTH products before setting the O_2 coefficient."
+          ],
+          "explanation": "Three carbons give 3 CO_2 and eight hydrogens give 4 H_2O. The right side then holds 6 + 4 = 10 oxygens, so 5 O_2. Final: C_3H_8 + 5 O_2 -> 3 CO_2 + 4 H_2O.",
+          "tags": [
+            "balancing",
+            "combustion"
+          ],
+          "expectedSeconds": 130,
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "C5L2",
+      "title": "The Five Main Reaction Types",
+      "requiredCorrect": 5,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C5L2-Q01",
+          "prompt": "Classify this reaction.\n\n2 Na + Cl_2 -> 2 NaCl",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Synthesis",
+              "Decomposition",
+              "Single displacement",
+              "Double replacement",
+              "Combustion"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "How many products are there?"
+          ],
+          "explanation": "Synthesis. Two simpler substances combine into a single product. It is also a redox reaction, but redox is a subtype, not one of the five main types.",
+          "tags": [
+            "reaction-types"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "C5L2-Q02",
+          "prompt": "Classify this reaction.\n\n2 KClO_3 -> 2 KCl + 3 O_2",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Synthesis",
+              "Decomposition",
+              "Single displacement",
+              "Double replacement",
+              "Combustion"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Count the reactants, then the products."
+          ],
+          "explanation": "Decomposition. One compound breaks apart into two simpler substances. A single reactant giving several products is the signature.",
+          "tags": [
+            "reaction-types"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "C5L2-Q03",
+          "prompt": "Classify this reaction.\n\nZn + 2 HCl -> ZnCl_2 + H_2",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Synthesis",
+              "Decomposition",
+              "Single displacement",
+              "Double replacement",
+              "Combustion"
+            ],
+            "correct": [
+              2
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "One free element goes in and a different free element comes out."
+          ],
+          "explanation": "Single displacement. One element, zinc, takes the place of another, hydrogen, in a compound. The giveaway is an element plus a compound on the left giving a different element plus a different compound on the right.",
+          "tags": [
+            "reaction-types"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "C5L2-Q04",
+          "prompt": "Classify this reaction.\n\nAgNO_3 + NaCl -> AgCl + NaNO_3",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Synthesis",
+              "Decomposition",
+              "Single displacement",
+              "Double replacement",
+              "Combustion"
+            ],
+            "correct": [
+              3
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Both reactants are compounds, and the positive ions trade places."
+          ],
+          "explanation": "Double replacement. The two cations swap partners: silver leaves the nitrate for the chloride and sodium takes the nitrate. Two compounds in, two compounds out, with no free elements anywhere.",
+          "tags": [
+            "reaction-types"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "C5L2-Q05",
+          "prompt": "Classify this reaction.\n\nCH_4 + 2 O_2 -> CO_2 + 2 H_2O",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Synthesis",
+              "Decomposition",
+              "Single displacement",
+              "Double replacement",
+              "Combustion"
+            ],
+            "correct": [
+              4
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "What are the two products whenever a hydrocarbon burns completely?"
+          ],
+          "explanation": "Combustion. A hydrocarbon burns in oxygen to give carbon dioxide and water. Whenever you see a fuel plus O_2 producing CO_2 and H_2O, that is the pattern.",
+          "tags": [
+            "reaction-types",
+            "combustion"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "C5L2-Q06",
+          "prompt": "Classify this reaction.\n\nCaCO_3 -> CaO + CO_2",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Synthesis",
+              "Decomposition",
+              "Single displacement",
+              "Double replacement",
+              "Combustion"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "One substance in, two substances out."
+          ],
+          "explanation": "Decomposition. One reactant, two products. This particular reaction is how limestone is turned into lime.",
+          "tags": [
+            "reaction-types"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "C5L2-Q07",
+          "prompt": "Classify this reaction.\n\nFe + CuSO_4 -> FeSO_4 + Cu",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Synthesis",
+              "Decomposition",
+              "Single displacement",
+              "Double replacement",
+              "Combustion"
+            ],
+            "correct": [
+              2
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "A free metal goes in and a different free metal comes out."
+          ],
+          "explanation": "Single displacement. Iron displaces copper from the sulfate, leaving copper as a free metal. The sulfate ion is carried along unchanged.",
+          "tags": [
+            "reaction-types"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "C5L2-Q08",
+          "prompt": "Classify this reaction.\n\n2 C_2H_6 + 7 O_2 -> 4 CO_2 + 6 H_2O",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Synthesis",
+              "Decomposition",
+              "Single displacement",
+              "Double replacement",
+              "Combustion"
+            ],
+            "correct": [
+              4
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Look at the products, not the size of the numbers."
+          ],
+          "explanation": "Combustion. Ethane burns in oxygen to give only carbon dioxide and water, the same pattern as methane just with bigger coefficients.",
+          "tags": [
+            "reaction-types",
+            "combustion"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "C5L2-Q09",
+          "prompt": "Classify this reaction.\n\nN_2 + 3 H_2 -> 2 NH_3",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Synthesis",
+              "Decomposition",
+              "Single displacement",
+              "Double replacement",
+              "Combustion"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Two things go in, one thing comes out."
+          ],
+          "explanation": "Synthesis. Two elements combine into one compound. This is the Haber process for making ammonia.",
+          "tags": [
+            "reaction-types"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "C5L2-Q10",
+          "prompt": "Which of the five main reaction types always has exactly ONE reactant?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Synthesis",
+              "Decomposition",
+              "Single displacement",
+              "Double replacement"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Which one is the reverse of synthesis?"
+          ],
+          "explanation": "Decomposition. A single compound is pulled apart into two or more products, usually by heat or electricity. Synthesis is the reverse: many reactants, one product.",
+          "tags": [
+            "reaction-types"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "C5L2-Q11",
+          "prompt": "In a double replacement reaction, what do the two reactants exchange?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Their cations (positive ions)",
+              "Their electrons",
+              "Their physical states",
+              "Nothing; they simply dissolve"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Compare AgNO_3 + NaCl with its products and see what moved."
+          ],
+          "explanation": "They swap cations, so the positive ions change partners. No electrons are transferred, which is what separates a double replacement from a redox reaction.",
+          "tags": [
+            "reaction-types"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "C5L3",
+      "title": "Solubility Rules & Precipitates",
+      "requiredCorrect": 5,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C5L3-Q01",
+          "prompt": "Using the solubility rules, is NaCl soluble or insoluble in water?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Soluble",
+              "Insoluble"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "What does the first solubility rule say about Group 1 metals?"
+          ],
+          "explanation": "Soluble. Every compound of a Group 1 metal is soluble, and that rule has no exceptions, so any sodium salt dissolves.",
+          "tags": [
+            "solubility"
+          ],
+          "expectedSeconds": 35,
+          "points": 10
+        },
+        {
+          "id": "C5L3-Q02",
+          "prompt": "Using the solubility rules, is AgCl soluble or insoluble in water?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Soluble",
+              "Insoluble"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Chlorides are usually soluble. Which three cations are the exceptions?"
+          ],
+          "explanation": "Insoluble. Chlorides are generally soluble, but silver is one of the three classic exceptions, along with lead and mercury(I).",
+          "tags": [
+            "solubility"
+          ],
+          "expectedSeconds": 45,
+          "points": 15
+        },
+        {
+          "id": "C5L3-Q03",
+          "prompt": "Using the solubility rules, is KNO_3 soluble or insoluble in water?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Soluble",
+              "Insoluble"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Two separate rules both make this one soluble."
+          ],
+          "explanation": "Soluble on two counts: it is a Group 1 compound, and all nitrates are soluble without exception. Nitrates are the safest spectator ion to look for.",
+          "tags": [
+            "solubility"
+          ],
+          "expectedSeconds": 35,
+          "points": 10
+        },
+        {
+          "id": "C5L3-Q04",
+          "prompt": "Using the solubility rules, is BaSO_4 soluble or insoluble in water?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Soluble",
+              "Insoluble"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Sulfates are usually soluble. Barium is one of the exceptions."
+          ],
+          "explanation": "Insoluble. Sulfates are generally soluble, but barium is an exception, along with lead, calcium and strontium. Its insolubility is why barium sulfate is safe to swallow for medical imaging.",
+          "tags": [
+            "solubility"
+          ],
+          "expectedSeconds": 45,
+          "points": 15
+        },
+        {
+          "id": "C5L3-Q05",
+          "prompt": "Using the solubility rules, is CaCO_3 soluble or insoluble in water?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Soluble",
+              "Insoluble"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Carbonates are insoluble apart from a short list of cations."
+          ],
+          "explanation": "Insoluble. Carbonates are insoluble unless the cation is a Group 1 metal or ammonium, and calcium is neither. This is why limestone does not simply dissolve away in rain.",
+          "tags": [
+            "solubility"
+          ],
+          "expectedSeconds": 45,
+          "points": 15
+        },
+        {
+          "id": "C5L3-Q06",
+          "prompt": "Using the solubility rules, is (NH_4)_2S soluble or insoluble in water?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Soluble",
+              "Insoluble"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Two rules collide here. Which one has no exceptions?"
+          ],
+          "explanation": "Soluble. Sulfides are normally insoluble, but every ammonium compound is soluble, and that rule wins. Ammonium behaves like a Group 1 cation for solubility purposes.",
+          "tags": [
+            "solubility"
+          ],
+          "expectedSeconds": 50,
+          "points": 15
+        },
+        {
+          "id": "C5L3-Q07",
+          "prompt": "Solutions of AgNO_3 and NaCl are mixed and a precipitate forms. Write the formula of the precipitate.",
+          "answer": {
+            "type": "formula",
+            "value": "AgCl",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Swap the cations to see the two possible products.",
+            "Then check each one against the solubility rules."
+          ],
+          "explanation": "AgCl. Swapping partners gives the two possible products AgCl and NaNO_3. Sodium nitrate is soluble on two rules, while silver chloride is the exception that drops out as a white solid.",
+          "tags": [
+            "solubility",
+            "precipitation"
+          ],
+          "expectedSeconds": 90,
+          "points": 20
+        },
+        {
+          "id": "C5L3-Q08",
+          "prompt": "Solutions of BaCl_2 and Na_2SO_4 are mixed and a precipitate forms. Write the formula of the precipitate.",
+          "answer": {
+            "type": "formula",
+            "value": "BaSO_4",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Swap the cations, then test both products against the rules.",
+            "Ba^2+ and SO_4^2- combine one to one."
+          ],
+          "explanation": "BaSO_4. The possible products are BaSO_4 and NaCl. Sodium chloride is soluble, so barium sulfate is the solid. Watch the charges: Ba^2+ with SO_4^2- gives a 1:1 formula, not BaSO_4 with a subscript.",
+          "tags": [
+            "solubility",
+            "precipitation"
+          ],
+          "expectedSeconds": 95,
+          "points": 20
+        },
+        {
+          "id": "C5L3-Q09",
+          "prompt": "Solutions of Pb(NO_3)_2 and KI are mixed and a bright yellow precipitate forms. Write the formula of the precipitate.",
+          "answer": {
+            "type": "formula",
+            "value": "PbI_2",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Lead is one of the three exceptions to the halide rule.",
+            "Balance the charges: Pb^2+ needs two 1- ions."
+          ],
+          "explanation": "PbI_2. Iodides follow the same exceptions as chlorides, and lead is one of them. Lead(II) carries a 2+ charge against iodide's 1-, so two iodides are needed.",
+          "tags": [
+            "solubility",
+            "precipitation"
+          ],
+          "expectedSeconds": 100,
+          "points": 20
+        },
+        {
+          "id": "C5L3-Q10",
+          "prompt": "Solutions of NaNO_3 and KCl are mixed. Does a precipitate form?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Yes, a reaction occurs",
+              "No, no reaction occurs"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Work out both possible products, then check them against the rules.",
+            "If both products are soluble, nothing precipitates."
+          ],
+          "explanation": "No. The possible products are NaCl and KNO_3, and both are soluble: they are Group 1 compounds and one is a nitrate. Everything stays dissolved, so there is no reaction.",
+          "tags": [
+            "solubility",
+            "precipitation"
+          ],
+          "expectedSeconds": 65,
+          "points": 15
+        },
+        {
+          "id": "C5L3-Q11",
+          "prompt": "When AgNO_3(aq) and NaCl(aq) are mixed, AgCl precipitates. List the spectator ions, separated by commas.",
+          "answer": {
+            "type": "set",
+            "items": [
+              "Na^+",
+              "NO_3^-"
+            ],
+            "itemType": "formula",
+            "ordered": false,
+            "partialCredit": true
+          },
+          "hints": [
+            "List all four ions present, then cross out the two that form the solid.",
+            "Whatever is left over is a spectator."
+          ],
+          "explanation": "Na^+ and NO_3^-. Four ions are present in the mixture. Ag^+ and Cl^- leave the solution as solid AgCl, while sodium and nitrate stay dissolved and unchanged on both sides, which is what makes them spectators.",
+          "tags": [
+            "solubility",
+            "precipitation",
+            "spectator-ions"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        },
+        {
+          "id": "C5L3-Q12",
+          "prompt": "When BaCl_2(aq) and Na_2SO_4(aq) are mixed, BaSO_4 precipitates. List the spectator ions, separated by commas.",
+          "answer": {
+            "type": "set",
+            "items": [
+              "Na^+",
+              "Cl^-"
+            ],
+            "itemType": "formula",
+            "ordered": false,
+            "partialCredit": true
+          },
+          "hints": [
+            "Which two ions ended up in the solid? The other two are spectators."
+          ],
+          "explanation": "Na^+ and Cl^-. Barium and sulfate combine into the solid, leaving sodium and chloride dissolved throughout. Note that the spectators here would make NaCl if you evaporated the water.",
+          "tags": [
+            "solubility",
+            "precipitation",
+            "spectator-ions"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "C5L4",
+      "title": "Subtypes: Precipitation, Neutralization & Redox",
+      "requiredCorrect": 5,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C5L4-Q01",
+          "prompt": "Classify this reaction by subtype.\n\nHCl(aq) + NaOH(aq) -> NaCl(aq) + H_2O(l)",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Precipitation",
+              "Neutralization",
+              "Redox"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "What are the two reactants, and what is one of the products?"
+          ],
+          "explanation": "Neutralization. An acid and a base react to give a salt and water. It is also a double replacement by main type, but the production of water from H^+ and OH^- makes it specifically a neutralization.",
+          "tags": [
+            "subtypes",
+            "neutralization"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "C5L4-Q02",
+          "prompt": "Classify this reaction by subtype.\n\nAgNO_3(aq) + NaCl(aq) -> AgCl(s) + NaNO_3(aq)",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Precipitation",
+              "Neutralization",
+              "Redox"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Look at the phase labels. What does (s) tell you?"
+          ],
+          "explanation": "Precipitation. Two solutions are mixed and an insoluble solid forms, shown by the (s) label on AgCl. The main type is double replacement; precipitation is the subtype.",
+          "tags": [
+            "subtypes",
+            "precipitation"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "C5L4-Q03",
+          "prompt": "Classify this reaction by subtype.\n\nZn(s) + CuSO_4(aq) -> ZnSO_4(aq) + Cu(s)",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Precipitation",
+              "Neutralization",
+              "Redox"
+            ],
+            "correct": [
+              2
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Did anything change its charge?"
+          ],
+          "explanation": "Redox. Zinc goes from a neutral atom to Zn^2+, losing electrons, while Cu^2+ gains them and becomes neutral copper. Electrons transfer, which is the defining feature.",
+          "tags": [
+            "subtypes",
+            "redox"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        },
+        {
+          "id": "C5L4-Q04",
+          "prompt": "Classify this reaction by subtype.\n\nH_2SO_4(aq) + 2 KOH(aq) -> K_2SO_4(aq) + 2 H_2O(l)",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Precipitation",
+              "Neutralization",
+              "Redox"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "An acid plus a base giving water is always the same subtype."
+          ],
+          "explanation": "Neutralization. Sulfuric acid and potassium hydroxide give a salt and water. The coefficients are larger because sulfuric acid supplies two H^+, but the pattern is unchanged.",
+          "tags": [
+            "subtypes",
+            "neutralization"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        },
+        {
+          "id": "C5L4-Q05",
+          "prompt": "Classify this reaction by subtype.\n\nPb(NO_3)_2(aq) + 2 KI(aq) -> PbI_2(s) + 2 KNO_3(aq)",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Precipitation",
+              "Neutralization",
+              "Redox"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Which product is not dissolved?"
+          ],
+          "explanation": "Precipitation. Lead(II) iodide is insoluble and drops out as a solid, which the (s) label marks.",
+          "tags": [
+            "subtypes",
+            "precipitation"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "C5L4-Q06",
+          "prompt": "Classify this reaction by subtype.\n\n2 Mg(s) + O_2(g) -> 2 MgO(s)",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Precipitation",
+              "Neutralization",
+              "Redox"
+            ],
+            "correct": [
+              2
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Both reactants are neutral elements. Are the products still neutral atoms?"
+          ],
+          "explanation": "Redox. Magnesium atoms lose electrons to become Mg^2+ and oxygen atoms gain them to become O^2-. By main type this is a synthesis, but electrons move, so the subtype is redox.",
+          "tags": [
+            "subtypes",
+            "redox"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        },
+        {
+          "id": "C5L4-Q07",
+          "prompt": "Which subtype of reaction involves a transfer of electrons between species?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Precipitation",
+              "Neutralization",
+              "Redox",
+              "Decomposition"
+            ],
+            "correct": [
+              2
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "The name itself is a contraction of two words."
+          ],
+          "explanation": "Redox, short for oxidation-reduction. One species loses electrons and another gains them, and the two always happen together.",
+          "tags": [
+            "subtypes",
+            "redox"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "C5L4-Q08",
+          "prompt": "What two products are always formed in an acid-base neutralization?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "A salt and water",
+              "A gas and water",
+              "A precipitate and a gas",
+              "Two new acids"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "What happens when H^+ meets OH^-?"
+          ],
+          "explanation": "A salt and water. The H^+ from the acid joins the OH^- from the base to make water, and the leftover cation and anion make the salt.",
+          "tags": [
+            "subtypes",
+            "neutralization"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "C5L4-Q09",
+          "prompt": "In a precipitation reaction, what does the phase label (s) next to a product tell you?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "That product is insoluble and has come out of solution",
+              "That product is a strong acid",
+              "That product is a gas escaping the mixture",
+              "That product stayed dissolved as ions"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Compare the (s) label with the (aq) labels on the other products."
+          ],
+          "explanation": "It marks the precipitate: that product is insoluble, so instead of staying as separated ions it forms a solid. Everything still labelled (aq) remained dissolved.",
+          "tags": [
+            "subtypes",
+            "precipitation"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "C5L5",
+      "title": "Oxidation, Reduction & Metal Half-Reactions",
+      "requiredCorrect": 5,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C5L5-Q01",
+          "prompt": "In this reaction, which element is OXIDISED? Give the name or the symbol.\n\nZn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "zinc",
+              "Zn",
+              "zn"
+            ],
+            "reject": [
+              "copper",
+              "Cu"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Which species went up in charge?",
+            "Remember OIL RIG: oxidation is loss, reduction is gain."
+          ],
+          "explanation": "Zinc. It starts as a neutral atom and ends as Zn^2+, so it lost two electrons. Oxidation is loss of electrons.",
+          "tags": [
+            "redox",
+            "half-reactions"
+          ],
+          "expectedSeconds": 65,
+          "points": 15
+        },
+        {
+          "id": "C5L5-Q02",
+          "prompt": "In this reaction, which element is REDUCED? Give the name or the symbol.\n\nZn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "copper",
+              "Cu",
+              "cu"
+            ],
+            "reject": [
+              "zinc",
+              "Zn"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Which species went down in charge?"
+          ],
+          "explanation": "Copper. It starts as Cu^2+ and ends as a neutral atom, so it gained two electrons. Reduction is gain of electrons, and the charge going DOWN is the memory hook.",
+          "tags": [
+            "redox",
+            "half-reactions"
+          ],
+          "expectedSeconds": 65,
+          "points": 15
+        },
+        {
+          "id": "C5L5-Q03",
+          "prompt": "Is this half-reaction an oxidation or a reduction?\n\nMg -> Mg^2+ + 2 e^-",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "oxidation",
+              "oxidised",
+              "oxidized"
+            ],
+            "reject": [
+              "reduction",
+              "reduced"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Which side of the arrow are the electrons on?"
+          ],
+          "explanation": "Oxidation. The electrons appear on the PRODUCT side, which means they are being given away. Magnesium's charge rises from 0 to 2+.",
+          "tags": [
+            "redox",
+            "half-reactions"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        },
+        {
+          "id": "C5L5-Q04",
+          "prompt": "Is this half-reaction an oxidation or a reduction?\n\nAg^+ + e^- -> Ag",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "reduction",
+              "reduced"
+            ],
+            "reject": [
+              "oxidation",
+              "oxidised",
+              "oxidized"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Electrons on the left mean they are being gained."
+          ],
+          "explanation": "Reduction. The electron sits on the REACTANT side, so it is being taken in. Silver's charge falls from 1+ to 0.",
+          "tags": [
+            "redox",
+            "half-reactions"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        },
+        {
+          "id": "C5L5-Q05",
+          "prompt": "How many electrons does a single aluminium atom lose when it becomes Al^3+? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 3,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "The size of the charge tells you the number of electrons."
+          ],
+          "explanation": "Three. Going from a neutral atom to a 3+ ion means shedding three electrons, so the half-reaction is Al -> Al^3+ + 3 e^-.",
+          "tags": [
+            "redox",
+            "half-reactions"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "C5L5-Q06",
+          "prompt": "How many electrons does a single Fe^3+ ion gain when it becomes neutral iron? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 3,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.001
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "How far does the charge have to fall?"
+          ],
+          "explanation": "Three. Dropping from 3+ to 0 requires taking in three electrons: Fe^3+ + 3 e^- -> Fe.",
+          "tags": [
+            "redox",
+            "half-reactions"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "C5L5-Q07",
+          "prompt": "In Fe(s) + Cu^2+(aq) -> Fe^2+(aq) + Cu(s), write the formula, with its charge, of the species that GAINS electrons.",
+          "answer": {
+            "type": "formula",
+            "value": "Cu",
+            "match": "composition",
+            "charge": 2,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Gaining electrons means the charge goes down.",
+            "Which species starts charged and ends neutral?"
+          ],
+          "explanation": "Cu^2+. It picks up two electrons and becomes neutral copper metal, so it is the species being reduced. Iron is the one losing electrons.",
+          "tags": [
+            "redox",
+            "half-reactions"
+          ],
+          "expectedSeconds": 80,
+          "points": 20
+        },
+        {
+          "id": "C5L5-Q08",
+          "prompt": "When a metal atom is oxidised, does its charge increase or decrease?",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "increase",
+              "increases",
+              "goes up",
+              "it increases"
+            ],
+            "reject": [
+              "decrease",
+              "decreases"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "What happens to charge when you remove something negative?"
+          ],
+          "explanation": "It increases. Losing negatively charged electrons leaves the atom more positive, so a neutral metal becomes a positive ion. Metals almost always do this rather than the reverse.",
+          "tags": [
+            "redox"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        },
+        {
+          "id": "C5L5-Q09",
+          "prompt": "In any redox reaction, the total number of electrons lost must equal what?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "The total number of electrons gained",
+              "The number of atoms in the equation",
+              "The charge on the precipitate",
+              "The number of products"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Where would a leftover electron go?"
+          ],
+          "explanation": "The total gained. Electrons are never created or destroyed in the reaction, so every electron given up by one species is taken by another. This is what lets you combine two half-reactions into a balanced whole.",
+          "tags": [
+            "redox",
+            "half-reactions"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "C5L6",
+      "title": "The Activity Series & Single Displacement",
+      "requiredCorrect": 5,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C5L6-Q01",
+          "prompt": "Using the activity series, will a strip of Zn(s) react when placed in CuSO_4(aq)?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Yes, a reaction occurs",
+              "No, no reaction occurs"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Find both metals in the series. Which one is higher?",
+            "A metal displaces any metal listed below it."
+          ],
+          "explanation": "Yes. Zinc sits above copper in the activity series, so it is the more reactive metal and displaces copper from solution: Zn + CuSO_4 -> ZnSO_4 + Cu. The blue colour fades and copper coats the strip.",
+          "tags": [
+            "activity-series"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        },
+        {
+          "id": "C5L6-Q02",
+          "prompt": "Using the activity series, will a strip of Cu(s) react when placed in ZnSO_4(aq)?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Yes, a reaction occurs",
+              "No, no reaction occurs"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "This is the previous question turned around.",
+            "A metal cannot displace one listed above it."
+          ],
+          "explanation": "No. Copper sits BELOW zinc, so it is the less reactive metal and cannot displace zinc. This is the reverse of the previous reaction, and reversing it is exactly what the series forbids.",
+          "tags": [
+            "activity-series"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        },
+        {
+          "id": "C5L6-Q03",
+          "prompt": "Using the activity series, will Mg(s) react with HCl(aq) to release hydrogen gas?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Yes, a reaction occurs",
+              "No, no reaction occurs"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Hydrogen has its own place in the activity series.",
+            "Metals above hydrogen react with acids; metals below it do not."
+          ],
+          "explanation": "Yes. Magnesium lies above hydrogen in the series, so it displaces hydrogen from the acid: Mg + 2 HCl -> MgCl_2 + H_2. You would see bubbles of hydrogen forming.",
+          "tags": [
+            "activity-series"
+          ],
+          "expectedSeconds": 65,
+          "points": 15
+        },
+        {
+          "id": "C5L6-Q04",
+          "prompt": "Using the activity series, will Cu(s) react with HCl(aq) to release hydrogen gas?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Yes, a reaction occurs",
+              "No, no reaction occurs"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Where does copper sit relative to hydrogen?"
+          ],
+          "explanation": "No. Copper sits below hydrogen, so it cannot displace it from an acid. This is why copper pipes and cookware survive contact with weak acids while iron and zinc do not.",
+          "tags": [
+            "activity-series"
+          ],
+          "expectedSeconds": 65,
+          "points": 15
+        },
+        {
+          "id": "C5L6-Q05",
+          "prompt": "Which metal is more reactive, zinc or silver? Give the name or the symbol.",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "zinc",
+              "Zn",
+              "zn"
+            ],
+            "reject": [
+              "silver",
+              "Ag"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Higher in the series means more reactive."
+          ],
+          "explanation": "Zinc. It sits well above silver in the activity series. Silver is near the bottom, which is part of why it is found as the free metal in nature and resists corrosion.",
+          "tags": [
+            "activity-series"
+          ],
+          "expectedSeconds": 60,
+          "points": 10
+        },
+        {
+          "id": "C5L6-Q06",
+          "prompt": "An iron nail is placed in CuSO_4(aq) and a reaction occurs. Write the formula of the free metal that is deposited on the nail.",
+          "answer": {
+            "type": "formula",
+            "value": "Cu",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "The more reactive metal goes into solution; the less reactive one comes out.",
+            "Which of the two is less reactive?"
+          ],
+          "explanation": "Cu. Iron is above copper, so iron dissolves as Fe^2+ and copper comes out of solution as the free metal, plating the nail with a reddish coating.",
+          "tags": [
+            "activity-series"
+          ],
+          "expectedSeconds": 85,
+          "points": 20
+        },
+        {
+          "id": "C5L6-Q07",
+          "prompt": "Using the activity series, will Ag(s) react when placed in Cu(NO_3)_2(aq)?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Yes, a reaction occurs",
+              "No, no reaction occurs"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Compare the positions of silver and copper."
+          ],
+          "explanation": "No. Silver is below copper, so it cannot displace copper from solution. Nothing happens and the silver strip is unchanged.",
+          "tags": [
+            "activity-series"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        },
+        {
+          "id": "C5L6-Q08",
+          "prompt": "Using the activity series, will Al(s) react when placed in FeCl_3(aq)?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Yes, a reaction occurs",
+              "No, no reaction occurs"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Is aluminium above or below iron?"
+          ],
+          "explanation": "Yes. Aluminium sits above iron, so it displaces iron from the solution and goes in as Al^3+ itself.",
+          "tags": [
+            "activity-series"
+          ],
+          "expectedSeconds": 60,
+          "points": 15
+        },
+        {
+          "id": "C5L6-Q09",
+          "prompt": "A single displacement reaction between a metal and a dissolved metal salt will occur only if the free metal is:",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Higher on the activity series than the dissolved metal",
+              "Lower on the activity series than the dissolved metal",
+              "In the same group of the periodic table",
+              "Heavier than the dissolved metal"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Think about what happened with zinc and copper, then with copper and zinc."
+          ],
+          "explanation": "Higher on the series, which is to say more reactive. The activity series is simply a ranking of how readily each metal gives up electrons, so a metal can only push out one that holds its electrons more tightly.",
+          "tags": [
+            "activity-series"
+          ],
+          "expectedSeconds": 70,
+          "points": 15
+        }
+      ]
+    }
+  ]
+}
