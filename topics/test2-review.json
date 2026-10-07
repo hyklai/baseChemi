@@ -1,0 +1,3616 @@
+{
+  "schemaVersion": "1.0",
+  "topic": {
+    "id": "test2-review-ch4to6",
+    "title": "Test 2 Review: Chapters 4-6",
+    "course": "General Chemistry I",
+    "author": "",
+    "defaults": {
+      "tolerance": {
+        "type": "relative",
+        "value": 0.015
+      },
+      "sigFigPolicy": "enforce",
+      "unitsRequired": true,
+      "unitConversion": true,
+      "autoCapitalize": "suggest",
+      "hintAfterAttempts": 2,
+      "maxAttempts": 0
+    }
+  },
+  "levels": [
+    {
+      "id": "T2L1",
+      "title": "Periodic Trends, Lewis Symbols & Bond Type",
+      "requiredCorrect": 5,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T2L1-Q01",
+          "prompt": "Which atom has the LARGER atomic radius, Na or Cl?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Na",
+              "Cl"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Same row — compare the pull of the nucleus."
+          ],
+          "explanation": "Na. Both are in period 3, so both are filling the same shell, but chlorine has six more protons pulling that shell in. Radius decreases left to right across a period.",
+          "tags": [
+            "periodic-trends",
+            "atomic-radius"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "T2L1-Q02",
+          "prompt": "Which atom has the LARGER atomic radius, Li or K?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Li",
+              "K"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Same column — count the shells."
+          ],
+          "explanation": "K. Going down a group each element adds a whole new shell, so the outermost electrons sit farther from the nucleus. Potassium is in period 4, lithium in period 2.",
+          "tags": [
+            "periodic-trends",
+            "atomic-radius"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "T2L1-Q03",
+          "prompt": "Which of these atoms has the SMALLEST atomic radius: Be, Mg, or Ca?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Be",
+              "Mg",
+              "Ca"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "Be. All three are group 2, so the one highest in the group has the fewest shells and is the smallest.",
+          "tags": [
+            "periodic-trends",
+            "atomic-radius"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T2L1-Q04",
+          "prompt": "Rank these three atoms by INCREASING atomic radius (smallest first), separated by commas: Mg, Si, S",
+          "answer": {
+            "type": "set",
+            "items": [
+              "S",
+              "Si",
+              "Mg"
+            ],
+            "itemType": "formula",
+            "ordered": true,
+            "partialCredit": true
+          },
+          "hints": [
+            "Find all three in the same row of the table first.",
+            "The further right you go in a row, the smaller the atom."
+          ],
+          "explanation": "S, Si, Mg. All three are in period 3. Radius shrinks left to right, so the one furthest right (S) is smallest and the one furthest left (Mg) is largest.",
+          "tags": [
+            "periodic-trends",
+            "atomic-radius"
+          ],
+          "expectedSeconds": 70,
+          "points": 20
+        },
+        {
+          "id": "T2L1-Q05",
+          "prompt": "Which atom has the HIGHER first ionization energy, Mg or S?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Mg",
+              "S"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Ionization energy runs opposite to atomic radius."
+          ],
+          "explanation": "S. Ionization energy rises left to right across a period, because the electron being removed is held more tightly by the larger nuclear charge. Smaller atom, harder to ionize.",
+          "tags": [
+            "periodic-trends",
+            "ionization-energy"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T2L1-Q06",
+          "prompt": "Which atom has the HIGHER first ionization energy, Na or K?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Na",
+              "K"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "Na. Potassium's outer electron is in a shell further out and better shielded, so it comes off more easily. Ionization energy decreases going down a group.",
+          "tags": [
+            "periodic-trends",
+            "ionization-energy"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T2L1-Q07",
+          "prompt": "Why does atomic radius DECREASE from left to right across a period?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Electrons are added to the same shell while the nuclear charge keeps rising, so the shell is pulled in tighter",
+              "Each element adds another electron shell",
+              "The electrons repel each other more strongly, pushing the shell outward",
+              "Atomic mass increases, which makes the atom denser and smaller"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "Across a period no new shell is started: electrons go into the shell already occupied while protons keep being added. More positive charge pulling on the same shell means a tighter, smaller atom.",
+          "tags": [
+            "periodic-trends",
+            "atomic-radius"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "T2L1-Q08",
+          "prompt": "Which is LARGER, a neutral Na atom or a Na^+ ion?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Na atom",
+              "Na^+ ion"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "What happens to the outer shell when sodium forms its ion?"
+          ],
+          "explanation": "The Na atom. Sodium loses its single 3s electron to become Na^+, which empties the outer shell entirely. A cation is always smaller than its parent atom.",
+          "tags": [
+            "periodic-trends",
+            "ionic-radius"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T2L1-Q09",
+          "prompt": "Which is LARGER, a neutral Cl atom or a Cl^- ion?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Cl atom",
+              "Cl^- ion"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "The Cl^- ion. Adding an electron increases electron-electron repulsion without adding any protons, so the electron cloud swells. An anion is always larger than its parent atom.",
+          "tags": [
+            "periodic-trends",
+            "ionic-radius"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T2L1-Q10",
+          "prompt": "Which element has the MORE negative electron affinity, F or Li?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "F",
+              "Li"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "F. Fluorine is one electron short of a filled shell, so gaining an electron releases a lot of energy. Lithium has little to gain, so its electron affinity is far less negative.",
+          "tags": [
+            "periodic-trends",
+            "electron-affinity"
+          ],
+          "expectedSeconds": 50,
+          "points": 15
+        },
+        {
+          "id": "T2L1-Q11",
+          "prompt": "How many VALENCE electrons does an atom of sulfur have? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 6,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.01
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Use the group number."
+          ],
+          "explanation": "6. Sulfur is in group 6A (group 16), and for a main-group element the group number gives the valence count: 3s^2 3p^4 is six outer electrons.",
+          "tags": [
+            "lewis-symbols",
+            "valence-electrons"
+          ],
+          "expectedSeconds": 40,
+          "points": 10
+        },
+        {
+          "id": "T2L1-Q12",
+          "prompt": "How many DOTS are drawn in the Lewis dot symbol for aluminium? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 3,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.01
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "explanation": "3. A Lewis symbol shows only the valence electrons. Aluminium is in group 3A, so three dots go around the Al.",
+          "tags": [
+            "lewis-symbols"
+          ],
+          "expectedSeconds": 40,
+          "points": 10
+        },
+        {
+          "id": "T2L1-Q13",
+          "prompt": "In the Lewis dot symbol for nitrogen, how many UNPAIRED electrons are there? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 3,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.01
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "hints": [
+            "Place the five dots one per side before you pair any of them."
+          ],
+          "explanation": "3. Nitrogen has five valence electrons. Dots are placed one per side before any pairing, so four sides take 1, 1, 1, 1 and the fifth electron pairs up on one side: one pair and three unpaired.",
+          "tags": [
+            "lewis-symbols"
+          ],
+          "expectedSeconds": 50,
+          "points": 15
+        },
+        {
+          "id": "T2L1-Q14",
+          "prompt": "What type of bond forms between potassium and bromine?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Ionic",
+              "Covalent",
+              "Metallic"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Metal plus nonmetal, or nonmetal plus nonmetal?"
+          ],
+          "explanation": "Ionic. Potassium is a metal and bromine a nonmetal, so the electron is transferred rather than shared: K^+ and Br^- are held together by the attraction of opposite charges.",
+          "tags": [
+            "bonding",
+            "ionic-vs-covalent"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "T2L1-Q15",
+          "prompt": "What type of bond forms between carbon and oxygen?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Ionic",
+              "Covalent",
+              "Metallic"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "Covalent. Both are nonmetals, so neither one can strip an electron from the other; they share electrons instead.",
+          "tags": [
+            "bonding",
+            "ionic-vs-covalent"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "T2L1-Q16",
+          "prompt": "Which pair of elements would form an IONIC compound?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Mg and O",
+              "N and O",
+              "C and S",
+              "H and Cl"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "Mg and O. Magnesium is a metal and oxygen a nonmetal, which is the combination that transfers electrons. The other three pairs are nonmetal with nonmetal, so they bond covalently — HCl included, even though it is an acid in water.",
+          "tags": [
+            "bonding",
+            "ionic-vs-covalent"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "T2L1-Q17",
+          "prompt": "Write the formula, including its charge, of the ion that nitrogen forms.",
+          "answer": {
+            "type": "formula",
+            "value": "N",
+            "match": "composition",
+            "charge": -3,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "How many electrons short of eight is nitrogen?"
+          ],
+          "explanation": "N^3-. Nitrogen has five valence electrons and needs three more to reach a filled shell of eight, so it gains three electrons and carries a 3- charge.",
+          "tags": [
+            "bonding",
+            "ions"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "T2L1-Q18",
+          "prompt": "How many electrons does a magnesium atom LOSE when it forms its ion? Enter the number only.",
+          "answer": {
+            "type": "numeric",
+            "value": 2,
+            "unit": "",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.01
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore"
+          },
+          "explanation": "2. Magnesium is in group 2A with two valence electrons. Losing both empties the outer shell and leaves Mg^2+.",
+          "tags": [
+            "bonding",
+            "ions"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "T2L2",
+      "title": "Naming Ionic Compounds",
+      "requiredCorrect": 5,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T2L2-Q01",
+          "prompt": "Name this ionic compound: NaCl",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "sodium chloride"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal, then the anion with its ending."
+          ],
+          "explanation": "sodium chloride. Group 1 metals have only one possible charge, so no Roman numeral is needed. The anion takes the -ide ending: chlorine becomes chloride.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "T2L2-Q02",
+          "prompt": "Name this ionic compound: MgBr_2",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "magnesium bromide"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal, then the anion with its ending."
+          ],
+          "explanation": "magnesium bromide. Magnesium is always 2+, so the name needs no Roman numeral. The subscript 2 is not named — it is already implied by the charges.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "T2L2-Q03",
+          "prompt": "Name this ionic compound: K_2S",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "potassium sulfide"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal, then the anion with its ending."
+          ],
+          "explanation": "potassium sulfide. Two K^+ balance one S^2-. Sulfur's anion name is sulfide; do not confuse it with sulfate, which is the SO_4^2- polyatomic ion.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T2L2-Q04",
+          "prompt": "Name this ionic compound: Al_2O_3",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "aluminum oxide",
+              "aluminium oxide"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal, then the anion with its ending."
+          ],
+          "explanation": "aluminum oxide. Aluminum is always 3+, so no Roman numeral. Oxygen becomes oxide.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "T2L2-Q05",
+          "prompt": "Name this ionic compound: CaO",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "calcium oxide"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal, then the anion with its ending."
+          ],
+          "explanation": "calcium oxide. One Ca^2+ with one O^2-. Calcium has a single possible charge, so the name is just the two ions.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "T2L2-Q06",
+          "prompt": "Name this ionic compound: FeCl_3",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "iron(III) chloride",
+              "ferric chloride"
+            ],
+            "reject": [
+              "iron chloride"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal first, then the anion.",
+            "A transition metal needs a Roman numeral giving its charge."
+          ],
+          "explanation": "iron(III) chloride. Iron is a transition metal with more than one possible charge, so the charge must be stated. Three Cl^- means the iron must be 3+, giving iron(III) chloride.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 65,
+          "points": 20
+        },
+        {
+          "id": "T2L2-Q07",
+          "prompt": "Name this ionic compound: FeCl_2",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "iron(II) chloride",
+              "ferrous chloride"
+            ],
+            "reject": [
+              "iron chloride"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal first, then the anion.",
+            "A transition metal needs a Roman numeral giving its charge."
+          ],
+          "explanation": "iron(II) chloride. Two Cl^- means the iron is 2+ here. Same two elements as iron(III) chloride, different compound — which is exactly why the Roman numeral is required.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 65,
+          "points": 20
+        },
+        {
+          "id": "T2L2-Q08",
+          "prompt": "Name this ionic compound: CuO",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "copper(II) oxide",
+              "cupric oxide"
+            ],
+            "reject": [
+              "copper oxide"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal first, then the anion.",
+            "A transition metal needs a Roman numeral giving its charge."
+          ],
+          "explanation": "copper(II) oxide. Oxide is 2-, so the single copper must be 2+: copper(II) oxide.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 65,
+          "points": 20
+        },
+        {
+          "id": "T2L2-Q09",
+          "prompt": "Name this ionic compound: Cu_2O",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "copper(I) oxide",
+              "cuprous oxide"
+            ],
+            "reject": [
+              "copper oxide"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal first, then the anion.",
+            "A transition metal needs a Roman numeral giving its charge."
+          ],
+          "explanation": "copper(I) oxide. One O^2- is balanced by two coppers, so each copper carries only 1+. The Roman numeral gives the charge on ONE metal ion, not the number of them.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 70,
+          "points": 20
+        },
+        {
+          "id": "T2L2-Q10",
+          "prompt": "Name this ionic compound: PbO_2",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "lead(IV) oxide"
+            ],
+            "reject": [
+              "lead oxide"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal first, then the anion.",
+            "A transition metal needs a Roman numeral giving its charge."
+          ],
+          "explanation": "lead(IV) oxide. Two O^2- make 4- in total, so the single lead must be 4+.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 70,
+          "points": 20
+        },
+        {
+          "id": "T2L2-Q11",
+          "prompt": "Name this ionic compound: Ca(NO_3)_2",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "calcium nitrate"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal, then the anion with its ending."
+          ],
+          "explanation": "calcium nitrate. NO_3^- is nitrate, a polyatomic ion that keeps its own name. Two of them balance one Ca^2+.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "T2L2-Q12",
+          "prompt": "Name this ionic compound: Na_2SO_4",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "sodium sulfate"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal, then the anion with its ending."
+          ],
+          "explanation": "sodium sulfate. SO_4^2- is sulfate. Two Na^+ balance it. Sulfate ends in -ate because it is the oxygen-rich member of the sulfate/sulfite pair.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "T2L2-Q13",
+          "prompt": "Name this ionic compound: NH_4Cl",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "ammonium chloride"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal, then the anion with its ending."
+          ],
+          "explanation": "ammonium chloride. NH_4^+ is ammonium, the one common polyatomic CATION. Paired with chloride it gives a 1:1 formula.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "T2L2-Q14",
+          "prompt": "Name this ionic compound: K_2CO_3",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "potassium carbonate"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal, then the anion with its ending."
+          ],
+          "explanation": "potassium carbonate. CO_3^2- is carbonate, so two K^+ are needed to balance it.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "T2L2-Q15",
+          "prompt": "Name this ionic compound: Mg(OH)_2",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "magnesium hydroxide"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal, then the anion with its ending."
+          ],
+          "explanation": "magnesium hydroxide. OH^- is hydroxide. Two are needed for one Mg^2+, which is why it is written in parentheses with a subscript 2.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "T2L2-Q16",
+          "prompt": "Name this ionic compound: Fe_2(SO_4)_3",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "iron(III) sulfate",
+              "ferric sulfate"
+            ],
+            "reject": [
+              "iron sulfate"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Name the metal first, then the anion.",
+            "A transition metal needs a Roman numeral giving its charge."
+          ],
+          "explanation": "iron(III) sulfate. Three sulfates carry 6- in total, shared over two irons, so each iron is 3+. Work out the metal's charge from the anions before you write the numeral.",
+          "tags": [
+            "nomenclature",
+            "ionic-naming"
+          ],
+          "expectedSeconds": 80,
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "T2L3",
+      "title": "Formulas from Names, Covalent & Acid Naming",
+      "requiredCorrect": 5,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T2L3-Q01",
+          "prompt": "Write the chemical formula for calcium chloride.",
+          "answer": {
+            "type": "formula",
+            "value": "CaCl_2",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Write each ion with its charge, then balance the total charge to zero.",
+            "Use the smallest whole-number subscripts."
+          ],
+          "explanation": "CaCl_2. Ca^2+ needs two Cl^- to balance, giving CaCl_2.",
+          "tags": [
+            "nomenclature",
+            "formula-writing"
+          ],
+          "expectedSeconds": 50,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q02",
+          "prompt": "Write the chemical formula for potassium phosphate.",
+          "answer": {
+            "type": "formula",
+            "value": "K_3PO_4",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Write each ion with its charge, then balance the total charge to zero.",
+            "Use the smallest whole-number subscripts."
+          ],
+          "explanation": "K_3PO_4. Phosphate is PO_4^3-, so three K^+ are needed: K_3PO_4.",
+          "tags": [
+            "nomenclature",
+            "formula-writing"
+          ],
+          "expectedSeconds": 70,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q03",
+          "prompt": "Write the chemical formula for aluminum sulfate.",
+          "answer": {
+            "type": "formula",
+            "value": "Al_2(SO_4)_3",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Write each ion with its charge, then balance the total charge to zero.",
+            "Use the smallest whole-number subscripts."
+          ],
+          "explanation": "Al_2(SO_4)_3. Al^3+ and SO_4^2- cross over to 2 and 3: Al_2(SO_4)_3. The polyatomic ion goes in parentheses because it is taken three times.",
+          "tags": [
+            "nomenclature",
+            "formula-writing"
+          ],
+          "expectedSeconds": 85,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q04",
+          "prompt": "Write the chemical formula for iron(III) oxide.",
+          "answer": {
+            "type": "formula",
+            "value": "Fe_2O_3",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Write each ion with its charge, then balance the total charge to zero.",
+            "Use the smallest whole-number subscripts."
+          ],
+          "explanation": "Fe_2O_3. The numeral says iron is 3+, and oxide is 2-. Two irons and three oxides balance at 6+ and 6-.",
+          "tags": [
+            "nomenclature",
+            "formula-writing"
+          ],
+          "expectedSeconds": 70,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q05",
+          "prompt": "Write the chemical formula for ammonium sulfate.",
+          "answer": {
+            "type": "formula",
+            "value": "(NH_4)_2SO_4",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Write each ion with its charge, then balance the total charge to zero.",
+            "Use the smallest whole-number subscripts."
+          ],
+          "explanation": "(NH_4)_2SO_4. Two ammonium ions, NH_4^+, balance one sulfate, SO_4^2-. The ammonium needs parentheses because the whole ion is doubled.",
+          "tags": [
+            "nomenclature",
+            "formula-writing"
+          ],
+          "expectedSeconds": 80,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q06",
+          "prompt": "Write the chemical formula for magnesium nitrate.",
+          "answer": {
+            "type": "formula",
+            "value": "Mg(NO_3)_2",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Write each ion with its charge, then balance the total charge to zero.",
+            "Use the smallest whole-number subscripts."
+          ],
+          "explanation": "Mg(NO_3)_2. Mg^2+ with two nitrate ions: Mg(NO_3)_2.",
+          "tags": [
+            "nomenclature",
+            "formula-writing"
+          ],
+          "expectedSeconds": 70,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q07",
+          "prompt": "Write the chemical formula for sodium hydroxide.",
+          "answer": {
+            "type": "formula",
+            "value": "NaOH",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Write each ion with its charge, then balance the total charge to zero.",
+            "Use the smallest whole-number subscripts."
+          ],
+          "explanation": "NaOH. One Na^+ with one OH^-, so no subscripts are needed.",
+          "tags": [
+            "nomenclature",
+            "formula-writing"
+          ],
+          "expectedSeconds": 45,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q08",
+          "prompt": "Write the chemical formula for lithium carbonate.",
+          "answer": {
+            "type": "formula",
+            "value": "Li_2CO_3",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Write each ion with its charge, then balance the total charge to zero.",
+            "Use the smallest whole-number subscripts."
+          ],
+          "explanation": "Li_2CO_3. Carbonate is CO_3^2-, so two Li^+ are required: Li_2CO_3.",
+          "tags": [
+            "nomenclature",
+            "formula-writing"
+          ],
+          "expectedSeconds": 60,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q09",
+          "prompt": "Name this covalent compound: CO",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "carbon monoxide",
+              "carbon monoxide"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Both elements are nonmetals, so use Greek prefixes.",
+            "The first element gets a prefix only if there is more than one of it."
+          ],
+          "explanation": "carbon monoxide. Covalent names use Greek prefixes for the number of each atom. The first element drops the prefix when there is only one of it, so this is carbon monoxide, not monocarbon monoxide.",
+          "tags": [
+            "nomenclature",
+            "covalent-naming"
+          ],
+          "expectedSeconds": 50,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q10",
+          "prompt": "Name this covalent compound: N_2O_4",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "dinitrogen tetroxide",
+              "dinitrogen tetraoxide"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Both elements are nonmetals, so use Greek prefixes.",
+            "The first element gets a prefix only if there is more than one of it."
+          ],
+          "explanation": "dinitrogen tetroxide. Two nitrogens give di-, four oxygens give tetra-, shortened to tetroxide before the vowel.",
+          "tags": [
+            "nomenclature",
+            "covalent-naming"
+          ],
+          "expectedSeconds": 60,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q11",
+          "prompt": "Name this covalent compound: PCl_5",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "phosphorus pentachloride",
+              "phosphorus pentachloride"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Both elements are nonmetals, so use Greek prefixes.",
+            "The first element gets a prefix only if there is more than one of it."
+          ],
+          "explanation": "phosphorus pentachloride. One phosphorus takes no prefix; five chlorines give penta-.",
+          "tags": [
+            "nomenclature",
+            "covalent-naming"
+          ],
+          "expectedSeconds": 55,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q12",
+          "prompt": "Name this covalent compound: SF_6",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "sulfur hexafluoride",
+              "sulfur hexafluoride"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Both elements are nonmetals, so use Greek prefixes.",
+            "The first element gets a prefix only if there is more than one of it."
+          ],
+          "explanation": "sulfur hexafluoride. Six fluorines give hexa-. Both elements are nonmetals, so this is a covalent compound and prefixes are required.",
+          "tags": [
+            "nomenclature",
+            "covalent-naming"
+          ],
+          "expectedSeconds": 55,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q13",
+          "prompt": "Name this covalent compound: P_4O_10",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "tetraphosphorus decoxide",
+              "tetraphosphorus decaoxide"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Both elements are nonmetals, so use Greek prefixes.",
+            "The first element gets a prefix only if there is more than one of it."
+          ],
+          "explanation": "tetraphosphorus decoxide. Four phosphorus atoms earn a prefix on the FIRST element too, which only happens when there is more than one. Ten oxygens give deca-, shortened to dec-.",
+          "tags": [
+            "nomenclature",
+            "covalent-naming"
+          ],
+          "expectedSeconds": 70,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q14",
+          "prompt": "Name this acid as it exists in water: HCl(aq)",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "hydrochloric acid"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Start from the name of the anion.",
+            "-ide takes hydro-...-ic, -ate takes -ic, -ite takes -ous."
+          ],
+          "explanation": "hydrochloric acid. No oxygen in the anion, so the name is hydro- + the root + -ic acid. Chloride becomes hydrochloric acid.",
+          "tags": [
+            "nomenclature",
+            "acid-naming"
+          ],
+          "expectedSeconds": 50,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q15",
+          "prompt": "Name this acid as it exists in water: H_2SO_4(aq)",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "sulfuric acid"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Start from the name of the anion.",
+            "-ide takes hydro-...-ic, -ate takes -ic, -ite takes -ous."
+          ],
+          "explanation": "sulfuric acid. The anion is sulfate, which ends in -ate, so the acid ends in -ic. No hydro- prefix is used when the anion contains oxygen.",
+          "tags": [
+            "nomenclature",
+            "acid-naming"
+          ],
+          "expectedSeconds": 50,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q16",
+          "prompt": "Name this acid as it exists in water: HNO_3(aq)",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "nitric acid"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Start from the name of the anion.",
+            "-ide takes hydro-...-ic, -ate takes -ic, -ite takes -ous."
+          ],
+          "explanation": "nitric acid. Nitrate ends in -ate, so the acid is nitric acid.",
+          "tags": [
+            "nomenclature",
+            "acid-naming"
+          ],
+          "expectedSeconds": 50,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q17",
+          "prompt": "Name this acid as it exists in water: H_2S(aq)",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "hydrosulfuric acid"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Start from the name of the anion.",
+            "-ide takes hydro-...-ic, -ate takes -ic, -ite takes -ous."
+          ],
+          "explanation": "hydrosulfuric acid. Sulfide has no oxygen, so this takes the hydro- form: hydrosulfuric acid.",
+          "tags": [
+            "nomenclature",
+            "acid-naming"
+          ],
+          "expectedSeconds": 60,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q18",
+          "prompt": "Name this acid as it exists in water: H_2CO_3(aq)",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "carbonic acid"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Start from the name of the anion.",
+            "-ide takes hydro-...-ic, -ate takes -ic, -ite takes -ous."
+          ],
+          "explanation": "carbonic acid. Carbonate ends in -ate, so the acid ends in -ic: carbonic acid.",
+          "tags": [
+            "nomenclature",
+            "acid-naming"
+          ],
+          "expectedSeconds": 55,
+          "points": 20
+        },
+        {
+          "id": "T2L3-Q19",
+          "prompt": "Name this acid as it exists in water: HNO_2(aq)",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "nitrous acid"
+            ],
+            "reject": [],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Start from the name of the anion.",
+            "-ide takes hydro-...-ic, -ate takes -ic, -ite takes -ous."
+          ],
+          "explanation": "nitrous acid. Nitrite ends in -ite, and -ite becomes -ous. One fewer oxygen than nitric acid, so one step down the naming ladder.",
+          "tags": [
+            "nomenclature",
+            "acid-naming"
+          ],
+          "expectedSeconds": 60,
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "T2L4",
+      "title": "Percent Composition, Empirical & Molecular Formulas",
+      "requiredCorrect": 4,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T2L4-Q01",
+          "prompt": "What is the percent by mass of O in H_2O?\n\nMM(H_2O) = 18.02 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 88.8,
+            "unit": "%",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "%",
+              "percent"
+            ]
+          },
+          "hints": [
+            "Find the mass of just the O in one mole of the compound.",
+            "Divide that by the molar mass of the whole compound, then times 100."
+          ],
+          "explanation": "One mole of H_2O holds 1 mol of O, which is 16.00 g out of a total 18.02 g. 16.00 / 18.02 x 100 = 88.8%.",
+          "tags": [
+            "percent-composition"
+          ],
+          "expectedSeconds": 100,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 0.888,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "That is the mass fraction. Multiply by 100 to make it a percent.",
+                "label": "forgot-times-100"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T2L4-Q02",
+          "prompt": "What is the percent by mass of C in CO_2?\n\nMM(CO_2) = 44.01 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 27.3,
+            "unit": "%",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "%",
+              "percent"
+            ]
+          },
+          "hints": [
+            "Find the mass of just the C in one mole of the compound.",
+            "Divide that by the molar mass of the whole compound, then times 100."
+          ],
+          "explanation": "One mole of CO_2 holds 1 mol of C, which is 12.01 g out of a total 44.01 g. 12.01 / 44.01 x 100 = 27.3%.",
+          "tags": [
+            "percent-composition"
+          ],
+          "expectedSeconds": 100,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 0.273,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "That is the mass fraction. Multiply by 100 to make it a percent.",
+                "label": "forgot-times-100"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T2L4-Q03",
+          "prompt": "What is the percent by mass of N in NH_3?\n\nMM(NH_3) = 17.03 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 82.3,
+            "unit": "%",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "%",
+              "percent"
+            ]
+          },
+          "hints": [
+            "Find the mass of just the N in one mole of the compound.",
+            "Divide that by the molar mass of the whole compound, then times 100."
+          ],
+          "explanation": "One mole of NH_3 holds 1 mol of N, which is 14.01 g out of a total 17.03 g. 14.01 / 17.03 x 100 = 82.3%.",
+          "tags": [
+            "percent-composition"
+          ],
+          "expectedSeconds": 100,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 0.823,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "That is the mass fraction. Multiply by 100 to make it a percent.",
+                "label": "forgot-times-100"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T2L4-Q04",
+          "prompt": "What is the percent by mass of Fe in Fe_2O_3?\n\nMM(Fe_2O_3) = 159.70 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 69.9,
+            "unit": "%",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "%",
+              "percent"
+            ]
+          },
+          "hints": [
+            "Find the mass of just the Fe in one mole of the compound.",
+            "Divide that by the molar mass of the whole compound, then times 100."
+          ],
+          "explanation": "One mole of Fe_2O_3 holds 2 mol of Fe, which is 2 x 55.85 = 111.70 g out of a total 159.70 g. 111.70 / 159.70 x 100 = 69.9%.",
+          "tags": [
+            "percent-composition"
+          ],
+          "expectedSeconds": 110,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 0.699,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "That is the mass fraction. Multiply by 100 to make it a percent.",
+                "label": "forgot-times-100"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T2L4-Q05",
+          "prompt": "What is the percent by mass of H in C_6H_12O_6?\n\nMM(C_6H_12O_6) = 180.16 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 6.71,
+            "unit": "%",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "%",
+              "percent"
+            ]
+          },
+          "hints": [
+            "Find the mass of just the H in one mole of the compound.",
+            "Divide that by the molar mass of the whole compound, then times 100."
+          ],
+          "explanation": "One mole of C_6H_12O_6 holds 12 mol of H, which is 12 x 1.008 = 12.096 g out of a total 180.16 g. 12.096 / 180.16 x 100 = 6.71%.",
+          "tags": [
+            "percent-composition"
+          ],
+          "expectedSeconds": 110,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 0.0671,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "That is the mass fraction. Multiply by 100 to make it a percent.",
+                "label": "forgot-times-100"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T2L4-Q06",
+          "prompt": "A sample of CaCO_3 has a mass of 50.0 g. What mass of that sample is OXYGEN?\n\nMM(CaCO_3) = 100.09 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 24.0,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Work out the percent oxygen first.",
+            "Then take that percent of 50.0 g."
+          ],
+          "explanation": "3 oxygens give 3 x 16.00 = 48.00 g of oxygen per mole, out of 100.09 g. That same fraction of the sample is oxygen: 48.00 / 100.09 x 50.0 = 24 g.",
+          "tags": [
+            "percent-composition"
+          ],
+          "expectedSeconds": 130,
+          "points": 25,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 48.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "That is the percent oxygen, not the mass. Apply it to the 50.0 g sample.",
+                "label": "left-as-percent"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T2L4-Q07",
+          "prompt": "A compound is found to be 40.0% C, 6.7% H, 53.3% O by mass. What is its EMPIRICAL formula?",
+          "answer": {
+            "type": "formula",
+            "value": "CH_2O",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Assume a 100 g sample so each percent becomes a mass in grams.",
+            "Convert each mass to moles, then divide every answer by the smallest one."
+          ],
+          "explanation": "CH_2O. Treat the percentages as grams in a 100 g sample and convert each to moles: C: 40.0 / 12.01 = 3.3306 mol (/3.3306 = 1.00); H: 6.7 / 1.008 = 6.6468 mol (/3.3306 = 2.00); O: 53.3 / 16.00 = 3.3312 mol (/3.3306 = 1.00). Dividing by the smallest gives the whole-number ratio.",
+          "tags": [
+            "empirical-formula",
+            "percent-composition"
+          ],
+          "expectedSeconds": 150,
+          "points": 25
+        },
+        {
+          "id": "T2L4-Q08",
+          "prompt": "A compound is found to be 27.3% C, 72.7% O by mass. What is its EMPIRICAL formula?",
+          "answer": {
+            "type": "formula",
+            "value": "CO_2",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Assume a 100 g sample so each percent becomes a mass in grams.",
+            "Convert each mass to moles, then divide every answer by the smallest one."
+          ],
+          "explanation": "CO_2. Treat the percentages as grams in a 100 g sample and convert each to moles: C: 27.3 / 12.01 = 2.2731 mol (/2.2731 = 1.00); O: 72.7 / 16.00 = 4.5438 mol (/2.2731 = 2.00). Dividing by the smallest gives the whole-number ratio.",
+          "tags": [
+            "empirical-formula",
+            "percent-composition"
+          ],
+          "expectedSeconds": 140,
+          "points": 25
+        },
+        {
+          "id": "T2L4-Q09",
+          "prompt": "A compound is found to be 52.1% C, 13.1% H, 34.8% O by mass. What is its EMPIRICAL formula?",
+          "answer": {
+            "type": "formula",
+            "value": "C_2H_6O",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Assume a 100 g sample so each percent becomes a mass in grams.",
+            "Convert each mass to moles, then divide every answer by the smallest one."
+          ],
+          "explanation": "C_2H_6O. Treat the percentages as grams in a 100 g sample and convert each to moles: C: 52.1 / 12.01 = 4.3381 mol (/2.1750 = 1.99); H: 13.1 / 1.008 = 12.9960 mol (/2.1750 = 5.98); O: 34.8 / 16.00 = 2.1750 mol (/2.1750 = 1.00). Dividing by the smallest gives the whole-number ratio.",
+          "tags": [
+            "empirical-formula",
+            "percent-composition"
+          ],
+          "expectedSeconds": 160,
+          "points": 25
+        },
+        {
+          "id": "T2L4-Q10",
+          "prompt": "A compound is found to be 69.9% Fe, 30.1% O by mass. What is its EMPIRICAL formula?",
+          "answer": {
+            "type": "formula",
+            "value": "Fe_2O_3",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Assume a 100 g sample so each percent becomes a mass in grams.",
+            "Convert each mass to moles, then divide every answer by the smallest one."
+          ],
+          "explanation": "Fe_2O_3. Treat the percentages as grams in a 100 g sample and convert each to moles: Fe: 69.9 / 55.85 = 1.2516 mol (/1.2516 = 1.00); O: 30.1 / 16.00 = 1.8813 mol (/1.2516 = 1.50). Dividing by the smallest gives the whole-number ratio.",
+          "tags": [
+            "empirical-formula",
+            "percent-composition"
+          ],
+          "expectedSeconds": 150,
+          "points": 25
+        },
+        {
+          "id": "T2L4-Q11",
+          "prompt": "A compound is found to be 74.9% C, 25.1% H by mass. What is its EMPIRICAL formula?",
+          "answer": {
+            "type": "formula",
+            "value": "CH_4",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Assume a 100 g sample so each percent becomes a mass in grams.",
+            "Convert each mass to moles, then divide every answer by the smallest one."
+          ],
+          "explanation": "CH_4. Treat the percentages as grams in a 100 g sample and convert each to moles: C: 74.9 / 12.01 = 6.2365 mol (/6.2365 = 1.00); H: 25.1 / 1.008 = 24.9008 mol (/6.2365 = 3.99). Dividing by the smallest gives the whole-number ratio.",
+          "tags": [
+            "empirical-formula",
+            "percent-composition"
+          ],
+          "expectedSeconds": 130,
+          "points": 25
+        },
+        {
+          "id": "T2L4-Q12",
+          "prompt": "A compound has the empirical formula CH_2O and a molar mass of 180.16 g/mol. What is its MOLECULAR formula?\n\nMM(CH_2O) = 30.03 g/mol",
+          "answer": {
+            "type": "formula",
+            "value": "C_6H_12O_6",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Divide the molar mass of the compound by the mass of the empirical unit.",
+            "That whole number multiplies every subscript."
+          ],
+          "explanation": "C_6H_12O_6. The empirical unit weighs 30.03 g/mol, and 180.16 / 30.03 = 6.00, which rounds to 6. Multiply every subscript in CH_2O by 6.",
+          "tags": [
+            "molecular-formula"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "T2L4-Q13",
+          "prompt": "A compound has the empirical formula CH and a molar mass of 78.11 g/mol. What is its MOLECULAR formula?\n\nMM(CH) = 13.02 g/mol",
+          "answer": {
+            "type": "formula",
+            "value": "C_6H_6",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Divide the molar mass of the compound by the mass of the empirical unit.",
+            "That whole number multiplies every subscript."
+          ],
+          "explanation": "C_6H_6. The empirical unit weighs 13.02 g/mol, and 78.11 / 13.02 = 6.00, which rounds to 6. Multiply every subscript in CH by 6.",
+          "tags": [
+            "molecular-formula"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "T2L4-Q14",
+          "prompt": "A compound has the empirical formula NO_2 and a molar mass of 92.02 g/mol. What is its MOLECULAR formula?\n\nMM(NO_2) = 46.01 g/mol",
+          "answer": {
+            "type": "formula",
+            "value": "N_2O_4",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Divide the molar mass of the compound by the mass of the empirical unit.",
+            "That whole number multiplies every subscript."
+          ],
+          "explanation": "N_2O_4. The empirical unit weighs 46.01 g/mol, and 92.02 / 46.01 = 2.00, which rounds to 2. Multiply every subscript in NO_2 by 2.",
+          "tags": [
+            "molecular-formula"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "T2L4-Q15",
+          "prompt": "A compound is 40.0% C, 6.7% H, 53.3% O by mass and its molar mass is 60.05 g/mol. What is its MOLECULAR formula?",
+          "answer": {
+            "type": "formula",
+            "value": "C_2H_4O_2",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "This is two problems stacked: percentages to empirical formula first.",
+            "Then compare the empirical mass to the given molar mass."
+          ],
+          "explanation": "C_2H_4O_2. The percentages give the empirical formula CH_2O, which weighs 30.03 g/mol. 60.05 / 30.03 = 2.00, so double every subscript. This is acetic acid.",
+          "tags": [
+            "molecular-formula",
+            "empirical-formula"
+          ],
+          "expectedSeconds": 170,
+          "points": 30
+        },
+        {
+          "id": "T2L4-Q16",
+          "prompt": "A hydrocarbon is burned completely in oxygen. The combustion produces 0.440 g of CO_2 and 0.180 g of H_2O. What is the EMPIRICAL formula of the hydrocarbon?\n\nMM(CO_2) = 44.01 g/mol, MM(H_2O) = 18.02 g/mol",
+          "answer": {
+            "type": "formula",
+            "value": "CH_2",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "All the carbon came from the sample and is now in the CO_2.",
+            "Each H_2O molecule holds two hydrogen atoms, so double the water moles."
+          ],
+          "explanation": "CH_2. Every carbon in the sample ends up in the CO_2: 0.440 / 44.01 = 0.01000 mol C. Every hydrogen ends up in the H_2O, but each water carries TWO hydrogens: 2 x 0.180 / 18.02 = 0.01998 mol H. The ratio H:C is 2.00, so the empirical formula is CH_2.",
+          "tags": [
+            "empirical-formula",
+            "elemental-analysis"
+          ],
+          "expectedSeconds": 190,
+          "points": 30,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 1.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "You forgot that each H_2O contains two hydrogen atoms. Double the moles of water.",
+                "label": "forgot-two-H-per-water"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T2L4-Q17",
+          "prompt": "A mass spectrum of a hydrocarbon shows its molecular ion peak at m/z = 58, so its molar mass is 58 g/mol. Its empirical formula is C_2H_5. What is its MOLECULAR formula?\n\nMM(C_2H_5) = 29.06 g/mol",
+          "answer": {
+            "type": "formula",
+            "value": "C_4H_10",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "The m/z of the molecular ion peak IS the molar mass.",
+            "Compare it to the mass of one empirical unit."
+          ],
+          "explanation": "C_4H_10. The empirical unit C_2H_5 weighs 29.06 g/mol, and 58 / 29.06 = 2.00, which rounds to 2. Doubling C_2H_5 gives C_4H_10, butane. The molecular ion peak in a mass spectrum is the intact molecule, so it reads out the molar mass directly.",
+          "tags": [
+            "molecular-formula",
+            "mass-spectrometry"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "T2L4-Q18",
+          "prompt": "A sample of a magnesium chloride contains 0.500 g of magnesium combined with 1.458 g of chlorine. What is its EMPIRICAL formula?",
+          "answer": {
+            "type": "formula",
+            "value": "MgCl_2",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "You are given masses directly, so no 100 g assumption is needed.",
+            "Convert both to moles, then divide by the smaller."
+          ],
+          "explanation": "MgCl_2. Convert each mass to moles: 0.500 / 24.31 = 0.02057 mol Mg and 1.458 / 35.45 = 0.04113 mol Cl. Dividing both by the smaller gives 1 Mg to 2.00 Cl.",
+          "tags": [
+            "empirical-formula"
+          ],
+          "expectedSeconds": 150,
+          "points": 25
+        }
+      ]
+    },
+    {
+      "id": "T2L5",
+      "title": "Balancing & Classifying Reactions",
+      "requiredCorrect": 4,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T2L5-Q01",
+          "prompt": "Balance this equation.\n\n__ Na + __ Cl_2 -> __ NaCl",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ Na + __ Cl_2 -> __ NaCl",
+            "correct": [
+              2,
+              1,
+              2
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "Start with the diatomic element."
+          ],
+          "explanation": "Chlorine is diatomic, so one Cl_2 supplies 2 chlorine atoms and makes 2 NaCl, which then needs 2 Na. Final: 2 Na + Cl_2 -> 2 NaCl.",
+          "tags": [
+            "balancing"
+          ],
+          "expectedSeconds": 65,
+          "points": 10
+        },
+        {
+          "id": "T2L5-Q02",
+          "prompt": "Balance this equation.\n\n__ CH_4 + __ O_2 -> __ CO_2 + __ H_2O",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ CH_4 + __ O_2 -> __ CO_2 + __ H_2O",
+            "correct": [
+              1,
+              2,
+              1,
+              2
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "In a combustion, balance carbon first, then hydrogen, then oxygen last.",
+            "Oxygen is easiest last because it appears in both products."
+          ],
+          "explanation": "One carbon gives 1 CO_2, and four hydrogens give 2 H_2O. That puts 2 + 2 = 4 oxygens on the right, so 2 O_2 on the left. Final: CH_4 + 2 O_2 -> CO_2 + 2 H_2O.",
+          "tags": [
+            "balancing",
+            "combustion"
+          ],
+          "expectedSeconds": 85,
+          "points": 15
+        },
+        {
+          "id": "T2L5-Q03",
+          "prompt": "Balance this equation.\n\n__ Mg + __ HCl -> __ MgCl_2 + __ H_2",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ Mg + __ HCl -> __ MgCl_2 + __ H_2",
+            "correct": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "The subscript 2 in MgCl_2 tells you how much HCl you need.",
+            "Do not leave the 1s blank."
+          ],
+          "explanation": "MgCl_2 needs 2 chlorines, so 2 HCl, which brings 2 hydrogens and makes exactly 1 H_2. Three of the four coefficients are 1 and must still be typed in. Final: Mg + 2 HCl -> MgCl_2 + H_2.",
+          "tags": [
+            "balancing"
+          ],
+          "expectedSeconds": 80,
+          "points": 15
+        },
+        {
+          "id": "T2L5-Q04",
+          "prompt": "Balance this equation.\n\n__ N_2 + __ H_2 -> __ NH_3",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ N_2 + __ H_2 -> __ NH_3",
+            "correct": [
+              1,
+              3,
+              2
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "Both reactants are diatomic; start from one N_2."
+          ],
+          "explanation": "One N_2 supplies 2 nitrogens, so 2 NH_3, which needs 6 hydrogens, so 3 H_2. Final: N_2 + 3 H_2 -> 2 NH_3.",
+          "tags": [
+            "balancing"
+          ],
+          "expectedSeconds": 75,
+          "points": 15
+        },
+        {
+          "id": "T2L5-Q05",
+          "prompt": "Balance this equation.\n\n__ KClO_3 -> __ KCl + __ O_2",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ KClO_3 -> __ KCl + __ O_2",
+            "correct": [
+              2,
+              2,
+              3
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "An odd number of oxygens on one side usually means doubling everything.",
+            "Six oxygen atoms on each side."
+          ],
+          "explanation": "Three oxygens on the left will not divide into pairs, so double it: 2 KClO_3 gives 6 oxygens, which is 3 O_2, and the potassium and chlorine follow as 2 KCl. Final: 2 KClO_3 -> 2 KCl + 3 O_2.",
+          "tags": [
+            "balancing",
+            "decomposition"
+          ],
+          "expectedSeconds": 95,
+          "points": 15
+        },
+        {
+          "id": "T2L5-Q06",
+          "prompt": "Balance this equation.\n\n__ CaCO_3 -> __ CaO + __ CO_2",
+          "answer": {
+            "type": "balance",
+            "skeleton": "__ CaCO_3 -> __ CaO + __ CO_2",
+            "correct": [
+              1,
+              1,
+              1
+            ],
+            "requireLowest": true
+          },
+          "hints": [
+            "Count the atoms before you change anything. This one may already be balanced."
+          ],
+          "explanation": "Every atom already balances one to one: 1 Ca, 1 C and 3 O on each side. All three coefficients are 1, and all three must be typed in rather than left blank.",
+          "tags": [
+            "balancing",
+            "decomposition"
+          ],
+          "expectedSeconds": 65,
+          "points": 10
+        },
+        {
+          "id": "T2L5-Q07",
+          "prompt": "Classify this reaction.\n\n2 Na + Cl_2 -> 2 NaCl",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Synthesis",
+              "Decomposition",
+              "Single displacement",
+              "Double replacement",
+              "Combustion"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "How many products are there?"
+          ],
+          "explanation": "Synthesis. Two simpler substances combine into a single product. It is also a redox reaction, but redox is a subtype, not one of the five main types.",
+          "tags": [
+            "reaction-types"
+          ],
+          "expectedSeconds": 40,
+          "points": 10
+        },
+        {
+          "id": "T2L5-Q08",
+          "prompt": "Classify this reaction.\n\nZn + 2 HCl -> ZnCl_2 + H_2",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Synthesis",
+              "Decomposition",
+              "Single displacement",
+              "Double replacement",
+              "Combustion"
+            ],
+            "correct": [
+              2
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "One free element goes in and a different free element comes out."
+          ],
+          "explanation": "Single displacement. One element, zinc, takes the place of another, hydrogen, in a compound. The giveaway is an element plus a compound on the left giving a different element plus a different compound on the right.",
+          "tags": [
+            "reaction-types"
+          ],
+          "expectedSeconds": 45,
+          "points": 15
+        },
+        {
+          "id": "T2L5-Q09",
+          "prompt": "Classify this reaction.\n\nAgNO_3 + NaCl -> AgCl + NaNO_3",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Synthesis",
+              "Decomposition",
+              "Single displacement",
+              "Double replacement",
+              "Combustion"
+            ],
+            "correct": [
+              3
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Both reactants are compounds, and the positive ions trade places."
+          ],
+          "explanation": "Double replacement. The two cations swap partners: silver leaves the nitrate for the chloride and sodium takes the nitrate. Two compounds in, two compounds out, with no free elements anywhere.",
+          "tags": [
+            "reaction-types"
+          ],
+          "expectedSeconds": 45,
+          "points": 15
+        },
+        {
+          "id": "T2L5-Q10",
+          "prompt": "Classify this reaction.\n\nCH_4 + 2 O_2 -> CO_2 + 2 H_2O",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Synthesis",
+              "Decomposition",
+              "Single displacement",
+              "Double replacement",
+              "Combustion"
+            ],
+            "correct": [
+              4
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "What are the two products whenever a hydrocarbon burns completely?"
+          ],
+          "explanation": "Combustion. A hydrocarbon burns in oxygen to give carbon dioxide and water. Whenever you see a fuel plus O_2 producing CO_2 and H_2O, that is the pattern.",
+          "tags": [
+            "reaction-types",
+            "combustion"
+          ],
+          "expectedSeconds": 40,
+          "points": 10
+        },
+        {
+          "id": "T2L5-Q11",
+          "prompt": "Classify this reaction.\n\nCaCO_3 -> CaO + CO_2",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Synthesis",
+              "Decomposition",
+              "Single displacement",
+              "Double replacement",
+              "Combustion"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "One substance in, two substances out."
+          ],
+          "explanation": "Decomposition. One reactant, two products. This particular reaction is how limestone is turned into lime.",
+          "tags": [
+            "reaction-types"
+          ],
+          "expectedSeconds": 40,
+          "points": 10
+        },
+        {
+          "id": "T2L5-Q12",
+          "prompt": "Classify this reaction by subtype.\n\nHCl(aq) + NaOH(aq) -> NaCl(aq) + H_2O(l)",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Precipitation",
+              "Neutralization",
+              "Redox"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "What are the two reactants, and what is one of the products?"
+          ],
+          "explanation": "Neutralization. An acid and a base react to give a salt and water. It is also a double replacement by main type, but the production of water from H^+ and OH^- makes it specifically a neutralization.",
+          "tags": [
+            "subtypes",
+            "neutralization"
+          ],
+          "expectedSeconds": 45,
+          "points": 15
+        },
+        {
+          "id": "T2L5-Q13",
+          "prompt": "Classify this reaction by subtype.\n\nAgNO_3(aq) + NaCl(aq) -> AgCl(s) + NaNO_3(aq)",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Precipitation",
+              "Neutralization",
+              "Redox"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Look at the phase labels. What does (s) tell you?"
+          ],
+          "explanation": "Precipitation. Two solutions are mixed and an insoluble solid forms, shown by the (s) label on AgCl. The main type is double replacement; precipitation is the subtype.",
+          "tags": [
+            "subtypes",
+            "precipitation"
+          ],
+          "expectedSeconds": 45,
+          "points": 15
+        },
+        {
+          "id": "T2L5-Q14",
+          "prompt": "Classify this reaction by subtype.\n\nZn(s) + CuSO_4(aq) -> ZnSO_4(aq) + Cu(s)",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Precipitation",
+              "Neutralization",
+              "Redox"
+            ],
+            "correct": [
+              2
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Did anything change its charge?"
+          ],
+          "explanation": "Redox. Zinc goes from a neutral atom to Zn^2+, losing electrons, while Cu^2+ gains them and becomes neutral copper. Electrons transfer, which is the defining feature.",
+          "tags": [
+            "subtypes",
+            "redox"
+          ],
+          "expectedSeconds": 50,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "T2L6",
+      "title": "Solubility, Precipitates, Redox & the Activity Series",
+      "requiredCorrect": 4,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T2L6-Q01",
+          "prompt": "Using the solubility rules, is AgCl soluble or insoluble in water?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Soluble",
+              "Insoluble"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Chlorides are usually soluble. Which three cations are the exceptions?"
+          ],
+          "explanation": "Insoluble. Chlorides are generally soluble, but silver is one of the three classic exceptions, along with lead and mercury(I).",
+          "tags": [
+            "solubility"
+          ],
+          "expectedSeconds": 40,
+          "points": 15
+        },
+        {
+          "id": "T2L6-Q02",
+          "prompt": "Using the solubility rules, is BaSO_4 soluble or insoluble in water?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Soluble",
+              "Insoluble"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Sulfates are usually soluble. Barium is one of the exceptions."
+          ],
+          "explanation": "Insoluble. Sulfates are generally soluble, but barium is an exception, along with lead, calcium and strontium. Its insolubility is why barium sulfate is safe to swallow for medical imaging.",
+          "tags": [
+            "solubility"
+          ],
+          "expectedSeconds": 40,
+          "points": 15
+        },
+        {
+          "id": "T2L6-Q03",
+          "prompt": "Using the solubility rules, is CaCO_3 soluble or insoluble in water?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Soluble",
+              "Insoluble"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Carbonates are insoluble apart from a short list of cations."
+          ],
+          "explanation": "Insoluble. Carbonates are insoluble unless the cation is a Group 1 metal or ammonium, and calcium is neither. This is why limestone does not simply dissolve away in rain.",
+          "tags": [
+            "solubility"
+          ],
+          "expectedSeconds": 40,
+          "points": 15
+        },
+        {
+          "id": "T2L6-Q04",
+          "prompt": "Solutions of AgNO_3 and NaCl are mixed and a precipitate forms. Write the formula of the precipitate.",
+          "answer": {
+            "type": "formula",
+            "value": "AgCl",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Swap the cations to see the two possible products.",
+            "Then check each one against the solubility rules."
+          ],
+          "explanation": "AgCl. Swapping partners gives the two possible products AgCl and NaNO_3. Sodium nitrate is soluble on two rules, while silver chloride is the exception that drops out as a white solid.",
+          "tags": [
+            "solubility",
+            "precipitation"
+          ],
+          "expectedSeconds": 75,
+          "points": 20
+        },
+        {
+          "id": "T2L6-Q05",
+          "prompt": "Solutions of BaCl_2 and Na_2SO_4 are mixed and a precipitate forms. Write the formula of the precipitate.",
+          "answer": {
+            "type": "formula",
+            "value": "BaSO_4",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Swap the cations, then test both products against the rules.",
+            "Ba^2+ and SO_4^2- combine one to one."
+          ],
+          "explanation": "BaSO_4. The possible products are BaSO_4 and NaCl. Sodium chloride is soluble, so barium sulfate is the solid. Watch the charges: Ba^2+ with SO_4^2- gives a 1:1 formula, not BaSO_4 with a subscript.",
+          "tags": [
+            "solubility",
+            "precipitation"
+          ],
+          "expectedSeconds": 80,
+          "points": 20
+        },
+        {
+          "id": "T2L6-Q06",
+          "prompt": "Solutions of Pb(NO_3)_2 and KI are mixed and a bright yellow precipitate forms. Write the formula of the precipitate.",
+          "answer": {
+            "type": "formula",
+            "value": "PbI_2",
+            "match": "composition",
+            "charge": 0,
+            "phase": null,
+            "requirePhase": false,
+            "accept": []
+          },
+          "hints": [
+            "Lead is one of the three exceptions to the halide rule.",
+            "Balance the charges: Pb^2+ needs two 1- ions."
+          ],
+          "explanation": "PbI_2. Iodides follow the same exceptions as chlorides, and lead is one of them. Lead(II) carries a 2+ charge against iodide's 1-, so two iodides are needed.",
+          "tags": [
+            "solubility",
+            "precipitation"
+          ],
+          "expectedSeconds": 85,
+          "points": 20
+        },
+        {
+          "id": "T2L6-Q07",
+          "prompt": "Solutions of NaNO_3 and KCl are mixed. Does a precipitate form?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Yes, a reaction occurs",
+              "No, no reaction occurs"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Work out both possible products, then check them against the rules.",
+            "If both products are soluble, nothing precipitates."
+          ],
+          "explanation": "No. The possible products are NaCl and KNO_3, and both are soluble: they are Group 1 compounds and one is a nitrate. Everything stays dissolved, so there is no reaction.",
+          "tags": [
+            "solubility",
+            "precipitation"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "T2L6-Q08",
+          "prompt": "When AgNO_3(aq) and NaCl(aq) are mixed, AgCl precipitates. List the spectator ions, separated by commas.",
+          "answer": {
+            "type": "set",
+            "items": [
+              "Na^+",
+              "NO_3^-"
+            ],
+            "itemType": "formula",
+            "ordered": false,
+            "partialCredit": true
+          },
+          "hints": [
+            "List all four ions present, then cross out the two that form the solid.",
+            "Whatever is left over is a spectator."
+          ],
+          "explanation": "Na^+ and NO_3^-. Four ions are present in the mixture. Ag^+ and Cl^- leave the solution as solid AgCl, while sodium and nitrate stay dissolved and unchanged on both sides, which is what makes them spectators.",
+          "tags": [
+            "solubility",
+            "precipitation",
+            "spectator-ions"
+          ],
+          "expectedSeconds": 95,
+          "points": 20
+        },
+        {
+          "id": "T2L6-Q09",
+          "prompt": "In this reaction, which element is OXIDISED? Give the name or the symbol.\n\nZn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "zinc",
+              "Zn",
+              "zn"
+            ],
+            "reject": [
+              "copper",
+              "Cu"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Which species went up in charge?",
+            "Remember OIL RIG: oxidation is loss, reduction is gain."
+          ],
+          "explanation": "Zinc. It starts as a neutral atom and ends as Zn^2+, so it lost two electrons. Oxidation is loss of electrons.",
+          "tags": [
+            "redox",
+            "half-reactions"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "T2L6-Q10",
+          "prompt": "Is this half-reaction an oxidation or a reduction?\n\nMg -> Mg^2+ + 2 e^-",
+          "answer": {
+            "type": "text",
+            "accept": [
+              "oxidation",
+              "oxidised",
+              "oxidized"
+            ],
+            "reject": [
+              "reduction",
+              "reduced"
+            ],
+            "normalize": {
+              "case": true,
+              "punctuation": true,
+              "whitespace": true,
+              "articles": true
+            },
+            "fuzzy": {
+              "maxEdits": 1
+            }
+          },
+          "hints": [
+            "Which side of the arrow are the electrons on?"
+          ],
+          "explanation": "Oxidation. The electrons appear on the PRODUCT side, which means they are being given away. Magnesium's charge rises from 0 to 2+.",
+          "tags": [
+            "redox",
+            "half-reactions"
+          ],
+          "expectedSeconds": 50,
+          "points": 15
+        },
+        {
+          "id": "T2L6-Q11",
+          "prompt": "Using the activity series, will a strip of Zn(s) react when placed in CuSO_4(aq)?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Yes, a reaction occurs",
+              "No, no reaction occurs"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Find both metals in the series. Which one is higher?",
+            "A metal displaces any metal listed below it."
+          ],
+          "explanation": "Yes. Zinc sits above copper in the activity series, so it is the more reactive metal and displaces copper from solution: Zn + CuSO_4 -> ZnSO_4 + Cu. The blue colour fades and copper coats the strip.",
+          "tags": [
+            "activity-series"
+          ],
+          "expectedSeconds": 50,
+          "points": 15
+        },
+        {
+          "id": "T2L6-Q12",
+          "prompt": "Using the activity series, will Mg(s) react with HCl(aq) to release hydrogen gas?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Yes, a reaction occurs",
+              "No, no reaction occurs"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Hydrogen has its own place in the activity series.",
+            "Metals above hydrogen react with acids; metals below it do not."
+          ],
+          "explanation": "Yes. Magnesium lies above hydrogen in the series, so it displaces hydrogen from the acid: Mg + 2 HCl -> MgCl_2 + H_2. You would see bubbles of hydrogen forming.",
+          "tags": [
+            "activity-series"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "T2L6-Q13",
+          "prompt": "Using the activity series, will Cu(s) react with HCl(aq) to release hydrogen gas?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Yes, a reaction occurs",
+              "No, no reaction occurs"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Where does copper sit relative to hydrogen?"
+          ],
+          "explanation": "No. Copper sits below hydrogen, so it cannot displace it from an acid. This is why copper pipes and cookware survive contact with weak acids while iron and zinc do not.",
+          "tags": [
+            "activity-series"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "T2L6-Q14",
+          "prompt": "Using the activity series, will Al(s) react when placed in FeCl_3(aq)?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Yes, a reaction occurs",
+              "No, no reaction occurs"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Is aluminium above or below iron?"
+          ],
+          "explanation": "Yes. Aluminium sits above iron, so it displaces iron from the solution and goes in as Al^3+ itself.",
+          "tags": [
+            "activity-series"
+          ],
+          "expectedSeconds": 50,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "T2L7",
+      "title": "Mass Stoichiometry & Limiting Reagent",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T2L7-Q01",
+          "prompt": "What mass of O_2 is produced from 24.5 g of KClO_3?\n\n2 KClO_3 -> 2 KCl + 3 O_2\n\nMM(KClO_3) = 122.55 g/mol, MM(O_2) = 32.00 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 9.6,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "The O_2 to KClO_3 ratio is 3 to 2."
+          ],
+          "explanation": "24.5 / 122.55 = 0.1999 mol, x (3/2) = 0.2999 mol O_2, then x 32.00 = 9.6 g.",
+          "tags": [
+            "mass-mass"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        },
+        {
+          "id": "T2L7-Q02",
+          "prompt": "What mass of CO_2 is produced when 44.0 g of propane burns completely?\n\nC_3H_8 + 5 O_2 -> 3 CO_2 + 4 H_2O\n\nMM(C_3H_8) = 44.09 g/mol, MM(CO_2) = 44.01 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 132.0,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Each propane gives three CO_2."
+          ],
+          "explanation": "44.0 / 44.09 = 0.9980 mol C_3H_8, x 3 = 2.994 mol CO_2, then x 44.01 = 132 g.",
+          "tags": [
+            "mass-mass"
+          ],
+          "expectedSeconds": 110,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 43.9,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "You left out the 3 in front of CO_2. Each propane carries three carbons.",
+                "label": "missing-mole-ratio"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T2L7-Q03",
+          "prompt": "What mass of CO_2 is released when 53.0 g of Na_2CO_3 reacts with excess HCl?\n\nNa_2CO_3 + 2 HCl -> 2 NaCl + H_2O + CO_2\n\nMM(Na_2CO_3) = 105.99 g/mol, MM(CO_2) = 44.01 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 22.0,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "The 2 in front of HCl does not affect the CO_2 ratio."
+          ],
+          "explanation": "53.0 / 105.99 = 0.5000 mol Na_2CO_3, 1 to 1 with CO_2, then x 44.01 = 22 g.",
+          "tags": [
+            "mass-mass"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        },
+        {
+          "id": "T2L7-Q04",
+          "prompt": "15.0 g of Na is mixed with 15.0 g of Cl_2. Which reactant is limiting?\n\n2 Na + Cl_2 -> 2 NaCl\n\nMM(Na) = 22.99 g/mol, MM(Cl_2) = 70.90 g/mol",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Na",
+              "Cl_2",
+              "Neither, both are completely consumed"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Scaling both masses by the same factor cannot change the answer."
+          ],
+          "explanation": "Cl_2 again. 15.0 / 22.99 = 0.6525 mol Na gives 0.3262 after dividing by 2, against 0.2116 mol Cl_2. Scaling both masses equally does not change which one limits.",
+          "tags": [
+            "limiting-reactant",
+            "mass-based"
+          ],
+          "expectedSeconds": 130,
+          "points": 20
+        },
+        {
+          "id": "T2L7-Q05",
+          "prompt": "100. g of Fe_2O_3 is mixed with 50.0 g of CO. Which reactant is limiting?\n\nFe_2O_3 + 3 CO -> 2 Fe + 3 CO_2\n\nMM(Fe_2O_3) = 159.70 g/mol, MM(CO) = 28.01 g/mol",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Fe_2O_3",
+              "CO",
+              "Neither, both are completely consumed"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Remember to divide the CO moles by its coefficient of 3."
+          ],
+          "explanation": "CO. 100. / 159.70 = 0.6262 mol Fe_2O_3 (coefficient 1) against 50.0 / 28.01 = 1.7851 mol CO divided by 3 = 0.5950. Carbon monoxide is the smaller, so it limits.",
+          "tags": [
+            "limiting-reactant",
+            "mass-based"
+          ],
+          "expectedSeconds": 135,
+          "points": 20
+        },
+        {
+          "id": "T2L7-Q06",
+          "prompt": "5.00 g of Mg is mixed with 10.0 g of HCl. Which reactant is limiting?\n\nMg + 2 HCl -> MgCl_2 + H_2\n\nMM(Mg) = 24.31 g/mol, MM(HCl) = 36.46 g/mol",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Mg",
+              "HCl",
+              "Neither, both are completely consumed"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Divide the HCl moles by 2 before comparing."
+          ],
+          "explanation": "HCl. 5.00 / 24.31 = 0.2057 mol Mg against 10.0 / 36.46 = 0.2743 mol HCl, which after dividing by 2 is 0.1371. The acid runs out first.",
+          "tags": [
+            "limiting-reactant",
+            "mass-based"
+          ],
+          "expectedSeconds": 130,
+          "points": 20
+        },
+        {
+          "id": "T2L7-Q07",
+          "prompt": "10.0 g of Na is mixed with 10.0 g of Cl_2. What mass of NaCl forms?\n\n2 Na + Cl_2 -> 2 NaCl\n\nMM(Na) = 22.99 g/mol, MM(Cl_2) = 70.90 g/mol, MM(NaCl) = 58.44 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 16.5,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Chlorine is the limiting reagent here."
+          ],
+          "explanation": "Cl_2 limits at 0.1410 mol, giving 0.2821 mol NaCl, then x 58.44 = 16.5 g.",
+          "tags": [
+            "limiting-reactant",
+            "mass-based"
+          ],
+          "expectedSeconds": 140,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 25.4,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "You worked from the sodium, which is in excess. Use the Cl_2.",
+                "label": "used-excess-reactant"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T2L7-Q08",
+          "prompt": "10.0 g of Na is mixed with 10.0 g of Cl_2. What mass of Na is LEFT OVER?\n\n2 Na + Cl_2 -> 2 NaCl\n\nMM(Na) = 22.99 g/mol, MM(Cl_2) = 70.90 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 3.51,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.02
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Find the moles of Na consumed, convert to grams, then subtract from 10.0 g.",
+            "Each mole of Cl_2 consumes two of Na."
+          ],
+          "explanation": "Cl_2 limits at 0.1410 mol and consumes twice that in Na: 0.2821 mol x 22.99 = 6.49 g. So 10.0 - 6.49 = 3.51 g is left.",
+          "tags": [
+            "limiting-reactant",
+            "excess",
+            "mass-based"
+          ],
+          "expectedSeconds": 155,
+          "points": 25
+        },
+        {
+          "id": "T2L7-Q09",
+          "prompt": "5.00 g of Mg is mixed with 10.0 g of HCl. What mass of H_2 is produced?\n\nMg + 2 HCl -> MgCl_2 + H_2\n\nMM(Mg) = 24.31 g/mol, MM(HCl) = 36.46 g/mol, MM(H_2) = 2.02 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 0.277,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "The acid is limiting; divide its moles by 2."
+          ],
+          "explanation": "HCl limits: 10.0 / 36.46 = 0.2743 mol, x (1 H_2 / 2 HCl) = 0.13714 mol H_2, then x 2.02 = 0.277 g.",
+          "tags": [
+            "limiting-reactant",
+            "mass-based"
+          ],
+          "expectedSeconds": 150,
+          "points": 25
+        }
+      ]
+    },
+    {
+      "id": "T2L8",
+      "title": "Percent Yield & Solution Stoichiometry",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "T2L8-Q01",
+          "prompt": "10.0 g of Na is mixed with 10.0 g of Cl_2. What is the theoretical yield of NaCl?\n\n2 Na + Cl_2 -> 2 NaCl\n\nMM(Na) = 22.99 g/mol, MM(Cl_2) = 70.90 g/mol, MM(NaCl) = 58.44 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 16.5,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Both amounts are given, so identify the limiting reagent before anything else."
+          ],
+          "explanation": "Find the limiting reagent first: Cl_2, at 0.1410 mol. That gives 0.2821 mol NaCl x 58.44 = 16.5 g. When both amounts are given, the theoretical yield always comes from the limiting one.",
+          "tags": [
+            "theoretical-yield",
+            "limiting-reactant"
+          ],
+          "expectedSeconds": 145,
+          "points": 25
+        },
+        {
+          "id": "T2L8-Q02",
+          "prompt": "4.00 mol of H_2 is mixed with 1.50 mol of O_2. What is the theoretical yield of H_2O?\n\n2 H_2 + O_2 -> 2 H_2O\n\nMM(H_2O) = 18.02 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 54.1,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Oxygen is limiting here, so the water comes from it."
+          ],
+          "explanation": "O_2 limits, giving 3.00 mol H_2O x 18.02 = 54.1 g.",
+          "tags": [
+            "theoretical-yield",
+            "limiting-reactant"
+          ],
+          "expectedSeconds": 130,
+          "points": 25
+        },
+        {
+          "id": "T2L8-Q03",
+          "prompt": "100. g of Fe_2O_3 reacts with excess CO and 62.0 g of Fe is recovered. What is the percent yield?\n\nFe_2O_3 + 3 CO -> 2 Fe + 3 CO_2\n\nMM(Fe_2O_3) = 159.70 g/mol, MM(Fe) = 55.85 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 88.6,
+            "unit": "%",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.2
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "%",
+              "percent"
+            ]
+          },
+          "hints": [
+            "Theoretical yield first, then the ratio."
+          ],
+          "explanation": "Theoretical: 69.94 g Fe. Then (62.0 / 69.94) x 100 = 88.6%.",
+          "tags": [
+            "percent-yield",
+            "theoretical-yield"
+          ],
+          "expectedSeconds": 130,
+          "points": 25
+        },
+        {
+          "id": "T2L8-Q04",
+          "prompt": "54.0 g of Al burns in excess O_2 at a yield of 85.0%. What mass of Al_2O_3 is actually collected?\n\n4 Al + 3 O_2 -> 2 Al_2O_3\n\nMM(Al) = 26.98 g/mol, MM(Al_2O_3) = 101.96 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 86.7,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Remember the 4 to 2 ratio when finding the theoretical yield."
+          ],
+          "explanation": "Theoretical: 102.04 g Al_2O_3. Actual = 102.04 x 0.850 = 86.7 g.",
+          "tags": [
+            "actual-yield",
+            "theoretical-yield"
+          ],
+          "expectedSeconds": 135,
+          "points": 25
+        },
+        {
+          "id": "T2L8-Q05",
+          "prompt": "What volume of 18.0 M stock H_2SO_4 is needed to prepare 2.00 L of 0.250 M H_2SO_4? Answer in millilitres.",
+          "answer": {
+            "type": "numeric",
+            "value": 27.8,
+            "unit": "mL",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mL",
+              "millilitre",
+              "milliliter",
+              "millilitres",
+              "milliliters"
+            ]
+          },
+          "hints": [
+            "2.00 L = 2000. mL"
+          ],
+          "explanation": "Work in millilitres: V_1 = (0.250)(2000.) / 18.0 = 27.8 mL.",
+          "tags": [
+            "dilution"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        },
+        {
+          "id": "T2L8-Q06",
+          "prompt": "25.0 mL of 2.00 M solution is diluted to 0.400 M. What volume of WATER must be added, in millilitres?",
+          "answer": {
+            "type": "numeric",
+            "value": 100.0,
+            "unit": "mL",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mL",
+              "millilitre",
+              "milliliter",
+              "millilitres",
+              "milliliters"
+            ]
+          },
+          "hints": [
+            "Find the final volume first.",
+            "Water added = final volume minus the starting volume."
+          ],
+          "explanation": "The final volume is 125 mL, and 25.0 mL of that is the original solution, so the water added is 125 - 25.0 = 100 mL. The dilution formula gives the FINAL volume, not the water added.",
+          "tags": [
+            "dilution",
+            "solvent-added"
+          ],
+          "expectedSeconds": 120,
+          "points": 25,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 125.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "That is the final total volume. The question asks how much water to ADD, so subtract the 25.0 mL you started with.",
+                "label": "reported-final-volume"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T2L8-Q07",
+          "prompt": "100. mL of 0.500 M solution is diluted to 0.125 M. What volume of WATER must be added, in millilitres?",
+          "answer": {
+            "type": "numeric",
+            "value": 300.0,
+            "unit": "mL",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mL",
+              "millilitre",
+              "milliliter",
+              "millilitres",
+              "milliliters"
+            ]
+          },
+          "hints": [
+            "Quartering the concentration means quadrupling the volume."
+          ],
+          "explanation": "Final volume = (0.500)(100.) / 0.125 = 400 mL, so water added = 400 - 100. = 300 mL.",
+          "tags": [
+            "dilution",
+            "solvent-added"
+          ],
+          "expectedSeconds": 120,
+          "points": 25,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 400.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "That is the final total volume. Subtract the original 100. mL to get the water added.",
+                "label": "reported-final-volume"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T2L8-Q08",
+          "prompt": "What volume of 0.200 M H_3PO_4 neutralises 30.0 mL of 0.150 M Ca(OH)_2? Answer in millilitres.\n\n3 Ca(OH)_2 + 2 H_3PO_4 -> Ca_3(PO_4)_2 + 6 H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 15.0,
+            "unit": "mL",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mL",
+              "millilitre",
+              "milliliter",
+              "millilitres",
+              "milliliters"
+            ]
+          },
+          "hints": [
+            "The ratio here is 2 acid to 3 base, neither 1:1 nor 1:2.",
+            "Multiply the base moles by 2/3."
+          ],
+          "explanation": "moles Ca(OH)_2 = 0.0300 x 0.150 = 0.00450 mol, x (2 H_3PO_4 / 3 Ca(OH)_2) = 0.00300 mol acid, giving 0.00300 / 0.200 = 15 mL.",
+          "tags": [
+            "solution-stoichiometry",
+            "titration"
+          ],
+          "expectedSeconds": 150,
+          "points": 25
+        },
+        {
+          "id": "T2L8-Q09",
+          "prompt": "What volume of 0.500 M HCl reacts completely with 1.00 g of Mg? Answer in millilitres.\n\nMg + 2 HCl -> MgCl_2 + H_2\n\nMM(Mg) = 24.31 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 165.0,
+            "unit": "mL",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mL",
+              "millilitre",
+              "milliliter",
+              "millilitres",
+              "milliliters"
+            ]
+          },
+          "hints": [
+            "Grams to moles, mole ratio, then divide by the molarity."
+          ],
+          "explanation": "1.00 / 24.31 = 0.04114 mol Mg, x 2 = 0.08227 mol HCl, then / 0.500 = 0.1645 L = 165 mL.",
+          "tags": [
+            "solution-stoichiometry"
+          ],
+          "expectedSeconds": 130,
+          "points": 25
+        },
+        {
+          "id": "T2L8-Q10",
+          "prompt": "What volume of 0.250 M HCl is needed to dissolve 5.00 g of CaCO_3? Answer in litres.\n\nCaCO_3 + 2 HCl -> CaCl_2 + H_2O + CO_2\n\nMM(CaCO_3) = 100.09 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 0.4,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "Each carbonate needs two acids."
+          ],
+          "explanation": "5.00 / 100.09 = 0.04996 mol, x 2 = 0.09991 mol HCl, then / 0.250 = 0.4 L.",
+          "tags": [
+            "solution-stoichiometry"
+          ],
+          "expectedSeconds": 135,
+          "points": 25
+        },
+        {
+          "id": "T2L8-Q11",
+          "prompt": "What volume of 0.500 M HCl reacts completely with 25.0 mL of 0.200 M Na_2CO_3? Answer in millilitres.\n\nNa_2CO_3 + 2 HCl -> 2 NaCl + H_2O + CO_2",
+          "answer": {
+            "type": "numeric",
+            "value": 20.0,
+            "unit": "mL",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mL",
+              "millilitre",
+              "milliliter",
+              "millilitres",
+              "milliliters"
+            ]
+          },
+          "hints": [
+            "Carbonate needs two acids, same as the solid case."
+          ],
+          "explanation": "moles Na_2CO_3 = 0.0250 x 0.200 = 0.00500 mol, x 2 = 0.0100 mol HCl, then / 0.500 = 20 mL.",
+          "tags": [
+            "solution-stoichiometry"
+          ],
+          "expectedSeconds": 130,
+          "points": 25
+        },
+        {
+          "id": "T2L8-Q12",
+          "prompt": "50.0 mL of 0.100 M AgNO_3 reacts with excess NaCl. What mass of AgCl precipitates?\n\nAgNO_3 + NaCl -> AgCl + NaNO_3\n\nMM(AgCl) = 143.35 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 0.717,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Volume times molarity, then the molar mass."
+          ],
+          "explanation": "moles AgNO_3 = 0.0500 x 0.100 = 0.00500 mol, 1 to 1 with AgCl, then x 143.35 = 0.717 g.",
+          "tags": [
+            "gravimetric"
+          ],
+          "expectedSeconds": 115,
+          "points": 20
+        },
+        {
+          "id": "T2L8-Q13",
+          "prompt": "100. mL of 0.200 M BaCl_2 reacts with excess Na_2SO_4. What mass of BaSO_4 precipitates?\n\nBaCl_2 + Na_2SO_4 -> BaSO_4 + 2 NaCl\n\nMM(BaSO_4) = 233.36 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 4.67,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "100. mL = 0.100 L"
+          ],
+          "explanation": "moles BaCl_2 = 0.100 x 0.200 = 0.0200 mol, 1 to 1 with BaSO_4, then x 233.36 = 4.67 g.",
+          "tags": [
+            "gravimetric"
+          ],
+          "expectedSeconds": 115,
+          "points": 20
+        },
+        {
+          "id": "T2L8-Q14",
+          "prompt": "A 25.0 mL sample of NaCl solution is treated with excess AgNO_3 and yields 1.435 g of AgCl. What was the molarity of the NaCl?\n\nAgNO_3 + NaCl -> AgCl + NaNO_3\n\nMM(AgCl) = 143.35 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 0.4,
+            "unit": "mol/L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol/L",
+              "M",
+              "molar",
+              "mol L^-1"
+            ]
+          },
+          "hints": [
+            "Moles from the precipitate, then divide by the sample volume in litres."
+          ],
+          "explanation": "1.435 / 143.35 = 0.01001 mol AgCl, so 0.01001 mol NaCl in 0.0250 L, giving 0.4 mol/L.",
+          "tags": [
+            "gravimetric",
+            "unknown-concentration"
+          ],
+          "expectedSeconds": 150,
+          "points": 25
+        }
+      ]
+    }
+  ]
+}

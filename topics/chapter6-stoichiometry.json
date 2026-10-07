@@ -1,0 +1,2010 @@
+{
+  "schemaVersion": "1.0",
+  "topic": {
+    "id": "stoichiometry-ch6",
+    "title": "Chapter 6: Stoichiometry & Solutions",
+    "course": "General Chemistry I",
+    "author": "",
+    "defaults": {
+      "tolerance": {
+        "type": "relative",
+        "value": 0.015
+      },
+      "sigFigPolicy": "enforce",
+      "unitsRequired": true,
+      "unitConversion": true,
+      "autoCapitalize": "suggest",
+      "hintAfterAttempts": 2,
+      "maxAttempts": 0
+    }
+  },
+  "levels": [
+    {
+      "id": "C6L1",
+      "title": "Mole-to-Mole Conversions",
+      "requiredCorrect": 4,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C6L1-Q01",
+          "prompt": "How many moles of H_2 are needed to react completely with 1 mol of N_2?\n\nN_2 + 3 H_2 -> 2 NH_3",
+          "answer": {
+            "type": "numeric",
+            "value": 3,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 1,
+            "sigFigPolicy": "ignore",
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Read the coefficients straight off the balanced equation."
+          ],
+          "explanation": "The coefficients give the ratio directly: 3 mol H_2 per 1 mol N_2. Coefficients, not subscripts, set the mole ratio.",
+          "tags": [
+            "mole-mole"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "C6L1-Q02",
+          "prompt": "How many moles of NH_3 form from 2.50 mol of N_2 with excess H_2?\n\nN_2 + 3 H_2 -> 2 NH_3",
+          "answer": {
+            "type": "numeric",
+            "value": 5.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Multiply by the NH_3 coefficient over the N_2 coefficient."
+          ],
+          "explanation": "2 mol NH_3 per 1 mol N_2, so 2.50 x 2 = 5.00 mol NH_3.",
+          "tags": [
+            "mole-mole"
+          ],
+          "expectedSeconds": 70,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 1.25,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.01
+                  }
+                },
+                "message": "You divided by the ratio instead of multiplying. Two NH_3 come from each N_2, so the answer exceeds 2.50.",
+                "label": "inverted-mole-ratio"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C6L1-Q03",
+          "prompt": "How many moles of H_2 are needed to react with 4.00 mol of N_2?\n\nN_2 + 3 H_2 -> 2 NH_3",
+          "answer": {
+            "type": "numeric",
+            "value": 12.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Hydrogen has the largest coefficient, so expect the largest amount."
+          ],
+          "explanation": "3 mol H_2 per 1 mol N_2, so 4.00 x 3 = 12.0 mol.",
+          "tags": [
+            "mole-mole"
+          ],
+          "expectedSeconds": 65,
+          "points": 10
+        },
+        {
+          "id": "C6L1-Q04",
+          "prompt": "How many moles of O_2 are produced from 6.00 mol of KClO_3?\n\n2 KClO_3 -> 2 KCl + 3 O_2",
+          "answer": {
+            "type": "numeric",
+            "value": 9.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "The ratio is 3 to 2, not 3 to 1."
+          ],
+          "explanation": "3 mol O_2 per 2 mol KClO_3, so 6.00 x (3/2) = 9.00 mol.",
+          "tags": [
+            "mole-mole"
+          ],
+          "expectedSeconds": 80,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 18.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.01
+                  }
+                },
+                "message": "You used a 3:1 ratio. The KClO_3 coefficient is 2, so multiply by 3/2.",
+                "label": "ignored-reactant-coefficient"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C6L1-Q05",
+          "prompt": "How many moles of O_2 are needed to burn 3.00 mol of CH_4 completely?\n\nCH_4 + 2 O_2 -> CO_2 + 2 H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 6.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Read the O_2 coefficient against the CH_4 coefficient."
+          ],
+          "explanation": "2 mol O_2 per 1 mol CH_4, so 3.00 x 2 = 6.00 mol.",
+          "tags": [
+            "mole-mole"
+          ],
+          "expectedSeconds": 65,
+          "points": 10
+        },
+        {
+          "id": "C6L1-Q06",
+          "prompt": "How many moles of H_2O are produced when 3.00 mol of CH_4 burns?\n\nCH_4 + 2 O_2 -> CO_2 + 2 H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 6.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Water and oxygen happen to share a coefficient here."
+          ],
+          "explanation": "2 mol H_2O per 1 mol CH_4, so 3.00 x 2 = 6.00 mol.",
+          "tags": [
+            "mole-mole"
+          ],
+          "expectedSeconds": 65,
+          "points": 10
+        },
+        {
+          "id": "C6L1-Q07",
+          "prompt": "How many moles of Al_2O_3 form from 8.00 mol of Al with excess O_2?\n\n4 Al + 3 O_2 -> 2 Al_2O_3",
+          "answer": {
+            "type": "numeric",
+            "value": 4.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Two aluminium atoms go into each Al_2O_3, so expect fewer moles of product."
+          ],
+          "explanation": "2 mol Al_2O_3 per 4 mol Al, which is 1 per 2, so 8.00 x (2/4) = 4.00 mol.",
+          "tags": [
+            "mole-mole"
+          ],
+          "expectedSeconds": 80,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 16.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.01
+                  }
+                },
+                "message": "You multiplied by 4/2 instead of 2/4. Four moles of Al give only two of Al_2O_3.",
+                "label": "inverted-mole-ratio"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C6L1-Q08",
+          "prompt": "How many moles of O_2 are needed to react with 8.00 mol of Al?\n\n4 Al + 3 O_2 -> 2 Al_2O_3",
+          "answer": {
+            "type": "numeric",
+            "value": 6.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "The ratio is 3 to 4."
+          ],
+          "explanation": "3 mol O_2 per 4 mol Al, so 8.00 x (3/4) = 6.00 mol.",
+          "tags": [
+            "mole-mole"
+          ],
+          "expectedSeconds": 80,
+          "points": 15
+        },
+        {
+          "id": "C6L1-Q09",
+          "prompt": "How many moles of H_2 are needed to produce 5.00 mol of H_2O?\n\n2 H_2 + O_2 -> 2 H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 5.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Compare the two coefficients before reaching for a calculator."
+          ],
+          "explanation": "H_2 and H_2O both have a coefficient of 2, so the ratio is 1 to 1.",
+          "tags": [
+            "mole-mole"
+          ],
+          "expectedSeconds": 60,
+          "points": 10
+        },
+        {
+          "id": "C6L1-Q10",
+          "prompt": "How many moles of O_2 are needed to burn 2.50 mol of propane completely?\n\nC_3H_8 + 5 O_2 -> 3 CO_2 + 4 H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 12.5,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Propane needs five O_2 per molecule."
+          ],
+          "explanation": "5 mol O_2 per 1 mol C_3H_8, so 2.50 x 5 = 12.5 mol. Bigger hydrocarbons need a lot of oxygen.",
+          "tags": [
+            "mole-mole"
+          ],
+          "expectedSeconds": 70,
+          "points": 15
+        },
+        {
+          "id": "C6L1-Q11",
+          "prompt": "How many moles of H_2O are produced when 2.50 mol of propane burns?\n\nC_3H_8 + 5 O_2 -> 3 CO_2 + 4 H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 10.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Eight hydrogens per propane become four waters."
+          ],
+          "explanation": "4 mol H_2O per 1 mol C_3H_8, so 2.50 x 4 = 10.0 mol.",
+          "tags": [
+            "mole-mole"
+          ],
+          "expectedSeconds": 70,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "C6L2",
+      "title": "Mass-to-Mass Stoichiometry",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C6L2-Q01",
+          "prompt": "What mass of NH_3 forms from 2.00 mol of N_2 with excess H_2?\n\nN_2 + 3 H_2 -> 2 NH_3\n\nMM(NH_3) = 17.03 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 68.1,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Mole ratio first, then the molar mass."
+          ],
+          "explanation": "2.00 mol N_2 x 2 = 4.00 mol NH_3, then x 17.03 g/mol = 68.1 g.",
+          "tags": [
+            "mass-mole"
+          ],
+          "expectedSeconds": 95,
+          "points": 15
+        },
+        {
+          "id": "C6L2-Q02",
+          "prompt": "How many moles of CO_2 are produced when 32.0 g of CH_4 burns completely?\n\nCH_4 + 2 O_2 -> CO_2 + 2 H_2O\n\nMM(CH_4) = 16.04 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 2.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Grams to moles first, then the mole ratio."
+          ],
+          "explanation": "32.0 / 16.04 = 1.9950 mol CH_4, and CH_4 to CO_2 is 1 to 1.",
+          "tags": [
+            "mass-mole"
+          ],
+          "expectedSeconds": 95,
+          "points": 15
+        },
+        {
+          "id": "C6L2-Q03",
+          "prompt": "What mass of CO_2 is produced when 16.0 g of CH_4 burns completely?\n\nCH_4 + 2 O_2 -> CO_2 + 2 H_2O\n\nMM(CH_4) = 16.04 g/mol, MM(CO_2) = 44.01 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 43.9,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Three steps: grams to moles, mole ratio, moles to grams."
+          ],
+          "explanation": "16.0 / 16.04 = 0.9975 mol CH_4, which gives 0.9975 mol CO_2, then x 44.01 = 43.9 g.",
+          "tags": [
+            "mass-mass"
+          ],
+          "expectedSeconds": 120,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 87.8,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "You used a 1:2 ratio. Only one CO_2 forms per CH_4; the 2 belongs to O_2 and H_2O.",
+                "label": "wrong-mole-ratio"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C6L2-Q04",
+          "prompt": "What mass of H_2O forms from 8.00 g of H_2 with excess O_2?\n\n2 H_2 + O_2 -> 2 H_2O\n\nMM(H_2) = 2.02 g/mol, MM(H_2O) = 18.02 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 71.4,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "8.00 g of H_2 is almost four moles, so expect a large mass of water."
+          ],
+          "explanation": "8.00 / 2.02 = 3.960 mol H_2, a 1 to 1 ratio with H_2O, then x 18.02 = 71.4 g.",
+          "tags": [
+            "mass-mass"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C6L2-Q05",
+          "prompt": "What mass of Fe is produced from 160. g of Fe_2O_3 with excess CO?\n\nFe_2O_3 + 3 CO -> 2 Fe + 3 CO_2\n\nMM(Fe_2O_3) = 159.70 g/mol, MM(Fe) = 55.85 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 112.0,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Each Fe_2O_3 yields 2 Fe."
+          ],
+          "explanation": "160. / 159.70 = 1.002 mol Fe_2O_3, x 2 = 2.004 mol Fe, then x 55.85 = 112 g.",
+          "tags": [
+            "mass-mass"
+          ],
+          "expectedSeconds": 130,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 56.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "You forgot the 2 in front of Fe. Each Fe_2O_3 gives two iron atoms.",
+                "label": "missing-mole-ratio"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C6L2-Q06",
+          "prompt": "What mass of Al_2O_3 forms from 54.0 g of Al with excess O_2?\n\n4 Al + 3 O_2 -> 2 Al_2O_3\n\nMM(Al) = 26.98 g/mol, MM(Al_2O_3) = 101.96 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 102.0,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "The Al to Al_2O_3 ratio is 4 to 2, which halves the moles."
+          ],
+          "explanation": "54.0 / 26.98 = 2.001 mol Al, x (2/4) = 1.001 mol Al_2O_3, then x 101.96 = 102 g.",
+          "tags": [
+            "mass-mass"
+          ],
+          "expectedSeconds": 130,
+          "points": 20
+        },
+        {
+          "id": "C6L2-Q07",
+          "prompt": "What mass of CaO is produced when 50.0 g of CaCO_3 decomposes?\n\nCaCO_3 -> CaO + CO_2\n\nMM(CaCO_3) = 100.09 g/mol, MM(CaO) = 56.08 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 28.0,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "All three coefficients are 1 here."
+          ],
+          "explanation": "50.0 / 100.09 = 0.4996 mol, all ratios 1 to 1, then x 56.08 = 28 g. The mass drops because CO_2 escapes.",
+          "tags": [
+            "mass-mass"
+          ],
+          "expectedSeconds": 115,
+          "points": 20
+        },
+        {
+          "id": "C6L2-Q08",
+          "prompt": "What mass of H_2 is needed to produce 36.0 g of H_2O?\n\n2 H_2 + O_2 -> 2 H_2O\n\nMM(H_2O) = 18.02 g/mol, MM(H_2) = 2.02 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 4.04,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Start from the product and work backwards."
+          ],
+          "explanation": "36.0 / 18.02 = 1.998 mol H_2O, 1 to 1 with H_2, then x 2.02 = 4.04 g. Working back from a product uses the same three steps.",
+          "tags": [
+            "mass-mass"
+          ],
+          "expectedSeconds": 125,
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "C6L3",
+      "title": "Limiting Reagent: What Runs Out, What Forms, What Is Left",
+      "requiredCorrect": 4,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C6L3-Q01",
+          "prompt": "2.00 mol of N_2 is mixed with 3.00 mol of H_2. Which reactant is limiting?\n\nN_2 + 3 H_2 -> 2 NH_3",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "N_2",
+              "H_2",
+              "Neither, both are completely consumed"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Work out how much H_2 the N_2 would need, then compare."
+          ],
+          "explanation": "H_2. All 2.00 mol of N_2 would need 6.00 mol of H_2, but only 3.00 mol is present.",
+          "tags": [
+            "limiting-reactant"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C6L3-Q02",
+          "prompt": "4.00 mol of H_2 is mixed with 1.50 mol of O_2. Which reactant is limiting?\n\n2 H_2 + O_2 -> 2 H_2O",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "H_2",
+              "O_2",
+              "Neither, both are completely consumed"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "How much O_2 would 4.00 mol of H_2 require?"
+          ],
+          "explanation": "O_2. Burning 4.00 mol of H_2 would need 2.00 mol of O_2, and only 1.50 mol is present.",
+          "tags": [
+            "limiting-reactant"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C6L3-Q03",
+          "prompt": "3.00 mol of CH_4 is mixed with 5.00 mol of O_2. Which reactant is limiting?\n\nCH_4 + 2 O_2 -> CO_2 + 2 H_2O",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "CH_4",
+              "O_2",
+              "Neither, both are completely consumed"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Methane needs twice its own moles of oxygen."
+          ],
+          "explanation": "O_2. Burning 3.00 mol of CH_4 needs 6.00 mol of O_2, and only 5.00 mol is available.",
+          "tags": [
+            "limiting-reactant"
+          ],
+          "expectedSeconds": 125,
+          "points": 20
+        },
+        {
+          "id": "C6L3-Q04",
+          "prompt": "5.00 mol of Al is mixed with 3.00 mol of O_2. Which reactant is limiting?\n\n4 Al + 3 O_2 -> 2 Al_2O_3",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Al",
+              "O_2",
+              "Neither, both are completely consumed"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Divide each amount by its own coefficient and compare the two results.",
+            "Al: 5.00/4. O_2: 3.00/3."
+          ],
+          "explanation": "O_2. Divide each by its coefficient: Al gives 5.00/4 = 1.25 and O_2 gives 3.00/3 = 1.00. The smaller value is the limiting one.",
+          "tags": [
+            "limiting-reactant"
+          ],
+          "expectedSeconds": 140,
+          "points": 20
+        },
+        {
+          "id": "C6L3-Q05",
+          "prompt": "2.00 mol of Mg is mixed with 3.00 mol of HCl. Which reactant is limiting?\n\nMg + 2 HCl -> MgCl_2 + H_2",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Mg",
+              "HCl",
+              "Neither, both are completely consumed"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Each magnesium needs two acids."
+          ],
+          "explanation": "HCl. Dissolving 2.00 mol of Mg takes 4.00 mol of HCl, and only 3.00 mol is there.",
+          "tags": [
+            "limiting-reactant"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C6L3-Q06",
+          "prompt": "10.0 g of Na is mixed with 10.0 g of Cl_2. Which reactant is limiting?\n\n2 Na + Cl_2 -> 2 NaCl\n\nMM(Na) = 22.99 g/mol, MM(Cl_2) = 70.90 g/mol",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Na",
+              "Cl_2",
+              "Neither, both are completely consumed"
+            ],
+            "correct": [
+              1
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "hints": [
+            "Equal masses are not equal moles. Convert both first.",
+            "Then divide each by its coefficient."
+          ],
+          "explanation": "Cl_2. In moles: 10.0 / 22.99 = 0.4350 mol Na and 10.0 / 70.90 = 0.1410 mol Cl_2. Dividing by coefficients gives 0.2175 against 0.1410, so chlorine runs out first. Equal masses are not equal moles.",
+          "tags": [
+            "limiting-reactant",
+            "mass-based"
+          ],
+          "expectedSeconds": 165,
+          "points": 20
+        },
+        {
+          "id": "C6L3-Q07",
+          "prompt": "2.00 mol of N_2 is mixed with 3.00 mol of H_2. How many moles of NH_3 form?\n\nN_2 + 3 H_2 -> 2 NH_3",
+          "answer": {
+            "type": "numeric",
+            "value": 2.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Identify the limiting reagent first, then use only that amount."
+          ],
+          "explanation": "H_2 limits, so work from it: 3.00 x (2 NH_3 / 3 H_2) = 2.00 mol NH_3. The yield always comes from the limiting reagent.",
+          "tags": [
+            "limiting-reactant"
+          ],
+          "expectedSeconds": 125,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 4.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.01
+                  }
+                },
+                "message": "You used N_2, which is in excess. The yield is set by H_2.",
+                "label": "used-excess-reactant"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C6L3-Q08",
+          "prompt": "3.00 mol of N_2 is mixed with 6.00 mol of H_2. How many moles of NH_3 form?\n\nN_2 + 3 H_2 -> 2 NH_3",
+          "answer": {
+            "type": "numeric",
+            "value": 4.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Divide each by its coefficient to see which runs out."
+          ],
+          "explanation": "Dividing by coefficients: N_2 gives 3.00, H_2 gives 6.00/3 = 2.00, so H_2 limits. Then 6.00 x (2/3) = 4.00 mol NH_3.",
+          "tags": [
+            "limiting-reactant"
+          ],
+          "expectedSeconds": 125,
+          "points": 20
+        },
+        {
+          "id": "C6L3-Q09",
+          "prompt": "3.00 mol of N_2 is mixed with 6.00 mol of H_2. How many moles of N_2 are CONSUMED?\n\nN_2 + 3 H_2 -> 2 NH_3",
+          "answer": {
+            "type": "numeric",
+            "value": 2.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Run the limiting reagent back to the other reactant.",
+            "Consumed is not the same as what you started with."
+          ],
+          "explanation": "H_2 limits, and 6.00 mol H_2 x (1 N_2 / 3 H_2) = 2.00 mol of N_2 is used up. The other 1.00 mol never reacts.",
+          "tags": [
+            "limiting-reactant",
+            "consumed"
+          ],
+          "expectedSeconds": 130,
+          "points": 20
+        },
+        {
+          "id": "C6L3-Q10",
+          "prompt": "3.00 mol of N_2 is mixed with 6.00 mol of H_2. How many moles of N_2 are LEFT OVER?\n\nN_2 + 3 H_2 -> 2 NH_3",
+          "answer": {
+            "type": "numeric",
+            "value": 1.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Work out how much N_2 is consumed, then subtract from the starting amount."
+          ],
+          "explanation": "2.00 mol of the N_2 is consumed, so 3.00 - 2.00 = 1.00 mol remains. Leftover is what you started with minus what was consumed.",
+          "tags": [
+            "limiting-reactant",
+            "excess"
+          ],
+          "expectedSeconds": 135,
+          "points": 20
+        },
+        {
+          "id": "C6L3-Q11",
+          "prompt": "4.00 mol of H_2 is mixed with 1.50 mol of O_2. How many moles of H_2O form?\n\n2 H_2 + O_2 -> 2 H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 3.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Start from the oxygen, since that is what runs out."
+          ],
+          "explanation": "O_2 limits: 1.50 x (2 H_2O / 1 O_2) = 3.00 mol H_2O.",
+          "tags": [
+            "limiting-reactant"
+          ],
+          "expectedSeconds": 120,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 4.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.01
+                  }
+                },
+                "message": "You used H_2, which is in excess. Run the calculation from O_2.",
+                "label": "used-excess-reactant"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C6L3-Q12",
+          "prompt": "4.00 mol of H_2 is mixed with 1.50 mol of O_2. How many moles of H_2 are LEFT OVER?\n\n2 H_2 + O_2 -> 2 H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 1.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "How much H_2 can 1.50 mol of O_2 actually burn?"
+          ],
+          "explanation": "The 1.50 mol of O_2 consumes 1.50 x (2 H_2 / 1 O_2) = 3.00 mol of H_2, leaving 4.00 - 3.00 = 1.00 mol.",
+          "tags": [
+            "limiting-reactant",
+            "excess"
+          ],
+          "expectedSeconds": 130,
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "C6L4",
+      "title": "Theoretical, Actual & Percent Yield",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C6L4-Q01",
+          "prompt": "A reaction has a theoretical yield of 25.0 g and an actual yield of 20.0 g. What is the percent yield?",
+          "answer": {
+            "type": "numeric",
+            "value": 80.0,
+            "unit": "%",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.1
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "%",
+              "percent"
+            ]
+          },
+          "hints": [
+            "Actual over theoretical, times 100."
+          ],
+          "explanation": "(actual / theoretical) x 100 = (20.0 / 25.0) x 100 = 80.0%.",
+          "tags": [
+            "percent-yield"
+          ],
+          "expectedSeconds": 70,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 125.0,
+                  "tolerance": {
+                    "type": "absolute",
+                    "value": 0.5
+                  }
+                },
+                "message": "You divided theoretical by actual. The actual yield goes on top.",
+                "label": "inverted-yield-ratio"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C6L4-Q02",
+          "prompt": "A reaction has a theoretical yield of 15.0 g and an actual yield of 12.3 g. What is the percent yield?",
+          "answer": {
+            "type": "numeric",
+            "value": 82.0,
+            "unit": "%",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.1
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "%",
+              "percent"
+            ]
+          },
+          "hints": [
+            "The answer is below 100% because less was recovered than predicted."
+          ],
+          "explanation": "(12.3 / 15.0) x 100 = 82.0%.",
+          "tags": [
+            "percent-yield"
+          ],
+          "expectedSeconds": 70,
+          "points": 10
+        },
+        {
+          "id": "C6L4-Q03",
+          "prompt": "A reaction with a theoretical yield of 40.0 g runs at 75.0% yield. What mass is actually recovered?",
+          "answer": {
+            "type": "numeric",
+            "value": 30.0,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Rearrange the percent yield formula for the actual yield."
+          ],
+          "explanation": "actual = theoretical x (percent / 100) = 40.0 x 0.750 = 30.0 g.",
+          "tags": [
+            "actual-yield"
+          ],
+          "expectedSeconds": 85,
+          "points": 15
+        },
+        {
+          "id": "C6L4-Q04",
+          "prompt": "A reaction recovers 18.0 g of product at 90.0% yield. What was the theoretical yield?",
+          "answer": {
+            "type": "numeric",
+            "value": 20.0,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "The theoretical yield must be the larger number."
+          ],
+          "explanation": "theoretical = actual / (percent / 100) = 18.0 / 0.900 = 20.0 g.",
+          "tags": [
+            "percent-yield"
+          ],
+          "expectedSeconds": 95,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 16.2,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "You multiplied by 0.900 instead of dividing. The theoretical yield is larger than the actual.",
+                "label": "multiplied-instead-of-divided"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C6L4-Q05",
+          "prompt": "2.00 mol of N_2 reacts with excess H_2. What is the theoretical yield of NH_3?\n\nN_2 + 3 H_2 -> 2 NH_3\n\nMM(NH_3) = 17.03 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 68.1,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Nitrogen is limiting because hydrogen is in excess."
+          ],
+          "explanation": "Theoretical yield is the mass you would get if every bit of the limiting reagent converted: 4.00 mol NH_3 x 17.03 = 68.1 g.",
+          "tags": [
+            "theoretical-yield"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C6L4-Q06",
+          "prompt": "50.0 g of CaCO_3 is heated until it fully decomposes. What is the theoretical yield of CaO?\n\nCaCO_3 -> CaO + CO_2\n\nMM(CaCO_3) = 100.09 g/mol, MM(CaO) = 56.08 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 28.0,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "With one reactant, all of it is the limiting reagent."
+          ],
+          "explanation": "50.0 / 100.09 = 0.4996 mol, 1 to 1 with CaO, then x 56.08 = 28 g.",
+          "tags": [
+            "theoretical-yield"
+          ],
+          "expectedSeconds": 125,
+          "points": 20
+        },
+        {
+          "id": "C6L4-Q07",
+          "prompt": "32.0 g of CH_4 burns in excess O_2. What is the theoretical yield of CO_2?\n\nCH_4 + 2 O_2 -> CO_2 + 2 H_2O\n\nMM(CH_4) = 16.04 g/mol, MM(CO_2) = 44.01 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 87.8,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Methane is limiting since oxygen is in excess."
+          ],
+          "explanation": "32.0 / 16.04 = 1.995 mol CH_4, 1 to 1 with CO_2, then x 44.01 = 87.8 g.",
+          "tags": [
+            "theoretical-yield"
+          ],
+          "expectedSeconds": 130,
+          "points": 20
+        },
+        {
+          "id": "C6L4-Q08",
+          "prompt": "2.00 mol of N_2 reacts with excess H_2 and 55.0 g of NH_3 is collected. What is the percent yield?\n\nN_2 + 3 H_2 -> 2 NH_3\n\nMM(NH_3) = 17.03 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 80.7,
+            "unit": "%",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.2
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "%",
+              "percent"
+            ]
+          },
+          "hints": [
+            "Work out the theoretical yield from the equation first."
+          ],
+          "explanation": "Theoretical: 4.00 mol x 17.03 = 68.12 g. Then (55.0 / 68.12) x 100 = 80.7%.",
+          "tags": [
+            "percent-yield",
+            "theoretical-yield"
+          ],
+          "expectedSeconds": 150,
+          "points": 25
+        },
+        {
+          "id": "C6L4-Q09",
+          "prompt": "50.0 g of CaCO_3 is decomposed and 24.0 g of CaO is recovered. What is the percent yield?\n\nCaCO_3 -> CaO + CO_2\n\nMM(CaCO_3) = 100.09 g/mol, MM(CaO) = 56.08 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 85.7,
+            "unit": "%",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.2
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "%",
+              "percent"
+            ]
+          },
+          "hints": [
+            "Calculate the theoretical mass of CaO first."
+          ],
+          "explanation": "Theoretical: 50.0 / 100.09 x 56.08 = 28.01 g. Then (24.0 / 28.01) x 100 = 85.7%.",
+          "tags": [
+            "percent-yield",
+            "theoretical-yield"
+          ],
+          "expectedSeconds": 160,
+          "points": 25
+        }
+      ]
+    },
+    {
+      "id": "C6L5",
+      "title": "Molarity & Moles of Solute",
+      "requiredCorrect": 4,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C6L5-Q01",
+          "prompt": "What is the molarity of a solution containing 0.500 mol of NaCl in 2.00 L of solution?",
+          "answer": {
+            "type": "numeric",
+            "value": 0.25,
+            "unit": "mol/L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol/L",
+              "M",
+              "molar",
+              "mol L^-1"
+            ]
+          },
+          "hints": [
+            "Moles divided by litres."
+          ],
+          "explanation": "Molarity = moles of solute / litres of solution = 0.500 / 2.00 = 0.250 mol/L.",
+          "tags": [
+            "molarity"
+          ],
+          "expectedSeconds": 65,
+          "points": 10
+        },
+        {
+          "id": "C6L5-Q02",
+          "prompt": "How many moles of solute are in 250. mL of a 0.400 M solution?",
+          "answer": {
+            "type": "numeric",
+            "value": 0.1,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Millilitres must become litres first."
+          ],
+          "explanation": "250. mL = 0.250 L, so moles = 0.400 x 0.250 = 0.100 mol.",
+          "tags": [
+            "molarity"
+          ],
+          "expectedSeconds": 80,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 100.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.01
+                  }
+                },
+                "message": "You left the volume in millilitres. 250. mL = 0.250 L.",
+                "label": "no-volume-conversion"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C6L5-Q03",
+          "prompt": "How many moles of solute are in 2.00 L of a 1.50 M solution?",
+          "answer": {
+            "type": "numeric",
+            "value": 3.0,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "The volume is already in litres."
+          ],
+          "explanation": "moles = M x V = 1.50 x 2.00 = 3.00 mol.",
+          "tags": [
+            "molarity"
+          ],
+          "expectedSeconds": 60,
+          "points": 10
+        },
+        {
+          "id": "C6L5-Q04",
+          "prompt": "What volume of a 0.250 M solution contains 0.500 mol of solute? Answer in litres.",
+          "answer": {
+            "type": "numeric",
+            "value": 2.0,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "Rearrange M = moles / V for the volume."
+          ],
+          "explanation": "V = moles / M = 0.500 / 0.250 = 2.00 L.",
+          "tags": [
+            "molarity"
+          ],
+          "expectedSeconds": 80,
+          "points": 15
+        },
+        {
+          "id": "C6L5-Q05",
+          "prompt": "How many moles of solute are in 125 mL of a 0.320 M solution?",
+          "answer": {
+            "type": "numeric",
+            "value": 0.04,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Convert to litres, then multiply."
+          ],
+          "explanation": "125 mL = 0.125 L, so moles = 0.320 x 0.125 = 0.0400 mol.",
+          "tags": [
+            "molarity"
+          ],
+          "expectedSeconds": 80,
+          "points": 15
+        },
+        {
+          "id": "C6L5-Q06",
+          "prompt": "9.80 g of H_2SO_4 is dissolved to make 500. mL of solution. What is the molarity?\n\nMM(H_2SO_4) = 98.08 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 0.2,
+            "unit": "mol/L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol/L",
+              "M",
+              "molar",
+              "mol L^-1"
+            ]
+          },
+          "hints": [
+            "Grams to moles, then divide by the volume in litres."
+          ],
+          "explanation": "9.80 / 98.08 = 0.0999 mol, and 500. mL = 0.500 L, so 0.2 mol/L.",
+          "tags": [
+            "molarity"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C6L5-Q07",
+          "prompt": "11.7 g of NaCl is dissolved to make 250. mL of solution. What is the molarity?\n\nMM(NaCl) = 58.44 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 0.801,
+            "unit": "mol/L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol/L",
+              "M",
+              "molar",
+              "mol L^-1"
+            ]
+          },
+          "hints": [
+            "250. mL = 0.250 L"
+          ],
+          "explanation": "11.7 / 58.44 = 0.2002 mol in 0.250 L, giving 0.801 mol/L.",
+          "tags": [
+            "molarity"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C6L5-Q08",
+          "prompt": "4.00 g of NaOH is dissolved to make 500. mL of solution. What is the molarity?\n\nMM(NaOH) = 40.00 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 0.2,
+            "unit": "mol/L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol/L",
+              "M",
+              "molar",
+              "mol L^-1"
+            ]
+          },
+          "hints": [
+            "Sodium hydroxide has a convenient molar mass."
+          ],
+          "explanation": "4.00 / 40.00 = 0.100 mol in 0.500 L, giving 0.2 mol/L.",
+          "tags": [
+            "molarity"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        },
+        {
+          "id": "C6L5-Q09",
+          "prompt": "How many grams of KNO_3 are present in 2.00 L of a 0.150 M solution?\n\nMM(KNO_3) = 101.11 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 30.3,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Moles first, then grams."
+          ],
+          "explanation": "2.00 x 0.150 = 0.300 mol KNO_3, then x 101.11 = 30.3 g.",
+          "tags": [
+            "molarity"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "C6L6",
+      "title": "Preparing & Diluting Solutions",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C6L6-Q01",
+          "prompt": "What mass of NaOH is needed to prepare 500. mL of a 0.200 M solution?\n\nMM(NaOH) = 40.00 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 4.0,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Moles needed first, then convert to grams."
+          ],
+          "explanation": "0.500 L x 0.200 M = 0.100 mol, then x 40.00 = 4 g.",
+          "tags": [
+            "solution-prep"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        },
+        {
+          "id": "C6L6-Q02",
+          "prompt": "What mass of glucose, C_6H_12O_6, is needed to prepare 250. mL of a 0.100 M solution?\n\nMM(C_6H_12O_6) = 180.16 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 4.5,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Litres times molarity gives moles."
+          ],
+          "explanation": "0.250 L x 0.100 M = 0.0250 mol, then x 180.16 = 4.5 g.",
+          "tags": [
+            "solution-prep"
+          ],
+          "expectedSeconds": 115,
+          "points": 20
+        },
+        {
+          "id": "C6L6-Q03",
+          "prompt": "What mass of Na_2CO_3 is needed to prepare 250. mL of a 0.200 M solution?\n\nMM(Na_2CO_3) = 105.99 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 5.3,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Same two steps as the other preparations."
+          ],
+          "explanation": "0.250 L x 0.200 M = 0.0500 mol, then x 105.99 = 5.3 g.",
+          "tags": [
+            "solution-prep"
+          ],
+          "expectedSeconds": 115,
+          "points": 20
+        },
+        {
+          "id": "C6L6-Q04",
+          "prompt": "50.0 mL of 6.00 M HCl is diluted to a final volume of 300. mL. What is the new molarity?",
+          "answer": {
+            "type": "numeric",
+            "value": 1.0,
+            "unit": "mol/L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.01
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol/L",
+              "M",
+              "molar",
+              "mol L^-1"
+            ]
+          },
+          "hints": [
+            "M_1V_1 = M_2V_2"
+          ],
+          "explanation": "M_1V_1 = M_2V_2: (6.00)(50.0) = M_2(300.), so M_2 = 1.00 M. Volumes may stay in millilitres as long as both sides match.",
+          "tags": [
+            "dilution"
+          ],
+          "expectedSeconds": 100,
+          "points": 15
+        },
+        {
+          "id": "C6L6-Q05",
+          "prompt": "What volume of 12.0 M stock HCl is needed to prepare 500. mL of 0.500 M HCl? Answer in millilitres.",
+          "answer": {
+            "type": "numeric",
+            "value": 20.8,
+            "unit": "mL",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mL",
+              "millilitre",
+              "milliliter",
+              "millilitres",
+              "milliliters"
+            ]
+          },
+          "hints": [
+            "Solve M_1V_1 = M_2V_2 for V_1.",
+            "The stock is far more concentrated, so expect a small volume."
+          ],
+          "explanation": "V_1 = (0.500)(500.) / 12.0 = 20.8 mL, which you then dilute up to 500. mL.",
+          "tags": [
+            "dilution"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C6L6-Q06",
+          "prompt": "25.0 mL of 2.00 M solution is diluted to 0.400 M. What is the FINAL VOLUME in millilitres?",
+          "answer": {
+            "type": "numeric",
+            "value": 125.0,
+            "unit": "mL",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mL",
+              "millilitre",
+              "milliliter",
+              "millilitres",
+              "milliliters"
+            ]
+          },
+          "hints": [
+            "Diluting to a fifth of the concentration means five times the volume."
+          ],
+          "explanation": "V_2 = M_1V_1 / M_2 = (2.00)(25.0) / 0.400 = 125 mL.",
+          "tags": [
+            "dilution"
+          ],
+          "expectedSeconds": 110,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "C6L7",
+      "title": "Neutralisation & Titration",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C6L7-Q01",
+          "prompt": "What volume of 0.100 M NaOH neutralises 25.0 mL of 0.100 M HCl? Answer in millilitres.\n\nHCl + NaOH -> NaCl + H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 25.0,
+            "unit": "mL",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mL",
+              "millilitre",
+              "milliliter",
+              "millilitres",
+              "milliliters"
+            ]
+          },
+          "hints": [
+            "Moles of acid first, then the mole ratio."
+          ],
+          "explanation": "moles HCl = 0.0250 x 0.100 = 0.00250 mol. The ratio is 1 to 1, so 0.00250 / 0.100 = 0.0250 L = 25.0 mL. Equal concentrations in a 1:1 reaction means equal volumes.",
+          "tags": [
+            "solution-stoichiometry",
+            "titration"
+          ],
+          "expectedSeconds": 125,
+          "points": 20
+        },
+        {
+          "id": "C6L7-Q02",
+          "prompt": "What volume of 0.200 M NaOH neutralises 25.0 mL of 0.100 M HCl? Answer in millilitres.\n\nHCl + NaOH -> NaCl + H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 12.5,
+            "unit": "mL",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mL",
+              "millilitre",
+              "milliliter",
+              "millilitres",
+              "milliliters"
+            ]
+          },
+          "hints": [
+            "Same moles of base, twice the concentration."
+          ],
+          "explanation": "0.00250 mol HCl needs 0.00250 mol NaOH, so 0.00250 / 0.200 = 0.0125 L = 12.5 mL. Doubling the base concentration halves the volume.",
+          "tags": [
+            "solution-stoichiometry",
+            "titration"
+          ],
+          "expectedSeconds": 130,
+          "points": 20
+        },
+        {
+          "id": "C6L7-Q03",
+          "prompt": "What volume of 0.200 M NaOH neutralises 20.0 mL of 0.150 M H_2SO_4? Answer in millilitres.\n\nH_2SO_4 + 2 NaOH -> Na_2SO_4 + 2 H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 30.0,
+            "unit": "mL",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mL",
+              "millilitre",
+              "milliliter",
+              "millilitres",
+              "milliliters"
+            ]
+          },
+          "hints": [
+            "Check the NaOH coefficient before dividing."
+          ],
+          "explanation": "moles H_2SO_4 = 0.0200 x 0.150 = 0.00300 mol. Sulfuric acid is diprotic, so it needs 0.00600 mol NaOH, giving 0.0300 L = 30.0 mL.",
+          "tags": [
+            "solution-stoichiometry",
+            "titration"
+          ],
+          "expectedSeconds": 135,
+          "points": 25,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 15.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "You used a 1:1 ratio. H_2SO_4 needs two moles of NaOH per mole of acid.",
+                "label": "ignored-diprotic-ratio"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C6L7-Q04",
+          "prompt": "What volume of 0.100 M H_2SO_4 neutralises 40.0 mL of 0.150 M NaOH? Answer in millilitres.\n\nH_2SO_4 + 2 NaOH -> Na_2SO_4 + 2 H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 30.0,
+            "unit": "mL",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mL",
+              "millilitre",
+              "milliliter",
+              "millilitres",
+              "milliliters"
+            ]
+          },
+          "hints": [
+            "This time divide the base moles by 2."
+          ],
+          "explanation": "moles NaOH = 0.0400 x 0.150 = 0.00600 mol, halved to 0.00300 mol H_2SO_4, giving 0.0300 L = 30.0 mL.",
+          "tags": [
+            "solution-stoichiometry",
+            "titration"
+          ],
+          "expectedSeconds": 135,
+          "points": 25,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 60.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "You used a 1:1 ratio. Two NaOH react per H_2SO_4, so halve the acid moles.",
+                "label": "ignored-diprotic-ratio"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C6L7-Q05",
+          "prompt": "In a titration, 25.0 mL of HCl of unknown concentration needs 32.5 mL of 0.100 M NaOH to reach the endpoint. What is the molarity of the HCl?\n\nHCl + NaOH -> NaCl + H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 0.13,
+            "unit": "mol/L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol/L",
+              "M",
+              "molar",
+              "mol L^-1"
+            ]
+          },
+          "hints": [
+            "Start from the burette, where you know both numbers."
+          ],
+          "explanation": "moles NaOH = 0.0325 x 0.100 = 0.00325 mol, which is also the moles of HCl, so 0.13 mol/L in 0.0250 L.",
+          "tags": [
+            "solution-stoichiometry",
+            "titration",
+            "unknown-concentration"
+          ],
+          "expectedSeconds": 140,
+          "points": 25
+        },
+        {
+          "id": "C6L7-Q06",
+          "prompt": "In a titration, 20.0 mL of NaOH of unknown concentration needs 18.5 mL of 0.200 M HCl. What is the molarity of the NaOH?\n\nHCl + NaOH -> NaCl + H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 0.185,
+            "unit": "mol/L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol/L",
+              "M",
+              "molar",
+              "mol L^-1"
+            ]
+          },
+          "hints": [
+            "The unknown is the base this time, but the method is unchanged."
+          ],
+          "explanation": "moles HCl = 0.0185 x 0.200 = 0.00370 mol, 1 to 1 with NaOH, so 0.185 mol/L in 0.0200 L.",
+          "tags": [
+            "solution-stoichiometry",
+            "titration",
+            "unknown-concentration"
+          ],
+          "expectedSeconds": 140,
+          "points": 25
+        }
+      ]
+    }
+  ]
+}
