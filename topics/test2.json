@@ -426,7 +426,7 @@
           "answer": {
             "type": "formula",
             "value": "N",
-            "match": "composition",
+            "match": "structural",
             "charge": -3,
             "phase": null,
             "requirePhase": false,
@@ -482,7 +482,10 @@
             "accept": [
               "sodium chloride"
             ],
-            "reject": [],
+            "reject": [
+              "sodium chlorate",
+              "sodium chlorite"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -490,7 +493,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -512,7 +515,10 @@
             "accept": [
               "magnesium bromide"
             ],
-            "reject": [],
+            "reject": [
+              "magnesium bromate",
+              "magnesium bromite"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -520,7 +526,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -542,7 +548,10 @@
             "accept": [
               "potassium sulfide"
             ],
-            "reject": [],
+            "reject": [
+              "potassium sulfate",
+              "potassium sulfite"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -550,7 +559,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -573,7 +582,12 @@
               "aluminum oxide",
               "aluminium oxide"
             ],
-            "reject": [],
+            "reject": [
+              "aluminium oxate",
+              "aluminium oxite",
+              "aluminum oxate",
+              "aluminum oxite"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -581,7 +595,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -603,7 +617,10 @@
             "accept": [
               "calcium oxide"
             ],
-            "reject": [],
+            "reject": [
+              "calcium oxate",
+              "calcium oxite"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -611,7 +628,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -635,7 +652,16 @@
               "ferric chloride"
             ],
             "reject": [
-              "iron chloride"
+              "ferric chlorate",
+              "ferric chlorite",
+              "iron chloride",
+              "iron(I) chloride",
+              "iron(II) chloride",
+              "iron(III) chlorate",
+              "iron(III) chlorite",
+              "iron(IV) chloride",
+              "iron(V) chloride",
+              "iron(VI) chloride"
             ],
             "normalize": {
               "case": true,
@@ -644,7 +670,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -669,7 +695,16 @@
               "ferrous chloride"
             ],
             "reject": [
-              "iron chloride"
+              "ferrous chlorate",
+              "ferrous chlorite",
+              "iron chloride",
+              "iron(I) chloride",
+              "iron(II) chlorate",
+              "iron(II) chlorite",
+              "iron(III) chloride",
+              "iron(IV) chloride",
+              "iron(V) chloride",
+              "iron(VI) chloride"
             ],
             "normalize": {
               "case": true,
@@ -678,7 +713,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -703,7 +738,16 @@
               "cupric oxide"
             ],
             "reject": [
-              "copper oxide"
+              "copper oxide",
+              "copper(I) oxide",
+              "copper(II) oxate",
+              "copper(II) oxite",
+              "copper(III) oxide",
+              "copper(IV) oxide",
+              "copper(V) oxide",
+              "copper(VI) oxide",
+              "cupric oxate",
+              "cupric oxite"
             ],
             "normalize": {
               "case": true,
@@ -712,7 +756,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -737,7 +781,16 @@
               "cuprous oxide"
             ],
             "reject": [
-              "copper oxide"
+              "copper oxide",
+              "copper(I) oxate",
+              "copper(I) oxite",
+              "copper(II) oxide",
+              "copper(III) oxide",
+              "copper(IV) oxide",
+              "copper(V) oxide",
+              "copper(VI) oxide",
+              "cuprous oxate",
+              "cuprous oxite"
             ],
             "normalize": {
               "case": true,
@@ -746,7 +799,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -770,7 +823,14 @@
               "lead(IV) oxide"
             ],
             "reject": [
-              "lead oxide"
+              "lead oxide",
+              "lead(I) oxide",
+              "lead(II) oxide",
+              "lead(III) oxide",
+              "lead(IV) oxate",
+              "lead(IV) oxite",
+              "lead(V) oxide",
+              "lead(VI) oxide"
             ],
             "normalize": {
               "case": true,
@@ -779,7 +839,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -802,7 +862,9 @@
             "accept": [
               "calcium nitrate"
             ],
-            "reject": [],
+            "reject": [
+              "calcium nitrite"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -810,7 +872,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -832,7 +894,9 @@
             "accept": [
               "sodium sulfate"
             ],
-            "reject": [],
+            "reject": [
+              "sodium sulfite"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -840,7 +904,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -862,7 +926,10 @@
             "accept": [
               "ammonium chloride"
             ],
-            "reject": [],
+            "reject": [
+              "ammonium chlorate",
+              "ammonium chlorite"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -870,7 +937,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -892,7 +959,9 @@
             "accept": [
               "potassium carbonate"
             ],
-            "reject": [],
+            "reject": [
+              "potassium carbonite"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -900,7 +969,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -922,7 +991,10 @@
             "accept": [
               "magnesium hydroxide"
             ],
-            "reject": [],
+            "reject": [
+              "magnesium hydroxate",
+              "magnesium hydroxite"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -930,7 +1002,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -954,7 +1026,14 @@
               "ferric sulfate"
             ],
             "reject": [
-              "iron sulfate"
+              "ferric sulfite",
+              "iron sulfate",
+              "iron(I) sulfate",
+              "iron(II) sulfate",
+              "iron(III) sulfite",
+              "iron(IV) sulfate",
+              "iron(V) sulfate",
+              "iron(VI) sulfate"
             ],
             "normalize": {
               "case": true,
@@ -963,7 +1042,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -993,7 +1072,7 @@
           "answer": {
             "type": "formula",
             "value": "CaCl_2",
-            "match": "composition",
+            "match": "structural",
             "charge": 0,
             "phase": null,
             "requirePhase": false,
@@ -1017,7 +1096,7 @@
           "answer": {
             "type": "formula",
             "value": "K_3PO_4",
-            "match": "composition",
+            "match": "structural",
             "charge": 0,
             "phase": null,
             "requirePhase": false,
@@ -1041,7 +1120,7 @@
           "answer": {
             "type": "formula",
             "value": "Al_2(SO_4)_3",
-            "match": "composition",
+            "match": "structural",
             "charge": 0,
             "phase": null,
             "requirePhase": false,
@@ -1065,7 +1144,7 @@
           "answer": {
             "type": "formula",
             "value": "Fe_2O_3",
-            "match": "composition",
+            "match": "structural",
             "charge": 0,
             "phase": null,
             "requirePhase": false,
@@ -1089,7 +1168,7 @@
           "answer": {
             "type": "formula",
             "value": "(NH_4)_2SO_4",
-            "match": "composition",
+            "match": "structural",
             "charge": 0,
             "phase": null,
             "requirePhase": false,
@@ -1113,7 +1192,7 @@
           "answer": {
             "type": "formula",
             "value": "Mg(NO_3)_2",
-            "match": "composition",
+            "match": "structural",
             "charge": 0,
             "phase": null,
             "requirePhase": false,
@@ -1137,7 +1216,7 @@
           "answer": {
             "type": "formula",
             "value": "NaOH",
-            "match": "composition",
+            "match": "structural",
             "charge": 0,
             "phase": null,
             "requirePhase": false,
@@ -1161,7 +1240,7 @@
           "answer": {
             "type": "formula",
             "value": "Li_2CO_3",
-            "match": "composition",
+            "match": "structural",
             "charge": 0,
             "phase": null,
             "requirePhase": false,
@@ -1185,10 +1264,12 @@
           "answer": {
             "type": "text",
             "accept": [
-              "carbon monoxide",
               "carbon monoxide"
             ],
-            "reject": [],
+            "reject": [
+              "carbon monoxate",
+              "carbon monoxite"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -1196,7 +1277,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -1220,7 +1301,12 @@
               "dinitrogen tetroxide",
               "dinitrogen tetraoxide"
             ],
-            "reject": [],
+            "reject": [
+              "dinitrogen tetraoxate",
+              "dinitrogen tetraoxite",
+              "dinitrogen tetroxate",
+              "dinitrogen tetroxite"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -1228,7 +1314,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -1249,10 +1335,12 @@
           "answer": {
             "type": "text",
             "accept": [
-              "phosphorus pentachloride",
               "phosphorus pentachloride"
             ],
-            "reject": [],
+            "reject": [
+              "phosphorus pentachlorate",
+              "phosphorus pentachlorite"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -1260,7 +1348,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -1281,10 +1369,12 @@
           "answer": {
             "type": "text",
             "accept": [
-              "sulfur hexafluoride",
               "sulfur hexafluoride"
             ],
-            "reject": [],
+            "reject": [
+              "sulfur hexafluorate",
+              "sulfur hexafluorite"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -1292,7 +1382,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -1316,7 +1406,12 @@
               "tetraphosphorus decoxide",
               "tetraphosphorus decaoxide"
             ],
-            "reject": [],
+            "reject": [
+              "tetraphosphorus decaoxate",
+              "tetraphosphorus decaoxite",
+              "tetraphosphorus decoxate",
+              "tetraphosphorus decoxite"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -1324,7 +1419,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -1347,7 +1442,9 @@
             "accept": [
               "hydrochloric acid"
             ],
-            "reject": [],
+            "reject": [
+              "hydrochlorous acid"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -1355,7 +1452,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -1378,7 +1475,9 @@
             "accept": [
               "sulfuric acid"
             ],
-            "reject": [],
+            "reject": [
+              "sulfurous acid"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -1386,7 +1485,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -1409,7 +1508,9 @@
             "accept": [
               "nitric acid"
             ],
-            "reject": [],
+            "reject": [
+              "nitrous acid"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -1417,7 +1518,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -1440,7 +1541,9 @@
             "accept": [
               "hydrosulfuric acid"
             ],
-            "reject": [],
+            "reject": [
+              "hydrosulfurous acid"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -1448,7 +1551,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -1471,7 +1574,9 @@
             "accept": [
               "carbonic acid"
             ],
-            "reject": [],
+            "reject": [
+              "carbonous acid"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -1479,7 +1584,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -1502,7 +1607,9 @@
             "accept": [
               "nitrous acid"
             ],
-            "reject": [],
+            "reject": [
+              "nitric acid"
+            ],
             "normalize": {
               "case": true,
               "punctuation": true,
@@ -1510,7 +1617,7 @@
               "articles": true
             },
             "fuzzy": {
-              "maxEdits": 1
+              "maxEdits": 0
             }
           },
           "hints": [
@@ -1539,13 +1646,13 @@
           "prompt": "What is the percent by mass of O in H_2O?\n\nMM(H_2O) = 18.02 g/mol",
           "answer": {
             "type": "numeric",
-            "value": 88.8,
+            "value": 88.79,
             "unit": "%",
             "tolerance": {
               "type": "relative",
               "value": 0.015
             },
-            "sigFigs": 3,
+            "sigFigs": 4,
             "unitAliases": [
               "%",
               "percent"
@@ -1553,11 +1660,13 @@
           },
           "hints": [
             "Find the mass of just the O in one mole of the compound.",
-            "Divide that by the molar mass of the whole compound, then times 100."
+            "Divide that by the molar mass of the whole compound, then times 100.",
+            "Count the significant figures in the two masses you divided."
           ],
-          "explanation": "One mole of H_2O holds 1 mol of O, which is 16.00 g out of a total 18.02 g. 16.00 / 18.02 x 100 = 88.8%.",
+          "explanation": "One mole of H_2O holds 1 mol of O, which is 16.00 g out of a total 18.02 g. 16.00 / 18.02 x 100 = 88.79%. Both 16.00 and 18.02 carry 4 significant figures or more, so the answer keeps 4.",
           "tags": [
-            "percent-composition"
+            "percent-composition",
+            "significant-figures"
           ],
           "expectedSeconds": 100,
           "points": 20,
@@ -1566,7 +1675,7 @@
               {
                 "match": {
                   "type": "numeric",
-                  "value": 0.888,
+                  "value": 0.8879,
                   "tolerance": {
                     "type": "relative",
                     "value": 0.015
@@ -1583,13 +1692,13 @@
           "prompt": "What is the percent by mass of C in CO_2?\n\nMM(CO_2) = 44.01 g/mol",
           "answer": {
             "type": "numeric",
-            "value": 27.3,
+            "value": 27.29,
             "unit": "%",
             "tolerance": {
               "type": "relative",
               "value": 0.015
             },
-            "sigFigs": 3,
+            "sigFigs": 4,
             "unitAliases": [
               "%",
               "percent"
@@ -1597,11 +1706,13 @@
           },
           "hints": [
             "Find the mass of just the C in one mole of the compound.",
-            "Divide that by the molar mass of the whole compound, then times 100."
+            "Divide that by the molar mass of the whole compound, then times 100.",
+            "Count the significant figures in the two masses you divided."
           ],
-          "explanation": "One mole of CO_2 holds 1 mol of C, which is 12.01 g out of a total 44.01 g. 12.01 / 44.01 x 100 = 27.3%.",
+          "explanation": "One mole of CO_2 holds 1 mol of C, which is 12.01 g out of a total 44.01 g. 12.01 / 44.01 x 100 = 27.29%. Both 12.01 and 44.01 carry 4 significant figures or more, so the answer keeps 4.",
           "tags": [
-            "percent-composition"
+            "percent-composition",
+            "significant-figures"
           ],
           "expectedSeconds": 100,
           "points": 20,
@@ -1610,7 +1721,7 @@
               {
                 "match": {
                   "type": "numeric",
-                  "value": 0.273,
+                  "value": 0.2729,
                   "tolerance": {
                     "type": "relative",
                     "value": 0.015
@@ -1627,13 +1738,13 @@
           "prompt": "What is the percent by mass of N in NH_3?\n\nMM(NH_3) = 17.03 g/mol",
           "answer": {
             "type": "numeric",
-            "value": 82.3,
+            "value": 82.27,
             "unit": "%",
             "tolerance": {
               "type": "relative",
               "value": 0.015
             },
-            "sigFigs": 3,
+            "sigFigs": 4,
             "unitAliases": [
               "%",
               "percent"
@@ -1641,11 +1752,13 @@
           },
           "hints": [
             "Find the mass of just the N in one mole of the compound.",
-            "Divide that by the molar mass of the whole compound, then times 100."
+            "Divide that by the molar mass of the whole compound, then times 100.",
+            "Count the significant figures in the two masses you divided."
           ],
-          "explanation": "One mole of NH_3 holds 1 mol of N, which is 14.01 g out of a total 17.03 g. 14.01 / 17.03 x 100 = 82.3%.",
+          "explanation": "One mole of NH_3 holds 1 mol of N, which is 14.01 g out of a total 17.03 g. 14.01 / 17.03 x 100 = 82.27%. Both 14.01 and 17.03 carry 4 significant figures or more, so the answer keeps 4.",
           "tags": [
-            "percent-composition"
+            "percent-composition",
+            "significant-figures"
           ],
           "expectedSeconds": 100,
           "points": 20,
@@ -1654,7 +1767,7 @@
               {
                 "match": {
                   "type": "numeric",
-                  "value": 0.823,
+                  "value": 0.8227,
                   "tolerance": {
                     "type": "relative",
                     "value": 0.015
@@ -1671,13 +1784,13 @@
           "prompt": "What is the percent by mass of Fe in Fe_2O_3?\n\nMM(Fe_2O_3) = 159.70 g/mol",
           "answer": {
             "type": "numeric",
-            "value": 69.9,
+            "value": 69.94,
             "unit": "%",
             "tolerance": {
               "type": "relative",
               "value": 0.015
             },
-            "sigFigs": 3,
+            "sigFigs": 4,
             "unitAliases": [
               "%",
               "percent"
@@ -1685,11 +1798,13 @@
           },
           "hints": [
             "Find the mass of just the Fe in one mole of the compound.",
-            "Divide that by the molar mass of the whole compound, then times 100."
+            "Divide that by the molar mass of the whole compound, then times 100.",
+            "Count the significant figures in the two masses you divided."
           ],
-          "explanation": "One mole of Fe_2O_3 holds 2 mol of Fe, which is 2 x 55.85 = 111.70 g out of a total 159.70 g. 111.70 / 159.70 x 100 = 69.9%.",
+          "explanation": "One mole of Fe_2O_3 holds 2 mol of Fe, which is 2 x 55.85 = 111.70 g out of a total 159.70 g. 111.70 / 159.70 x 100 = 69.94%. Both 55.85 and 159.70 carry 4 significant figures or more, so the answer keeps 4.",
           "tags": [
-            "percent-composition"
+            "percent-composition",
+            "significant-figures"
           ],
           "expectedSeconds": 110,
           "points": 20,
@@ -1698,7 +1813,7 @@
               {
                 "match": {
                   "type": "numeric",
-                  "value": 0.699,
+                  "value": 0.6994,
                   "tolerance": {
                     "type": "relative",
                     "value": 0.015
@@ -1715,13 +1830,13 @@
           "prompt": "What is the percent by mass of H in C_6H_12O_6?\n\nMM(C_6H_12O_6) = 180.16 g/mol",
           "answer": {
             "type": "numeric",
-            "value": 6.71,
+            "value": 6.714,
             "unit": "%",
             "tolerance": {
               "type": "relative",
               "value": 0.015
             },
-            "sigFigs": 3,
+            "sigFigs": 4,
             "unitAliases": [
               "%",
               "percent"
@@ -1729,11 +1844,13 @@
           },
           "hints": [
             "Find the mass of just the H in one mole of the compound.",
-            "Divide that by the molar mass of the whole compound, then times 100."
+            "Divide that by the molar mass of the whole compound, then times 100.",
+            "Count the significant figures in the two masses you divided."
           ],
-          "explanation": "One mole of C_6H_12O_6 holds 12 mol of H, which is 12 x 1.008 = 12.096 g out of a total 180.16 g. 12.096 / 180.16 x 100 = 6.71%.",
+          "explanation": "One mole of C_6H_12O_6 holds 12 mol of H, which is 12 x 1.008 = 12.096 g out of a total 180.16 g. 12.096 / 180.16 x 100 = 6.714%. Both 1.008 and 180.16 carry 4 significant figures or more, so the answer keeps 4.",
           "tags": [
-            "percent-composition"
+            "percent-composition",
+            "significant-figures"
           ],
           "expectedSeconds": 110,
           "points": 20,
@@ -1742,7 +1859,7 @@
               {
                 "match": {
                   "type": "numeric",
-                  "value": 0.0671,
+                  "value": 0.06714,
                   "tolerance": {
                     "type": "relative",
                     "value": 0.015
@@ -1787,7 +1904,7 @@
               {
                 "match": {
                   "type": "numeric",
-                  "value": 48.0,
+                  "value": 47.96,
                   "tolerance": {
                     "type": "relative",
                     "value": 0.015
@@ -3098,13 +3215,14 @@
           "prompt": "10.0 g of Na is mixed with 10.0 g of Cl_2. What mass of Na is LEFT OVER?\n\n2 Na + Cl_2 -> 2 NaCl\n\nMM(Na) = 22.99 g/mol, MM(Cl_2) = 70.90 g/mol",
           "answer": {
             "type": "numeric",
-            "value": 3.51,
+            "value": 3.5,
             "unit": "g",
             "tolerance": {
               "type": "relative",
               "value": 0.02
             },
-            "sigFigs": 3,
+            "sigFigs": 2,
+            "sigFigPolicy": "warn",
             "unitAliases": [
               "g",
               "gram",
@@ -3113,13 +3231,15 @@
           },
           "hints": [
             "Find the moles of Na consumed, convert to grams, then subtract from 10.0 g.",
-            "Each mole of Cl_2 consumes two of Na."
+            "Each mole of Cl_2 consumes two of Na.",
+            "The final step is a subtraction: line up the decimal places."
           ],
-          "explanation": "Cl_2 limits at 0.1410 mol and consumes twice that in Na: 0.2821 mol x 22.99 = 6.49 g. So 10.0 - 6.49 = 3.51 g is left.",
+          "explanation": "Cl_2 limits at 0.1410 mol and consumes twice that in Na: 0.2821 mol x 22.99 = 6.49 g. So 10.0 - 6.49 = 3.51 g is left. This last step is a SUBTRACTION, where significant figures follow the decimal places rather than the digit count: 10.0 g is known only to the tenths place, so the answer is 3.5 g. Both 3.5 and 3.51 are accepted here.",
           "tags": [
             "limiting-reactant",
             "excess",
-            "mass-based"
+            "mass-based",
+            "significant-figures"
           ],
           "expectedSeconds": 155,
           "points": 25
