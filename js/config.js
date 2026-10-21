@@ -28,7 +28,12 @@ export const MIN_RESPONSES_TO_SHOW = 5;
 // topic you add here appears as soon as GitHub Pages finishes deploying. If it
 // still does not show, the deploy has not landed yet: check the Actions tab.
 export const BUILTIN_TOPICS = [
+  { file: "topics/ch07.json", label: "chapter 7" },
+  { file: "topics/test2.json", label: "test 2 review" },
+  { file: "topics/ch06.json", label: "chapter 6" },
+  { file: "topics/chapter5-reactions.json", label: "chapter 5" },
   { file: "topics/stoichiometry.json", label: "Stoichiometry & Limiting Reagents" },
+  { file: "topics/test1.json", label: "test 1 review" },
   { file: "topics/mole-ladder.json", label: "8-31-2026" },
   { file: "topics/chapter02-03.json", label: "9-03-2026" },
   { file: "topics/ch3.json", label: "chapter 3" }
