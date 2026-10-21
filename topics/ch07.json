@@ -156,7 +156,7 @@
         },
         {
           "id": "C7L1-Q05",
-          "prompt": "Convert 2.50 atm to torr.",
+          "prompt": "Convert 2.50 atm to torr. 1 atm = 760 torr",
           "answer": {
             "type": "numeric",
             "value": 1900.0,
@@ -185,7 +185,7 @@
         },
         {
           "id": "C7L1-Q06",
-          "prompt": "Convert 950. torr to atmospheres.",
+          "prompt": "Convert 950. torr to atmospheres. 1 atm = 760 torr",
           "answer": {
             "type": "numeric",
             "value": 1.25,
@@ -231,7 +231,7 @@
         },
         {
           "id": "C7L1-Q07",
-          "prompt": "Convert 1.50 atm to kilopascals.",
+          "prompt": "Convert 1.50 atm to kilopascals. 1 atm = 101.325 kPa",
           "answer": {
             "type": "numeric",
             "value": 152.0,
@@ -255,81 +255,6 @@
           ],
           "expectedSeconds": 65,
           "points": 10
-        },
-        {
-          "id": "C7L1-Q08",
-          "prompt": "Which temperature scale must be used in every gas law calculation?",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "Kelvin",
-              "Celsius",
-              "Fahrenheit",
-              "Either Kelvin or Celsius works"
-            ],
-            "correct": [
-              0
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "explanation": "Kelvin. The gas laws treat temperature as directly proportional to volume and pressure, and only the Kelvin scale starts at absolute zero, so only Kelvin makes that proportionality true.",
-          "tags": [
-            "temperature",
-            "concept"
-          ],
-          "expectedSeconds": 45,
-          "points": 10
-        },
-        {
-          "id": "C7L1-Q09",
-          "prompt": "Why can Celsius not be used in place of Kelvin in the gas laws?",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "Its zero point is arbitrary rather than absolute, so doubling a Celsius value does not double the quantity the gas laws are proportional to — and a Celsius temperature can be zero or negative, which would make the answer infinite or negative",
-              "Celsius degrees are a different size from kelvins",
-              "Celsius is not an SI unit",
-              "Celsius can only be used for liquids"
-            ],
-            "correct": [
-              0
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "explanation": "The gas laws need a scale whose zero really means none of the quantity left. Going from 10 °C to 20 °C looks like a doubling but is 283 K to 293 K, a rise of about 4 percent, so Charles's law would predict a doubling of volume where only a few percent occurs. A Celsius temperature of 0 would also predict zero volume. The degree size is identical in the two scales; only the zero point differs.",
-          "tags": [
-            "temperature",
-            "concept"
-          ],
-          "expectedSeconds": 55,
-          "points": 15
-        },
-        {
-          "id": "C7L1-Q10",
-          "prompt": "A problem gives the pressure in torr and asks you to find a volume using R = 0.08206 L*atm/(mol*K). What has to happen first?",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "Convert the pressure to atmospheres, because that is the unit inside R",
-              "Convert the volume to millilitres",
-              "Convert R to torr by multiplying it by 760",
-              "Nothing — the units cancel either way"
-            ],
-            "correct": [
-              0
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "explanation": "Every unit in the problem has to match the units built into R. This R is in L*atm/(mol*K), so pressure must be in atm, volume in litres and temperature in kelvin before anything is substituted.",
-          "tags": [
-            "ideal-gas-law",
-            "concept"
-          ],
-          "expectedSeconds": 55,
-          "points": 15
         }
       ]
     },
@@ -1240,56 +1165,6 @@
           ],
           "expectedSeconds": 135,
           "points": 20
-        },
-        {
-          "id": "C7L4-Q10",
-          "prompt": "In PV = nRT, the temperature T must always be expressed in:",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "Kelvin",
-              "Degrees Celsius",
-              "Whatever unit the problem uses",
-              "Degrees Fahrenheit"
-            ],
-            "correct": [
-              0
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "explanation": "Kelvin. R itself is defined with kelvin in it, so any other scale makes the units fail to cancel and the answer meaningless.",
-          "tags": [
-            "ideal-gas-law",
-            "concept"
-          ],
-          "expectedSeconds": 50,
-          "points": 10
-        },
-        {
-          "id": "C7L4-Q11",
-          "prompt": "The number of moles and the temperature of a gas are held constant while its volume is halved. Its pressure:",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "Doubles",
-              "Halves",
-              "Is unchanged",
-              "Quadruples"
-            ],
-            "correct": [
-              0
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "explanation": "Doubles. With n, R and T fixed, PV is a constant, so halving V must double P. This is Boyle's law falling straight out of the ideal gas law.",
-          "tags": [
-            "ideal-gas-law",
-            "concept"
-          ],
-          "expectedSeconds": 55,
-          "points": 10
         }
       ]
     },
@@ -1778,31 +1653,6 @@
         },
         {
           "id": "C7L6-Q07",
-          "prompt": "In a mixture of ideal gases, each gas exerts:",
-          "answer": {
-            "type": "choice",
-            "options": [
-              "The same pressure it would exert if it occupied the container alone",
-              "A pressure equal to the total divided by the number of gases",
-              "No pressure of its own until the other gases are removed",
-              "A pressure that depends on which other gases are present"
-            ],
-            "correct": [
-              0
-            ],
-            "shuffle": true,
-            "multiSelect": false
-          },
-          "explanation": "Each gas behaves as if the others were not there, so it exerts exactly the pressure it would exert alone in that container at that temperature. Dalton's law is this statement added up.",
-          "tags": [
-            "daltons-law",
-            "concept"
-          ],
-          "expectedSeconds": 60,
-          "points": 10
-        },
-        {
-          "id": "C7L6-Q08",
           "prompt": "What decides a gas's share of the total pressure in a mixture?",
           "answer": {
             "type": "choice",
@@ -1827,7 +1677,7 @@
           "points": 10
         },
         {
-          "id": "C7L6-Q09",
+          "id": "C7L6-Q08",
           "prompt": "Hydrogen gas is collected over water at 298 K. The total pressure in the collection tube is 755 torr, and the vapour pressure of water at that temperature is 23.8 torr. What is the partial pressure of the hydrogen?",
           "answer": {
             "type": "numeric",
@@ -1856,7 +1706,7 @@
           "points": 20
         },
         {
-          "id": "C7L6-Q10",
+          "id": "C7L6-Q9",
           "prompt": "Oxygen is collected over water. The total pressure is 760. torr and the vapour pressure of water at that temperature is 31.8 torr. What is the partial pressure of the oxygen?",
           "answer": {
             "type": "numeric",
@@ -1881,7 +1731,7 @@
           "points": 20
         },
         {
-          "id": "C7L6-Q11",
+          "id": "C7L6-Q10",
           "prompt": "A 2.00 L vessel holds 0.100 mol of N_2 and 0.200 mol of O_2 at 298 K. What is the total pressure?\n\nR = 0.08206 L*atm/(mol*K)",
           "answer": {
             "type": "numeric",
@@ -1910,7 +1760,7 @@
           "points": 25
         },
         {
-          "id": "C7L6-Q12",
+          "id": "C7L6-Q11",
           "prompt": "A 2.00 L vessel holds 0.100 mol of N_2 and 0.200 mol of O_2 at 298 K. What is the partial pressure of the N_2?\n\nR = 0.08206 L*atm/(mol*K)",
           "answer": {
             "type": "numeric",
