@@ -1,0 +1,2263 @@
+{
+  "schemaVersion": "1.0",
+  "topic": {
+    "id": "gases-ch7",
+    "title": "Chapter 7: Gases & the Gas Laws",
+    "course": "General Chemistry I",
+    "author": "",
+    "defaults": {
+      "tolerance": {
+        "type": "relative",
+        "value": 0.015
+      },
+      "sigFigPolicy": "enforce",
+      "unitsRequired": true,
+      "unitConversion": true,
+      "autoCapitalize": "suggest",
+      "hintAfterAttempts": 2,
+      "maxAttempts": 0
+    }
+  },
+  "levels": [
+    {
+      "id": "C7L1",
+      "title": "Temperature Scales & Pressure Units",
+      "requiredCorrect": 4,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C7L1-Q01",
+          "prompt": "Convert 25 °C to kelvin.",
+          "answer": {
+            "type": "numeric",
+            "value": 298.0,
+            "unit": "K",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.6
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "K",
+              "kelvin",
+              "kelvins"
+            ],
+            "unitConversion": false
+          },
+          "hints": [
+            "Kelvin is Celsius plus 273.15.",
+            "Round to the same decimal place as the Celsius value."
+          ],
+          "explanation": "Add 273.15: 25 + 273.15 = 298.15. The 25 °C is known only to the ones place, and adding lines the two numbers up at that place, so the answer is 298 K.",
+          "tags": [
+            "temperature",
+            "unit-conversion",
+            "additive"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "C7L1-Q02",
+          "prompt": "Convert 150 °C to kelvin.",
+          "answer": {
+            "type": "numeric",
+            "value": 423.0,
+            "unit": "K",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.6
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "K",
+              "kelvin",
+              "kelvins"
+            ],
+            "unitConversion": false
+          },
+          "hints": [
+            "Kelvin is Celsius plus 273.15.",
+            "Round to the same decimal place as the Celsius value."
+          ],
+          "explanation": "Add 273.15: 150 + 273.15 = 423.15. The 150 °C is known only to the ones place, and adding lines the two numbers up at that place, so the answer is 423 K.",
+          "tags": [
+            "temperature",
+            "unit-conversion",
+            "additive"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "C7L1-Q03",
+          "prompt": "Convert 0 °C to kelvin.",
+          "answer": {
+            "type": "numeric",
+            "value": 273.0,
+            "unit": "K",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.6
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "K",
+              "kelvin",
+              "kelvins"
+            ],
+            "unitConversion": false
+          },
+          "hints": [
+            "Kelvin is Celsius plus 273.15.",
+            "Round to the same decimal place as the Celsius value."
+          ],
+          "explanation": "Add 273.15: 0 + 273.15 = 273.15. The 0 °C is known only to the ones place, and adding lines the two numbers up at that place, so the answer is 273 K.",
+          "tags": [
+            "temperature",
+            "unit-conversion",
+            "additive"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "C7L1-Q04",
+          "prompt": "Convert 348 K to degrees Celsius.",
+          "answer": {
+            "type": "numeric",
+            "value": 75.0,
+            "unit": "°C",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.6
+            },
+            "sigFigs": 2,
+            "unitAliases": [
+              "°C",
+              "C",
+              "degrees C",
+              "celsius"
+            ],
+            "unitConversion": false
+          },
+          "hints": [
+            "Going the other way means subtracting 273.15."
+          ],
+          "explanation": "Subtract 273.15: 348 - 273.15 = 74.85, which lines up at the ones place because 348 K is given there, so 75 °C.",
+          "tags": [
+            "temperature",
+            "unit-conversion",
+            "additive"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "C7L1-Q05",
+          "prompt": "Convert 2.50 atm to torr.",
+          "answer": {
+            "type": "numeric",
+            "value": 1900.0,
+            "unit": "torr",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "torr",
+              "mmHg"
+            ],
+            "unitConversion": false
+          },
+          "hints": [
+            "1 atm = 760 torr exactly."
+          ],
+          "explanation": "One atmosphere is defined as exactly 760 torr, so 2.50 x 760 = 1900 torr. Because 760 is a definition it does not limit the answer; the 2.50 atm does, which is why it keeps three significant figures.",
+          "tags": [
+            "pressure",
+            "unit-conversion"
+          ],
+          "expectedSeconds": 60,
+          "points": 10
+        },
+        {
+          "id": "C7L1-Q06",
+          "prompt": "Convert 950. torr to atmospheres.",
+          "answer": {
+            "type": "numeric",
+            "value": 1.25,
+            "unit": "atm",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "atm",
+              "atmosphere",
+              "atmospheres"
+            ],
+            "unitConversion": false
+          },
+          "hints": [
+            "Divide by 760 to get atmospheres."
+          ],
+          "explanation": "950. / 760 = 1.25 atm. Dividing by 760 moves from torr to atm; multiplying goes the other way.",
+          "tags": [
+            "pressure",
+            "unit-conversion"
+          ],
+          "expectedSeconds": 65,
+          "points": 10,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 722000.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "You multiplied. Torr are smaller than atmospheres, so the number of atmospheres must come out smaller.",
+                "label": "inverted-pressure-conversion"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C7L1-Q07",
+          "prompt": "Convert 1.50 atm to kilopascals.",
+          "answer": {
+            "type": "numeric",
+            "value": 152.0,
+            "unit": "kPa",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "kPa",
+              "kilopascal",
+              "kilopascals"
+            ],
+            "unitConversion": false
+          },
+          "explanation": "One atmosphere is 101.325 kPa, so 1.50 x 101.325 = 151.988, which rounds to 152 kPa on the three significant figures of the 1.50 atm.",
+          "tags": [
+            "pressure",
+            "unit-conversion"
+          ],
+          "expectedSeconds": 65,
+          "points": 10
+        },
+        {
+          "id": "C7L1-Q08",
+          "prompt": "Which temperature scale must be used in every gas law calculation?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Kelvin",
+              "Celsius",
+              "Fahrenheit",
+              "Either Kelvin or Celsius works"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "Kelvin. The gas laws treat temperature as directly proportional to volume and pressure, and only the Kelvin scale starts at absolute zero, so only Kelvin makes that proportionality true.",
+          "tags": [
+            "temperature",
+            "concept"
+          ],
+          "expectedSeconds": 45,
+          "points": 10
+        },
+        {
+          "id": "C7L1-Q09",
+          "prompt": "Why can Celsius not be used in place of Kelvin in the gas laws?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Its zero point is arbitrary rather than absolute, so doubling a Celsius value does not double the quantity the gas laws are proportional to — and a Celsius temperature can be zero or negative, which would make the answer infinite or negative",
+              "Celsius degrees are a different size from kelvins",
+              "Celsius is not an SI unit",
+              "Celsius can only be used for liquids"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "The gas laws need a scale whose zero really means none of the quantity left. Going from 10 °C to 20 °C looks like a doubling but is 283 K to 293 K, a rise of about 4 percent, so Charles's law would predict a doubling of volume where only a few percent occurs. A Celsius temperature of 0 would also predict zero volume. The degree size is identical in the two scales; only the zero point differs.",
+          "tags": [
+            "temperature",
+            "concept"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        },
+        {
+          "id": "C7L1-Q10",
+          "prompt": "A problem gives the pressure in torr and asks you to find a volume using R = 0.08206 L*atm/(mol*K). What has to happen first?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Convert the pressure to atmospheres, because that is the unit inside R",
+              "Convert the volume to millilitres",
+              "Convert R to torr by multiplying it by 760",
+              "Nothing — the units cancel either way"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "Every unit in the problem has to match the units built into R. This R is in L*atm/(mol*K), so pressure must be in atm, volume in litres and temperature in kelvin before anything is substituted.",
+          "tags": [
+            "ideal-gas-law",
+            "concept"
+          ],
+          "expectedSeconds": 55,
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "C7L2",
+      "title": "Boyle's, Charles's & Avogadro's Laws",
+      "requiredCorrect": 4,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C7L2-Q01",
+          "prompt": "A gas occupies 2.50 L at 1.00 atm. It is compressed to 1.50 L at constant temperature. What is the new pressure?",
+          "answer": {
+            "type": "numeric",
+            "value": 1.67,
+            "unit": "atm",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "atm",
+              "atmosphere",
+              "atmospheres"
+            ]
+          },
+          "hints": [
+            "P_1V_1 = P_2V_2 at constant temperature.",
+            "The volume went down, so the pressure must go up."
+          ],
+          "explanation": "Boyle's law: P_1V_1 = P_2V_2, so P_2 = (1.00)(2.50) / 1.50 = 1.67 atm. Squeezing a gas into a smaller volume raises its pressure.",
+          "tags": [
+            "boyles-law"
+          ],
+          "expectedSeconds": 75,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 0.6,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "You put the volumes the wrong way round. A smaller volume means a LARGER pressure, so the answer must exceed 1.00 atm.",
+                "label": "inverted-boyle"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C7L2-Q02",
+          "prompt": "A gas occupies 4.00 L at 2.00 atm. The pressure is lowered to 0.500 atm at constant temperature. What is the new volume?",
+          "answer": {
+            "type": "numeric",
+            "value": 16.0,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "Solve P_1V_1 = P_2V_2 for V_2."
+          ],
+          "explanation": "P_2 = (2.00)(4.00) / 0.500 = 16 L. Dropping the pressure to a quarter of its value lets the gas expand to four times the volume.",
+          "tags": [
+            "boyles-law"
+          ],
+          "expectedSeconds": 75,
+          "points": 15
+        },
+        {
+          "id": "C7L2-Q03",
+          "prompt": "A sample of gas fills 500. mL at 760. torr. What volume does it fill at 950. torr and the same temperature?",
+          "answer": {
+            "type": "numeric",
+            "value": 400.0,
+            "unit": "mL",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mL",
+              "millilitre",
+              "milliliter",
+              "millilitres",
+              "milliliters"
+            ]
+          },
+          "hints": [
+            "The pressure units cancel, so torr are fine on both sides."
+          ],
+          "explanation": "V_2 = (500.)(760.) / 950. = 400 mL. Both pressures are in torr, so there is no need to convert: only the ratio matters.",
+          "tags": [
+            "boyles-law"
+          ],
+          "expectedSeconds": 85,
+          "points": 15
+        },
+        {
+          "id": "C7L2-Q04",
+          "prompt": "A gas occupies 3.00 L at 298 K. It is heated to 373 K at constant pressure. What is the new volume?",
+          "answer": {
+            "type": "numeric",
+            "value": 3.76,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "V_1/T_1 = V_2/T_2, with both temperatures in kelvin.",
+            "The gas got hotter, so the volume must grow."
+          ],
+          "explanation": "Charles's law: V_1/T_1 = V_2/T_2, so V_2 = 3.00 x (373 / 298) = 3.76 L. Heating a gas at constant pressure expands it.",
+          "tags": [
+            "charles-law"
+          ],
+          "expectedSeconds": 90,
+          "points": 15,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 2.4,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "The ratio is upside down. Heating expands a gas, so V_2 must be larger than 3.00 L.",
+                "label": "inverted-charles"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C7L2-Q05",
+          "prompt": "A balloon holds 5.00 L of gas at 348 K. It is cooled to 273 K at constant pressure. What is its new volume?",
+          "answer": {
+            "type": "numeric",
+            "value": 3.92,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "explanation": "V_2 = 5.00 x (273 / 348) = 3.92 L. Cooling shrinks the balloon.",
+          "tags": [
+            "charles-law"
+          ],
+          "expectedSeconds": 90,
+          "points": 15
+        },
+        {
+          "id": "C7L2-Q06",
+          "prompt": "A gas occupies 2.50 L at 25 °C. What volume does it occupy at 75 °C and the same pressure?",
+          "answer": {
+            "type": "numeric",
+            "value": 2.92,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "Convert both temperatures to kelvin before taking the ratio.",
+            "25 °C = 298 K and 75 °C = 348 K."
+          ],
+          "explanation": "Convert both temperatures first: 25 °C is 298 K and 75 °C is 348 K. Then V_2 = 2.50 x (348 / 298) = 2.92 L. Using 25 and 75 directly would predict a threefold expansion, which is badly wrong.",
+          "tags": [
+            "charles-law",
+            "temperature"
+          ],
+          "expectedSeconds": 100,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 7.5,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "You used Celsius. In kelvin the two temperatures differ by much less than a factor of three, so the volume changes far less.",
+                "label": "celsius-in-ratio"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C7L2-Q07",
+          "prompt": "A rigid container holds gas at 1.50 atm and 298 K. It is heated to 373 K. What is the new pressure?",
+          "answer": {
+            "type": "numeric",
+            "value": 1.88,
+            "unit": "atm",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "atm",
+              "atmosphere",
+              "atmospheres"
+            ]
+          },
+          "hints": [
+            "'Rigid' means the volume cannot change.",
+            "P_1/T_1 = P_2/T_2 with kelvin temperatures."
+          ],
+          "explanation": "A rigid container fixes the volume, so P_1/T_1 = P_2/T_2 and P_2 = 1.50 x (373 / 298) = 1.88 atm. With nowhere to expand, the gas pushes harder instead.",
+          "tags": [
+            "gay-lussac"
+          ],
+          "expectedSeconds": 90,
+          "points": 15
+        },
+        {
+          "id": "C7L2-Q08",
+          "prompt": "A sealed rigid vessel holds gas at 1.00 atm and 273 K. At what temperature, in kelvin, does the pressure reach 2.00 atm?",
+          "answer": {
+            "type": "numeric",
+            "value": 546.0,
+            "unit": "K",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "K",
+              "kelvin",
+              "kelvins"
+            ]
+          },
+          "explanation": "T_2 = 273 x (2.00 / 1.00) = 546 K. At constant volume, doubling the Kelvin temperature doubles the pressure.",
+          "tags": [
+            "gay-lussac"
+          ],
+          "expectedSeconds": 90,
+          "points": 15
+        },
+        {
+          "id": "C7L2-Q09",
+          "prompt": "0.500 mol of a gas occupies 11.2 L. What volume does 1.50 mol of the same gas occupy at the same temperature and pressure?",
+          "answer": {
+            "type": "numeric",
+            "value": 33.6,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "Volume is proportional to moles at fixed temperature and pressure."
+          ],
+          "explanation": "Avogadro's law: V_1/n_1 = V_2/n_2, so V_2 = 11.2 x (1.50 / 0.500) = 33.6 L. Three times the gas in the same conditions takes three times the room, whatever the gas is.",
+          "tags": [
+            "avogadro-law"
+          ],
+          "expectedSeconds": 85,
+          "points": 15
+        },
+        {
+          "id": "C7L2-Q10",
+          "prompt": "A 2.00 L vessel holds 0.0800 mol of gas. How many moles does a 5.00 L vessel hold at the same temperature and pressure?",
+          "answer": {
+            "type": "numeric",
+            "value": 0.2,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "explanation": "n_2 = 0.0800 x (5.00 / 2.00) = 0.2 mol. The same proportionality read in the other direction.",
+          "tags": [
+            "avogadro-law"
+          ],
+          "expectedSeconds": 85,
+          "points": 15
+        },
+        {
+          "id": "C7L2-Q11",
+          "prompt": "At constant temperature, the pressure on a sample of gas is doubled. Its volume becomes:",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Half as large",
+              "Twice as large",
+              "Four times as large",
+              "Unchanged"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "Half as large. Pressure and volume are inversely proportional at constant temperature, so doubling one halves the other.",
+          "tags": [
+            "boyles-law",
+            "concept"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        },
+        {
+          "id": "C7L2-Q12",
+          "prompt": "At constant pressure, the KELVIN temperature of a gas is doubled. Its volume becomes:",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Twice as large",
+              "Half as large",
+              "Four times as large",
+              "Unchanged"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "Twice as large. Volume is directly proportional to Kelvin temperature at constant pressure. This is only true in kelvin, which is the whole reason the scale matters.",
+          "tags": [
+            "charles-law",
+            "concept"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "C7L3",
+      "title": "The Combined Gas Law",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C7L3-Q01",
+          "prompt": "A 5.00 L sample of gas is at 740. torr and 298 K. What volume does it occupy at 760. torr and 273 K?",
+          "answer": {
+            "type": "numeric",
+            "value": 4.46,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "V_2 = V_1 x (P_1/P_2) x (T_2/T_1).",
+            "Check each ratio against what it should do to the volume."
+          ],
+          "explanation": "Combined gas law: P_1V_1/T_1 = P_2V_2/T_2, so V_2 = 5.00 x (740./760.) x (273/298) = 4.46 L. Both changes shrink the gas: higher pressure and lower temperature.",
+          "tags": [
+            "combined-gas-law"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C7L3-Q02",
+          "prompt": "250. mL of gas is at 1.50 atm and 348 K. What volume does it occupy at 0.750 atm and 273 K?",
+          "answer": {
+            "type": "numeric",
+            "value": 392.0,
+            "unit": "mL",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mL",
+              "millilitre",
+              "milliliter",
+              "millilitres",
+              "milliliters"
+            ]
+          },
+          "explanation": "V_2 = 250. x (1.50/0.750) x (273/348) = 392 mL. Halving the pressure doubles the volume, while the cooling pulls it back somewhat.",
+          "tags": [
+            "combined-gas-law"
+          ],
+          "expectedSeconds": 125,
+          "points": 20
+        },
+        {
+          "id": "C7L3-Q03",
+          "prompt": "A weather balloon holds 10.0 L of gas at 1.00 atm and 298 K. It rises to where the pressure is 0.250 atm and the temperature is 223 K. What is its volume there?",
+          "answer": {
+            "type": "numeric",
+            "value": 29.9,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "Two competing effects: work out each ratio separately."
+          ],
+          "explanation": "V_2 = 10.0 x (1.00/0.250) x (223/298) = 29.9 L. The pressure drop expands it fourfold and the cold shrinks it by about a quarter, so it still ends up roughly three times larger.",
+          "tags": [
+            "combined-gas-law"
+          ],
+          "expectedSeconds": 130,
+          "points": 20
+        },
+        {
+          "id": "C7L3-Q04",
+          "prompt": "A gas at 1.00 atm and 298 K fills 1.00 L. It is compressed to 0.500 L and heated to 373 K. What is the new pressure?",
+          "answer": {
+            "type": "numeric",
+            "value": 2.5,
+            "unit": "atm",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "atm",
+              "atmosphere",
+              "atmospheres"
+            ]
+          },
+          "hints": [
+            "P_2 = P_1 x (V_1/V_2) x (T_2/T_1)."
+          ],
+          "explanation": "Rearranged for pressure: P_2 = P_1 x (V_1/V_2) x (T_2/T_1) = 1.00 x (1.00/0.500) x (373/298) = 2.5 atm. Compressing and heating both raise the pressure.",
+          "tags": [
+            "combined-gas-law"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C7L3-Q05",
+          "prompt": "2.00 L of gas is at 1.00 atm and 273 K. It is allowed to reach 4.00 L at 1.50 atm. What is the new temperature, in kelvin?",
+          "answer": {
+            "type": "numeric",
+            "value": 819.0,
+            "unit": "K",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "K",
+              "kelvin",
+              "kelvins"
+            ]
+          },
+          "explanation": "Rearranged for temperature: T_2 = T_1 x (V_2/V_1) x (P_2/P_1) = 273 x (4.00/2.00) x (1.50/1.00) = 819 K. Both a larger volume and a higher pressure mean a hotter gas.",
+          "tags": [
+            "combined-gas-law"
+          ],
+          "expectedSeconds": 125,
+          "points": 20
+        },
+        {
+          "id": "C7L3-Q06",
+          "prompt": "1.00 L of gas is at 1.00 atm and 273 K. What volume does it occupy at 2.00 atm and 373 K?",
+          "answer": {
+            "type": "numeric",
+            "value": 0.683,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "explanation": "V_2 = 1.00 x (1.00/2.00) x (373/273) = 0.683 L. Doubling the pressure halves the volume, and the heating wins back about a third of that.",
+          "tags": [
+            "combined-gas-law"
+          ],
+          "expectedSeconds": 115,
+          "points": 20
+        },
+        {
+          "id": "C7L3-Q07",
+          "prompt": "500. mL of gas is at 2.00 atm and 273 K. What volume does it occupy at 1.00 atm and 546 K?",
+          "answer": {
+            "type": "numeric",
+            "value": 2000.0,
+            "unit": "mL",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mL",
+              "millilitre",
+              "milliliter",
+              "millilitres",
+              "milliliters"
+            ]
+          },
+          "explanation": "V_2 = 500. x (2.00/1.00) x (546/273) = 2000 mL. Halving the pressure and doubling the Kelvin temperature each double the volume, so it quadruples.",
+          "tags": [
+            "combined-gas-law"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C7L3-Q08",
+          "prompt": "A 2.00 L sample at 1.00 atm and 273 K is taken to 2.00 atm and 546 K. What is its new volume?",
+          "answer": {
+            "type": "numeric",
+            "value": 2.0,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "Work out both ratios before deciding the gas must change size."
+          ],
+          "explanation": "V_2 = 2.00 x (1.00/2.00) x (546/273) = 2 L. The two changes cancel exactly, so the volume is unchanged. Doubling the pressure and the Kelvin temperature together leaves the volume alone.",
+          "tags": [
+            "combined-gas-law"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "C7L4",
+      "title": "The Ideal Gas Law",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C7L4-Q01",
+          "prompt": "What pressure does 2.00 mol of an ideal gas exert in a 10.0 L container at 298 K?\n\nR = 0.08206 L*atm/(mol*K)",
+          "answer": {
+            "type": "numeric",
+            "value": 4.89,
+            "unit": "atm",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "atm",
+              "atmosphere",
+              "atmospheres"
+            ]
+          },
+          "hints": [
+            "Rearrange PV = nRT for P.",
+            "Every unit must match those in R: atm, L, mol, K."
+          ],
+          "explanation": "PV = nRT, so P = nRT/V = (2.00)(0.08206)(298) / 10.0 = 4.89 atm.",
+          "tags": [
+            "ideal-gas-law"
+          ],
+          "expectedSeconds": 105,
+          "points": 15
+        },
+        {
+          "id": "C7L4-Q02",
+          "prompt": "What volume does 0.500 mol of an ideal gas occupy at 1.50 atm and 273 K?\n\nR = 0.08206 L*atm/(mol*K)",
+          "answer": {
+            "type": "numeric",
+            "value": 7.47,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "Rearrange PV = nRT for V."
+          ],
+          "explanation": "V = nRT/P = (0.500)(0.08206)(273) / 1.50 = 7.47 L.",
+          "tags": [
+            "ideal-gas-law"
+          ],
+          "expectedSeconds": 105,
+          "points": 15
+        },
+        {
+          "id": "C7L4-Q03",
+          "prompt": "How many moles of an ideal gas are in a 5.00 L container at 2.00 atm and 298 K?\n\nR = 0.08206 L*atm/(mol*K)",
+          "answer": {
+            "type": "numeric",
+            "value": 0.409,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "hints": [
+            "Rearrange PV = nRT for n."
+          ],
+          "explanation": "n = PV/RT = (2.00)(5.00) / ((0.08206)(298)) = 0.409 mol.",
+          "tags": [
+            "ideal-gas-law"
+          ],
+          "expectedSeconds": 110,
+          "points": 15
+        },
+        {
+          "id": "C7L4-Q04",
+          "prompt": "At what temperature, in kelvin, does 1.00 mol of an ideal gas fill 20.0 L at 1.00 atm?\n\nR = 0.08206 L*atm/(mol*K)",
+          "answer": {
+            "type": "numeric",
+            "value": 244.0,
+            "unit": "K",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "K",
+              "kelvin",
+              "kelvins"
+            ]
+          },
+          "hints": [
+            "Rearrange PV = nRT for T."
+          ],
+          "explanation": "T = PV/(nR) = (1.00)(20.0) / ((1.00)(0.08206)) = 244 K.",
+          "tags": [
+            "ideal-gas-law"
+          ],
+          "expectedSeconds": 110,
+          "points": 15
+        },
+        {
+          "id": "C7L4-Q05",
+          "prompt": "0.250 mol of an ideal gas is held in 3.00 L at 348 K. What is its pressure?\n\nR = 0.08206 L*atm/(mol*K)",
+          "answer": {
+            "type": "numeric",
+            "value": 2.38,
+            "unit": "atm",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "atm",
+              "atmosphere",
+              "atmospheres"
+            ]
+          },
+          "explanation": "P = nRT/V = (0.250)(0.08206)(348) / 3.00 = 2.38 atm.",
+          "tags": [
+            "ideal-gas-law"
+          ],
+          "expectedSeconds": 105,
+          "points": 15
+        },
+        {
+          "id": "C7L4-Q06",
+          "prompt": "What volume does 1.25 mol of an ideal gas occupy at 4.00 atm and 373 K?\n\nR = 0.08206 L*atm/(mol*K)",
+          "answer": {
+            "type": "numeric",
+            "value": 9.57,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "explanation": "V = nRT/P = (1.25)(0.08206)(373) / 4.00 = 9.57 L.",
+          "tags": [
+            "ideal-gas-law"
+          ],
+          "expectedSeconds": 110,
+          "points": 15
+        },
+        {
+          "id": "C7L4-Q07",
+          "prompt": "What volume does 8.00 g of O_2 occupy at 1.00 atm and 298 K?\n\nR = 0.08206 L*atm/(mol*K), MM(O2) = 32.00 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 6.11,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "Convert the mass to moles before using PV = nRT.",
+            "O_2 is diatomic, so its molar mass is twice oxygen's atomic mass."
+          ],
+          "explanation": "Grams first: 8.00 / 32.00 = 0.2500 mol. Then V = nRT/P = (0.2500)(0.08206)(298) / 1.00 = 6.11 L. The ideal gas law takes moles, never grams.",
+          "tags": [
+            "ideal-gas-law",
+            "mass-to-volume"
+          ],
+          "expectedSeconds": 130,
+          "points": 20,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 196.0,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "You used 8.00 as the number of moles. Divide the mass by the molar mass first.",
+                "label": "grams-as-moles"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C7L4-Q08",
+          "prompt": "What volume does 44.0 g of CO_2 occupy at 2.00 atm and 273 K?\n\nR = 0.08206 L*atm/(mol*K), MM(CO2) = 44.01 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 11.2,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "explanation": "44.0 / 44.01 = 0.9998 mol, then V = nRT/P = (0.9998)(0.08206)(273) / 2.00 = 11.2 L.",
+          "tags": [
+            "ideal-gas-law",
+            "mass-to-volume"
+          ],
+          "expectedSeconds": 130,
+          "points": 20
+        },
+        {
+          "id": "C7L4-Q09",
+          "prompt": "What mass of N_2 fills a 5.00 L container at 1.50 atm and 298 K?\n\nR = 0.08206 L*atm/(mol*K), MM(N2) = 28.02 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 8.59,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Find the moles with PV = nRT, then convert to grams."
+          ],
+          "explanation": "n = PV/RT = (1.50)(5.00) / ((0.08206)(298)) = 0.30670 mol, then x 28.02 g/mol = 8.59 g.",
+          "tags": [
+            "ideal-gas-law",
+            "volume-to-mass"
+          ],
+          "expectedSeconds": 135,
+          "points": 20
+        },
+        {
+          "id": "C7L4-Q10",
+          "prompt": "In PV = nRT, the temperature T must always be expressed in:",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Kelvin",
+              "Degrees Celsius",
+              "Whatever unit the problem uses",
+              "Degrees Fahrenheit"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "Kelvin. R itself is defined with kelvin in it, so any other scale makes the units fail to cancel and the answer meaningless.",
+          "tags": [
+            "ideal-gas-law",
+            "concept"
+          ],
+          "expectedSeconds": 50,
+          "points": 10
+        },
+        {
+          "id": "C7L4-Q11",
+          "prompt": "The number of moles and the temperature of a gas are held constant while its volume is halved. Its pressure:",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Doubles",
+              "Halves",
+              "Is unchanged",
+              "Quadruples"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "Doubles. With n, R and T fixed, PV is a constant, so halving V must double P. This is Boyle's law falling straight out of the ideal gas law.",
+          "tags": [
+            "ideal-gas-law",
+            "concept"
+          ],
+          "expectedSeconds": 55,
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "C7L5",
+      "title": "Molar Mass, Gas Density & Molar Volume at STP",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C7L5-Q01",
+          "prompt": "1.50 g of an unknown gas occupies 1.00 L at 1.00 atm and 298 K. What is its molar mass?\n\nR = 0.08206 L*atm/(mol*K)",
+          "answer": {
+            "type": "numeric",
+            "value": 36.7,
+            "unit": "g/mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g/mol",
+              "g mol^-1",
+              "grams per mole"
+            ]
+          },
+          "hints": [
+            "Replace n in PV = nRT with mass over molar mass.",
+            "MM = mRT / (PV)."
+          ],
+          "explanation": "Put n = m/MM into PV = nRT and solve for the molar mass: MM = mRT/(PV) = (1.50)(0.08206)(298) / ((1.00)(1.00)) = 36.7 g/mol.",
+          "tags": [
+            "molar-mass-of-gas"
+          ],
+          "expectedSeconds": 140,
+          "points": 25
+        },
+        {
+          "id": "C7L5-Q02",
+          "prompt": "0.500 g of a gas fills 250. mL at 2.00 atm and 273 K. What is its molar mass?\n\nR = 0.08206 L*atm/(mol*K)",
+          "answer": {
+            "type": "numeric",
+            "value": 22.4,
+            "unit": "g/mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g/mol",
+              "g mol^-1",
+              "grams per mole"
+            ]
+          },
+          "hints": [
+            "Convert the millilitres to litres first.",
+            "R is in L*atm/(mol*K), so litres it is."
+          ],
+          "explanation": "The volume has to be in litres: 250. mL = 0.250 L. Then MM = mRT/(PV) = (0.500)(0.08206)(273) / ((2.00)(0.250)) = 22.4 g/mol.",
+          "tags": [
+            "molar-mass-of-gas"
+          ],
+          "expectedSeconds": 145,
+          "points": 25,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 0.0224,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "You left the volume in millilitres. R uses litres, so 250. mL must become 0.250 L.",
+                "label": "millilitres-not-converted"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C7L5-Q03",
+          "prompt": "A gas has a density of 1.96 g/L at 1.00 atm and 273 K. What is its molar mass?\n\nR = 0.08206 L*atm/(mol*K)",
+          "answer": {
+            "type": "numeric",
+            "value": 43.9,
+            "unit": "g/mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g/mol",
+              "g mol^-1",
+              "grams per mole"
+            ]
+          },
+          "hints": [
+            "Density in grams per litre is the mass of exactly one litre.",
+            "MM = dRT / P."
+          ],
+          "explanation": "Density is mass per litre, so take 1.00 L of it: MM = dRT/P = (1.96)(0.08206)(273) / 1.00 = 43.9 g/mol. That is close to CO_2.",
+          "tags": [
+            "molar-mass-of-gas",
+            "gas-density"
+          ],
+          "expectedSeconds": 150,
+          "points": 25
+        },
+        {
+          "id": "C7L5-Q04",
+          "prompt": "What is the mass of 1.00 L of O_2 gas at 1.00 atm and 298 K? Since the volume is exactly one litre, this number is also the density of the gas in g/L.\n\nR = 0.08206 L*atm/(mol*K), MM(O2) = 32.00 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 1.31,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Find the moles in 1.00 L with PV = nRT, then convert to grams.",
+            "Equivalently d = P x MM / (RT)."
+          ],
+          "explanation": "Density is mass per litre, so the mass of one litre IS the density: d = P x MM / (RT) = (1.00)(32.00) / ((0.08206)(298)) = 1.31 g/L, so 1.00 L weighs 1.31 g. Gases are roughly a thousand times less dense than liquids, which is why the answer is near 1 rather than near 1000.",
+          "tags": [
+            "gas-density"
+          ],
+          "expectedSeconds": 140,
+          "points": 25
+        },
+        {
+          "id": "C7L5-Q05",
+          "prompt": "What is the mass of 1.00 L of CO_2 gas at 2.00 atm and 273 K? This number is also the density of the gas in g/L.\n\nR = 0.08206 L*atm/(mol*K), MM(CO2) = 44.01 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 3.93,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "explanation": "d = P x MM / (RT) = (2.00)(44.01) / ((0.08206)(273)) = 3.93 g/L, so one litre weighs 3.93 g. Doubling the pressure doubles the density, because the same mass is squeezed into half the volume.",
+          "tags": [
+            "gas-density"
+          ],
+          "expectedSeconds": 140,
+          "points": 25
+        },
+        {
+          "id": "C7L5-Q06",
+          "prompt": "At STP, one mole of any ideal gas occupies 22.4 L. What volume does 2.50 mol occupy at STP?",
+          "answer": {
+            "type": "numeric",
+            "value": 56.0,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "Multiply the moles by 22.4 L/mol."
+          ],
+          "explanation": "2.50 x 22.4 = 56 L. At STP the identity of the gas is irrelevant: equal moles take equal volumes.",
+          "tags": [
+            "molar-volume",
+            "stp"
+          ],
+          "expectedSeconds": 85,
+          "points": 10
+        },
+        {
+          "id": "C7L5-Q07",
+          "prompt": "At STP one mole of an ideal gas occupies 22.4 L. How many moles are in 11.2 L of gas at STP?",
+          "answer": {
+            "type": "numeric",
+            "value": 0.5,
+            "unit": "mol",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "mol",
+              "mole",
+              "moles"
+            ]
+          },
+          "explanation": "11.2 / 22.4 = 0.5 mol. Half the molar volume holds half a mole.",
+          "tags": [
+            "molar-volume",
+            "stp"
+          ],
+          "expectedSeconds": 85,
+          "points": 10
+        },
+        {
+          "id": "C7L5-Q08",
+          "prompt": "At STP one mole of an ideal gas occupies 22.4 L. What volume does 16.0 g of CH_4 occupy at STP?\n\nMM(CH4) = 16.04 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 22.3,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "Grams to moles first, then moles to litres."
+          ],
+          "explanation": "16.0 / 16.04 = 0.9975 mol, then x 22.4 = 22.3 L.",
+          "tags": [
+            "molar-volume",
+            "stp"
+          ],
+          "expectedSeconds": 125,
+          "points": 20
+        },
+        {
+          "id": "C7L5-Q09",
+          "prompt": "At STP one mole of an ideal gas occupies 22.4 L. What is the mass of 5.60 L of O_2 at STP?\n\nMM(O2) = 32.00 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 8.0,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "explanation": "5.60 / 22.4 = 0.2500 mol, then x 32.00 = 8 g.",
+          "tags": [
+            "molar-volume",
+            "stp"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C7L5-Q10",
+          "prompt": "At STP one mole of an ideal gas occupies 22.4 L. What is the mass of 1.00 L of N_2 at STP? This number is also the density of N_2 at STP in g/L.\n\nMM(N2) = 28.02 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 1.25,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Divide the mass of one mole by the volume of one mole."
+          ],
+          "explanation": "One mole weighs 28.02 g and fills 22.4 L, so 28.02 / 22.4 = 1.25 g/L, and one litre therefore weighs 1.25 g. Molar mass over molar volume is the quickest route to a density at STP.",
+          "tags": [
+            "gas-density",
+            "stp"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "C7L6",
+      "title": "Dalton's Law of Partial Pressures",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C7L6-Q01",
+          "prompt": "A mixture holds O_2 at 0.250 atm, N_2 at 0.600 atm and CO_2 at 0.150 atm. What is the total pressure?",
+          "answer": {
+            "type": "numeric",
+            "value": 1.0,
+            "unit": "atm",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.004
+            },
+            "sigFigs": 4,
+            "unitAliases": [
+              "atm",
+              "atmosphere",
+              "atmospheres"
+            ]
+          },
+          "hints": [
+            "Just add the partial pressures.",
+            "Line up the decimal places rather than counting digits."
+          ],
+          "explanation": "Dalton's law: the total pressure is the sum of the partial pressures. 0.250 + 0.600 + 0.150 = 1 atm. This is an ADDITION, so the significant figures follow the decimal places: all three terms reach the thousandths, so the answer does too.",
+          "tags": [
+            "daltons-law",
+            "additive"
+          ],
+          "expectedSeconds": 70,
+          "points": 10
+        },
+        {
+          "id": "C7L6-Q02",
+          "prompt": "A vessel holds three gases at a total pressure of 2.50 atm. Two of them are O_2 at 0.800 atm and N_2 at 1.20 atm. What is the partial pressure of the third?",
+          "answer": {
+            "type": "numeric",
+            "value": 0.5,
+            "unit": "atm",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.006
+            },
+            "sigFigs": 2,
+            "unitAliases": [
+              "atm",
+              "atmosphere",
+              "atmospheres"
+            ]
+          },
+          "hints": [
+            "The partial pressures must add up to the total.",
+            "Line up the decimal places in the subtraction."
+          ],
+          "explanation": "Subtract the known partial pressures from the total: 2.50 - 0.800 - 1.20 = 0.50 atm. Because this is a SUBTRACTION the decimal places govern, and the 2.50 atm reaches only the hundredths, so the answer is 0.5 atm.",
+          "tags": [
+            "daltons-law",
+            "additive"
+          ],
+          "expectedSeconds": 95,
+          "points": 15
+        },
+        {
+          "id": "C7L6-Q03",
+          "prompt": "A mixture contains 0.400 mol of O_2 and 0.600 mol of N_2 at a total pressure of 2.00 atm. What is the partial pressure of the O_2?",
+          "answer": {
+            "type": "numeric",
+            "value": 0.8,
+            "unit": "atm",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "atm",
+              "atmosphere",
+              "atmospheres"
+            ]
+          },
+          "hints": [
+            "Find the mole fraction first: that gas's moles over the total moles.",
+            "Partial pressure = mole fraction x total pressure."
+          ],
+          "explanation": "The mole fraction of O_2 is 0.400 / (0.400 + 0.600) = 0.4. Multiply by the total pressure: 0.4 x 2.00 = 0.8 atm. Each gas claims the share of the pressure that matches its share of the molecules.",
+          "tags": [
+            "daltons-law",
+            "mole-fraction"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        },
+        {
+          "id": "C7L6-Q04",
+          "prompt": "A mixture contains 0.400 mol of O_2 and 0.600 mol of N_2 at a total pressure of 2.00 atm. What is the partial pressure of the N_2?",
+          "answer": {
+            "type": "numeric",
+            "value": 1.2,
+            "unit": "atm",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "atm",
+              "atmosphere",
+              "atmospheres"
+            ]
+          },
+          "explanation": "Mole fraction of N_2 = 0.600 / 1.000 = 0.6, so the partial pressure is 0.6 x 2.00 = 1.2 atm. Note that this and the O_2 partial pressure add back to 2.00 atm, as they must.",
+          "tags": [
+            "daltons-law",
+            "mole-fraction"
+          ],
+          "expectedSeconds": 105,
+          "points": 20
+        },
+        {
+          "id": "C7L6-Q05",
+          "prompt": "A tank holds 2.00 mol of N_2 and 3.00 mol of O_2 at a total pressure of 5.00 atm. What is the partial pressure of the O_2?",
+          "answer": {
+            "type": "numeric",
+            "value": 3.0,
+            "unit": "atm",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "atm",
+              "atmosphere",
+              "atmospheres"
+            ]
+          },
+          "explanation": "Mole fraction of O_2 = 3.00 / 5.00 = 0.6, so its partial pressure is 0.6 x 5.00 = 3 atm.",
+          "tags": [
+            "daltons-law",
+            "mole-fraction"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        },
+        {
+          "id": "C7L6-Q06",
+          "prompt": "In a gas mixture at a total pressure of 1.50 atm, the partial pressure of O_2 is 0.300 atm. What is the mole fraction of O_2? Enter a number with no unit.",
+          "answer": {
+            "type": "numeric",
+            "value": 0.2,
+            "unit": "",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3
+          },
+          "hints": [
+            "The ratio of the pressures is the ratio of the moles."
+          ],
+          "explanation": "Mole fraction = partial pressure / total pressure = 0.300 / 1.50 = 0.2. A mole fraction is a ratio of two pressures, so it has no unit and can never exceed 1.",
+          "tags": [
+            "daltons-law",
+            "mole-fraction"
+          ],
+          "expectedSeconds": 90,
+          "points": 15
+        },
+        {
+          "id": "C7L6-Q07",
+          "prompt": "In a mixture of ideal gases, each gas exerts:",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "The same pressure it would exert if it occupied the container alone",
+              "A pressure equal to the total divided by the number of gases",
+              "No pressure of its own until the other gases are removed",
+              "A pressure that depends on which other gases are present"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "Each gas behaves as if the others were not there, so it exerts exactly the pressure it would exert alone in that container at that temperature. Dalton's law is this statement added up.",
+          "tags": [
+            "daltons-law",
+            "concept"
+          ],
+          "expectedSeconds": 60,
+          "points": 10
+        },
+        {
+          "id": "C7L6-Q08",
+          "prompt": "What decides a gas's share of the total pressure in a mixture?",
+          "answer": {
+            "type": "choice",
+            "options": [
+              "Its mole fraction",
+              "Its molar mass",
+              "Its density",
+              "The size of its molecules"
+            ],
+            "correct": [
+              0
+            ],
+            "shuffle": true,
+            "multiSelect": false
+          },
+          "explanation": "Its mole fraction. A gas's share of the pressure follows how many moles of it are present, not what it weighs, so a heavy gas and a light gas at the same mole fraction contribute equally.",
+          "tags": [
+            "daltons-law",
+            "concept"
+          ],
+          "expectedSeconds": 60,
+          "points": 10
+        },
+        {
+          "id": "C7L6-Q09",
+          "prompt": "Hydrogen gas is collected over water at 298 K. The total pressure in the collection tube is 755 torr, and the vapour pressure of water at that temperature is 23.8 torr. What is the partial pressure of the hydrogen?",
+          "answer": {
+            "type": "numeric",
+            "value": 731.0,
+            "unit": "torr",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.6
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "torr",
+              "mmHg"
+            ]
+          },
+          "hints": [
+            "The gas in the tube is not dry: water vapour is in there too.",
+            "Subtract the water's vapour pressure from the total."
+          ],
+          "explanation": "The tube holds hydrogen plus water vapour, so P_total = P_H2 + P_water and P_H2 = 755 - 23.8 = 731.2 torr. The subtraction lines up at the ones place because the 755 torr is given there, so 731 torr.",
+          "tags": [
+            "daltons-law",
+            "additive"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        },
+        {
+          "id": "C7L6-Q10",
+          "prompt": "Oxygen is collected over water. The total pressure is 760. torr and the vapour pressure of water at that temperature is 31.8 torr. What is the partial pressure of the oxygen?",
+          "answer": {
+            "type": "numeric",
+            "value": 728.0,
+            "unit": "torr",
+            "tolerance": {
+              "type": "absolute",
+              "value": 0.6
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "torr",
+              "mmHg"
+            ]
+          },
+          "explanation": "P_O2 = 760. - 31.8 = 728.2 torr, which rounds to 728 torr at the ones place set by the 760. torr.",
+          "tags": [
+            "daltons-law",
+            "additive"
+          ],
+          "expectedSeconds": 110,
+          "points": 20
+        },
+        {
+          "id": "C7L6-Q11",
+          "prompt": "A 2.00 L vessel holds 0.100 mol of N_2 and 0.200 mol of O_2 at 298 K. What is the total pressure?\n\nR = 0.08206 L*atm/(mol*K)",
+          "answer": {
+            "type": "numeric",
+            "value": 3.67,
+            "unit": "atm",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "atm",
+              "atmosphere",
+              "atmospheres"
+            ]
+          },
+          "hints": [
+            "Add the moles, then use PV = nRT once."
+          ],
+          "explanation": "Dalton's law lets you treat the mixture as 0.3 mol of gas in total: P = nRT/V = (0.3)(0.08206)(298) / 2.00 = 3.67 atm. The ideal gas law does not care that there are two different gases.",
+          "tags": [
+            "daltons-law",
+            "ideal-gas-law"
+          ],
+          "expectedSeconds": 130,
+          "points": 25
+        },
+        {
+          "id": "C7L6-Q12",
+          "prompt": "A 2.00 L vessel holds 0.100 mol of N_2 and 0.200 mol of O_2 at 298 K. What is the partial pressure of the N_2?\n\nR = 0.08206 L*atm/(mol*K)",
+          "answer": {
+            "type": "numeric",
+            "value": 1.22,
+            "unit": "atm",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "atm",
+              "atmosphere",
+              "atmospheres"
+            ]
+          },
+          "hints": [
+            "A partial pressure uses that gas's moles and the full volume."
+          ],
+          "explanation": "Use only the nitrogen's own moles: P = nRT/V = (0.100)(0.08206)(298) / 2.00 = 1.22 atm. A partial pressure is what that gas alone would exert in the whole container.",
+          "tags": [
+            "daltons-law",
+            "ideal-gas-law"
+          ],
+          "expectedSeconds": 125,
+          "points": 25
+        }
+      ]
+    },
+    {
+      "id": "C7L7",
+      "title": "Gas Stoichiometry",
+      "requiredCorrect": 3,
+      "drawMode": "random",
+      "raceCount": 3,
+      "questions": [
+        {
+          "id": "C7L7-Q01",
+          "prompt": "24.5 g of KClO_3 decomposes completely. What volume of O_2 is produced at 1.00 atm and 298 K?\n\n2 KClO_3 -> 2 KCl + 3 O_2\n\nR = 0.08206 L*atm/(mol*K), MM(KClO3) = 122.55 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 7.33,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "Three steps: grams to moles, mole ratio, then PV = nRT.",
+            "The O_2 to KClO_3 ratio is 3 to 2."
+          ],
+          "explanation": "24.5 / 122.55 = 0.19992 mol KClO_3, and the equation gives 3 O_2 for every 2 KClO_3, so 0.29988 mol O_2. Then V = nRT/P = (0.29988)(0.08206)(298) / 1.00 = 7.33 L. Mass to moles, mole ratio, then the ideal gas law.",
+          "tags": [
+            "gas-stoichiometry"
+          ],
+          "expectedSeconds": 150,
+          "points": 25
+        },
+        {
+          "id": "C7L7-Q02",
+          "prompt": "2.43 g of Mg reacts with excess HCl. What volume of H_2 is produced at 1.00 atm and 298 K?\n\nMg + 2 HCl -> MgCl_2 + H_2\n\nR = 0.08206 L*atm/(mol*K), MM(Mg) = 24.31 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 2.44,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "The Mg to H_2 ratio is 1 to 1; the 2 belongs to HCl."
+          ],
+          "explanation": "2.43 / 24.31 = 0.09996 mol Mg, and Mg to H_2 is 1 to 1, so V = (0.09996)(0.08206)(298) / 1.00 = 2.44 L.",
+          "tags": [
+            "gas-stoichiometry"
+          ],
+          "expectedSeconds": 150,
+          "points": 25
+        },
+        {
+          "id": "C7L7-Q03",
+          "prompt": "10.0 g of CaCO_3 is heated until it fully decomposes. What volume of CO_2 is produced at STP, where one mole of gas occupies 22.4 L?\n\nCaCO_3 -> CaO + CO_2\n\nMM(CaCO3) = 100.09 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 2.24,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "At STP you can go straight from moles to litres with 22.4 L/mol."
+          ],
+          "explanation": "10.0 / 100.09 = 0.09991 mol CaCO_3, a 1 to 1 ratio with CO_2, then x 22.4 L/mol = 2.24 L. At STP the molar volume replaces the full ideal gas law.",
+          "tags": [
+            "gas-stoichiometry",
+            "stp"
+          ],
+          "expectedSeconds": 140,
+          "points": 25
+        },
+        {
+          "id": "C7L7-Q04",
+          "prompt": "What volume of O_2 reacts completely with 10.0 L of H_2, both measured at the same temperature and pressure?\n\n2 H_2 + O_2 -> 2 H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 5.0,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "Equal volumes hold equal moles at the same temperature and pressure.",
+            "So the coefficients work directly on the volumes."
+          ],
+          "explanation": "At a fixed temperature and pressure, volume is proportional to moles, so the coefficients can be read directly as volumes: 10.0 L H_2 x (1 O_2 / 2 H_2) = 5 L. No conversion to moles is needed at all.",
+          "tags": [
+            "gas-stoichiometry",
+            "volume-volume"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C7L7-Q05",
+          "prompt": "What volume of NH_3 forms from 5.00 L of N_2 with excess H_2, all measured at the same temperature and pressure?\n\nN_2 + 3 H_2 -> 2 NH_3",
+          "answer": {
+            "type": "numeric",
+            "value": 10.0,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "explanation": "5.00 L N_2 x (2 NH_3 / 1 N_2) = 10 L NH_3, reading the coefficients straight off as volumes.",
+          "tags": [
+            "gas-stoichiometry",
+            "volume-volume"
+          ],
+          "expectedSeconds": 120,
+          "points": 20
+        },
+        {
+          "id": "C7L7-Q06",
+          "prompt": "What volume of CO_2 is produced when 2.50 L of CH_4 burns completely, both measured at the same temperature and pressure?\n\nCH_4 + 2 O_2 -> CO_2 + 2 H_2O",
+          "answer": {
+            "type": "numeric",
+            "value": 2.5,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "explanation": "CH_4 to CO_2 is 1 to 1, so the volume is unchanged at 2.5 L. The 2 in front of O_2 and H_2O does not enter this ratio.",
+          "tags": [
+            "gas-stoichiometry",
+            "volume-volume"
+          ],
+          "expectedSeconds": 115,
+          "points": 20
+        },
+        {
+          "id": "C7L7-Q07",
+          "prompt": "What mass of CaCO_3 must decompose to produce 5.00 L of CO_2 at 1.00 atm and 298 K?\n\nCaCO_3 -> CaO + CO_2\n\nR = 0.08206 L*atm/(mol*K), MM(CaCO3) = 100.09 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 20.5,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Start with PV = nRT to get the moles of gas, then work back up the equation."
+          ],
+          "explanation": "Work backwards from the gas: n = PV/RT = (1.00)(5.00) / ((0.08206)(298)) = 0.20447 mol CO_2, a 1 to 1 ratio with CaCO_3, then x 100.09 = 20.5 g.",
+          "tags": [
+            "gas-stoichiometry"
+          ],
+          "expectedSeconds": 160,
+          "points": 30
+        },
+        {
+          "id": "C7L7-Q08",
+          "prompt": "What volume of Cl_2 at 1.00 atm and 273 K reacts completely with 4.60 g of Na?\n\n2 Na + Cl_2 -> 2 NaCl\n\nR = 0.08206 L*atm/(mol*K), MM(Na) = 22.99 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 2.24,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "hints": [
+            "Each Cl_2 reacts with two Na, so the chlorine moles are half the sodium moles."
+          ],
+          "explanation": "4.60 / 22.99 = 0.20009 mol Na, and two Na are needed per Cl_2, so divide by 2 to get 0.10004 mol Cl_2. Then V = (0.10004)(0.08206)(273) / 1.00 = 2.24 L.",
+          "tags": [
+            "gas-stoichiometry"
+          ],
+          "expectedSeconds": 160,
+          "points": 30,
+          "feedback": {
+            "commonErrors": [
+              {
+                "match": {
+                  "type": "numeric",
+                  "value": 4.48,
+                  "tolerance": {
+                    "type": "relative",
+                    "value": 0.015
+                  }
+                },
+                "message": "You forgot the 2 in front of Na. Two sodium atoms are consumed per Cl_2, so the chlorine moles are half the sodium moles.",
+                "label": "missed-two-to-one"
+              }
+            ]
+          }
+        },
+        {
+          "id": "C7L7-Q09",
+          "prompt": "6.54 g of Zn reacts with excess HCl. What volume of H_2 is produced at 2.00 atm and 298 K?\n\nZn + 2 HCl -> ZnCl_2 + H_2\n\nR = 0.08206 L*atm/(mol*K), MM(Zn) = 65.38 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 1.22,
+            "unit": "L",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "L",
+              "litre",
+              "liter",
+              "litres",
+              "liters"
+            ]
+          },
+          "explanation": "6.54 / 65.38 = 0.10003 mol Zn, a 1 to 1 ratio with H_2, then V = (0.10003)(0.08206)(298) / 2.00 = 1.22 L. The higher pressure squeezes the same amount of gas into a smaller volume.",
+          "tags": [
+            "gas-stoichiometry"
+          ],
+          "expectedSeconds": 155,
+          "points": 25
+        },
+        {
+          "id": "C7L7-Q10",
+          "prompt": "What mass of KClO_3 must decompose to produce 1.00 L of O_2 at 1.00 atm and 273 K?\n\n2 KClO_3 -> 2 KCl + 3 O_2\n\nR = 0.08206 L*atm/(mol*K), MM(KClO3) = 122.55 g/mol",
+          "answer": {
+            "type": "numeric",
+            "value": 3.65,
+            "unit": "g",
+            "tolerance": {
+              "type": "relative",
+              "value": 0.015
+            },
+            "sigFigs": 3,
+            "unitAliases": [
+              "g",
+              "gram",
+              "grams"
+            ]
+          },
+          "hints": [
+            "Gas volume to moles first, then the mole ratio, then grams.",
+            "The ratio runs 2 KClO_3 to 3 O_2, so the solid's moles are smaller."
+          ],
+          "explanation": "n = PV/RT = (1.00)(1.00) / ((0.08206)(273)) = 0.044638 mol O_2. Two KClO_3 give three O_2, so multiply by 2/3 to get 0.029759 mol KClO_3, then x 122.55 = 3.65 g.",
+          "tags": [
+            "gas-stoichiometry"
+          ],
+          "expectedSeconds": 165,
+          "points": 30
+        }
+      ]
+    }
+  ]
+}
